@@ -331,7 +331,7 @@ const Chat: React.FC<ChatProps> = ({ videoId }) => {
                             type="text"
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
-                            placeholder={isThinking ? "Thinking..." : selectedFile ? "Ask about this image..." : "Analyze this concept..."}
+                            placeholder={isThinking ? "Thinking..." : selectedFile ? "Ask about this image..." : "How can I help you learn today?"}
                             disabled={isThinking}
                             className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/10 transition-all shadow-sm disabled:bg-gray-50 disabled:text-gray-400"
                         />
