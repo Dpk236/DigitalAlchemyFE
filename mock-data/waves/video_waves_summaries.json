@@ -1,0 +1,68 @@
+[
+  {
+    "video_id": "waves",
+    "start_time": 0.51,
+    "end_time": 13.71,
+    "summary": "- The topic is about wave motion from the waves chapter.\n- The types of waves to be discussed are transverse waves and longitudinal waves."
+  },
+  {
+    "video_id": "waves",
+    "start_time": 13.71,
+    "end_time": 38.89,
+    "summary": "- In oscillations, we studied how a single particle moves in simple harmonic motion.\n- Now, we will discuss what happens when there is a group or system of particles."
+  },
+  {
+    "video_id": "waves",
+    "start_time": 38.89,
+    "end_time": 60.41,
+    "summary": "- When one end of a string is tied and the other end is moved up and down, a wave is generated in the string.\n- The individual particles of the string move, creating oscillations."
+  },
+  {
+    "video_id": "waves",
+    "start_time": 60.41,
+    "end_time": 110.07,
+    "summary": "- A wave consists of a set of particles oscillating at their positions.\n- Mechanical waves need a medium to propagate."
+  },
+  {
+    "video_id": "waves",
+    "start_time": 110.07,
+    "end_time": 134.27,
+    "summary": "- Waves like those in a string or sound waves need a medium to travel through (such as a string or air).\n- Sound waves propagate through air when we speak."
+  },
+  {
+    "video_id": "waves",
+    "start_time": 134.27,
+    "end_time": 157.25,
+    "summary": "- Mechanical waves require a medium to propagate.\n- Electromagnetic waves do not need a medium and can travel through a vacuum."
+  },
+  {
+    "video_id": "waves",
+    "start_time": 157.25,
+    "end_time": 216.7,
+    "summary": "- Electromagnetic waves (like light from the sun) do not need a medium to travel; they are called non-mechanical waves.\n- Waves in a spring or string need a medium to travel; these are examples of mechanical waves."
+  },
+  {
+    "video_id": "waves",
+    "start_time": 216.7,
+    "end_time": 237.96,
+    "summary": "- When multiple springs are connected and one end is pulled and then released, compressions and rarefactions travel through the springs.\n- This shows how pulses are generated and move in a medium."
+  },
+  {
+    "video_id": "waves",
+    "start_time": 237.96,
+    "end_time": 256.68,
+    "summary": "- Compressions and rarefactions travel through the spring, generating waves.\n- Mechanical waves are of two types."
+  },
+  {
+    "video_id": "waves",
+    "start_time": 256.68,
+    "end_time": 277.78,
+    "summary": "- In a string, a particle moves up and down while the wave travels horizontally.\n- The motion of each particle is perpendicular to the direction in which the wave propagates."
+  },
+  {
+    "video_id": "waves",
+    "start_time": 277.78,
+    "end_time": 324.88,
+    "summary": "- In a transverse wave, the motion of the particle of the medium is perpendicular to the direction of propagation of the wave.\n- In a longitudinal wave, the motion of the particle is in the direction of the wave, and compressions and rarefactions are formed."
+  }
+]

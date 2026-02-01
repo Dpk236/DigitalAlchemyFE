@@ -4,7 +4,11 @@ import QuizPlayer from './QuizPlayer';
 import PreviousYearQuestions from './PreviousYearQuestions';
 import PracticeMock from './PracticeMock';
 
-const Quizzes: React.FC = () => {
+interface QuizzesProps {
+  videoId: string;
+}
+
+const Quizzes: React.FC<QuizzesProps> = ({ videoId }) => {
   const { quiz = {}, fetchQuiz, loading } = useChatbot();
   const [activeMode, setActiveMode] = useState<'Practice' | 'PYQ' | 'PracticeMock'>('Practice');
 
@@ -14,8 +18,8 @@ const Quizzes: React.FC = () => {
   const isDarkMode = false;
 
   useEffect(() => {
-    fetchQuiz();
-  }, [fetchQuiz]);
+    fetchQuiz(videoId);
+  }, [fetchQuiz, videoId]);
 
   return (
     <div className="space-y-6 animate-fade-in pb-10">

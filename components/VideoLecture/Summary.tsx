@@ -3,12 +3,16 @@ import React, { useEffect } from 'react';
 import useChatbot from '../../contexts/useChatbot';
 import MarkdownWithTimestamps from '../markdown/MarkdownWithTimestamps';
 
-const Summary: React.FC = () => {
+interface SummaryProps {
+    videoId: string;
+}
+
+const Summary: React.FC<SummaryProps> = ({ videoId }) => {
     const { summaryHtml, fetchSummary, loading } = useChatbot();
 
     useEffect(() => {
-        fetchSummary();
-    }, [fetchSummary]);
+        fetchSummary(videoId);
+    }, [fetchSummary, videoId]);
 
     return (
         <div className="space-y-10 animate-fade-in pb-10">

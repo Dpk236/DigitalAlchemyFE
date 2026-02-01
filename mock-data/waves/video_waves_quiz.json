@@ -1,0 +1,118 @@
+{
+  "quiz_title": "Wave Motion: Types and Characteristics",
+  "total_questions": 8,
+  "questions": [
+    {
+      "id": 1,
+      "question_text": "Which of the following statements is TRUE about mechanical waves?",
+      "options": {
+        "A": "They can travel without a medium.",
+        "B": "They require a medium to propagate.",
+        "C": "They do not involve oscillations of particles.",
+        "D": "They are examples of electromagnetic waves."
+      },
+      "correct_option": "B",
+      "hint": "Think about why sound cannot travel through a vacuum.",
+      "explanation": "Mechanical waves need a material medium (like air, water, or a string) to travel. This is a key characteristic that distinguishes them from electromagnetic waves.",
+      "solution": "Mechanical waves require a medium to propagate, so the correct answer is B."
+    },
+    {
+      "id": 2,
+      "question_text": "Which of the following is an example of a mechanical wave?",
+      "options": {
+        "A": "Light from the sun",
+        "B": "Heat radiation",
+        "C": "Waves in a string",
+        "D": "Radio waves"
+      },
+      "correct_option": "C",
+      "hint": "Mechanical waves involve vibrating particles of a medium.",
+      "explanation": "Waves in a string require the presence of the material (string) for transmission, demonstrating mechanical wave behavior.",
+      "solution": "Waves in a string are mechanical waves, so option C is correct."
+    },
+    {
+      "id": 3,
+      "question_text": "In a transverse wave, how does the motion of the particle compare to the direction of propagation of the wave?",
+      "options": {
+        "A": "It is in the same direction as the wave.",
+        "B": "It is in the opposite direction of the wave.",
+        "C": "It is perpendicular to the direction of the wave.",
+        "D": "There is no specific direction."
+      },
+      "correct_option": "C",
+      "hint": "Recall how a string moves when you make a wave in it.",
+      "explanation": "In transverse waves, such as those in a string, particles move up and down while the wave itself travels horizontally—these motions are perpendicular.",
+      "solution": "The motion of the particle is perpendicular to the direction of wave propagation, so C is correct."
+    },
+    {
+      "id": 4,
+      "question_text": "What happens in a longitudinal wave as it propagates through a medium?",
+      "options": {
+        "A": "Particles of the medium move in circular paths.",
+        "B": "Particles remain stationary.",
+        "C": "Compressions and rarefactions are formed.",
+        "D": "A vacuum is needed for transmission."
+      },
+      "correct_option": "C",
+      "hint": "Listen carefully to descriptions of sound waves in a spring.",
+      "explanation": "Longitudinal waves are characterized by alternate regions of compression and rarefaction moving through the medium.",
+      "solution": "Option C is correct: compressions and rarefactions are formed in longitudinal waves."
+    },
+    {
+      "id": 5,
+      "question_text": "Which of the following waves can travel through a vacuum?",
+      "options": {
+        "A": "Sound waves",
+        "B": "Waves in a spring",
+        "C": "Electromagnetic waves",
+        "D": "Mechanical waves"
+      },
+      "correct_option": "C",
+      "hint": "This type of wave includes light from the sun.",
+      "explanation": "Electromagnetic waves, such as light, do not need any material medium to travel and can propagate through a vacuum.",
+      "solution": "Electromagnetic waves travel through vacuum, so C is correct."
+    },
+    {
+      "id": 6,
+      "question_text": "What is the main difference between the study of oscillations and wave motion as described in the lecture?",
+      "options": {
+        "A": "Oscillations involve waves; wave motion involves only particles.",
+        "B": "Oscillations involve single particle motion; wave motion involves a group of particles.",
+        "C": "Both focus only on one particle at a time.",
+        "D": "Wave motion never involves oscillations."
+      },
+      "correct_option": "B",
+      "hint": "Think about the number of particles considered in each type of motion.",
+      "explanation": "Oscillations study the movement of a single particle, while wave motion concerns the behavior of a set or system of particles interacting.",
+      "solution": "Wave motion deals with a group/system of particles; so B is correct."
+    },
+    {
+      "id": 7,
+      "question_text": "Select the correct statement about electromagnetic waves based on the summary.",
+      "options": {
+        "A": "They need air to propagate.",
+        "B": "They require a string as a medium.",
+        "C": "They can travel through vacuum.",
+        "D": "They are a type of mechanical wave."
+      },
+      "correct_option": "C",
+      "hint": "Consider how sunlight reaches earth.",
+      "explanation": "Electromagnetic waves are distinct from mechanical waves because they do not require any medium and can travel through the vacuum of space.",
+      "solution": "Option C correctly states that electromagnetic waves can travel through a vacuum."
+    },
+    {
+      "id": 8,
+      "question_text": "If a particle moves up and down while the wave spreads horizontally along a string, what type of wave is being described?",
+      "options": {
+        "A": "Mechanical wave, longitudinal",
+        "B": "Mechanical wave, transverse",
+        "C": "Electromagnetic wave, longitudinal",
+        "D": "Electromagnetic wave, transverse"
+      },
+      "correct_option": "B",
+      "hint": "Think about the motion of the medium’s particles relative to wave direction.",
+      "explanation": "Transverse waves involve particle motion perpendicular to the propagation direction, as in a string.",
+      "solution": "This describes a mechanical wave that is transverse, so option B is correct."
+    }
+  ]
+}

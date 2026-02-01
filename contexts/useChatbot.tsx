@@ -2,6 +2,14 @@
 import { useState, useCallback } from "react";
 import { Flashcard, QuizQuestion } from "../types";
 
+// Mock Data Imports
+import wavesFlashcards from "../mock-data/waves/video_waves_flashcards.json";
+import wavesQuiz from "../mock-data/waves/video_waves_quiz.json";
+import wavesSummaries from "../mock-data/waves/video_waves_summaries.json";
+import projectileFlashcards from "../mock-data/projectile_motion/video_projectile_motion_flashcards.json";
+import projectileQuiz from "../mock-data/projectile_motion/video_projectile_motion_quiz.json";
+import projectileSummaries from "../mock-data/projectile_motion/video_projectile_motion_summaries.json";
+
 const useChatbot = () => {
   const [summaryHtml, setSummaryHtml] = useState<string | null>(null);
   const [visualViewContent, setVisualViewContent] = useState<any>(null);
@@ -10,7 +18,22 @@ const useChatbot = () => {
   const [quiz, setQuiz] = useState<any>({});
   const [loading, setLoading] = useState<boolean>(false);
 
-  const fetchSummary = useCallback(async () => {
+  const fetchSummary = useCallback(async (videoId?: string) => {
+    if (videoId === "waves") {
+      const summary = (wavesSummaries as any[]).map(s => {
+        const mins = Math.floor(s.start_time / 60);
+        const secs = Math.floor(s.start_time % 60);
+        const time = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        return `[${time}] ${s.summary}`;
+      }).join("\n\n");
+      setSummaryHtml(summary);
+      return;
+    }
+    if (videoId === "projectile_motion") {
+      setSummaryHtml((projectileSummaries as any).final_summary);
+      return;
+    }
+
     const url = "http://localhost:5000/get_summmary";
     setLoading(true);
     try {
@@ -38,7 +61,16 @@ const useChatbot = () => {
     }
   }, []);
 
-  const fetchAIFlashCards = useCallback(async () => {
+  const fetchAIFlashCards = useCallback(async (videoId?: string) => {
+    if (videoId === "waves") {
+      setAiFlashCardsContent(wavesFlashcards as any);
+      return;
+    }
+    if (videoId === "projectile_motion") {
+      setAiFlashCardsContent(projectileFlashcards as any);
+      return;
+    }
+
     const url = "http://localhost:5000/ai-flashcards";
     setLoading(true);
     try {
@@ -69,7 +101,16 @@ const useChatbot = () => {
     }
   }, []);
 
-  const fetchQuiz = useCallback(async () => {
+  const fetchQuiz = useCallback(async (videoId?: string) => {
+    if (videoId === "waves") {
+      setQuiz({ data: wavesQuiz });
+      return;
+    }
+    if (videoId === "projectile_motion") {
+      setQuiz({ data: projectileQuiz });
+      return;
+    }
+
     const url = "http://localhost:5000/get-quiz";
     setLoading(true);
     try {

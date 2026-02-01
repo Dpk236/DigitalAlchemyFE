@@ -1,0 +1,118 @@
+{
+  "quiz_title": "Projectile Motion: Fundamentals and Analysis",
+  "total_questions": 8,
+  "questions": [
+    {
+      "id": 1,
+      "question_text": "What is the path followed by a projectile when it is thrown at an angle to the ground under gravity?",
+      "options": {
+        "A": "Straight line",
+        "B": "Circular",
+        "C": "Parabolic",
+        "D": "Elliptical"
+      },
+      "correct_option": "C",
+      "hint": "Projectiles under gravity do not follow a straight path.",
+      "explanation": "The summary states that the trajectory of projectile motion is always a parabolic curve in a vertical plane.",
+      "solution": "Option C is correct because projectile motion always results in a parabolic path."
+    },
+    {
+      "id": 2,
+      "question_text": "Which component of velocity remains constant during projectile motion?",
+      "options": {
+        "A": "Vertical component",
+        "B": "Both components",
+        "C": "Horizontal component",
+        "D": "Neither component"
+      },
+      "correct_option": "C",
+      "hint": "Gravity only affects the y-direction.",
+      "explanation": "The summary mentions that horizontal velocity remains constant, while vertical velocity changes due to gravity.",
+      "solution": "Option C is correct because only the horizontal component of velocity stays the same."
+    },
+    {
+      "id": 3,
+      "question_text": "How is the initial velocity of a projectile resolved for calculations?",
+      "options": {
+        "A": "Into x and y components using trigonometric ratios",
+        "B": "As a single vector along the trajectory",
+        "C": "Only into y component",
+        "D": "Only into x component"
+      },
+      "correct_option": "A",
+      "hint": "Resolution into perpendicular axes is preferred.",
+      "explanation": "The summary states that to analyze projectile motion, initial velocity must be resolved into x (V₀ cos θ) and y (V₀ sin θ) components.",
+      "solution": "Option A is correct because projectiles' initial velocities are always split into horizontal and vertical parts."
+    },
+    {
+      "id": 4,
+      "question_text": "What is the acceleration acting on a projectile near the Earth's surface?",
+      "options": {
+        "A": "0",
+        "B": "Always upward",
+        "C": "Always downward, -g ĵ",
+        "D": "Varies along the path"
+      },
+      "correct_option": "C",
+      "hint": "Gravity determines acceleration in projectile motion.",
+      "explanation": "Acceleration in projectile motion is always –g ĵ, acting downward along the y-axis, as per the summary.",
+      "solution": "Option C is correct as acceleration is constantly vertically downward due to gravity."
+    },
+    {
+      "id": 5,
+      "question_text": "At the topmost point of a projectile's trajectory, which statement is true?",
+      "options": {
+        "A": "Both velocity components are zero",
+        "B": "Vertical velocity is zero; horizontal velocity remains",
+        "C": "Only the vertical velocity remains",
+        "D": "Acceleration is zero"
+      },
+      "correct_option": "B",
+      "hint": "Vertical motion stops momentarily at the peak.",
+      "explanation": "At maximum height, vertical velocity becomes zero, but the horizontal velocity (V cos θ) is unchanged.",
+      "solution": "Option B is correct as only the vertical velocity component is zero at the topmost point."
+    },
+    {
+      "id": 6,
+      "question_text": "How is the range of a projectile defined?",
+      "options": {
+        "A": "The highest vertical distance reached by the projectile",
+        "B": "The horizontal distance from projection to landing point",
+        "C": "The distance covered along the path",
+        "D": "The sum of x and y components of displacement"
+      },
+      "correct_option": "B",
+      "hint": "Focus on the total horizontal distance.",
+      "explanation": "Range is described as the horizontal distance from the origin (point of projection) to where the projectile lands.",
+      "solution": "Option B is correct since range is always the total horizontal distance traveled."
+    },
+    {
+      "id": 7,
+      "question_text": "Why is projectile motion considered two-dimensional?",
+      "options": {
+        "A": "It involves motion only in the horizontal direction",
+        "B": "It involves both horizontal and vertical motions simultaneously",
+        "C": "It occurs only vertically downward",
+        "D": "Because of air resistance"
+      },
+      "correct_option": "B",
+      "hint": "Two axes are analyzed separately.",
+      "explanation": "The summary emphasizes that projectile motion has simultaneous and independent horizontal (x-axis) and vertical (y-axis) components.",
+      "solution": "Option B is correct as projectile motion requires analyzing both x and y directions."
+    },
+    {
+      "id": 8,
+      "question_text": "If the acceleration due to gravity were not constant throughout the path, would standard projectile motion analysis apply?",
+      "options": {
+        "A": "Yes, completely",
+        "B": "No, gravity must be constant",
+        "C": "Only at the starting point",
+        "D": "Acceleration is not important"
+      },
+      "correct_option": "B",
+      "hint": "Constant 'g' is an essential condition.",
+      "explanation": "Standard analysis applies only when acceleration due to gravity is uniform near the Earth's surface.",
+      "solution": "Option B is correct since variable gravity invalidates the usual projectile motion formulas."
+    }
+  ]
+}

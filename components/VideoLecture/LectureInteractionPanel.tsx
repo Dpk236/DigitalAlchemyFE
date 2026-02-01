@@ -22,7 +22,7 @@ const LectureInteractionPanel: React.FC<LectureInteractionPanelProps> = ({ video
 
             <div className={`flex-1 overflow-x-hidden relative ${activeRightTab === 'Chat' ? 'p-0' : 'p-8 overflow-y-auto'}`}>
                 {activeRightTab === 'Summary' && (
-                    <Summary />
+                    <Summary videoId={videoId}/>
                 )}
 
                 {activeRightTab === 'Chat' && (
@@ -32,11 +32,11 @@ const LectureInteractionPanel: React.FC<LectureInteractionPanelProps> = ({ video
                 {activeRightTab === 'Simulation' && <Simulation videoId={videoId} />}
 
                 {activeRightTab === 'Flashcards' && (
-                    <Flashcards />
+                    <Flashcards videoId={videoId} />
                 )}
 
                 {activeRightTab === 'Challenge Zone' && (
-                    <Quizzes />
+                    <Quizzes videoId={videoId} />
                 )}
 
                 {activeRightTab === 'Notes' && <NotionNotes />}

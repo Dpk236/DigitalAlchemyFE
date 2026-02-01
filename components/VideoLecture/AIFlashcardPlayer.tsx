@@ -4,15 +4,16 @@ import useChatbot from '../../contexts/useChatbot';
 // import "./index.css"; // Assuming styles are global or handled via Tailwind
 
 interface AIFlashcardPlayerProps {
+    videoId: string;
     isDarkMode?: boolean;
 }
 
-const AIFlashcardPlayer: React.FC<AIFlashcardPlayerProps> = ({ isDarkMode = false }) => {
+const AIFlashcardPlayer: React.FC<AIFlashcardPlayerProps> = ({ videoId, isDarkMode = false }) => {
     const { aiFlashCardsContent = [], fetchAIFlashCards } = useChatbot();
 
     React.useEffect(() => {
-        fetchAIFlashCards();
-    }, [fetchAIFlashCards]);
+        fetchAIFlashCards(videoId);
+    }, [fetchAIFlashCards, videoId]);
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
@@ -20,7 +21,7 @@ const AIFlashcardPlayer: React.FC<AIFlashcardPlayerProps> = ({ isDarkMode = fals
     const total = aiFlashCardsContent?.length || 0;
     const progress = total > 0 ? Math.round(((currentIndex + 1) / total) * 100) : 0;
 
-    const card = total > 0 ? aiFlashCardsContent[currentIndex] : null;
+    const card = (total > 0 ? aiFlashCardsContent[currentIndex] : null) as any;
 
     // Theme colors
     const containerBg = isDarkMode
