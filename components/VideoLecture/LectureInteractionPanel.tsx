@@ -26,7 +26,7 @@ const LectureInteractionPanel: React.FC<LectureInteractionPanelProps> = ({ video
                 )}
 
                 {activeRightTab === 'Chat' && (
-                    <Chat />
+                    <Chat videoId={videoId} />
                 )}
 
                 {activeRightTab === 'Simulation' && <Simulation videoId={videoId} />}
