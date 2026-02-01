@@ -1,0 +1,122 @@
+{
+    "NEET_Biology_Teacher_Note": "Hello future doctor! I have compiled the most relevant questions from the past decade focusing on 'Body Fluids and Circulation'. Pay close attention to ECG waves and the Cardiac Cycle, as these are high-yield topics.",
+    "Previous_Year_Questions": [
+        {
+            "NEET_Year": "2024",
+            "Question": "The 'Lub' sound of the heart is caused by the ___________",
+            "Options": {
+                "a": "Closure of the semilunar valves",
+                "b": "Opening of tricuspid and bicuspid valves",
+                "c": "Opening of the semilunar valves",
+                "d": "Closure of the tricuspid and bicuspid valves"
+            },
+            "Answer": "d"
+        },
+        {
+            "NEET_Year": "2024",
+            "Question": "In a standard ECG diagram, the P-wave represents:",
+            "Options": {
+                "a": "Depolarisation of the atria",
+                "b": "Repolarisation of the ventricle",
+                "c": "Depolarisation of the ventricle",
+                "d": "End of systole"
+            },
+            "Answer": "a"
+        },
+        {
+            "NEET_Year": "2023",
+            "Question": "Erythroblastosis fetalis occurs due to:",
+            "Options": {
+                "a": "Rh incompatibility",
+                "b": "ABO incompatibility",
+                "c": "Both Rh and ABO incompatibility",
+                "d": "Neither"
+            },
+            "Answer": "a"
+        },
+        {
+            "NEET_Year": "2022",
+            "Question": "A person has blood pressure of 140/90 mm Hg. This condition is known as:",
+            "Options": {
+                "a": "Hypotension",
+                "b": "Hypertension",
+                "c": "Normal",
+                "d": "Prehypertension"
+            },
+            "Answer": "b"
+        },
+        {
+            "NEET_Year": "2021",
+            "Question": "If heart rate is 72 beats/min and stroke volume is 70 ml, what is the cardiac output?",
+            "Options": {
+                "a": "3 L/min",
+                "b": "5 L/min",
+                "c": "7 L/min",
+                "d": "10 L/min"
+            },
+            "Answer": "b (Approx 5040 ml/min)"
+        },
+        {
+            "NEET_Year": "2020",
+            "Question": "The QRS complex in a standard ECG represents:",
+            "Options": {
+                "a": "Depolarisation of ventricles",
+                "b": "Repolarisation of ventricles",
+                "c": "Repolarisation of auricles",
+                "d": "Depolarisation of auricles"
+            },
+            "Answer": "a"
+        },
+        {
+            "NEET_Year": "2018",
+            "Question": "The pacemaker of the human heart is:",
+            "Options": {
+                "a": "AV node",
+                "b": "SA node",
+                "c": "Bundle of His",
+                "d": "Purkinje fibers"
+            },
+            "Answer": "b"
+        },
+        {
+            "NEET_Year": "2017",
+            "Question": "Adult human RBCs are enucleated. Which of the following is the most appropriate explanation for this feature?",
+            "Options": {
+                "a": "They do not need to reproduce",
+                "b": "They are somatic cells",
+                "c": "They do not metabolize",
+                "d": "All their internal space is available for oxygen transport"
+            },
+            "Answer": "d"
+        },
+        {
+            "NEET_Year": "2016",
+            "Question": "Blood pressure in the pulmonary artery is:",
+            "Options": {
+                "a": "Same as that in the aorta",
+                "b": "More than that in the carotid",
+                "c": "More than that in the pulmonary vein",
+                "d": "Less than that in the venae cavae"
+            },
+            "Answer": "c"
+        },
+        {
+            "NEET_Year": "2015",
+            "Question": "Doctors use a stethoscope to hear the sounds produced during each cardiac cycle. The second sound (dub) is heard when:",
+            "Options": {
+                "a": "AV valves open up",
+                "b": "Ventricular walls vibrate due to gushing in of blood",
+                "c": "Semilunar valves close down after blood flows into vessels",
+                "d": "AV node receives signals from SA node"
+            },
+            "Answer": "c"
+        }
+    ],
+    "Student_Tips_on_Circulatory_Motion": {
+        "Tip_1": "Master the ECG Waves: Always remember P = Atrial depolarization, QRS = Ventricular depolarization (systole starts), and T = Ventricular repolarization.",
+        "Tip_2": "Calculate Cardiac Output: Use the formula: Cardiac Output = Stroke Volume × Heart Rate. In a healthy adult, this is roughly 5 liters/minute.",
+        "Tip_3": "Valve Logic: Heart sounds are created by the CLOSURE of valves, not the opening. Lub = AV valves closure; Dub = Semilunar valves closure.",
+        "Tip_4": "Blood Grouping: O− is the universal donor (no antigens), and AB+ is the universal recipient (no antibodies).",
+        "Tip_5": "Pathways: Remember the flow of the conducting system: SA Node → AV Node → Bundle of His → Purkinje Fibers."
+    }
+}

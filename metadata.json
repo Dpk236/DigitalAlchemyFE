@@ -1,0 +1,8 @@
+{
+  "name": "Digital Alchemy",
+  "description": "An intelligent AI learning companion for JEE/NEET students, providing contextual help within videos, notes, and practice sessions to shift from answer-focused to understanding-focused learning.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

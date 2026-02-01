@@ -1,0 +1,278 @@
+{
+  "quiz_summary": "A mock test for NEET Biology covering the chapter 'Body Fluids and Circulation' based on the provided PDF and standard NEET curriculum. It includes 10 questions focusing on circulatory pathways, heart structure, cardiac cycle, and ECG.",
+  "quiz": {
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Which of the following organisms possesses a closed circulatory system where blood is always circulated through a network of blood vessels?",
+        "answerOptions": [
+          {
+            "text": "Arthropods",
+            "rationale": "Arthropods have an open circulatory system where blood flows into sinuses rather than staying within vessels.",
+            "isCorrect": false
+          },
+          {
+            "text": "Annelids",
+            "rationale": "Annelids and chordates are known for having a closed circulatory system, ensuring efficient blood flow regulation.",
+            "isCorrect": true
+          },
+          {
+            "text": "Molluscs (except Cephalopods)",
+            "rationale": "Most molluscs have an open system; only cephalopods within this phylum exhibit a closed system.",
+            "isCorrect": false
+          },
+          {
+            "text": "Tunicates",
+            "rationale": "Tunicates are part of the groups that typically exhibit an open circulatory system.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Refer to the classification of circulatory systems mentioned on page 3 of your notes."
+      },
+      {
+        "questionNumber": 2,
+        "question": "In fishes, the heart pumps out deoxygenated blood which is then oxygenated by the gills. This type of circulation is known as:",
+        "answerOptions": [
+          {
+            "text": "Single circulation",
+            "rationale": "Blood passes through the heart only once in a complete circuit of the body in fishes.",
+            "isCorrect": true
+          },
+          {
+            "text": "Double circulation",
+            "rationale": "This occurs in birds and mammals where blood passes through the heart twice per cycle.",
+            "isCorrect": false
+          },
+          {
+            "text": "Incomplete double circulation",
+            "rationale": "This is characteristic of amphibians and reptiles where oxygenated and deoxygenated blood mix in a single ventricle.",
+            "isCorrect": false
+          },
+          {
+            "text": "Open circulation",
+            "rationale": "This refers to the lack of vessels, not the path blood takes through the heart and lungs/gills.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Consider how many times the blood passes through the heart in one complete circuit."
+      },
+      {
+        "questionNumber": 3,
+        "question": "Which specific event in the cardiac cycle is represented by the P-wave in a standard ECG?",
+        "answerOptions": [
+          {
+            "text": "Depolarisation of the ventricles",
+            "rationale": "This is represented by the QRS complex, not the P-wave.",
+            "isCorrect": false
+          },
+          {
+            "text": "Repolarisation of the atria",
+            "rationale": "Atrial repolarization is usually masked by the much larger QRS complex and isn't a distinct wave in a standard ECG.",
+            "isCorrect": false
+          },
+          {
+            "text": "Depolarisation of the atria",
+            "rationale": "The P-wave represents the electrical excitation or depolarisation of the atria, leading to their contraction.",
+            "isCorrect": true
+          },
+          {
+            "text": "Repolarisation of the ventricles",
+            "rationale": "This event corresponds to the T-wave in the ECG.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "The P-wave is the first small upward deflection in the ECG tracing."
+      },
+      {
+        "questionNumber": 4,
+        "question": "The 'dub' heart sound is primarily associated with which physiological event?",
+        "answerOptions": [
+          {
+            "text": "Closure of Tricuspid and Bicuspid valves",
+            "rationale": "Closure of these AV valves produces the first heart sound, 'lub'.",
+            "isCorrect": false
+          },
+          {
+            "text": "Opening of Semilunar valves",
+            "rationale": "The opening of valves is generally silent; heart sounds are produced by valve closure.",
+            "isCorrect": false
+          },
+          {
+            "text": "Closure of Semilunar valves",
+            "rationale": "The second heart sound ('dub') occurs at the beginning of ventricular diastole when the semilunar valves snap shut.",
+            "isCorrect": true
+          },
+          {
+            "text": "Atrial contraction",
+            "rationale": "Contraction of the heart muscle itself does not produce the characteristic 'lub-dub' sounds.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "This sound occurs at the end of ventricular systole."
+      },
+      {
+        "questionNumber": 5,
+        "question": "During the ventricular contraction phase (systole), why does the blood not flow back into the atria?",
+        "answerOptions": [
+          {
+            "text": "Because of the high pressure in the atria",
+            "rationale": "Pressure is actually lower in the atria during ventricular systole.",
+            "isCorrect": false
+          },
+          {
+            "text": "Closure of the semilunar valves",
+            "rationale": "Semilunar valves prevent backflow from the arteries to the ventricles, not from ventricles to atria.",
+            "isCorrect": false
+          },
+          {
+            "text": "Closure of tricuspid and bicuspid valves",
+            "rationale": "The AV valves (tricuspid and bicuspid) shut as ventricular pressure rises, preventing backflow into the atria.",
+            "isCorrect": true
+          },
+          {
+            "text": "Opening of the pulmonary artery",
+            "rationale": "Opening of a vessel allows flow forward but does not inherently block backflow elsewhere.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Think about the valves located between the atria and the ventricles."
+      },
+      {
+        "questionNumber": 6,
+        "question": "A standard ECG of a healthy individual shows a T-wave. What does the end of the T-wave signify?",
+        "answerOptions": [
+          {
+            "text": "The beginning of systole",
+            "rationale": "Systole begins with the QRS complex, not the end of the T-wave.",
+            "isCorrect": false
+          },
+          {
+            "text": "The end of diastole",
+            "rationale": "Diastole ends when the next cycle's atrial contraction or ventricular systole begins.",
+            "isCorrect": false
+          },
+          {
+            "text": "The end of systole",
+            "rationale": "The T-wave represents ventricular repolarisation, and its conclusion marks the end of the ventricular contraction phase.",
+            "isCorrect": true
+          },
+          {
+            "text": "The start of atrial excitation",
+            "rationale": "Atrial excitation is represented by the P-wave.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "The T-wave marks the return to a 'normal' or relaxed state for the ventricles."
+      },
+      {
+        "questionNumber": 7,
+        "question": "Calculate the Cardiac Output for an individual with a heart rate of $75\\text{ beats/min}$ and a stroke volume of $80\\text{ ml}$.",
+        "answerOptions": [
+          {
+            "text": "$5000\\text{ ml/min}$",
+            "rationale": "This would be the result if the stroke volume was roughly $66.6\\text{ ml}$.",
+            "isCorrect": false
+          },
+          {
+            "text": "$6000\\text{ ml/min}$",
+            "rationale": "Cardiac output is calculated by Heart Rate $\\times$ Stroke Volume ($75 \\times 80 = 6000$).",
+            "isCorrect": true
+          },
+          {
+            "text": "$155\\text{ ml/min}$",
+            "rationale": "This value incorrectly sums the heart rate and stroke volume instead of multiplying them.",
+            "isCorrect": false
+          },
+          {
+            "text": "$7500\\text{ ml/min}$",
+            "rationale": "This would require a higher stroke volume of $100\\text{ ml}$ given the $75\\text{ bpm}$ heart rate.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Use the formula: $\\text{Cardiac Output} = \\text{Heart Rate} \\times \\text{Stroke Volume}$."
+      },
+      {
+        "questionNumber": 8,
+        "question": "Which of the following statements regarding the human heart is true?",
+        "answerOptions": [
+          {
+            "text": "The left atrium receives deoxygenated blood from the lungs.",
+            "rationale": "The left atrium receives oxygenated blood from the lungs via the pulmonary veins.",
+            "isCorrect": false
+          },
+          {
+            "text": "The right ventricle pumps oxygenated blood to the body.",
+            "rationale": "The right ventricle pumps deoxygenated blood to the lungs.",
+            "isCorrect": false
+          },
+          {
+            "text": "The left ventricle has thicker muscular walls than the right ventricle.",
+            "rationale": "The left ventricle must pump blood to the entire body against higher resistance, requiring thicker muscle.",
+            "isCorrect": true
+          },
+          {
+            "text": "Oxygenated and deoxygenated blood mix in the left ventricle.",
+            "rationale": "In the human 4-chambered heart, there is a complete separation of oxygenated and deoxygenated blood.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Consider the pressure requirements for systemic versus pulmonary circulation."
+      },
+      {
+        "questionNumber": 9,
+        "question": "The QRS complex in an ECG is used clinically to determine:",
+        "answerOptions": [
+          {
+            "text": "Blood pressure",
+            "rationale": "Blood pressure is measured using a sphygmomanometer, not an ECG.",
+            "isCorrect": false
+          },
+          {
+            "text": "Heart rate",
+            "rationale": "By counting the number of QRS complexes in a given time period, one can determine the heart beat rate.",
+            "isCorrect": true
+          },
+          {
+            "text": "Oxygen saturation",
+            "rationale": "This is measured using a pulse oximeter.",
+            "isCorrect": false
+          },
+          {
+            "text": "Valve health directly",
+            "rationale": "Valve health is better assessed via echocardiogram or listening to heart sounds, though ECG shows electrical issues.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Think about what counting the peaks of the 'main' electrical event tells you about frequency."
+      },
+      {
+        "questionNumber": 10,
+        "question": "Amphibians and reptiles (except crocodiles) have a 3-chambered heart. This results in:",
+        "answerOptions": [
+          {
+            "text": "Complete separation of oxygenated and deoxygenated blood.",
+            "rationale": "Complete separation only occurs in 4-chambered hearts.",
+            "isCorrect": false
+          },
+          {
+            "text": "Single circulation only.",
+            "rationale": "They have two atria, indicating a double circuit, even if incomplete.",
+            "isCorrect": false
+          },
+          {
+            "text": "Incomplete double circulation due to mixing in the ventricle.",
+            "rationale": "Since there is only one ventricle, the oxygenated blood from the left atrium and deoxygenated from the right atrium mix.",
+            "isCorrect": true
+          },
+          {
+            "text": "Blood being oxygenated by the heart itself.",
+            "rationale": "The heart pumps blood; oxygenation occurs in respiratory organs like lungs, gills, or skin.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Identify the consequence of having two atria but only one common ventricle."
+      }
+    ]
+  },
+  "encouragement": "Great job requesting this practice! Consistent testing is the key to mastering NEET Biology. Good luck with your study session!"
+}

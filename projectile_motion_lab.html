@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Projectile Motion - Physics Live Lab</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root { 
+            --primary: #3B82F6; 
+            --secondary: #8B5CF6;
+            --success: #10B981; 
+            --warning: #F59E0B;
+            --danger: #EF4444;
+            --bg: #0f172a; 
+            --panel: rgba(15, 23, 42, 0.85); 
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body { 
+            margin: 0; 
+            overflow: hidden; 
+            font-family: 'Inter', 'Segoe UI', sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+        }
+        
+        #info { 
+            position: absolute; 
+            top: 20px; 
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center; 
+            pointer-events: none; 
+            z-index: 10; 
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8); 
+        }
+        
+        h1 { 
+            margin: 0; 
+            font-size: 2rem; 
+            font-weight: 800; 
+            letter-spacing: -0.5px; 
+            background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        #info p { 
+            font-size: 0.95rem; 
+            opacity: 0.8; 
+            margin-top: 4px;
+            color: var(--text-muted);
+        }
+        
+        /* Stats Panel */
+        .stats-panel {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: var(--panel);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            width: 220px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        
+        .stats-header { 
+            font-weight: 700; 
+            color: var(--primary); 
+            margin-bottom: 12px; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.85rem;
+        }
+        
+        .stat-row:last-child { border-bottom: none; }
+        
+        .stat-label { color: var(--text-muted); }
+        .stat-value { 
+            font-weight: 600; 
+            font-family: 'SF Mono', monospace;
+        }
+        
+        /* Mission Panel */
+        .mission-panel {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: var(--panel);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            width: 280px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        
+        .mission-header { 
+            font-weight: 700; 
+            color: var(--success); 
+            margin-bottom: 15px; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .mission-item { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            font-size: 0.9rem; 
+            margin-bottom: 10px; 
+            padding: 8px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        
+        .mission-item:hover { background: rgba(255,255,255,0.03); }
+        
+        .mission-checkbox { 
+            width: 22px; 
+            height: 22px; 
+            border: 2px solid var(--success); 
+            border-radius: 6px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .mission-checkbox.completed { 
+            background: var(--success); 
+            border-color: var(--success);
+            transform: scale(1.1);
+        }
+        
+        .mission-checkbox.completed::after { 
+            content: '✓'; 
+            color: white; 
+            font-size: 14px; 
+            font-weight: bold; 
+        }
+        
+        .mission-text { opacity: 0.9; }
+        .mission-text.completed { 
+            text-decoration: line-through; 
+            opacity: 0.5;
+        }
+        
+        /* Controls Panel */
+        .controls-panel { 
+            position: absolute; 
+            bottom: 30px; 
+            left: 30px; 
+            background: var(--panel); 
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            padding: 24px; 
+            border-radius: 16px; 
+            border: 1px solid rgba(255,255,255,0.1); 
+            width: 340px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 16px; 
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        
+        .panel-header {
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .control-group { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 8px; 
+        }
+        
+        label { 
+            font-size: 0.8rem; 
+            font-weight: 600; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px; 
+            color: var(--text-muted); 
+            display: flex; 
+            justify-content: space-between; 
+        }
+        
+        .value-display {
+            color: var(--primary);
+            font-family: 'SF Mono', monospace;
+        }
+        
+        input[type="range"] { 
+            width: 100%; 
+            cursor: pointer; 
+            accent-color: var(--primary);
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255,255,255,0.1);
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+            transition: transform 0.1s;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        
+        button { 
+            flex: 1;
+            background: var(--primary); 
+            color: white; 
+            border: none; 
+            padding: 12px 16px; 
+            border-radius: 10px; 
+            font-weight: 600; 
+            cursor: pointer; 
+            transition: all 0.2s; 
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        
+        button:hover { 
+            filter: brightness(1.15); 
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        
+        button:active { 
+            transform: translateY(0); 
+        }
+        
+        button.secondary {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        button.secondary:hover {
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        button.success {
+            background: var(--success);
+        }
+        
+        button.success:hover {
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* Vector Toggle */
+        .toggle-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            width: 44px;
+            height: 24px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .toggle-switch.active {
+            background: var(--primary);
+        }
+        
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        
+        .toggle-switch.active::after {
+            transform: translateX(20px);
+        }
+        
+        .toggle-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        /* Success Overlay */
+        .success-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: var(--panel);
+            backdrop-filter: blur(20px);
+            padding: 40px 60px;
+            border-radius: 24px;
+            border: 1px solid var(--success);
+            text-align: center;
+            z-index: 100;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            pointer-events: none;
+        }
+        
+        .success-overlay.show {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+        
+        .success-overlay h2 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            color: var(--success);
+        }
+        
+        .success-overlay p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        
+        .target-distance-control {
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Legend - Center Bottom */
+        .legend {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--panel);
+            backdrop-filter: blur(12px);
+            padding: 10px 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.7rem;
+            display: flex;
+            gap: 16px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 0;
+        }
+        
+        .legend-color {
+            width: 14px;
+            height: 2px;
+            border-radius: 2px;
+        }
+        
+        .legend-color.velocity { background: #3B82F6; }
+        .legend-color.gravity { background: #EF4444; }
+        
+        /* Learn Panel - Bottom Right */
+        .learn-panel {
+            position: absolute;
+            bottom: 80px;
+            right: 30px;
+            background: var(--panel);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            width: 260px;
+            max-height: 45vh;
+            overflow-y: auto;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            z-index: 5;
+        }
+        
+        .learn-panel.hidden {
+            display: none;
+        }
+        
+        .learn-header {
+            font-weight: 700;
+            color: var(--warning);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .learn-section {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .learn-section:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .learn-title {
+            font-weight: 600;
+            font-size: 0.75rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .learn-text {
+            font-size: 0.7rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+        }
+        
+        .formula {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 6px;
+            padding: 6px 10px;
+            margin: 6px 0;
+            font-family: 'SF Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--primary);
+            text-align: center;
+        }
+        
+        .hint-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 2px solid var(--warning);
+            border-radius: 0 6px 6px 0;
+            padding: 8px;
+            margin-top: 8px;
+        }
+        
+        .hint-title {
+            font-weight: 600;
+            font-size: 0.7rem;
+            color: var(--warning);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .hint-text {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        .learn-toggle {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: var(--panel);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 12px 20px;
+            cursor: pointer;
+            z-index: 6;
+            transition: all 0.3s;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .learn-toggle:hover {
+            background: rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <h1>🎯 Projectile Motion Lab</h1>
+        <p>Interactive Physics Simulation • Drag to Rotate • Scroll to Zoom</p>
+    </div>
+
+    <!-- Real-time Stats Panel -->
+    <div class="stats-panel">
+        <div class="stats-header">📊 Live Metrics</div>
+        <div class="stat-row">
+            <span class="stat-label">Time</span>
+            <span class="stat-value" id="stat_time">0.00 s</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Height</span>
+            <span class="stat-value" id="stat_height">0.00 m</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Distance</span>
+            <span class="stat-value" id="stat_distance">0.00 m</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Velocity</span>
+            <span class="stat-value" id="stat_velocity">0.00 m/s</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Max Height</span>
+            <span class="stat-value" id="stat_max_height">0.00 m</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Range</span>
+            <span class="stat-value" id="stat_range">0.00 m</span>
+        </div>
+    </div>
+
+    <!-- Mission Panel -->
+    <div class="mission-panel">
+        <div class="mission-header">🎯 MISSIONS</div>
+        <div class="mission-item">
+            <div class="mission-checkbox" id="mission1"></div>
+            <span class="mission-text" id="text1">Launch beyond 30m</span>
+        </div>
+        <div class="mission-item">
+            <div class="mission-checkbox" id="mission2"></div>
+            <span class="mission-text" id="text2">Reach height > 15m</span>
+        </div>
+        <div class="mission-item">
+            <div class="mission-checkbox" id="mission3"></div>
+            <span class="mission-text" id="text3">Hit the target! 🎯</span>
+        </div>
+        <div class="mission-item">
+            <div class="mission-checkbox" id="mission4"></div>
+            <span class="mission-text" id="text4">Try 45° angle</span>
+        </div>
+    </div>
+
+    <!-- Controls Panel -->
+    <div class="controls-panel">
+        <div class="panel-header">⚙️ Experiment Controls</div>
+        
+        <div class="control-group">
+            <label>Initial Velocity (v₀) <span class="value-display" id="val_v0">25 m/s</span></label>
+            <input type="range" id="v0" min="5" max="50" value="25" step="1">
+        </div>
+        
+        <div class="control-group">
+            <label>Launch Angle (θ) <span class="value-display" id="val_angle">45°</span></label>
+            <input type="range" id="angle" min="0" max="90" value="45" step="1">
+        </div>
+        
+        <div class="control-group">
+            <label>Initial Height (h₀) <span class="value-display" id="val_height">0 m</span></label>
+            <input type="range" id="height" min="0" max="20" value="0" step="1">
+        </div>
+        
+        <div class="control-group">
+            <label>Gravity (g) <span class="value-display" id="val_gravity">9.8 m/s²</span></label>
+            <input type="range" id="gravity" min="1" max="20" value="9.8" step="0.1">
+        </div>
+        
+        <div class="control-group">
+            <label>Air Resistance <span class="value-display" id="val_drag">0</span></label>
+            <input type="range" id="drag" min="0" max="0.5" value="0" step="0.01">
+        </div>
+        
+        <div class="target-distance-control">
+            <div class="control-group">
+                <label>Target Distance <span class="value-display" id="val_target">40 m</span></label>
+                <input type="range" id="target" min="10" max="80" value="40" step="5">
+            </div>
+        </div>
+        
+        <div class="toggle-group">
+            <div class="toggle-switch active" id="vectorToggle"></div>
+            <span class="toggle-label">Show Force Vectors</span>
+        </div>
+        
+        <div class="button-group">
+            <button class="success" onclick="launchProjectile()">🚀 Launch</button>
+            <button class="secondary" onclick="resetSimulation()">↺ Reset</button>
+        </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color velocity"></div>
+            <span>Velocity Vector</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color gravity"></div>
+            <span>Gravity (g = 9.8)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color trajectory"></div>
+            <span>Trajectory Path</span>
+        </div>
+    </div>
+
+    <!-- Success Overlay -->
+    <div class="success-overlay" id="successOverlay">
+        <h2>🏆 Mission Accomplished!</h2>
+        <p>Excellent work, scientist!</p>
+    </div>
+
+    <!-- Learn Panel Toggle -->
+    <div class="learn-toggle" onclick="toggleLearnPanel()">📚 Concepts & Hints</div>
+
+    <!-- Learn Panel -->
+    <!-- Legend -->
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color velocity"></div>
+            <span>Velocity</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color gravity"></div>
+            <span>Gravity</span>
+        </div>
+    </div>
+
+    <!-- Learn Panel -->
+    <div class="learn-panel hidden" id="learnPanel">
+        <div class="learn-header">📚 Physics Concepts</div>
+        
+        <div class="learn-section">
+            <div class="learn-title">What is Projectile Motion?</div>
+            <div class="learn-text">
+                A projectile is any object thrown into space where the only acting force is gravity. The path is called its <strong>trajectory</strong>, which is always parabolic.
+            </div>
+        </div>
+        
+        <div class="learn-section">
+            <div class="learn-title">Key Equations</div>
+            <div class="formula">H = (v₀²sin²θ)/2g</div>
+            <div class="formula">R = (v₀²sin2θ)/g</div>
+        </div>
+        
+        <div class="hint-box">
+            <div class="hint-title">💡 Hints</div>
+            <div class="hint-text">
+                • <strong>Hit target:</strong> Use purple dashed line to aim<br>
+                • <strong>Max distance:</strong> Use 45° angle<br>
+                • <strong>Max height:</strong> Use high angle + velocity
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // PHYSICS CONSTANTS & VARIABLES
+        // ============================================
+        let gravity = 9.8; // Gravity (m/s²) - now variable
+        const SCALE = 1; // 1 unit = 1 meter
+        
+        let scene, camera, renderer, controls;
+        let projectile, target, launcher;
+        let trajectoryLine, predictedTrajectory;
+        let velocityArrow, gravityArrow, horizontalArrow, verticalArrow;
+        let animationId;
+        let isAnimating = false;
+        let showVectors = true;
+        
+        // Physics state
+        let v0 = 25; // Initial velocity (m/s)
+        let angle = 45; // Launch angle (degrees)
+        let h0 = 0; // Initial height (m)
+        let targetDistance = 40; // Target distance (m)
+        let dragCoefficient = 0; // Air resistance coefficient
+        
+        // Animation state
+        let startTime = 0;
+        let projectileState = {
+            x: 0, y: 0, z: 0,
+            vx: 0, vy: 0,
+            time: 0,
+            maxHeight: 0,
+            landed: false
+        };
+        
+        // Mission tracking
+        let missions = {
+            mission1: false, // Launch beyond 30m
+            mission2: false, // Reach height > 15m
+            mission3: false, // Hit target
+            mission4: false  // Try 45° angle
+        };
+
+        // ============================================
+        // INITIALIZATION
+        // ============================================
+        function init() {
+            // Scene setup
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x0a0a0a);
+            scene.fog = new THREE.Fog(0x0a0a0a, 50, 200);
+
+            // Camera
+            camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.set(0, 20, 60);
+
+            // Renderer
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.shadowMap.enabled = true;
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+            document.body.appendChild(renderer.domElement);
+
+            // Controls
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            controls.maxPolarAngle = Math.PI / 2 - 0.05; // Prevent going below ground
+            controls.minDistance = 10;
+            controls.maxDistance = 150;
+
+            // Lighting
+            setupLighting();
+
+            // Environment
+            createEnvironment();
+
+            // Objects
+            createObjects();
+
+            // Event Listeners
+            window.addEventListener('resize', onWindowResize, false);
+            setupUI();
+
+            // Start loop
+            animate();
+            
+            // Initial trajectory prediction
+            updatePredictedTrajectory();
+        }
+
+        function setupLighting() {
+            const ambientLight = new THREE.AmbientLight(0x404040, 1.5);
+            scene.add(ambientLight);
+
+            const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+            dirLight.position.set(50, 100, 50);
+            dirLight.castShadow = true;
+            dirLight.shadow.mapSize.width = 2048;
+            dirLight.shadow.mapSize.height = 2048;
+            dirLight.shadow.camera.near = 0.5;
+            dirLight.shadow.camera.far = 500;
+            dirLight.shadow.camera.left = -100;
+            dirLight.shadow.camera.right = 100;
+            dirLight.shadow.camera.top = 100;
+            dirLight.shadow.camera.bottom = -100;
+            scene.add(dirLight);
+            
+            // Add a subtle blue rim light
+            const rimLight = new THREE.DirectionalLight(0x3B82F6, 0.5);
+            rimLight.position.set(-50, 30, -50);
+            scene.add(rimLight);
+        }
+
+        function createEnvironment() {
+            // Ground grid
+            const gridHelper = new THREE.GridHelper(200, 100, 0x334155, 0x1e293b);
+            scene.add(gridHelper);
+            
+            // Ground plane (invisible but receives shadows)
+            const planeGeometry = new THREE.PlaneGeometry(200, 200);
+            const planeMaterial = new THREE.MeshStandardMaterial({ 
+                color: 0x0f172a,
+                roughness: 0.8,
+                metalness: 0.2
+            });
+            const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+            plane.rotation.x = -Math.PI / 2;
+            plane.position.y = -0.01;
+            plane.receiveShadow = true;
+            scene.add(plane);
+            
+            // Distance markers
+            for (let i = 10; i <= 100; i += 10) {
+                const markerGeometry = new THREE.BoxGeometry(0.5, 0.1, 2);
+                const markerMaterial = new THREE.MeshBasicMaterial({ color: 0x475569 });
+                const marker = new THREE.Mesh(markerGeometry, markerMaterial);
+                marker.position.set(i, 0.05, 0);
+                scene.add(marker);
+                
+                // Add text sprite for distance
+                const sprite = createTextSprite(i + 'm', 0x64748b);
+                sprite.position.set(i, 1, 2);
+                scene.add(sprite);
+            }
+        }
+
+        function createObjects() {
+            // Launcher/Cannon base
+            const baseGeometry = new THREE.CylinderGeometry(1.5, 2, 1, 32);
+            const baseMaterial = new THREE.MeshStandardMaterial({ 
+                color: 0x475569,
+                roughness: 0.5,
+                metalness: 0.7
+            });
+            launcher = new THREE.Mesh(baseGeometry, baseMaterial);
+            launcher.position.set(0, 0.5, 0);
+            launcher.castShadow = true;
+            launcher.receiveShadow = true;
+            scene.add(launcher);
+            
+            // Cannon barrel
+            const barrelGeometry = new THREE.CylinderGeometry(0.4, 0.5, 3, 32);
+            const barrelMaterial = new THREE.MeshStandardMaterial({ 
+                color: 0x334155,
+                roughness: 0.4,
+                metalness: 0.8
+            });
+            const barrel = new THREE.Mesh(barrelGeometry, barrelMaterial);
+            barrel.position.set(0, 1.5, 0);
+            barrel.rotation.z = Math.PI / 2;
+            barrel.castShadow = true;
+            launcher.add(barrel);
+            
+            // Update launcher rotation based on angle
+            updateLauncherRotation();
+            
+            // Projectile
+            const projectileGeometry = new THREE.SphereGeometry(0.4, 32, 32);
+            const projectileMaterial = new THREE.MeshStandardMaterial({ 
+                color: 0x3B82F6,
+                roughness: 0.3,
+                metalness: 0.5,
+                emissive: 0x1d4ed8,
+                emissiveIntensity: 0.2
+            });
+            projectile = new THREE.Mesh(projectileGeometry, projectileMaterial);
+            projectile.castShadow = true;
+            resetProjectilePosition();
+            scene.add(projectile);
+            
+            // Target
+            createTarget();
+            
+            // Predicted trajectory (dashed line)
+            const predictedMaterial = new THREE.LineDashedMaterial({ 
+                color: 0x8B5CF6,
+                linewidth: 1,
+                dashSize: 1,
+                gapSize: 0.5,
+                opacity: 0.6,
+                transparent: true
+            });
+            const predictedGeometry = new THREE.BufferGeometry();
+            const predictedPositions = new Float32Array(200 * 3);
+            predictedGeometry.setAttribute('position', new THREE.BufferAttribute(predictedPositions, 3));
+            predictedTrajectory = new THREE.Line(predictedGeometry, predictedMaterial);
+            predictedTrajectory.frustumCulled = false;
+            scene.add(predictedTrajectory);
+            
+            // Vector arrows
+            createVectorArrows();
+        }
+
+        function createTarget() {
+            if (target) scene.remove(target);
+            
+            const targetGroup = new THREE.Group();
+            
+            // Target stand
+            const standGeometry = new THREE.CylinderGeometry(0.1, 0.1, 3, 16);
+            const standMaterial = new THREE.MeshStandardMaterial({ color: 0x64748b });
+            const stand = new THREE.Mesh(standGeometry, standMaterial);
+            stand.position.y = 1.5;
+            stand.castShadow = true;
+            targetGroup.add(stand);
+            
+            // Target board (concentric circles)
+            const boardGeometry = new THREE.CylinderGeometry(1.5, 1.5, 0.1, 32);
+            const boardMaterial = new THREE.MeshStandardMaterial({ 
+                color: 0xEF4444,
+                roughness: 0.6
+            });
+            const board = new THREE.Mesh(boardGeometry, boardMaterial);
+            board.position.y = 3;
+            board.rotation.x = Math.PI / 2;
+            board.castShadow = true;
+            targetGroup.add(board);
+            
+            // Inner circles
+            const innerColors = [0xF59E0B, 0x10B981, 0x3B82F6];
+            const innerRadii = [1.0, 0.6, 0.3];
+            
+            innerRadii.forEach((radius, i) => {
+                const innerGeometry = new THREE.CylinderGeometry(radius, radius, 0.12, 32);
+                const innerMaterial = new THREE.MeshStandardMaterial({ 
+                    color: innerColors[i],
+                    roughness: 0.5
+                });
+                const inner = new THREE.Mesh(innerGeometry, innerMaterial);
+                inner.position.y = 3;
+                inner.rotation.x = Math.PI / 2;
+                targetGroup.add(inner);
+            });
+            
+            target = targetGroup;
+            target.position.set(targetDistance, 0, 0);
+            scene.add(target);
+        }
+
+        function createVectorArrows() {
+            // Velocity vector (blue)
+            velocityArrow = createArrow(0x3B82F6);
+            scene.add(velocityArrow);
+            
+            // Gravity vector (red)
+            gravityArrow = createArrow(0xEF4444);
+            scene.add(gravityArrow);
+            
+            // Horizontal component (cyan)
+            horizontalArrow = createArrow(0x06b6d4);
+            scene.add(horizontalArrow);
+            
+            // Vertical component (purple)
+            verticalArrow = createArrow(0x8B5CF6);
+            scene.add(verticalArrow);
+            
+            updateVectors();
+        }
+
+        function createArrow(color) {
+            const group = new THREE.Group();
+            
+            // Shaft
+            const shaftGeometry = new THREE.CylinderGeometry(0.05, 0.05, 1, 8);
+            const shaftMaterial = new THREE.MeshBasicMaterial({ color: color });
+            const shaft = new THREE.Mesh(shaftGeometry, shaftMaterial);
+            shaft.position.y = 0.5;
+            group.add(shaft);
+            
+            // Head
+            const headGeometry = new THREE.ConeGeometry(0.15, 0.3, 8);
+            const headMaterial = new THREE.MeshBasicMaterial({ color: color });
+            const head = new THREE.Mesh(headGeometry, headMaterial);
+            head.position.y = 1.15;
+            group.add(head);
+            
+            group.visible = false;
+            return group;
+        }
+
+        function createTextSprite(text, color) {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = 128;
+            canvas.height = 64;
+            
+            context.font = 'Bold 32px Inter, sans-serif';
+            context.fillStyle = '#' + new THREE.Color(color).getHexString();
+            context.textAlign = 'center';
+            context.textBaseline = 'middle';
+            context.fillText(text, 64, 32);
+            
+            const texture = new THREE.CanvasTexture(canvas);
+            const spriteMaterial = new THREE.SpriteMaterial({ map: texture });
+            const sprite = new THREE.Sprite(spriteMaterial);
+            sprite.scale.set(4, 2, 1);
+            
+            return sprite;
+        }
+
+        // ============================================
+        // PHYSICS CALCULATIONS
+        // ============================================
+        
+        // Calculate trajectory with air resistance using numerical integration
+        function calculateTrajectory(t) {
+            const theta = angle * Math.PI / 180;
+            const vx0 = v0 * Math.cos(theta);
+            const vy0 = v0 * Math.sin(theta);
+            
+            if (dragCoefficient === 0) {
+                // No air resistance - use analytical solution
+                const x = vx0 * t;
+                const y = h0 + vy0 * t - 0.5 * gravity * t * t;
+                const vy = vy0 - gravity * t;
+                const v = Math.sqrt(vx0 * vx0 + vy * vy);
+                return { x, y, vx: vx0, vy, v };
+            } else {
+                // With air resistance - use numerical integration (Euler method)
+                const dt = 0.01; // Small time step
+                let x = 0;
+                let y = h0;
+                let vx = vx0;
+                let vy = vy0;
+                let elapsed = 0;
+                
+                while (elapsed < t && y >= 0) {
+                    const v = Math.sqrt(vx * vx + vy * vy);
+                    const dragForce = dragCoefficient * v;
+                    
+                    // Drag opposes velocity
+                    const ax = -dragForce * (vx / v);
+                    const ay = -gravity - dragForce * (vy / v);
+                    
+                    vx += ax * dt;
+                    vy += ay * dt;
+                    x += vx * dt;
+                    y += vy * dt;
+                    elapsed += dt;
+                }
+                
+                const v = Math.sqrt(vx * vx + vy * vy);
+                return { x, y, vx, vy, v };
+            }
+        }
+
+        function calculateMaxHeight() {
+            const theta = angle * Math.PI / 180;
+            const vy0 = v0 * Math.sin(theta);
+            
+            if (dragCoefficient === 0) {
+                // No air resistance
+                return h0 + (vy0 * vy0) / (2 * gravity);
+            } else {
+                // With air resistance - numerical integration
+                const dt = 0.01;
+                let y = h0;
+                let vy = vy0;
+                let maxH = y;
+                
+                while (vy > 0 && y >= 0) {
+                    const v = Math.sqrt(v0 * Math.cos(theta) * v0 * Math.cos(theta) + vy * vy);
+                    const dragForce = dragCoefficient * v;
+                    const ay = -gravity - dragForce * (vy / v);
+                    
+                    vy += ay * dt;
+                    y += vy * dt;
+                    if (y > maxH) maxH = y;
+                }
+                
+                return maxH;
+            }
+        }
+
+        function calculateRange() {
+            if (dragCoefficient === 0) {
+                // No air resistance - analytical solution
+                const theta = angle * Math.PI / 180;
+                const vx0 = v0 * Math.cos(theta);
+                const vy0 = v0 * Math.sin(theta);
+                
+                // Time of flight: solve h0 + vy0*t - 0.5*gravity*t^2 = 0
+                const a = -0.5 * gravity;
+                const b = vy0;
+                const c = h0;
+                
+                const discriminant = b * b - 4 * a * c;
+                if (discriminant < 0) return 0;
+                
+                const t1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                const t2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                const timeOfFlight = Math.max(t1, t2);
+                
+                return vx0 * timeOfFlight;
+            } else {
+                // With air resistance - numerical integration
+                const theta = angle * Math.PI / 180;
+                const vx0 = v0 * Math.cos(theta);
+                const vy0 = v0 * Math.sin(theta);
+                
+                const dt = 0.01;
+                let x = 0;
+                let y = h0;
+                let vx = vx0;
+                let vy = vy0;
+                
+                while (y >= 0) {
+                    const v = Math.sqrt(vx * vx + vy * vy);
+                    const dragForce = dragCoefficient * v;
+                    
+                    const ax = -dragForce * (vx / v);
+                    const ay = -gravity - dragForce * (vy / v);
+                    
+                    vx += ax * dt;
+                    vy += ay * dt;
+                    x += vx * dt;
+                    y += vy * dt;
+                }
+                
+                return x;
+            }
+        }
+
+        function calculateTimeOfFlight() {
+            if (dragCoefficient === 0) {
+                // No air resistance - analytical solution
+                const theta = angle * Math.PI / 180;
+                const vy0 = v0 * Math.sin(theta);
+                
+                const a = -0.5 * gravity;
+                const b = vy0;
+                const c = h0;
+                
+                const discriminant = b * b - 4 * a * c;
+                if (discriminant < 0) return 0;
+                
+                const t1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                const t2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                
+                return Math.max(t1, t2);
+            } else {
+                // With air resistance - numerical integration
+                const theta = angle * Math.PI / 180;
+                const vy0 = v0 * Math.sin(theta);
+                const vx0 = v0 * Math.cos(theta);
+                
+                const dt = 0.01;
+                let y = h0;
+                let vy = vy0;
+                let vx = vx0;
+                let t = 0;
+                
+                while (y >= 0) {
+                    const v = Math.sqrt(vx * vx + vy * vy);
+                    const dragForce = dragCoefficient * v;
+                    
+                    const ay = -gravity - dragForce * (vy / v);
+                    
+                    vy += ay * dt;
+                    y += vy * dt;
+                    t += dt;
+                }
+                
+                return t;
+            }
+        }
+
+        // ============================================
+        // ANIMATION & UPDATES
+        // ============================================
+        function updatePredictedTrajectory() {
+            const positions = predictedTrajectory.geometry.attributes.position.array;
+            const timeOfFlight = calculateTimeOfFlight();
+            const steps = 100;
+            
+            let idx = 0;
+            for (let i = 0; i <= steps; i++) {
+                const t = (i / steps) * timeOfFlight;
+                const pos = calculateTrajectory(t);
+                
+                if (pos.y >= 0) {
+                    positions[idx++] = pos.x;
+                    positions[idx++] = pos.y;
+                    positions[idx++] = 0;
+                }
+            }
+            
+            predictedTrajectory.geometry.setDrawRange(0, idx / 3);
+            predictedTrajectory.geometry.attributes.position.needsUpdate = true;
+            predictedTrajectory.computeLineDistances();
+        }
+
+        function updateLauncherRotation() {
+            if (launcher) {
+                launcher.rotation.y = -angle * Math.PI / 180;
+            }
+        }
+
+        function updateVectors() {
+            if (!showVectors || !projectile) {
+                velocityArrow.visible = false;
+                gravityArrow.visible = false;
+                horizontalArrow.visible = false;
+                verticalArrow.visible = false;
+                return;
+            }
+            
+            const theta = angle * Math.PI / 180;
+            const scale = 0.5;
+            
+            // Position vectors at projectile
+            const pos = projectile.position;
+            
+            // Velocity vector
+            velocityArrow.position.copy(pos);
+            velocityArrow.scale.set(1, v0 * scale, 1);
+            velocityArrow.rotation.z = -theta;
+            velocityArrow.visible = true;
+            
+            // Gravity vector (always down)
+            gravityArrow.position.copy(pos);
+            gravityArrow.position.x += 1;
+            gravityArrow.scale.set(1, gravity * scale * 2, 1);
+            gravityArrow.rotation.z = Math.PI;
+            gravityArrow.visible = true;
+            
+            // Horizontal component
+            horizontalArrow.position.copy(pos);
+            horizontalArrow.position.y -= 1;
+            horizontalArrow.scale.set(1, v0 * Math.cos(theta) * scale, 1);
+            horizontalArrow.rotation.z = 0;
+            horizontalArrow.visible = true;
+            
+            // Vertical component
+            verticalArrow.position.copy(pos);
+            verticalArrow.position.x -= 1;
+            verticalArrow.scale.set(1, v0 * Math.sin(theta) * scale, 1);
+            verticalArrow.rotation.z = Math.PI / 2;
+            verticalArrow.visible = true;
+        }
+
+        function launchProjectile() {
+            if (isAnimating) return;
+            
+            isAnimating = true;
+            startTime = performance.now();
+            projectileState.landed = false;
+            projectileState.maxHeight = h0;
+            projectileState.time = 0;
+            
+            // Check mission 4 (45° angle)
+            if (Math.abs(angle - 45) < 2 && !missions.mission4) {
+                completeMission('mission4', 'text4');
+            }
+        }
+
+        function resetProjectilePosition() {
+            projectile.position.set(0, h0 + 0.4, 0);
+            projectileState.x = 0;
+            projectileState.y = h0;
+            projectileState.time = 0;
+            projectileState.maxHeight = h0;
+            projectileState.landed = false;
+        }
+
+        function resetSimulation() {
+            isAnimating = false;
+            resetProjectilePosition();
+            
+            // Reset stats
+            updateStats();
+            updateVectors();
+        }
+
+        function updatePhysics() {
+            if (!isAnimating || projectileState.landed) return;
+            
+            const now = performance.now();
+            const elapsed = (now - startTime) / 1000; // Convert to seconds
+            projectileState.time = elapsed;
+            
+            const pos = calculateTrajectory(elapsed);
+            
+            if (pos.y < 0) {
+                // Projectile landed
+                projectileState.landed = true;
+                isAnimating = false;
+                
+                // Set to ground level at landing point
+                const range = calculateRange();
+                projectile.position.set(range, 0.4, 0);
+                projectileState.x = range;
+                projectileState.y = 0;
+                
+                // Check missions
+                checkMissions();
+            } else {
+                projectile.position.set(pos.x, pos.y + 0.4, 0);
+                projectileState.x = pos.x;
+                projectileState.y = pos.y;
+                
+                if (pos.y > projectileState.maxHeight) {
+                    projectileState.maxHeight = pos.y;
+                }
+            }
+            
+            updateVectors();
+        }
+
+        function checkMissions() {
+            const range = calculateRange();
+            const maxH = projectileState.maxHeight;
+            
+            // Mission 1: Launch beyond 30m
+            if (range > 30 && !missions.mission1) {
+                completeMission('mission1', 'text1');
+            }
+            
+            // Mission 2: Reach height > 15m
+            if (maxH > 15 && !missions.mission2) {
+                completeMission('mission2', 'text2');
+            }
+            
+            // Mission 3: Hit target (within 2m tolerance)
+            if (Math.abs(range - targetDistance) < 2 && !missions.mission3) {
+                completeMission('mission3', 'text3');
+                showSuccessOverlay();
+            }
+        }
+
+        function completeMission(checkboxId, textId) {
+            missions[checkboxId] = true;
+            document.getElementById(checkboxId).classList.add('completed');
+            document.getElementById(textId).classList.add('completed');
+            
+            confetti({ 
+                particleCount: 80, 
+                spread: 60, 
+                origin: { y: 0.7 },
+                colors: ['#10B981', '#3B82F6', '#8B5CF6']
+            });
+        }
+
+        function showSuccessOverlay() {
+            const overlay = document.getElementById('successOverlay');
+            overlay.classList.add('show');
+            
+            setTimeout(() => {
+                overlay.classList.remove('show');
+            }, 3000);
+            
+            // Big confetti celebration
+            const duration = 2000;
+            const end = Date.now() + duration;
+            
+            const frame = () => {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#10B981', '#3B82F6', '#8B5CF6', '#F59E0B']
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#10B981', '#3B82F6', '#8B5CF6', '#F59E0B']
+                });
+                
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            };
+            frame();
+        }
+
+        function updateStats() {
+            const pos = isAnimating ? projectileState : { x: 0, y: h0, time: 0 };
+            const vel = isAnimating ? calculateTrajectory(pos.time) : { v: 0 };
+            
+            document.getElementById('stat_time').textContent = pos.time.toFixed(2) + ' s';
+            document.getElementById('stat_height').textContent = Math.max(0, pos.y).toFixed(2) + ' m';
+            document.getElementById('stat_distance').textContent = pos.x.toFixed(2) + ' m';
+            document.getElementById('stat_velocity').textContent = vel.v.toFixed(2) + ' m/s';
+            document.getElementById('stat_max_height').textContent = projectileState.maxHeight.toFixed(2) + ' m';
+            document.getElementById('stat_range').textContent = calculateRange().toFixed(2) + ' m';
+        }
+
+        // ============================================
+        // UI SETUP
+        // ============================================
+        function setupUI() {
+            // Velocity slider
+            document.getElementById('v0').addEventListener('input', (e) => {
+                v0 = parseFloat(e.target.value);
+                document.getElementById('val_v0').textContent = v0 + ' m/s';
+                if (!isAnimating) {
+                    updatePredictedTrajectory();
+                    updateVectors();
+                    updateStats();
+                }
+            });
+            
+            // Angle slider
+            document.getElementById('angle').addEventListener('input', (e) => {
+                angle = parseFloat(e.target.value);
+                document.getElementById('val_angle').textContent = angle + '°';
+                updateLauncherRotation();
+                if (!isAnimating) {
+                    updatePredictedTrajectory();
+                    updateVectors();
+                    updateStats();
+                }
+            });
+            
+            // Height slider
+            document.getElementById('height').addEventListener('input', (e) => {
+                h0 = parseFloat(e.target.value);
+                document.getElementById('val_height').textContent = h0 + ' m';
+                resetProjectilePosition();
+                if (!isAnimating) {
+                    updatePredictedTrajectory();
+                    updateVectors();
+                    updateStats();
+                }
+            });
+            
+            // Target distance slider
+            document.getElementById('target').addEventListener('input', (e) => {
+                targetDistance = parseFloat(e.target.value);
+                document.getElementById('val_target').textContent = targetDistance + ' m';
+                createTarget();
+            });
+            
+            // Gravity slider
+            document.getElementById('gravity').addEventListener('input', (e) => {
+                gravity = parseFloat(e.target.value);
+                document.getElementById('val_gravity').textContent = gravity + ' m/s²';
+                if (!isAnimating) {
+                    updatePredictedTrajectory();
+                    updateVectors();
+                    updateStats();
+                }
+            });
+            
+            // Air resistance slider
+            document.getElementById('drag').addEventListener('input', (e) => {
+                dragCoefficient = parseFloat(e.target.value);
+                document.getElementById('val_drag').textContent = dragCoefficient;
+                if (!isAnimating) {
+                    updatePredictedTrajectory();
+                    updateStats();
+                }
+            });
+            
+            // Vector toggle
+            document.getElementById('vectorToggle').addEventListener('click', (e) => {
+                showVectors = !showVectors;
+                e.target.classList.toggle('active');
+                updateVectors();
+            });
+        }
+
+        // Toggle Learn Panel
+        function toggleLearnPanel() {
+            const panel = document.getElementById('learnPanel');
+            panel.classList.toggle('hidden');
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            updatePhysics();
+            updateStats();
+            renderer.render(scene, camera);
+        }
+
+        // Initialize
+        init();
+    </script>
+</body>
+</html>

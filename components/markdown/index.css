@@ -1,0 +1,136 @@
+.timestamp-pill {
+    color: rgb(14 165 233 / var(--tw-text-opacity, 1)) !important;
+    cursor: pointer !important;
+  }
+  .react-mark-down-summary {
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont;
+    color: #1f2937;
+    line-height: 1.7;
+  }
+  .md-heading-h1 {
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 4px solid #008dc4;
+  }
+  /* Headings */
+  .md-heading {
+    font-size: 20px;
+    font-weight: 700;
+    border-left: 4px solid #008dc4;
+    padding-left: 10px;
+  }
+  
+  .md-subheading {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* Paragraphs */
+  .md-paragraph {
+    font-size: 14.5px;
+    color: #6b7280 !important;
+    /* margin-bottom: 12px !important; */
+  }
+  
+  /* Lists */
+  .md-list-item {
+    margin-left: 10px;
+    margin-bottom: -10px;
+    margin-bottom: 4px  !important;
+    font-size: 14.5px !important;
+  }
+  
+  /* Emphasis */
+  .md-strong {
+    font-weight: 600;
+  }
+  
+  .timestamp-pill {
+    display: inline-block;
+    margin: 0;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #008dc4;
+    background: #e6f6fb;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  
+  .timestamp-pill:hover {
+    background: #d0effa;
+  }
+  
+  /* Tooltip */
+  .timestamp-pill::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: #1f2937;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+  
+  .timestamp-pill::before {
+    content: "";
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #1f2937 transparent transparent transparent;
+    opacity: 0;
+  }
+  
+  .timestamp-pill:hover::after,
+  .timestamp-pill:hover::before {
+    opacity: 1;
+  }
+  .ask-ai-btn {
+    position: relative;
+    border-radius: 9999px;
+    transition: background-color 100ms, color 100ms;
+    cursor: pointer;
+    width: initial;
+    padding: 0px 12px 0px 8px;
+    height: 32px;
+    max-height: 32px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    background-color: rgb(255, 111, 15);
+    color: rgb(255, 255, 255);
+  }
+  .ask-ai-btn:hover{
+    background-color: rgb(255, 111, 15);
+    color: rgb(255, 255, 255);
+  }
+  ::selection {
+    background: #cceeff;
+  }
+  .ask-ai-float {
+    animation: fadeUp 0.15s ease-out;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translate(-50%, 5px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+    
