@@ -88,7 +88,7 @@ const VideoLecture: React.FC = () => {
       )}
 
       {/* Right Pane: Interaction Panel */}
-      <LectureInteractionPanel />
+      <LectureInteractionPanel videoId={videoId} />
 
       <style>{`
         .perspective-1000 { perspective: 1000px; }

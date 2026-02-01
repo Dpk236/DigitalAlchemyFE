@@ -10,10 +10,10 @@ import NotionNotes from './NotionNotes';
 import Tabs from './Tabs';
 
 interface LectureInteractionPanelProps {
-    // Add any props if needed from parent
+    videoId: string;
 }
 
-const LectureInteractionPanel: React.FC<LectureInteractionPanelProps> = () => {
+const LectureInteractionPanel: React.FC<LectureInteractionPanelProps> = ({ videoId }) => {
     const [activeRightTab, setActiveRightTab] = useState<TabType>('Chat');
 
     return (
@@ -29,7 +29,7 @@ const LectureInteractionPanel: React.FC<LectureInteractionPanelProps> = () => {
                     <Chat />
                 )}
 
-                {activeRightTab === 'Simulation' && <Simulation />}
+                {activeRightTab === 'Simulation' && <Simulation videoId={videoId} />}
 
                 {activeRightTab === 'Flashcards' && (
                     <Flashcards />

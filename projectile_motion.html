@@ -178,38 +178,38 @@
         /* Controls Panel */
         .controls-panel { 
             position: absolute; 
-            bottom: 30px; 
-            left: 30px; 
+            bottom: 20px; 
+            left: 20px; 
             background: var(--panel); 
             backdrop-filter: blur(12px); 
             -webkit-backdrop-filter: blur(12px);
-            padding: 24px; 
-            border-radius: 16px; 
+            padding: 16px; 
+            border-radius: 12px; 
             border: 1px solid rgba(255,255,255,0.1); 
-            width: 340px; 
+            width: 280px; 
             display: flex; 
             flex-direction: column; 
-            gap: 16px; 
+            gap: 10px; 
             box-shadow: 0 8px 32px rgba(0,0,0,0.3);
         }
         
         .panel-header {
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             color: var(--primary);
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
         
         .control-group { 
             display: flex; 
             flex-direction: column; 
-            gap: 8px; 
+            gap: 4px; 
         }
         
         label { 
-            font-size: 0.8rem; 
+            font-size: 0.7rem; 
             font-weight: 600; 
             text-transform: uppercase; 
             letter-spacing: 0.5px; 
@@ -221,14 +221,15 @@
         .value-display {
             color: var(--primary);
             font-family: 'SF Mono', monospace;
+            font-size: 0.7rem;
         }
         
         input[type="range"] { 
             width: 100%; 
             cursor: pointer; 
             accent-color: var(--primary);
-            height: 6px;
-            border-radius: 3px;
+            height: 4px;
+            border-radius: 2px;
             background: rgba(255,255,255,0.1);
             -webkit-appearance: none;
             appearance: none;
@@ -237,23 +238,23 @@
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 18px;
-            height: 18px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
             background: var(--primary);
             cursor: pointer;
-            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 2px 4px rgba(59, 130, 246, 0.4);
             transition: transform 0.1s;
         }
         
         input[type="range"]::-webkit-slider-thumb:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
         
         .button-group {
             display: flex;
-            gap: 10px;
-            margin-top: 8px;
+            gap: 8px;
+            margin-top: 4px;
         }
         
         button { 
@@ -261,22 +262,22 @@
             background: var(--primary); 
             color: white; 
             border: none; 
-            padding: 12px 16px; 
-            border-radius: 10px; 
+            padding: 8px 12px; 
+            border-radius: 8px; 
             font-weight: 600; 
             cursor: pointer; 
             transition: all 0.2s; 
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 4px;
         }
         
         button:hover { 
             filter: brightness(1.15); 
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(59, 130, 246, 0.4);
         }
         
         button:active { 
@@ -289,7 +290,7 @@
         
         button.secondary:hover {
             background: rgba(255,255,255,0.15);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
         }
         
         button.success {
@@ -297,23 +298,23 @@
         }
         
         button.success:hover {
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 3px 8px rgba(16, 185, 129, 0.4);
         }
         
         /* Vector Toggle */
         .toggle-group {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 8px 0;
+            gap: 8px;
+            padding: 4px 0;
         }
         
         .toggle-switch {
             position: relative;
-            width: 44px;
-            height: 24px;
+            width: 36px;
+            height: 20px;
             background: rgba(255,255,255,0.1);
-            border-radius: 12px;
+            border-radius: 10px;
             cursor: pointer;
             transition: background 0.3s;
         }
@@ -327,19 +328,19 @@
             position: absolute;
             top: 2px;
             left: 2px;
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             background: white;
             border-radius: 50%;
             transition: transform 0.3s;
         }
         
         .toggle-switch.active::after {
-            transform: translateX(20px);
+            transform: translateX(16px);
         }
         
         .toggle-label {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
         }
         
@@ -906,7 +907,7 @@
             predictedGeometry.setAttribute('position', new THREE.BufferAttribute(predictedPositions, 3));
             predictedTrajectory = new THREE.Line(predictedGeometry, predictedMaterial);
             predictedTrajectory.frustumCulled = false;
-            scene.add(predictedTrajectory);
+            // Trajectory line hidden - not adding to scene
             
             // Vector arrows
             createVectorArrows();
@@ -1354,12 +1355,15 @@
             document.getElementById(checkboxId).classList.add('completed');
             document.getElementById(textId).classList.add('completed');
             
-            confetti({ 
-                particleCount: 80, 
-                spread: 60, 
-                origin: { y: 0.7 },
-                colors: ['#10B981', '#3B82F6', '#8B5CF6']
-            });
+            // Only celebrate with confetti when target is hit (mission3)
+            if (checkboxId === 'mission3') {
+                confetti({
+                    particleCount: 80,
+                    spread: 60,
+                    origin: { y: 0.7 },
+                    colors: ['#10B981', '#3B82F6', '#8B5CF6']
+                });
+            }
         }
 
         function showSuccessOverlay() {

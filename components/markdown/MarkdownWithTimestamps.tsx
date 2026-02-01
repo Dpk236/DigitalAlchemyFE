@@ -75,11 +75,20 @@ const MarkdownSummary: React.FC<MarkdownSummaryProps> = ({ content, onSeek, isDa
     const preprocessContent = (text: string) => {
         if (!text) return "";
         return text
-            .replace(/<html>|<\/html>|<body>|<\/body>|<ul>|<\/ul>/gi, "")
+            // Remove common block-level HTML tags
+            .replace(/<html>|<\/html>|<body>|<\/body>|<ul>|<\/ul>|<ol>|<\/ol>/gi, "")
+            .replace(/<p>|<\/p>/gi, "\n\n")
+            .replace(/<div>|<\/div>/gi, "\n")
+            // Convert list items to markdown
             .replace(/<li>/gi, "- ")
             .replace(/<\/li>/gi, "\n")
-            .replace(/<i>|<\/i>/gi, "*")
+            // Convert inline formatting to markdown
+            .replace(/<i>|<\/i>|<em>|<\/em>/gi, "*")
+            .replace(/<b>|<\/b>|<strong>|<\/strong>/gi, "**")
+            // Convert line breaks
             .replace(/<br\s*\/?>/gi, "\n")
+            // Remove any remaining HTML tags (catch-all)
+            .replace(/<[^>]+>/g, "")
             .trim();
     };
 

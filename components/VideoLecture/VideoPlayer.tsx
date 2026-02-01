@@ -101,12 +101,16 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
     if (lang === 'eng' || label.toLowerCase().includes('english')) return 'English';
     if (lang === 'hin' || label.toLowerCase().includes('hindi')) return 'Hindi (हिन्दी)';
+    if (lang === 'mar' || label.toLowerCase().includes('marathi')) return 'Marathi (मराठी)';
+    if (lang === 'tam' || label.toLowerCase().includes('tamil')) return 'Tamil (தமிழ்)';
+    if (lang === 'tel' || label.toLowerCase().includes('telugu')) return 'Telugu (తెలుగు)';
     
-    // Fallback for this specific HLS stream if labels are audio_1/audio_2
-    // Assuming audio_1 is usually the first track (index 0) and is English
-    // and audio_2 is the second track (index 1) and is Hindi
+    // Fallback for HLS stream labels (audio_1, audio_2, audio_3, etc.)
     if (label === 'audio_1' || (label === '' && index === 0)) return 'English';
     if (label === 'audio_2' || (label === '' && index === 1)) return 'Hindi (हिन्दी)';
+    if (label === 'audio_3' || (label === '' && index === 2)) return 'Marathi (मराठी)';
+    if (label === 'audio_4' || (label === '' && index === 3)) return 'Tamil (தமிழ்)';
+    if (label === 'audio_5' || (label === '' && index === 4)) return 'Telugu (తెలుగు)';
 
     return label || `Audio ${index + 1}`;
   };
