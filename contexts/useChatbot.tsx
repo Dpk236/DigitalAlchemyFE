@@ -36,7 +36,7 @@ const useChatbot = () => {
       return;
     }
 
-    const url = `${BACKEND_URL}/get_summmary`;
+    const url = `${BACKEND_URL}/get_summmary?video_id=${videoId || 'waves'}`;
     setLoading(true);
     try {
       const response = await fetch(url);
@@ -73,7 +73,7 @@ const useChatbot = () => {
       return;
     }
 
-    const url = `${BACKEND_URL}/ai-flashcards`;
+    const url = `${BACKEND_URL}/ai-flashcards?video_id=${videoId || 'waves'}`;
     setLoading(true);
     try {
       const response = await fetch(url);
@@ -88,8 +88,8 @@ const useChatbot = () => {
     }
   }, []);
 
-  const fetchAllChats = useCallback(async () => {
-    const url = `${BACKEND_URL}/get-all-chat`;
+  const fetchAllChats = useCallback(async (videoId?: string, userId: string = "user123", sessionId: string = "session789") => {
+    const url = `${BACKEND_URL}/get-all-chat?video_id=${videoId || 'waves'}&user_id=${userId}&session_id=${sessionId}`;
     setLoading(true);
     try {
       const response = await fetch(url);
@@ -113,7 +113,7 @@ const useChatbot = () => {
       return;
     }
 
-    const url = `${BACKEND_URL}/get-quiz`;
+    const url = `${BACKEND_URL}/get-quiz?video_id=${videoId || 'waves'}`;
     setLoading(true);
     try {
       const response = await fetch(url);
