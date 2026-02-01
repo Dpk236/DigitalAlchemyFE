@@ -10,6 +10,8 @@ import projectileFlashcards from "../mock-data/projectile_motion/video_projectil
 import projectileQuiz from "../mock-data/projectile_motion/video_projectile_motion_quiz.json";
 import projectileSummaries from "../mock-data/projectile_motion/video_projectile_motion_summaries.json";
 
+const BACKEND_URL = "https://askdoubt-backend.onrender.com";
+
 const useChatbot = () => {
   const [summaryHtml, setSummaryHtml] = useState<string | null>(null);
   const [visualViewContent, setVisualViewContent] = useState<any>(null);
@@ -34,7 +36,7 @@ const useChatbot = () => {
       return;
     }
 
-    const url = "http://localhost:5000/get_summmary";
+    const url = `${BACKEND_URL}/get_summmary`;
     setLoading(true);
     try {
       const response = await fetch(url);
@@ -48,7 +50,7 @@ const useChatbot = () => {
   }, []);
 
   const fetchVisualView = useCallback(async () => {
-    const url = "http://localhost:5000/visual-view";
+    const url = `${BACKEND_URL}/visual-view`;
     setLoading(true);
     try {
       const response = await fetch(url);
@@ -71,7 +73,7 @@ const useChatbot = () => {
       return;
     }
 
-    const url = "http://localhost:5000/ai-flashcards";
+    const url = `${BACKEND_URL}/ai-flashcards`;
     setLoading(true);
     try {
       const response = await fetch(url);
@@ -87,7 +89,7 @@ const useChatbot = () => {
   }, []);
 
   const fetchAllChats = useCallback(async () => {
-    const url = "http://localhost:5000/get-all-chat";
+    const url = `${BACKEND_URL}/get-all-chat`;
     setLoading(true);
     try {
       const response = await fetch(url);
@@ -111,7 +113,7 @@ const useChatbot = () => {
       return;
     }
 
-    const url = "http://localhost:5000/get-quiz";
+    const url = `${BACKEND_URL}/get-quiz`;
     setLoading(true);
     try {
       const response = await fetch(url);
