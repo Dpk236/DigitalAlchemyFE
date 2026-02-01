@@ -72,6 +72,17 @@ const MarkdownSummary: React.FC<MarkdownSummaryProps> = ({ content, onSeek, isDa
     };
     */
 
+    const preprocessContent = (text: string) => {
+        if (!text) return "";
+        return text
+            .replace(/<html>|<\/html>|<body>|<\/body>|<ul>|<\/ul>/gi, "")
+            .replace(/<li>/gi, "- ")
+            .replace(/<\/li>/gi, "\n")
+            .replace(/<i>|<\/i>/gi, "*")
+            .replace(/<br\s*\/?>/gi, "\n")
+            .trim();
+    };
+
     return (
         <div
             style={{
@@ -80,9 +91,8 @@ const MarkdownSummary: React.FC<MarkdownSummaryProps> = ({ content, onSeek, isDa
                 gap: 12,
             }}
         >
-            {/* <AskAIOverlay text={selection} position={position} onAsk={handleAskAI} /> */}
             <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
-                {content}
+                {preprocessContent(content)}
             </ReactMarkdown>
         </div>
     );
