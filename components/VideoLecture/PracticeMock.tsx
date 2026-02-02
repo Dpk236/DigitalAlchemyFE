@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import heartMockData from '../../mock-data/PraticeMock.json';
 import wavesMockData from '../../mock-data/waves/practice-mock.json';
 import projectileMockData from '../../mock-data/projectile_motion/practice-mock.json';
+import heartMockData_new from '../../mock-data/human-heart/practice-mock.json';
+
 import MarkdownRenderer from '../markdown/MarkdownRenderer';
 
 interface PracticeMockProps {
@@ -20,8 +22,10 @@ const PracticeMock: React.FC<PracticeMockProps> = ({ videoId }) => {
     const getMockData = () => {
         if (videoId === 'waves') return wavesMockData;
         if (videoId === 'projectile_motion') return projectileMockData;
+        if (videoId === 'human_heart') return heartMockData_new;
         return heartMockData;
     };
+
 
     const mockData = getMockData();
     const questions = mockData.quiz.questions;

@@ -33,8 +33,16 @@ const VideoLecture: React.FC = () => {
     const fetchTranscript = async () => {
       setLoading(true);
       try {
-        const folderName = videoId === 'projectile_motion' ? 'projectile' : videoId;
-        const url = `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/${folderName}_transcript.json`;
+        const folderName = videoId === 'projectile_motion' ? 'projectile' : 
+                         videoId === 'human_heart' ? 'human-heart' : videoId;
+        const separator = videoId === 'human_heart' ? '-' : '_';
+        const filename = videoId === 'human_heart' ? 'human-heart' : 
+                        videoId === 'projectile_motion' ? 'projectile' : folderName;
+        const url = `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/${filename}${separator}transcript.json`;
+
+
+
+
         
         console.log("Fetching transcript from:", url);
         const response = await fetch(url);

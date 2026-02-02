@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import heartPYQData from '../../mock-data/previous-mock.json';
 import wavesPYQData from '../../mock-data/waves/previous-year-questions.json';
 import projectilePYQData from '../../mock-data/projectile_motion/previous-year-questions.json';
+import heartPYQData_new from '../../mock-data/human-heart/previous-year-questions.json';
+
 import MarkdownRenderer from '../markdown/MarkdownRenderer';
 
 interface PreviousYearQuestionsProps {
@@ -15,8 +17,10 @@ const PreviousYearQuestions: React.FC<PreviousYearQuestionsProps> = ({ videoId }
     const getPYQData = () => {
         if (videoId === 'waves') return wavesPYQData;
         if (videoId === 'projectile_motion') return projectilePYQData;
+        if (videoId === 'human_heart') return heartPYQData_new;
         return heartPYQData;
     };
+
 
     const pyqData = getPYQData() as any;
 

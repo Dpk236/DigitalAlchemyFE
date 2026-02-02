@@ -28,8 +28,8 @@ const VideoJS: React.FC<VideoJSProps> = ({
             videoRef.current.appendChild(videoElement);
 
             playerRef.current = videojs(videoElement, {
-                controls: false, // Turn off default controls
-                bigPlayButton: false, // Hide default play button
+                controls: false,
+                bigPlayButton: false,
                 responsive: true,
                 fluid: true,
                 preload: "auto",
@@ -41,22 +41,9 @@ const VideoJS: React.FC<VideoJSProps> = ({
                     nativeAudioTracks: false,
                     nativeVideoTracks: false
                 },
-                sources: [
-                    {
-                        src: videoUrl,
-                        type: videoUrl.endsWith('.m3u8') ? 'application/x-mpegURL' : 'video/mp4',
-                    },
-                ],
-                tracks: [
-                    {
-                        kind: "subtitles",
-                        src: vttUrl,
-                        srclang: "en",
-                        label: "English",
-                        default: true,
-                    },
-                ],
+                // Removed initial sources and tracks to prevent premature load errors
             });
+
 
             // Handle network errors with auto-retry
             playerRef.current.on("error", () => {
@@ -87,17 +74,41 @@ const VideoJS: React.FC<VideoJSProps> = ({
         }
     }, [videoRef, onReady]);
 
-    // Update source when videoUrl changes
+    // Update source and tracks when videoUrl or vttUrl changes
     useEffect(() => {
         const player = playerRef.current;
         if (player && videoUrl) {
+            // Reset any existing errors before loading new source
+            player.error(null);
+            
             player.src({
                 src: videoUrl,
                 type: videoUrl.endsWith('.m3u8') ? 'application/x-mpegURL' : 'video/mp4',
             });
+
+            // Update subtitles if vttUrl provided
+            if (vttUrl) {
+                // Remove old remote text tracks
+                const oldTracks = player.remoteTextTracks();
+                let i = (oldTracks as any).length;
+                while (i--) {
+                    player.removeRemoteTextTrack((oldTracks as any)[i]);
+                }
+
+
+                player.addRemoteTextTrack({
+                    kind: 'subtitles',
+                    src: vttUrl,
+                    srclang: 'en',
+                    label: 'English',
+                    default: true
+                }, false);
+            }
+
             player.load();
         }
-    }, [videoUrl]);
+    }, [videoUrl, vttUrl]);
+
 
     // Dispose the player on unmount
     useEffect(() => {

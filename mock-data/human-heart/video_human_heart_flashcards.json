@@ -1,0 +1,87 @@
+[
+  {
+    "question": "What are the two types of circulatory systems present in animals?",
+    "answer": "Open circulatory system and closed circulatory system.",
+    "timestamp": "70:15"
+  },
+  {
+    "question": "In which system does blood flow through open spaces or sinuses?",
+    "answer": "Open circulatory system.",
+    "timestamp": "79:33"
+  },
+  {
+    "question": "What is the primary advantage of a closed circulatory system?",
+    "answer": "The flow of blood can be precisely regulated.",
+    "timestamp": "160:83"
+  },
+  {
+    "question": "How many chambers are in a fish heart?",
+    "answer": "Two chambers: one atrium and one ventricle.",
+    "timestamp": "189:45"
+  },
+  {
+    "question": "Which animals exhibit 'incomplete double circulation'?",
+    "answer": "Amphibians and reptiles.",
+    "timestamp": "315:58"
+  },
+  {
+    "question": "Where is the human heart located?",
+    "answer": "In the thoracic cavity, between the lungs, slightly tilted to the left.",
+    "timestamp": "416:68"
+  },
+  {
+    "question": "What is the protective double-walled bag enclosing the heart called?",
+    "answer": "Pericardium.",
+    "timestamp": "452:62"
+  },
+  {
+    "question": "Name the valve between the right atrium and the right ventricle.",
+    "answer": "Tricuspid valve.",
+    "timestamp": "800:36"
+  },
+  {
+    "question": "What is another name for the bicuspid valve?",
+    "answer": "Mitral valve.",
+    "timestamp": "838:44"
+  },
+  {
+    "question": "Where are the semilunar valves located?",
+    "answer": "At the openings of the ventricles into the pulmonary artery and the aorta.",
+    "timestamp": "860:68"
+  },
+  {
+    "question": "Which tissue is known as the 'pacemaker' of the heart?",
+    "answer": "Sinoatrial (SA) node.",
+    "timestamp": "1248:20"
+  },
+  {
+    "question": "What is the specialized musculature that conducts impulses from the AV node to the ventricles?",
+    "answer": "Bundle of His (AV bundle) and Purkinje fibers.",
+    "timestamp": "1089:28"
+  },
+  {
+    "question": "What is the normal cardiac output for a healthy individual?",
+    "answer": "Approximately 5 liters (5000 ml) per minute.",
+    "timestamp": "1799:61"
+  },
+  {
+    "question": "What causes the 'Lub' heart sound?",
+    "answer": "Closure of the tricuspid and bicuspid (AV) valves.",
+    "timestamp": "1839:90"
+  },
+  {
+    "question": "Which ECG wave represents the depolarization of information in the atria?",
+    "answer": "P wave.",
+    "timestamp": "2041:52"
+  },
+  {
+    "question": "What does the QRS complex in an ECG represent?",
+    "answer": "Depolarization of the ventricles (initiating ventricular contraction).",
+    "timestamp": "2125:61"
+  },
+  {
+    "question": "Which ECG wave marks the return of ventricles to a normal state (repolarization)?",
+    "answer": "T wave.",
+    "timestamp": "2198:64"
+  }
+]

@@ -1,0 +1,100 @@
+{
+    "NEET_Biology_Teacher_Note": "Hello future doctors! The human heart is a high-yield topic in NEET. Focus on the cardiac cycle, heart sounds, and ECG interpretation. Understanding the conduction path (SA Node to Purkinje) is essential!",
+    "Previous_Year_Questions": [
+        {
+            "NEET_Year": "2023",
+            "Question": "The 'bundle of His' is a network of:",
+            "Options": {
+                "a": "Nerve fibers distributed in ventricles",
+                "b": "Muscle fibers distributed throughout the heart walls",
+                "c": "Muscle fibers found only in the ventricle wall",
+                "d": "Nerve fibers found throughout the atria"
+            },
+            "Answer": "c"
+        },
+        {
+            "NEET_Year": "2022",
+            "Question": "The hepatic portal vein drains blood to liver from:",
+            "Options": {
+                "a": "Stomach",
+                "b": "Kidneys",
+                "c": "Intestine",
+                "d": "Heart"
+            },
+            "Answer": "c (General circulatory concept)"
+        },
+        {
+            "NEET_Year": "2021",
+            "Question": "The QRS complex in a standard ECG represents:",
+            "Options": {
+                "a": "Repolarization of auricles",
+                "b": "Depolarization of auricles",
+                "c": "Depolarization of ventricles",
+                "d": "Repolarization of ventricles"
+            },
+            "Answer": "c"
+        },
+        {
+            "NEET_Year": "2020",
+            "Question": "Double circulation is absent in:",
+            "Options": {
+                "a": "Fishes",
+                "b": "Amphibians",
+                "c": "Reptiles",
+                "d": "Birds"
+            },
+            "Answer": "a"
+        },
+        {
+            "NEET_Year": "2019",
+            "Question": "What would be the cardiac output of a person having heart beat of 72 per minute and a stroke volume of 50ml?",
+            "Options": {
+                "a": "3600 ml",
+                "b": "3400 ml",
+                "c": "6300 ml",
+                "d": "2800 ml"
+            },
+            "Answer": "a"
+        },
+        {
+            "NEET_Year": "2018",
+            "Question": "The second heart sound (dubb) is associated with the closure of:",
+            "Options": {
+                "a": "Tricuspid valve",
+                "b": "Semilunar valves",
+                "c": "Bicuspid valve",
+                "d": "AV valves"
+            },
+            "Answer": "b"
+        },
+        {
+            "NEET_Year": "2017",
+            "Question": "Doctors use stethoscope to hear the sounds produced during each cardiac cycle. The second sound is heard when:",
+            "Options": {
+                "a": "AV valves open up",
+                "b": "Ventricular walls vibrate due to gushing in of blood from atria",
+                "c": "Semilunar valves close down after the blood flows into vessels from ventricles",
+                "d": "AV nodes receive signal from SA node"
+            },
+            "Answer": "c"
+        },
+        {
+            "NEET_Year": "2016",
+            "Question": "Name the blood cells, whose reduction in number can cause clotting disorder, leading to excessive loss of blood from the body.",
+            "Options": {
+                "a": "Erythrocytes",
+                "b": "Leucocytes",
+                "c": "Neutrophils",
+                "d": "Thrombocytes"
+            },
+            "Answer": "d"
+        }
+    ],
+    "Student_Tips_on_Human_Heart": {
+        "Tip_1": "Pacemaker Priority: The SA node generates rhythmic impulses independently (auto-excitable).",
+        "Tip_2": "Valvular Security: Valves strictly prevent backflow. Mitral = Left, Tricuspid = Right.",
+        "Tip_3": "Pressure Dynamics: Lub sound is SV closure (Systole start), Dub is SLV closure (Diastole start).",
+        "Tip_4": "ECG peaks: P (Atrial systole), QRS (Ventricular systole), T (Ventricular diastole).",
+        "Tip_5": "Circulation Check: Double circulation means blood passes through the heart twice for one full circuit of the body."
+    }
+}

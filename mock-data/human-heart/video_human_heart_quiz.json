@@ -1,0 +1,118 @@
+{
+  "quiz_title": "Human Heart: Structure and Function",
+  "total_questions": 8,
+  "questions": [
+    {
+      "id": 1,
+      "question_text": "Which of the following organisms possesses a closed circulatory system?",
+      "options": {
+        "A": "Arthropods",
+        "B": "Molluscs (excluding cephalopods)",
+        "C": "Annelids",
+        "D": "Tunicates"
+      },
+      "correct_option": "C",
+      "hint": "Think about the system where blood flows within defined vessels.",
+      "explanation": "Closed circulatory systems, where blood flow is precisely regulated through vessels, are found in annelids and chordates.",
+      "solution": "Option C is correct because annelids have a closed circulatory system."
+    },
+    {
+      "id": 2,
+      "question_text": "How many chambers are present in the heart of an amphibian?",
+      "options": {
+        "A": "Two",
+        "B": "Three",
+        "C": "Four",
+        "D": "One"
+      },
+      "correct_option": "B",
+      "hint": "Amphibians have two atria and one ventricle.",
+      "explanation": "Amphibians and reptiles (except crocodiles) have a three-chambered heart consisting of two atria and a single ventricle.",
+      "solution": "Option B is correct as amphibians have a three-chambered heart."
+    },
+    {
+      "id": 3,
+      "question_text": "What is the primary function of the pericardial fluid?",
+      "options": {
+        "A": "To oxygenate the heart muscle",
+        "B": "To act as a shock absorber",
+        "C": "To regulate heart rate",
+        "D": "To prevent blood clotting"
+      },
+      "correct_option": "B",
+      "hint": "It is located between the two layers of the pericardium.",
+      "explanation": "The pericardial fluid, found between the double-walled pericardium, acts as a lubricant and shock absorber for the heart.",
+      "solution": "Option B is correct: the fluid protects the heart from mechanical shock."
+    },
+    {
+      "id": 4,
+      "question_text": "The bicuspid (mitral) valve guards the opening between which two chambers?",
+      "options": {
+        "A": "Right atrium and right ventricle",
+        "B": "Left atrium and left ventricle",
+        "C": "Right ventricle and pulmonary artery",
+        "D": "Left ventricle and aorta"
+      },
+      "correct_option": "B",
+      "hint": "It is the valve on the left side of the heart.",
+      "explanation": "The bicuspid or mitral valve is located between the left atrium and the left ventricle.",
+      "solution": "Option B is correct as the bicuspid valve connects the left atrium and ventricle."
+    },
+    {
+      "id": 5,
+      "question_text": "Why is the Sinoatrial (SA) node called the pacemaker of the heart?",
+      "options": {
+        "A": "It receives signals from the brain to start each beat",
+        "B": "It prevents the heart from beating too fast",
+        "C": "It generates action potentials at the highest rate (70-75 bpm)",
+        "D": "It is the only part of the heart that can contract"
+      },
+      "correct_option": "C",
+      "hint": "Consider the auto-excitable nature of nodal tissue.",
+      "explanation": "The SA node initiates and maintains the rhythmic contraction of the heart by producing the maximum number of action potentials per minute.",
+      "solution": "Option C is correct because the SA node sets the pace for the entire heart."
+    },
+    {
+      "id": 6,
+      "question_text": "During which phase of the cardiac cycle do the heart sounds 'Lub' and 'Dub' occur?",
+      "options": {
+        "A": "Atrial systole and Joint diastole",
+        "B": "Ventricular systole and Ventricular diastole",
+        "C": "Joint diastole and Atrial systole",
+        "D": "None of the above"
+      },
+      "correct_option": "B",
+      "hint": "The sounds are caused by the closure of valves due to pressure changes.",
+      "explanation": "The 'Lub' sound occurs during ventricular systole (AV valve closure), and 'Dub' occurs during ventricular diastole (semilunar valve closure).",
+      "solution": "Option B is correct as both sounds are associated with the ventricular phases."
+    },
+    {
+      "id": 7,
+      "question_text": "What does the QRS complex in a standard ECG represent?",
+      "options": {
+        "A": "Atrial repolarization",
+        "B": "Atrial depolarization",
+        "C": "Ventricular depolarization",
+        "D": "Ventricular repolarization"
+      },
+      "correct_option": "C",
+      "hint": "This peak precedes the largest contraction of the heart.",
+      "explanation": "The QRS complex represents the depolarization of the ventricles, which triggers their contraction (systole).",
+      "solution": "Option C is correct: QRS denotes ventricular excitation."
+    },
+    {
+      "id": 8,
+      "question_text": "A healthy individual has a stroke volume of 70 ml and a heart rate of 80 bpm. What is their cardiac output?",
+      "options": {
+        "A": "5000 ml",
+        "B": "5600 ml",
+        "C": "4900 ml",
+        "D": "7000 ml"
+      },
+      "correct_option": "B",
+      "hint": "Cardiac Output = Stroke Volume \u00d7 Heart Rate.",
+      "explanation": "To find cardiac output, multiply stroke volume (70ml) by heart rate (80 bpm). 70 \u00d7 80 = 5600 ml.",
+      "solution": "Option B is correct based on the formula: 70 * 80 = 5600."
+    }
+  ]
+}

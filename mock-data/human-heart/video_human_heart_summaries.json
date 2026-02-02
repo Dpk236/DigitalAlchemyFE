@@ -1,0 +1,92 @@
+{
+    "level1_summaries": [
+        {
+            "level": 1,
+            "range_start": "0.00",
+            "range_end": "109.37",
+            "summary": "## Introduction to Circulatory Pathways\n\n- The lecture begins with a recap of blood components (RBCs, WBCs, platelets), blood groups, and clotting mechanisms [0:00].\n- **Open Circulatory System:** Blood flows through open spaces or sinuses. Found in arthropods, molluscs (except cephalopods), hemicordates, and tunicates [96:59].\n- **Closed Circulatory System:** Blood flows through a closed network of vessels (arteries, veins, capillaries). Found in annelids and chordates [122:39].\n- **Advantage:** Closed systems allow for precise regulation of blood flow to tissues [160:83].",
+            "source_chunks": 16
+        },
+        {
+            "level": 1,
+            "range_start": "189.45",
+            "range_end": "386.73",
+            "summary": "## Comparative Anatomy of Hearts\n\n- **Fishes:** Have a **two-chambered heart** (one atrium, one ventricle). They exhibit **single circulation** where the heart pumps deoxygenated blood to the gills for oxygenation [189:45].\n- **Amphibians & Reptiles:** Most have a **three-chambered heart** (two atria, one ventricle). They exhibit **incomplete double circulation** due to mixing of oxygenated and deoxygenated blood in the single ventricle [243:85].\n- **Birds & Mammals:** Possess a **four-chambered heart** (two atria, two ventricles) with **complete double circulation**. There is no mixing of blood [337:74].",
+            "source_chunks": 29
+        },
+        {
+            "level": 1,
+            "range_start": "386.73",
+            "range_end": "757.79",
+            "summary": "## Anatomy of the Human Heart\n\n- **Origin & Location:** The heart is a mesodermally derived organ located in the thoracic cavity between the lungs, tilted slightly to the left. It is about the size of a clenched fist [386:73].\n- **Protection:** It is enclosed in a double-walled membranous bag called the **pericardium**, containing pericardial fluid that acts as a shock absorber [452:62].\n- **Chambers:** Two small upper **atria** and two larger lower **ventricles** [477:6].\n- **Vessels:** \n    - **Pulmonary Artery:** Carries deoxygenated blood from the right ventricle to the lungs [502:64].\n    - **Pulmonary Vein:** Brings oxygenated blood from the lungs to the left atrium [529:21].\n    - **Aorta:** The largest artery, pumps oxygenated blood from the left ventricle to the body [550:51].\n    - **Vena Cava:** Returns deoxygenated blood from the body to the right atrium [571:07].",
+            "source_chunks": 39
+        },
+        {
+            "level": 1,
+            "range_start": "759.23",
+            "range_end": "937.69",
+            "summary": "## Heart Valves and Blood Flow Regulation\n\n- **Atrio-ventricular (AV) Valves:** Prevent backflow from ventricles to atria.\n    - **Tricuspid Valve:** Located between the right atrium and right ventricle (three flaps) [800:36].\n    - **Bicuspid (Mitral) Valve:** Located between the left atrium and left ventricle (two flaps) [838:44].\n- **Semilunar Valves:** Located at the openings of the ventricles into the major arteries.\n    - **Pulmonary Valve:** Between the right ventricle and pulmonary artery [886:84].\n    - **Aortic Valve:** Between the left ventricle and aorta [910:48].\n- Valves ensure unidirectional blood flow and prevent backflow [929:93].",
+            "source_chunks": 22
+        },
+        {
+            "level": 1,
+            "range_start": "948.81",
+            "range_end": "1334.76",
+            "summary": "## Nodal Tissue and Heart Rhythm\n\n- The heart is **myogenic** and **auto-excitable**, generating its own electrical signals [959:13].\n- **Sinoatrial (SA) Node:** Located in the right upper corner of the right atrium. It initiates signals at 70-75 bpm and is the **pacemaker** of the heart [986:25], [1229:32].\n- **Atrioventricular (AV) Node:** Located in the lower left corner of the right atrium [1013:61].\n- **Conduction Path:** SA Node \u2192 AV Node \u2192 Bundle of His (Left & Right bundles) \u2192 Purkinje fibers [1089:28].",
+            "source_chunks": 42
+        },
+        {
+            "level": 1,
+            "range_start": "1344.12",
+            "range_end": "1818.06",
+            "summary": "## Cardiac Cycle and Output\n\n- **Cardiac Cycle:** Sequential events of contraction (**systole**) and relaxation (**diastole**) [1335:8].\n- **Phases:**\n    - **Joint Diastole:** All chambers relaxed, AV valves open, semilunar valves closed. Blood fills ventricles [1379:8].\n    - **Atrial Systole:** SA node fires, atria contract, increasing ventricular filling by 30% [1465:04].\n    - **Ventricular Systole:** Ventricles contract, pressure closes AV valves (Lub sound) and opens semilunar valves, ejecting blood into arteries [1558:27].\n- **Cardiac Output:** The volume of blood pumped by each ventricle per minute (\u22485 Liters for a healthy adult). Calculated as Stroke Volume (70ml) \u00d7 Heart Rate (72 bpm) [1773:29].",
+            "source_chunks": 44
+        },
+        {
+            "level": 1,
+            "range_start": "1824.30",
+            "range_end": "1915.55",
+            "summary": "## Heart Sounds\n\n- Two prominent sounds are audible via stethoscope during each cycle [1824:3].\n- **First Sound (Lub):** Caused by the closure of the tricuspid and bicuspid (AV) valves during early ventricular systole [1839:9].\n- **Second Sound (Dub):** Caused by the closure of the semilunar valves during ventricular diastole [1866:86].\n- These sounds are of significant clinical diagnostic value [1896:83].",
+            "source_chunks": 10
+        },
+        {
+            "level": 1,
+            "range_start": "1916.59",
+            "range_end": "2634.44",
+            "summary": "## Electrocardiogram (ECG)\n\n- **ECG:** Graphical representation of the heart's electrical activity [1930:59].\n- **Waves Explained:**\n    - **P Wave:** Atrial depolarization/excitation, leading to atrial contraction [2041:52].\n    - **QRS Complex:** Ventricular depolarization, initiating ventricular contraction [2125:61].\n    - **T Wave:** Ventricular repolarization, marking the end of systole and the beginning of diastole [2198:64].\n- Deviations from the standard ECG shape indicate heart disorders like myocardial infarction [2293:93].",
+            "source_chunks": 77
+        }
+    ],
+    "level2_summaries": [
+         {
+            "level": 2,
+            "range_start": "0.00",
+            "range_end": "386.73",
+            "summary": "## Circulatory Systems and Heart Evolution\n\n- The lecture introduces **open** vs **closed** circulatory systems. Open systems (arthropods) lack a closed network of vessels, while closed systems (annelids, chordates) allow precise regulation of blood flow [0:00].\n- Evolution of heart chambers is discussed:\n    - Fishes: 2 chambers, single circulation.\n    - Amphibians/Reptiles: 3 chambers, incomplete double circulation (mixing occurs).\n    - Birds/Mammals: 4 chambers, complete double circulation (no mixing) [189:45].",
+            "source_chunks": 45
+        },
+        {
+            "level": 2,
+            "range_start": "386.73",
+            "range_end": "937.69",
+            "summary": "## Human Heart Anatomy and Valves\n\n- The human heart is a four-chambered muscular organ located in the chest, protected by the **pericardium** [386:73].\n- It consists of two upper atria and two lower ventricles, separated by septa [477:6].\n- Key vessels include the **aorta**, **pulmonary artery**, **pulmonary vein**, and **vena cava** [502:64].\n- **Valves** (Tricuspid, Bicuspid, Pulmonary, and Aortic) ensure blood flows in a single direction, preventing dangerous backflows during the cardiac cycle [759:23].",
+            "source_chunks": 61
+        },
+        {
+            "level": 2,
+            "range_start": "948.81",
+            "range_end": "1915.55",
+            "summary": "## Conduction System and Cardiac Function\n\n- The heart is **auto-excitable** thanks to nodal tissue like the **SA Node** (pacemaker) and **AV Node** [948:81].\n- A cardiac cycle involves **joint diastole**, **atrial systole**, and **ventricular systole** [1335:8].\n- **Pressure changes** during the cycle produce the characteristic 'Lub-Dub' heart sounds [1824:3].\n- **Cardiac Output** is typically 5 liters per minute, but the body can alter this based on physical activity through changes in heart rate and stroke volume [1718:35].",
+            "source_chunks": 96
+        },
+        {
+            "level": 2,
+            "range_start": "1916.59",
+            "range_end": "2634.44",
+            "summary": "## ECG and Diagnostic Significance\n\n- An **ECG** monitors the electrical events of the heart: **P wave** (atria contracting), **QRS complex** (ventricles contracting), and **T wave** (ventricles relaxing) [1916:59].\n- Clinical examination of ECG waves helps detect heart rate abnormalities and serious conditions like heart failure or heart attacks [2293:93].",
+            "source_chunks": 77
+        }
+    ],
+    "final_summary": "# The Human Heart: Anatomy, Physiology, and Diagnosis\n\n## Topic Overview\n\n- This lecture provides a comprehensive guide to the human circulatory system, focusing on the heart's structure, the mechanics of the cardiac cycle, and electrical diagnostic tools.\n\n## Key Concepts Covered\n\n- **Circulatory Pathways:** Comparison between open and closed systems and the evolution of heart chambers across species [0:53], [189:45].\n- **Human Heart Anatomy:** Detailed look at the four chambers, protective layers (pericardium), and major blood vessels [386:73].\n- **Valvular Mechanism:** Function of AV valves (Tricuspid/Bicuspid) and semilunar valves in maintaining unidirectional flow [759:23].\n- **Nodal Conduction:** The myogenic nature of the heart and the role of the SA node as the natural pacemaker [948:81].\n- **Cardiac Cycle:** The synchronized sequence of systole and diastole that pumps blood through the body [1344:12].\n- **Heart Sounds:** Relationship between valve closure and the 'Lub' and 'Dub' sounds [1824:3].\n- **Electrocardiogram (ECG):** Interpreting the P, QRS, and T waves to monitor heart health [1916:59].\n\n## Important Definitions\n\n- **Pacemaker (SA Node):** Specialized tissue that initiates the heart's rhythmic contraction [1229:32].\n- **Cardiac Output:** The total volume of blood pumped per minute (\u2248 5L) [1773:29].\n- **Systole & Diastole:** Terms for heart contraction and relaxation phases respectively [1335:8].\n- **Myogenic:** Heart's ability to generate its own contraction signal without external nervous stimulation [959:13].\n\n## Clinical Significance\n\n- Understanding the normal patterns of heart sounds and ECG waves is critical for diagnosing heart diseases and maintaining cardiovascular health.",
+    "total_original_chunks": 282
+}

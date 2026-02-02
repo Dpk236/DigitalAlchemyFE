@@ -1,0 +1,278 @@
+{
+  "quiz_summary": "A mock test for NEET Biology covering 'Human Heart: Anatomy and Physiology'. It includes 10 questions focusing on heart structure, cardiac cycle, heart sounds, and ECG interpretation based on the video transcript.",
+  "quiz": {
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Which germinal layer is the human heart derived from?",
+        "answerOptions": [
+          {
+            "text": "Ectoderm",
+            "rationale": "Ectoderm primarily forms the nervous system and skin.",
+            "isCorrect": false
+          },
+          {
+            "text": "Mesoderm",
+            "rationale": "The teacher explicitly mentioned that the heart is a mesodermally derived organ.",
+            "isCorrect": true
+          },
+          {
+            "text": "Endoderm",
+            "rationale": "Endoderm forms the lining of the digestive and respiratory systems.",
+            "isCorrect": false
+          },
+          {
+            "text": "Exoderm",
+            "rationale": "There is no 'exoderm' layer in embryonic development.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Think about the middle germ layer."
+      },
+      {
+        "questionNumber": 2,
+        "question": "The double-walled membranous bag that protects the human heart is called:",
+        "answerOptions": [
+          {
+            "text": "Epicardium",
+            "rationale": "Epicardium is the outermost layer of the heart wall itself, not the bag.",
+            "isCorrect": false
+          },
+          {
+            "text": "Pericardium",
+            "rationale": "The transcript defines the pericardium as the protective bag containing pericardial fluid.",
+            "isCorrect": true
+          },
+          {
+            "text": "Pleura",
+            "rationale": "Pleura is the membrane covering the lungs.",
+            "isCorrect": false
+          },
+          {
+            "text": "Peritoneum",
+            "rationale": "Peritoneum is the membrane covering the abdominal cavity.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "It starts with 'P' and contains 'cardium'."
+      },
+      {
+        "questionNumber": 3,
+        "question": "Which valve prevents the backflow of blood from the right ventricle into the right atrium?",
+        "answerOptions": [
+          {
+            "text": "Bicuspid valve",
+            "rationale": "The bicuspid/mitral valve is on the left side.",
+            "isCorrect": false
+          },
+          {
+            "text": "Tricuspid valve",
+            "rationale": "The tricuspid valve is situated between the right atrium and right ventricle.",
+            "isCorrect": true
+          },
+          {
+            "text": "Aortic semilunar valve",
+            "rationale": "This valve is at the base of the aorta.",
+            "isCorrect": false
+          },
+          {
+            "text": "Eustachian valve",
+            "rationale": "This is a fetal heart structure, not the primary AV valve discussed.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "It consists of three muscular flaps."
+      },
+      {
+        "questionNumber": 4,
+        "question": "The 'pacemaker' of the human heart is the:",
+        "answerOptions": [
+          {
+            "text": "AV Node",
+            "rationale": "AV Node receives the signal but does not initiate it at the highest rate.",
+            "isCorrect": false
+          },
+          {
+            "text": "SA Node",
+            "rationale": "The SA node initiates and maintains the rhythmic contraction by generating 70-75 action potentials/min.",
+            "isCorrect": true
+          },
+          {
+            "text": "Purkinje fibers",
+            "rationale": "Purkinje fibers distribute the signal, they don't set the pace.",
+            "isCorrect": false
+          },
+          {
+            "text": "Bundle of His",
+            "rationale": "The Bundle of His conducts the signal from the atrium to the ventricles.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "It is located in the right upper corner of the right atrium."
+      },
+      {
+        "questionNumber": 5,
+        "question": "What happens during 'Atrial Systole'?",
+        "answerOptions": [
+          {
+            "text": "Ventricles contract and atria relax.",
+            "rationale": "This is ventricular systole.",
+            "isCorrect": false
+          },
+          {
+            "text": "Atria contract, increasing blood flow into ventricles by 30%.",
+            "rationale": "The teacher stated that atrial contraction increases ventricular filling by about 30%.",
+            "isCorrect": true
+          },
+          {
+            "text": "All heart chambers relax simultaneously.",
+            "rationale": "This is joint diastole.",
+            "isCorrect": false
+          },
+          {
+            "text": "The semilunar valves open.",
+            "rationale": "Semilunar valves open during ventricular systole.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Think about the percentage increase in blood volume."
+      },
+      {
+        "questionNumber": 6,
+        "question": "The second heart sound 'Dub' is associated with:",
+        "answerOptions": [
+          {
+            "text": "Closure of AV valves.",
+            "rationale": "Closure of AV valves creates the 'Lub' sound.",
+            "isCorrect": false
+          },
+          {
+            "text": "Closure of semilunar valves.",
+            "rationale": "The 'Dub' sound is produced when semilunar valves close at the start of ventricular diastole.",
+            "isCorrect": true
+          },
+          {
+            "text": "Opening of AV valves.",
+            "rationale": "Opening of valves is generally silent.",
+            "isCorrect": false
+          },
+          {
+            "text": "Opening of semilunar valves.",
+            "rationale": "Opening of valves does not produce the prominent heart sounds.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "It occurs during the early part of ventricular diastole."
+      },
+      {
+        "questionNumber": 7,
+        "question": "In an ECG, the 'T wave' signifies:",
+        "answerOptions": [
+          {
+            "text": "Atrial depolarization",
+            "rationale": "This is the P wave.",
+            "isCorrect": false
+          },
+          {
+            "text": "Ventricular depolarization",
+            "rationale": "This is the QRS complex.",
+            "isCorrect": false
+          },
+          {
+            "text": "Ventricular repolarization",
+            "rationale": "The T wave marks the return of the ventricles from excited to normal state (repolarization).",
+            "isCorrect": true
+          },
+          {
+            "text": "Atrial repolarization",
+            "rationale": "Atrial repolarization is typically masked by the QRS complex.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "It marks the end of systole."
+      },
+      {
+        "questionNumber": 8,
+        "question": "The duration of a single cardiac cycle in a healthy human is approximately:",
+        "answerOptions": [
+          {
+            "text": "0.1 seconds",
+            "rationale": "Too short for a full cycle.",
+            "isCorrect": false
+          },
+          {
+            "text": "0.5 seconds",
+            "rationale": "The calculation 60/72 gives a larger value.",
+            "isCorrect": false
+          },
+          {
+            "text": "0.8 seconds",
+            "rationale": "Based on 72 beats per minute, each cycle lasts about 0.8 seconds.",
+            "isCorrect": true
+          },
+          {
+            "text": "1.0 second",
+            "rationale": "This would mean 60 beats per minute.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Calculate 60 divided by the average heart rate (72)."
+      },
+      {
+        "questionNumber": 9,
+        "question": "Stroke Volume is defined as:",
+        "answerOptions": [
+          {
+            "text": "The total volume of blood in the heart.",
+            "rationale": "The heart does not empty completely.",
+            "isCorrect": false
+          },
+          {
+            "text": "Volume of blood pumped by each ventricle per beat.",
+            "rationale": "The transcript defines stroke volume as ~70ml pumped per ventricle per cardiac cycle.",
+            "isCorrect": true
+          },
+          {
+            "text": "Volume of blood pumped by each ventricle per minute.",
+            "rationale": "This is cardiac output.",
+            "isCorrect": false
+          },
+          {
+            "text": "Volume of blood entering the right atrium.",
+            "rationale": "This is venous return.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "It is roughly 70 ml in a healthy individual."
+      },
+      {
+        "questionNumber": 10,
+        "question": "Which of the following describes the 'Joint Diastole' phase?",
+        "answerOptions": [
+          {
+            "text": "Only atria are relaxed.",
+            "rationale": "Both sets of chambers must be relaxed.",
+            "isCorrect": false
+          },
+          {
+            "text": "Both atria and ventricles are in a relaxed state.",
+            "rationale": "Joint diastole is when all four chambers are relaxed and blood fills the atria freely.",
+            "isCorrect": true
+          },
+          {
+            "text": "Semilunar valves are open.",
+            "rationale": "Semilunar valves are closed during joint diastole.",
+            "isCorrect": false
+          },
+          {
+            "text": "Ventricles are contracting.",
+            "rationale": "Ventricles are relaxed during diastole.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "It is the state where all chambers relax together."
+      }
+    ]
+  },
+  "encouragement": "Excellent work! You have mastered the fundamentals of human heart physiology."
+}
