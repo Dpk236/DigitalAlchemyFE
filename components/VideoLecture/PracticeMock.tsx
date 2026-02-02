@@ -1,8 +1,13 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
-import mockData from '../../mock-data/PraticeMock.json';
+import heartMockData from '../../mock-data/PraticeMock.json';
+import wavesMockData from '../../mock-data/waves/practice-mock.json';
+import projectileMockData from '../../mock-data/projectile_motion/practice-mock.json';
 
-const PracticeMock: React.FC = () => {
+interface PracticeMockProps {
+    videoId: string;
+}
+
+const PracticeMock: React.FC<PracticeMockProps> = ({ videoId }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<number, number>>({});
     const [showHint, setShowHint] = useState(false);
@@ -10,6 +15,14 @@ const PracticeMock: React.FC = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isStarted, setIsStarted] = useState(false);
 
+    // Select mock data based on videoId
+    const getMockData = () => {
+        if (videoId === 'waves') return wavesMockData;
+        if (videoId === 'projectile_motion') return projectileMockData;
+        return heartMockData;
+    };
+
+    const mockData = getMockData();
     const questions = mockData.quiz.questions;
     const currentQuestion = questions[currentIndex];
 
@@ -56,7 +69,7 @@ const PracticeMock: React.FC = () => {
                 <div className="space-y-4 max-w-sm mx-auto mb-8 text-left">
                     <div className="flex gap-3">
                         <span className="text-blue-500 font-black">01</span>
-                        <p className="text-xs text-gray-500 font-bold leading-relaxed">10 Multiple choice questions covering Circulatory Pathways.</p>
+                        <p className="text-xs text-gray-500 font-bold leading-relaxed">10 Multiple choice questions covering {videoId === 'waves' ? 'Waves' : videoId === 'projectile_motion' ? 'Projectile Motion' : 'Circulatory Pathways'}.</p>
                     </div>
                     <div className="flex gap-3">
                         <span className="text-blue-500 font-black">02</span>

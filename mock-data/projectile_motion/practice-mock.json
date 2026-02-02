@@ -1,0 +1,278 @@
+{
+  "quiz_summary": "A mock test for NEET Physics covering 'Projectile Motion'. It includes 10 questions focusing on 2D motion, velocity resolution, maximum height, range, and time of flight based on the video transcript.",
+  "quiz": {
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "What is the primary characteristic of projectile motion as defined in the lecture?",
+        "answerOptions": [
+          {
+            "text": "Motion in a straight vertical line.",
+            "rationale": "Vertical motion is 1D; projectile motion is 2D at an angle.",
+            "isCorrect": false
+          },
+          {
+            "text": "Motion in a horizontal line.",
+            "rationale": "Strictly horizontal motion is 1D.",
+            "isCorrect": false
+          },
+          {
+            "text": "Motion at some angle with the horizontal, resulting in a parabolic path.",
+            "rationale": "The teacher defined projectile motion as a body thrown at an angle, moving under gravity in a parabolic path.",
+            "isCorrect": true
+          },
+          {
+            "text": "Motion outside the earth's gravitational field.",
+            "rationale": "Projectile motion as discussed is near the earth's surface.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Recall the visual description of throwing an object at an angle."
+      },
+      {
+        "questionNumber": 2,
+        "question": "Why is it important that the projectile is 'near the earth'?",
+        "answerOptions": [
+          {
+            "text": "To ignore air resistance.",
+            "rationale": "While air resistance is often ignored, the specific reason given was for a constant 'g'.",
+            "isCorrect": false
+          },
+          {
+            "text": "To ensure acceleration due to gravity (g) remains constant.",
+            "rationale": "The teacher noted that 'g' is only constant near the earth's surface.",
+            "isCorrect": true
+          },
+          {
+            "text": "So that the range is not more than 100 meters.",
+            "rationale": "The range can be kilometers, but 'g' must remain stable.",
+            "isCorrect": false
+          },
+          {
+            "text": "Because projectiles cannot fly at high altitudes.",
+            "rationale": "They can, but the math changes if 'g' varies.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Think about the value of 'g' at different heights."
+      },
+      {
+        "questionNumber": 3,
+        "question": "The initial velocity vector $V_0$ at an angle $\\theta$ can be resolved into:",
+        "answerOptions": [
+          {
+            "text": "$V_0 \\sin \\theta$ (Horizontal) and $V_0 \\cos \\theta$ (Vertical).",
+            "rationale": "The components are flipped; cos is horizontal if theta is with the horizontal.",
+            "isCorrect": false
+          },
+          {
+            "text": "$V_0 \\cos \\theta$ (Horizontal) and $V_0 \\sin \\theta$ (Vertical).",
+            "rationale": "As shown in the resolution diagram, the side adjacent to the angle is cos, and opposite is sin.",
+            "isCorrect": true
+          },
+          {
+            "text": "$V_0 \\tan \\theta$ in both directions.",
+            "rationale": "Tangents are not used for direct resolution into x and y vectors.",
+            "isCorrect": false
+          },
+          {
+            "text": "$V_0$ in both directions.",
+            "rationale": "Velocity must be resolved into components.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Recall $V_x$ and $V_y$ expressions from the video."
+      },
+      {
+        "questionNumber": 4,
+        "question": "What is the acceleration along the x-axis (horizontal) in a standard projectile motion?",
+        "answerOptions": [
+          {
+            "text": "Equal to $g$.",
+            "rationale": "Gravity acts vertically.",
+            "isCorrect": false
+          },
+          {
+            "text": "0",
+            "rationale": "The lecture states that since there is no horizontal force (ignoring air resistance), the acceleration $a_x = 0$.",
+            "isCorrect": true
+          },
+          {
+            "text": "Depends on the angle $\\theta$.",
+            "rationale": "Acceleration is independent of the projection angle.",
+            "isCorrect": false
+          },
+          {
+            "text": "Negative $g$.",
+            "rationale": "This is the vertical acceleration.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Does gravity pull you sideways or downwards?"
+      },
+      {
+        "questionNumber": 5,
+        "question": "At the maximum height of a projectile's path:",
+        "answerOptions": [
+          {
+            "text": "The total velocity is 0.",
+            "rationale": "The horizontal velocity persists.",
+            "isCorrect": false
+          },
+          {
+            "text": "The vertical component of velocity ($V_y$) is 0.",
+            "rationale": "At the peak, the object stops going up before it starts coming down, so $V_y = 0$.",
+            "isCorrect": true
+          },
+          {
+            "text": "The horizontal component of velocity ($V_x$) is 0.",
+            "rationale": "$V_x$ is constant throughout the flight.",
+            "isCorrect": false
+          },
+          {
+            "text": "The acceleration is 0.",
+            "rationale": "Acceleration $g$ acts throughout the motion.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "What happens to the 'upward' motion at the very top?"
+      },
+      {
+        "questionNumber": 6,
+        "question": "The velocity along the x-axis is considered ________ throughout the motion.",
+        "answerOptions": [
+          {
+            "text": "Increasing",
+            "rationale": "This would require a horizontal force.",
+            "isCorrect": false
+          },
+          {
+            "text": "Decreasing",
+            "rationale": "Ignoring air resistance, it stays the same.",
+            "isCorrect": false
+          },
+          {
+            "text": "Constant",
+            "rationale": "Since $a_x = 0$, the initial horizontal velocity ($V_x$) does not change.",
+            "isCorrect": true
+          },
+          {
+            "text": "Unpredictable",
+            "rationale": "It is predictable based on initial conditions.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Think about the expression 'no acceleration in x-axis'."
+      },
+      {
+        "questionNumber": 7,
+        "question": "The distance from the point of projection to the point where the particle lands is called the:",
+        "answerOptions": [
+          {
+            "text": "Maximum Height",
+            "rationale": "This is the peak vertical distance.",
+            "isCorrect": false
+          },
+          {
+            "text": "Range",
+            "rationale": "The horizontal distance traveled from start to finish is called the range.",
+            "isCorrect": true
+          },
+          {
+            "text": "Path Length",
+            "rationale": "This usually refers to the distance traveled along the actual trajectory.",
+            "isCorrect": false
+          },
+          {
+            "text": "Displacement Vector",
+            "rationale": "Displacement is a vector, while range refers to the horizontal magnitude.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "The teacher called the distance from O to A 'the _______'."
+      },
+      {
+        "questionNumber": 8,
+        "question": "The vertical acceleration acting on the projectile is represented as:",
+        "answerOptions": [
+          {
+            "text": "$+g j$",
+            "rationale": "Gravity acts downwards.",
+            "isCorrect": false
+          },
+          {
+            "text": "$-g j$",
+            "rationale": "The lecture uses 'minus j' to indicate the downward direction of gravity.",
+            "isCorrect": true
+          },
+          {
+            "text": "$-g i$",
+            "rationale": "'i' represents the x-axis.",
+            "isCorrect": false
+          },
+          {
+            "text": "0",
+            "rationale": "Gravity provides acceleration in the y-axis.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Which unit vector corresponds to the vertical axis?"
+      },
+      {
+        "questionNumber": 9,
+        "question": "The duration for which the particle remains in the air is known as:",
+        "answerOptions": [
+          {
+            "text": "Range time",
+            "rationale": "Not a standard term.",
+            "isCorrect": false
+          },
+          {
+            "text": "Time of Flight",
+            "rationale": "This is the standard term for the total time spent in the air.",
+            "isCorrect": true
+          },
+          {
+            "text": "Apex time",
+            "rationale": "This usually refers to time taken to reach maximum height.",
+            "isCorrect": false
+          },
+          {
+            "text": "Velocity duration",
+            "rationale": "Not a standard term.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Look at the very last point mentioned in the transcript."
+      },
+      {
+        "questionNumber": 10,
+        "question": "If a body is thrown vertically upwards, its horizontal velocity component is:",
+        "answerOptions": [
+          {
+            "text": "$V_0$",
+            "rationale": "Only if thrown horizontally.",
+            "isCorrect": false
+          },
+          {
+            "text": "0",
+            "rationale": "Vertical motion has an angle $\\theta = 90^\\circ$ with the horizontal ($ \\cos 90^\\circ = 0 $).",
+            "isCorrect": true
+          },
+          {
+            "text": "Maximum",
+            "rationale": "It is actually minimum (zero).",
+            "isCorrect": false
+          },
+          {
+            "text": "$g$",
+            "rationale": "G is acceleration, not velocity.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "The teacher contrasted this with horizontal and angular throws at the start."
+      }
+    ]
+  },
+  "encouragement": "Great job! You now have a solid understanding of the kinematics of projectile motion."
+}

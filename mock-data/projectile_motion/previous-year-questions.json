@@ -1,0 +1,122 @@
+{
+    "NEET_Biology_Teacher_Note": "Hello future doctors! Projectile motion is a favorite in the NEET physics section. Pay close attention to the range, maximum height, and time of flight formulas. Remember that $V_x$ never changes!",
+    "Previous_Year_Questions": [
+        {
+            "NEET_Year": "2024",
+            "Question": "A projectile is fired at an angle of $45^\\circ$ with the horizontal. Elevation angle of the projectile at its highest point as seen from the point of projection is:",
+            "Options": {
+                "a": "$45^\\circ$",
+                "b": "$60^\\circ$",
+                "c": "$\\tan^{-1}(1/2)$",
+                "d": "$\\tan^{-1}(\\sqrt{3}/2)$"
+            },
+            "Answer": "c"
+        },
+        {
+            "NEET_Year": "2023",
+            "Question": "The horizontal range and the maximum height of a projectile are equal. The angle of projection of the projectile is:",
+            "Options": {
+                "a": "$\\theta = \\tan^{-1}(2)$",
+                "b": "$\\theta = \\tan^{-1}(4)$",
+                "c": "$\\theta = \\tan^{-1}(1/4)$",
+                "d": "$\\theta = 45^\\circ$"
+            },
+            "Answer": "b"
+        },
+        {
+            "NEET_Year": "2022",
+            "Question": "A ball is projected with a velocity, $10\\text{ m/s}$, at an angle of $60^\\circ$ with the vertical direction. Its speed at the highest point of its trajectory will be:",
+            "Options": {
+                "a": "$5\\sqrt{3}\\text{ m/s}$",
+                "b": "$5\\text{ m/s}$",
+                "c": "Zero",
+                "d": "$10\\\\text{ m/s}$"
+            },
+            "Answer": "a (Note: angle is with vertical, so angle with horizontal is $30^\\circ$)"
+        },
+        {
+            "NEET_Year": "2021",
+            "Question": "For a projectile, the ratio of maximum height reached to the square of flight time is ($g = 10\\\\text{ ms}^{-2}$):",
+            "Options": {
+                "a": "$5:4$",
+                "b": "$5:2$",
+                "c": "$5:1$",
+                "d": "$10\\text{ ms}^{-2}$"
+            },
+            "Answer": "a"
+        },
+        {
+            "NEET_Year": "2020",
+            "Question": "The maximum range of a gun on horizontal terrain is $16\\\\text{ km}$. If $g = 10\\\\text{ m/s}^2$, then muzzle velocity of a shell must be:",
+            "Options": {
+                "a": "$400\\\\text{ m/s}$",
+                "b": "$160\\\\text{ m/s}$",
+                "c": "$200\\sqrt{2}\\text{ m/s}$",
+                "d": "$300\\text{ m/s}$"
+            },
+            "Answer": "a"
+        },
+        {
+            "NEET_Year": "2019",
+            "Question": "Two projectiles are fired from the same point with the same speed at angles of projection $60^\\circ$ and $30^\\circ$ respectively. Which one of the following is true?",
+            "Options": {
+                "a": "Their maximum height will be same",
+                "b": "Their range will be same",
+                "c": "Their landing speed will be different",
+                "d": "Their time of flight will be same"
+            },
+            "Answer": "b"
+        },
+        {
+            "NEET_Year": "2018",
+            "Question": "A body is projected with velocity $u$ such that its horizontal range is twice the maximum height. Its horizontal range is:",
+            "Options": {
+                "a": "$u^2 / g$",
+                "b": "$4u^2 / 5g$",
+                "c": "$2u^2 / 3g$",
+                "d": "$4u^2 / g$"
+            },
+            "Answer": "b"
+        },
+        {
+            "NEET_Year": "2017",
+            "Question": "Which of the following remains constant during the projectile motion?",
+            "Options": {
+                "a": "Vertical component of velocity",
+                "b": "Horizontal component of velocity",
+                "c": "Kinetic energy",
+                "d": "Potential energy"
+            },
+            "Answer": "b"
+        },
+        {
+            "NEET_Year": "2016",
+            "Question": "A projectile is thrown in the upward direction making an angle of $60^\\circ$ with the horizontal direction with a velocity of $147\\text{ ms}^{-1}$. Then the time after which its inclination with the horizontal is $45^\\circ$ is:",
+            "Options": {
+                "a": "$10.98\\\\text{ s}$",
+                "b": "$5.49\\\\text{ s}$",
+                "c": "$2.745\\\\text{ s}$",
+                "d": "$8.235\\\\text{ s}$"
+            },
+            "Answer": "b"
+        },
+        {
+            "NEET_Year": "2015",
+            "Question": "The velocity of a projectile at the initial point $A$ is $(2i + 3j)\\\\text{ m/s}$. Its velocity (in m/s) at point $B$ (upon landing) is:",
+            "Options": {
+                "a": "$2i - 3j$",
+                "b": "$2i + 3j$",
+                "c": "$-2i - 3j$",
+                "d": "$-2i + 3j$"
+            },
+            "Answer": "a"
+        }
+    ],
+    "Student_Tips_on_Projectile_Motion": {
+        "Tip_1": "Constant Velocity: The horizontal component $(u \\cos \\theta)$ never changes throughout the motion because there is no horizontal acceleration.",
+        "Tip_2": "Max Range: Range is maximum when the projection angle is $45^\\circ$.",
+        "Tip_3": "Complementary Angles: Projectiles fired at angles $\\theta$ and $(90^\\circ - \\theta)$ with the same speed have the same horizontal range.",
+        "Tip_4": "Peak Velocity: At the highest point, the velocity is not zero; it is equal to the horizontal component $(u \\cos \\theta)$.",
+        "Tip_5": "Path Symmetry: The time taken to reach the maximum height is exactly half the total time of flight."
+    }
+}
