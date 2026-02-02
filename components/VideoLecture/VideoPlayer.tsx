@@ -196,7 +196,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   };
 
   return (
-    <div className="w-1/2 flex flex-col border-r border-gray-100 overflow-auto scrollbar-hide">
+    <div className="w-1/2.5 flex flex-col border-r border-gray-100 overflow-auto scrollbar-hide">
       <div className="p-8 max-w-2xl mx-auto w-full">
         <div className="aspect-video bg-slate-900 rounded-3xl overflow-hidden shadow-2xl relative group mb-8">
           <VideoJS
