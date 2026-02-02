@@ -6,7 +6,7 @@ import SubjectFilters from '../components/Dashboard/SubjectFilters';
 
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
-  const [activeSubject, setActiveSubject] = useState('CHEMISTRY');
+  const [activeSubject, setActiveSubject] = useState('PHYSICS');
 
   const lectures = [
     {

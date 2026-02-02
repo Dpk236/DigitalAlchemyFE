@@ -1,8 +1,14 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
-import mockData from '../../mock-data/PraticeMock.json';
+import heartMockData from '../../mock-data/PraticeMock.json';
+import wavesMockData from '../../mock-data/waves/practice-mock.json';
+import projectileMockData from '../../mock-data/projectile_motion/practice-mock.json';
+import MarkdownRenderer from '../markdown/MarkdownRenderer';
 
-const PracticeMock: React.FC = () => {
+interface PracticeMockProps {
+    videoId: string;
+}
+
+const PracticeMock: React.FC<PracticeMockProps> = ({ videoId }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<number, number>>({});
     const [showHint, setShowHint] = useState(false);
@@ -10,6 +16,14 @@ const PracticeMock: React.FC = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isStarted, setIsStarted] = useState(false);
 
+    // Select mock data based on videoId
+    const getMockData = () => {
+        if (videoId === 'waves') return wavesMockData;
+        if (videoId === 'projectile_motion') return projectileMockData;
+        return heartMockData;
+    };
+
+    const mockData = getMockData();
     const questions = mockData.quiz.questions;
     const currentQuestion = questions[currentIndex];
 
@@ -56,7 +70,7 @@ const PracticeMock: React.FC = () => {
                 <div className="space-y-4 max-w-sm mx-auto mb-8 text-left">
                     <div className="flex gap-3">
                         <span className="text-blue-500 font-black">01</span>
-                        <p className="text-xs text-gray-500 font-bold leading-relaxed">10 Multiple choice questions covering Circulatory Pathways.</p>
+                        <p className="text-xs text-gray-500 font-bold leading-relaxed">10 Multiple choice questions covering {videoId === 'waves' ? 'Waves' : videoId === 'projectile_motion' ? 'Projectile Motion' : 'Circulatory Pathways'}.</p>
                     </div>
                     <div className="flex gap-3">
                         <span className="text-blue-500 font-black">02</span>
@@ -118,29 +132,37 @@ const PracticeMock: React.FC = () => {
                                     <span className={`w-7 h-7 rounded-lg flex items-center justify-center text-[10px] font-black text-white shrink-0 mt-0.5 ${isCorrect ? 'bg-green-500' : 'bg-red-500'}`}>
                                         {idx + 1}
                                     </span>
-                                    <h4 className="font-bold text-xs text-gray-800 leading-relaxed">{q.question}</h4>
+                                    <div className="font-bold text-xs text-gray-800 leading-relaxed">
+                                        <MarkdownRenderer content={q.question} />
+                                    </div>
                                 </div>
 
                                 {!isCorrect && (
                                     <div className="ml-10">
                                         <div className="text-[9px] font-black text-red-400 uppercase tracking-widest mb-0.5">Your Answer</div>
-                                        <div className="text-[11px] text-red-800 font-medium mb-3">{answers[idx] !== undefined ? q.answerOptions[answers[idx]].text : 'Not Answered'}</div>
+                                        <div className="text-[11px] text-red-800 font-medium mb-3">
+                                            {answers[idx] !== undefined ? <MarkdownRenderer content={q.answerOptions[answers[idx]].text} /> : 'Not Answered'}
+                                        </div>
 
                                         <div className="text-[9px] font-black text-green-400 uppercase tracking-widest mb-0.5">Correct Answer</div>
-                                        <div className="text-[11px] text-green-800 font-bold">{correctOption?.text}</div>
-                                        <p className="mt-1.5 text-[10px] text-green-700 bg-green-100/50 p-2.5 rounded-lg border border-green-100 italic">
-                                            {correctOption?.rationale}
-                                        </p>
+                                        <div className="text-[11px] text-green-800 font-bold">
+                                            <MarkdownRenderer content={correctOption?.text || ''} />
+                                        </div>
+                                        <div className="mt-1.5 text-[10px] text-green-700 bg-green-100/50 p-2.5 rounded-lg border border-green-100 italic">
+                                            <MarkdownRenderer content={correctOption?.rationale || ''} />
+                                        </div>
                                     </div>
                                 )}
 
                                 {isCorrect && (
                                     <div className="ml-10">
                                         <div className="text-[9px] font-black text-green-400 uppercase tracking-widest mb-0.5">Correctly Answered</div>
-                                        <div className="text-[11px] text-green-800 font-bold">{q.answerOptions[answers[idx]].text}</div>
-                                        <p className="mt-1.5 text-[10px] text-green-700 bg-green-100/50 p-2.5 rounded-lg border border-green-100 italic">
-                                            {q.answerOptions[answers[idx]].rationale}
-                                        </p>
+                                        <div className="text-[11px] text-green-800 font-bold">
+                                            <MarkdownRenderer content={q.answerOptions[answers[idx]].text} />
+                                        </div>
+                                        <div className="mt-1.5 text-[10px] text-green-700 bg-green-100/50 p-2.5 rounded-lg border border-green-100 italic">
+                                            <MarkdownRenderer content={q.answerOptions[answers[idx]].rationale} />
+                                        </div>
                                     </div>
                                 )}
                             </div>
@@ -168,9 +190,9 @@ const PracticeMock: React.FC = () => {
 
             {/* Question Card */}
             <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm min-h-[350px] flex flex-col">
-                <h3 className="text-lg font-bold text-gray-900 leading-relaxed mb-6">
-                    {currentQuestion.question}
-                </h3>
+                <div className="text-lg font-bold text-gray-900 leading-relaxed mb-6">
+                    <MarkdownRenderer content={currentQuestion.question} />
+                </div>
 
                 <div className="grid grid-cols-1 gap-3 flex-1">
                     {currentQuestion.answerOptions.map((opt, idx) => (
@@ -188,10 +210,9 @@ const PracticeMock: React.FC = () => {
                                 }`}>
                                 {String.fromCharCode(65 + idx)}
                             </span>
-                            <span className={`text-[13px] font-bold transition-colors ${answers[currentIndex] === idx ? 'text-blue-900' : 'text-gray-600 group-hover:text-gray-900'
-                                }`}>
-                                {opt.text}
-                            </span>
+                            <div className={`text-[13px] font-bold transition-colors ${answers[currentIndex] === idx ? 'text-blue-900' : 'text-gray-600 group-hover:text-gray-900'}`}>
+                                <MarkdownRenderer content={opt.text} />
+                            </div>
                         </button>
                     ))}
                 </div>
@@ -208,10 +229,8 @@ const PracticeMock: React.FC = () => {
                         </svg>
                     </button>
                     {showHint && (
-                        <div className="mt-3 p-3 bg-orange-50 border border-orange-100 rounded-xl animate-fade-in">
-                            <p className="text-[11px] text-orange-900 leading-relaxed font-medium capitalize-first">
-                                {currentQuestion.hint}
-                            </p>
+                        <div className="mt-3 p-3 bg-orange-50 border border-orange-100 rounded-xl animate-fade-in text-[11px] text-orange-900 leading-relaxed font-medium capitalize-first">
+                            <MarkdownRenderer content={currentQuestion.hint} />
                         </div>
                     )}
                 </div>

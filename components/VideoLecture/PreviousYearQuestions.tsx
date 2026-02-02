@@ -1,9 +1,30 @@
-
 import React, { useState } from 'react';
-import pyqData from '../../mock-data/previous-mock.json';
+import heartPYQData from '../../mock-data/previous-mock.json';
+import wavesPYQData from '../../mock-data/waves/previous-year-questions.json';
+import projectilePYQData from '../../mock-data/projectile_motion/previous-year-questions.json';
+import MarkdownRenderer from '../markdown/MarkdownRenderer';
 
-const PreviousYearQuestions: React.FC = () => {
+interface PreviousYearQuestionsProps {
+    videoId: string;
+}
+
+const PreviousYearQuestions: React.FC<PreviousYearQuestionsProps> = ({ videoId }) => {
     const [showAnswer, setShowAnswer] = useState<Record<number, boolean>>({});
+
+    // Select PYQ data based on videoId
+    const getPYQData = () => {
+        if (videoId === 'waves') return wavesPYQData;
+        if (videoId === 'projectile_motion') return projectilePYQData;
+        return heartPYQData;
+    };
+
+    const pyqData = getPYQData() as any;
+
+    const teacherNote = pyqData.NEET_Biology_Teacher_Note || pyqData.Teacher_Note || "Hello students! Here are some high-yield questions from previous years.";
+    const tips = (pyqData.Student_Tips_on_Wave_Motion || 
+                 pyqData.Student_Tips_on_Projectile_Motion || 
+                 pyqData.Student_Tips_on_Circulatory_Motion || 
+                 pyqData.Student_Tips || {}) as Record<string, string>;
 
     const toggleAnswer = (index: number) => {
         setShowAnswer(prev => ({ ...prev, [index]: !prev[index] }));
@@ -15,11 +36,11 @@ const PreviousYearQuestions: React.FC = () => {
             <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 shadow-sm">
                 <div className="flex items-center gap-3 mb-3">
                     <span className="text-2xl">👨‍⚕️</span>
-                    <h4 className="font-black text-blue-900 uppercase tracking-tight text-sm">NEET Biology Teacher's Note</h4>
+                    <h4 className="font-black text-blue-900 uppercase tracking-tight text-sm">Teacher's Note</h4>
                 </div>
-                <p className="text-sm text-blue-800 leading-relaxed font-medium italic">
-                    "{pyqData.NEET_Biology_Teacher_Note}"
-                </p>
+                <div className="text-sm text-blue-800 leading-relaxed font-medium italic">
+                    <MarkdownRenderer content={teacherNote} />
+                </div>
             </div>
 
             {/* Questions List */}
@@ -27,26 +48,28 @@ const PreviousYearQuestions: React.FC = () => {
                 <div className="flex items-center justify-between mb-4">
                     <h3 className="font-black text-gray-900 text-lg uppercase tracking-tight">Previous Year Questions</h3>
                     <span className="text-[10px] font-black bg-gray-100 text-gray-400 px-3 py-1 rounded-full uppercase">
-                        {pyqData.Previous_Year_Questions.length} Questions
+                        {(pyqData.Previous_Year_Questions?.length || 0)} Questions
                     </span>
                 </div>
 
-                {pyqData.Previous_Year_Questions.map((q, idx) => (
+                {(pyqData.Previous_Year_Questions as any[] || []).map((q, idx) => (
                     <div key={idx} className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-all group">
                         <div className="flex items-start justify-between gap-4 mb-4">
                             <span className="text-[10px] font-black bg-blue-600 text-white px-3 py-1 rounded-full uppercase shadow-lg shadow-blue-500/20">
                                 NEET {q.NEET_Year}
                             </span>
                         </div>
-                        <p className="text-gray-800 font-bold text-sm leading-relaxed mb-6 group-hover:text-blue-900 transition-colors">
-                            {q.Question}
-                        </p>
+                        <div className="text-gray-800 font-bold text-sm leading-relaxed mb-6 group-hover:text-blue-900 transition-colors">
+                            <MarkdownRenderer content={q.Question} />
+                        </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
-                            {Object.entries(q.Options).map(([key, value]) => (
+                            {Object.entries(q.Options || {}).map(([key, value]: [string, any]) => (
                                 <div key={key} className="flex items-center gap-3 bg-gray-50/50 p-3 rounded-xl border border-transparent hover:border-gray-100 transition-all">
                                     <span className="w-6 h-6 rounded-lg bg-white border border-gray-100 flex items-center justify-center text-[10px] font-black text-gray-400 uppercase">{key}</span>
-                                    <span className="text-xs text-gray-600 font-medium">{value}</span>
+                                    <div className="text-xs text-gray-600 font-medium">
+                                        <MarkdownRenderer content={value as any} />
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -66,15 +89,15 @@ const PreviousYearQuestions: React.FC = () => {
 
             {/* Tips Section */}
             <div className="space-y-4 pt-4">
-                <h3 className="font-black text-gray-900 text-lg uppercase tracking-tight">Study Tips: Circulatory Motion</h3>
+                <h3 className="font-black text-gray-900 text-lg uppercase tracking-tight">Study Tips: {videoId === 'waves' ? 'Waves' : videoId === 'projectile_motion' ? 'Projectile Motion' : 'Circulatory Motion'}</h3>
                 <div className="grid grid-cols-1 gap-4">
-                    {Object.entries(pyqData.Student_Tips_on_Circulatory_Motion).map(([key, tip], idx) => (
+                    {Object.entries(tips).map(([key, tip]: [string, any], idx) => (
                         <div key={key} className="flex gap-4 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:border-blue-100 transition-all">
                             <div className="w-8 h-8 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center font-black text-xs shrink-0">{idx + 1}</div>
-                            <p className="text-xs text-gray-600 leading-relaxed font-medium">
+                            <div className="text-xs text-gray-600 leading-relaxed font-medium">
                                 <span className="text-gray-900 font-black block mb-1 uppercase tracking-tighter text-[10px]">{key.replace('_', ' ')}</span>
-                                {tip}
-                            </p>
+                                <MarkdownRenderer content={tip as any} />
+                            </div>
                         </div>
                     ))}
                 </div>

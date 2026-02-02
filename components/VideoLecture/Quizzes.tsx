@@ -31,7 +31,7 @@ const Quizzes: React.FC<QuizzesProps> = ({ videoId }) => {
             className={`px-4 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${activeMode === 'Practice' ? 'bg-white text-blue-600 shadow-sm' : 'text-gray-400 hover:text-gray-600'
               }`}
           >
-            Practice
+            Quizzes
           </button>
           <button
             onClick={() => setActiveMode('PracticeMock')}
@@ -62,9 +62,9 @@ const Quizzes: React.FC<QuizzesProps> = ({ videoId }) => {
               <QuizPlayer title={quiz_title} questions={questions} isDarkMode={isDarkMode} />
             )
           ) : activeMode === 'PracticeMock' ? (
-            <PracticeMock />
+            <PracticeMock videoId={videoId} />
           ) : (
-            <PreviousYearQuestions />
+            <PreviousYearQuestions videoId={videoId} />
           )}
         </div>
       )}

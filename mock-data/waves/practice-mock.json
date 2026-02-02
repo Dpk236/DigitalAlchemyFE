@@ -1,0 +1,278 @@
+{
+  "quiz_summary": "A mock test for NEET Physics covering 'Waves'. It includes 10 questions focusing on mechanical waves, transverse and longitudinal waves, and displacement relations based on the video transcript.",
+  "quiz": {
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Which of the following describes a mechanical wave?",
+        "answerOptions": [
+          {
+            "text": "A wave that can travel through a vacuum.",
+            "rationale": "Mechanical waves require a medium to propagate.",
+            "isCorrect": false
+          },
+          {
+            "text": "A wave that requires a material medium to propagate.",
+            "rationale": "By definition, mechanical waves like sound or waves on a string need a medium.",
+            "isCorrect": true
+          },
+          {
+            "text": "A wave consisting of oscillating electric and magnetic fields.",
+            "rationale": "This describes electromagnetic waves, which are non-mechanical.",
+            "isCorrect": false
+          },
+          {
+            "text": "A wave that only travels in a vacuum.",
+            "rationale": "Mechanical waves cannot travel in a vacuum.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Recall the examples of strings and sound mentioned in the lecture."
+      },
+      {
+        "questionNumber": 2,
+        "question": "In a transverse wave, the individual particles of the medium move:",
+        "answerOptions": [
+          {
+            "text": "Parallel to the direction of wave propagation.",
+            "rationale": "This describes longitudinal waves.",
+            "isCorrect": false
+          },
+          {
+            "text": "Perpendicular to the direction of wave propagation.",
+            "rationale": "As discussed in the video, in transverse waves (like a plucked string), particles oscillate perpendicular to the wave's path.",
+            "isCorrect": true
+          },
+          {
+            "text": "In a circular motion.",
+            "rationale": "Surface water waves can have circular components, but the primary definition of transverse is perpendicular.",
+            "isCorrect": false
+          },
+          {
+            "text": "Only in the direction of the wave.",
+            "rationale": "Particles do not move with the wave; they oscillate.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Think about the motion of a string particle as a pulse passes through it."
+      },
+      {
+        "questionNumber": 3,
+        "question": "Which of the following is an example of an electromagnetic wave?",
+        "answerOptions": [
+          {
+            "text": "Sound wave",
+            "rationale": "Sound is a mechanical longitudinal wave.",
+            "isCorrect": false
+          },
+          {
+            "text": "Wave on a string",
+            "rationale": "This is a mechanical transverse wave.",
+            "isCorrect": false
+          },
+          {
+            "text": "Light wave",
+            "rationale": "Light consists of oscillating electric and magnetic fields and does not require a medium.",
+            "isCorrect": true
+          },
+          {
+            "text": "Wave in a spring",
+            "rationale": "This is a mechanical wave (longitudinal).",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Which wave can reach us from the sun through the vacuum of space?"
+      },
+      {
+        "questionNumber": 4,
+        "question": "What happens to the particles in a longitudinal wave?",
+        "answerOptions": [
+          {
+            "text": "They move with the wave speed.",
+            "rationale": "Particles oscillate about a mean position and do not travel with the wave.",
+            "isCorrect": false
+          },
+          {
+            "text": "They oscillate parallel to the direction of propagation.",
+            "rationale": "In longitudinal waves, like sound, the oscillation is in the same direction as the wave's energy transfer.",
+            "isCorrect": true
+          },
+          {
+            "text": "They oscillate perpendicular to the direction of propagation.",
+            "rationale": "This is the definition of a transverse wave.",
+            "isCorrect": false
+          },
+          {
+            "text": "They remain stationary.",
+            "rationale": "Particles must oscillate for a wave to propagate.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Think about the compression and rarefaction in a spring."
+      },
+      {
+        "questionNumber": 5,
+        "question": "Oscillations involve the motion of:",
+        "answerOptions": [
+          {
+            "text": "A set of particles together.",
+            "rationale": "While waves involve a set of particles, the lecture contrasts isolated particle oscillation with wave motion.",
+            "isCorrect": false
+          },
+          {
+            "text": "A single isolated particle.",
+            "rationale": "Simple harmonic motion typically refers to an isolated particle's oscillation before considering the system of particles in a wave.",
+            "isCorrect": true
+          },
+          {
+            "text": "Magnetic fields only.",
+            "rationale": "Oscillations can involve mechanical or field variations.",
+            "isCorrect": false
+          },
+          {
+            "text": "Light through a medium.",
+            "rationale": "This is propagation, not the basic definition of oscillation.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "The teacher mentioned this at the beginning of the discussion on wave motion."
+      },
+      {
+        "questionNumber": 6,
+        "question": "The speed of a transverse wave on a string depends on:",
+        "answerOptions": [
+          {
+            "text": "The amplitude only.",
+            "rationale": "Speed in a medium depends on the properties of the medium.",
+            "isCorrect": false
+          },
+          {
+            "text": "Tension and linear mass density.",
+            "rationale": "Formula: $v = \\sqrt{T/\\mu}$, where $T$ is tension and $\\mu$ is linear mass density.",
+            "isCorrect": true
+          },
+          {
+            "text": "Frequency only.",
+            "rationale": "Frequency and wavelength adjust to maintain the speed set by the medium.",
+            "isCorrect": false
+          },
+          {
+            "text": "The length of the string only.",
+            "rationale": "Length affects standing wave frequencies but not basic wave speed.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Recall the factors that determine how fast a pulse travels down a string."
+      },
+      {
+        "questionNumber": 7,
+        "question": "Which type of wave involves 'compressions' and 'rarefactions'?",
+        "answerOptions": [
+          {
+            "text": "Transverse waves",
+            "rationale": "Transverse waves involve crests and troughs.",
+            "isCorrect": false
+          },
+          {
+            "text": "Longitudinal waves",
+            "rationale": "As demonstrated with the spring, longitudinal waves travel through regions of high pressure (compressions) and low pressure (rarefactions).",
+            "isCorrect": true
+          },
+          {
+            "text": "Light waves",
+            "rationale": "Light is transverse.",
+            "isCorrect": false
+          },
+          {
+            "text": "Electromagnetic waves",
+            "rationale": "EM waves are transverse.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Think about how sound or a pushed spring travels."
+      },
+      {
+        "questionNumber": 8,
+        "question": "Non-mechanical waves differ from mechanical waves because they:",
+        "answerOptions": [
+          {
+            "text": "Always need a medium.",
+            "rationale": "Mechanical waves need a medium.",
+            "isCorrect": false
+          },
+          {
+            "text": "Can travel through a vacuum.",
+            "rationale": "EM waves like light do not need a material medium to propagate.",
+            "isCorrect": true
+          },
+          {
+            "text": "Are slower than sound.",
+            "rationale": "EM waves are significantly faster than mechanical waves.",
+            "isCorrect": false
+          },
+          {
+            "text": "Do not oscillate.",
+            "rationale": "All waves involve some form of oscillation.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Consider the name 'Non-mechanical'."
+      },
+      {
+        "questionNumber": 9,
+        "question": "A progressive wave is one that:",
+        "answerOptions": [
+          {
+            "text": "Stays in one place.",
+            "rationale": "That is a standing wave.",
+            "isCorrect": false
+          },
+          {
+            "text": "Travels through the medium, transferring energy.",
+            "rationale": "Progressive waves move through the medium.",
+            "isCorrect": true
+          },
+          {
+            "text": "Does not involve oscillation.",
+            "rationale": "All waves involve oscillation.",
+            "isCorrect": false
+          },
+          {
+            "text": "Only occurs in liquids.",
+            "rationale": "Progressive waves occur in all states of matter.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "The teacher discussed the displacement relation of a progressive wave."
+      },
+      {
+        "questionNumber": 10,
+        "question": "In the demonstration with a tied string, moving the free end up and down generates:",
+        "answerOptions": [
+          {
+            "text": "A sound wave.",
+            "rationale": "A string generates string waves, though it might produce sound as a byproduct.",
+            "isCorrect": false
+          },
+          {
+            "text": "A series of transverse pulses.",
+            "rationale": "Moving the end perpendicular to the string length creates transverse pulses/waves.",
+            "isCorrect": true
+          },
+          {
+            "text": "A series of longitudinal pulses.",
+            "rationale": "Longitudinal would require pulling/pushing along the string length.",
+            "isCorrect": false
+          },
+          {
+            "text": "An electromagnetic wave.",
+            "rationale": "A string wave is mechanical.",
+            "isCorrect": false
+          }
+        ],
+        "hint": "Is the hand moving parallel or perpendicular to the string?"
+      }
+    ]
+  },
+  "encouragement": "Mastering the basics of Waves is crucial for Physics. Great job completing this mock test!"
+}

@@ -1,0 +1,123 @@
+{
+    "NEET_Biology_Teacher_Note": "Hello students! Waves is a conceptually rich chapter. Focus on the differences between transverse and longitudinal waves, and the factors affecting wave speed. Here are some high-yield questions from previous years.",
+    "Previous_Year_Questions": [
+        {
+            "NEET_Year": "2023",
+            "Question": "A transverse wave is represented by $y = A \\sin(\\omega t - kx)$. For what value of the wavelength is the maximum particle velocity equal to twice the wave velocity?",
+            "Options": {
+                "a": "$\\pi A$",
+                "b": "$2\\pi A$",
+                "c": "$\\pi A / 2$",
+                "d": "$A$"
+            },
+            "Answer": "a"
+        },
+        {
+            "NEET_Year": "2022",
+            "Question": "The speed of sound in a gas is $v$. If the pressure of the gas is doubled at constant temperature, the speed of sound will be:",
+            "Options": {
+                "a": "$v$",
+                "b": "$2v$",
+                "c": "$v/2$",
+                "d": "$4v$"
+            },
+            "Answer": "a"
+        },
+        {
+            "NEET_Year": "2021",
+            "Question": "Which of the following waves cannot be polarized?",
+            "Options": {
+                "a": "Radio waves",
+                "b": "Microwaves",
+                "c": "Infrared waves",
+                "d": "Sound waves in air"
+            },
+            "Answer": "d"
+        },
+        {
+            "NEET_Year": "2020",
+            "Question": "A tuning fork of frequency $512\\text{ Hz}$ makes $4\\text{ beats/s}$ with the vibrating string of a piano. The beat frequency decreases to $2\\text{ beats/s}$ when the tension in the piano string is slightly increased. The frequency of the piano string before increasing the tension was:",
+            "Options": {
+                "a": "$510\\text{ Hz}$",
+                "b": "$514\\text{ Hz}$",
+                "c": "$516\\text{ Hz}$",
+                "d": "$508\\text{ Hz}$"
+            },
+            "Answer": "d"
+        },
+        {
+            "NEET_Year": "2019",
+            "Question": "The displacement of a particle executing simple harmonic motion is given by $y = A_0 + A\\sin\\omega t + B\\cos\\omega t$. Then the amplitude of its oscillation is given by:",
+            "Options": {
+                "a": "$A+B$",
+                "b": "$A_0 + \\sqrt{A^2 + B^2}$",
+                "c": "$\\sqrt{A^2 + B^2}$",
+                "d": "$\\sqrt{A_0^2 + (A+B)^2}$"
+            },
+            "Answer": "c"
+        },
+        {
+            "NEET_Year": "2018",
+            "Question": "Standing waves are produced in a $10\\text{ m}$ long stretched string. If the string vibrates in $5$ segments and the wave velocity is $20\\text{ m/s}$, its frequency is:",
+            "Options": {
+                "a": "$2\\text{ Hz}$",
+                "b": "$4\\text{ Hz}$",
+                "c": "$5\\text{ Hz}$",
+                "d": "$10\\text{ Hz}$"
+            },
+            "Answer": "c"
+        },
+        {
+            "NEET_Year": "2017",
+            "Question": "The fundamental frequency in an open organ pipe is equal to the third harmonic of a closed organ pipe. If the length of the closed organ pipe is $20\\text{ cm}$, the length of the open organ pipe is:",
+            "Options": {
+                "a": "$13.2\\text{ cm}$",
+                "b": "$8\\text{ cm}$",
+                "c": "$12.5\\text{ cm}$",
+                "d": "$16\\text{ cm}$"
+            },
+            "Answer": "a"
+        },
+        {
+            "NEET_Year": "2016",
+            "Question": "Two sources of sound placed close to each other are emitting progressive waves given by $y_1 = 4\\sin 600\\pi t$ and $y_2 = 5\\sin 608\\pi t$. An observer located near these two sources of sound will hear:",
+            "Options": {
+                "a": "$4\\text{ beats/s}$ with intensity ratio $25:16$",
+                "b": "$8\\text{ beats/s}$ with intensity ratio $25:16$",
+                "c": "$4\\text{ beats/s}$ with intensity ratio $81:1$",
+                "d": "$8\\text{ beats/s}$ with intensity ratio $81:1$"
+            },
+            "Answer": "c"
+        },
+        {
+            "NEET_Year": "2015",
+            "Question": "The frequency of the series limit of the Balmer series of hydrogen atom in terms of Rydberg constant $R$ is:",
+            "Options": {
+                "a": "$Rc$",
+                "b": "$Rc/4$",
+                "c": "$4Rc$",
+                "d": "$Rc/3$"
+            },
+            "Answer": "b"
+        },
+        {
+            "NEET_Year": "2014",
+            "Question": "A source of unknown frequency gives $4\\text{ beats/s}$ when sounded with a source of known frequency $250\\text{ Hz}$. The second harmonic of the source of unknown frequency gives $5\\text{ beats/s}$ when sounded with a source of frequency $513\\text{ Hz}$. The unknown frequency is:",
+            "Options": {
+                "a": "$246\\text{ Hz}$",
+                "b": "$240\\text{ Hz}$",
+                "c": "$260\\text{ Hz}$",
+                "d": "$254\\text{ Hz}$"
+            },
+            "Answer": "d"
+        }
+    ],
+    "Student_Tips_on_Wave_Motion": {
+        "Tip_1": "Distinguish Wave Types: Remember that sound waves are longitudinal (cannot be polarized) while light waves are transverse.",
+        "Tip_2": "Speed of Sound: In gases, speed depends on temperature and the nature of the gas, but NOT on pressure (at constant temperature).",
+        "Tip_3": "Beat Frequency: It is the absolute difference between the frequencies of two sound sources: $f_{beat} = |f_1 - f_2|$.",
+        "Tip_4": "Organ Pipes: Fundamental frequency of an open pipe is $v/2L$, and for a closed pipe, it is $v/4L$.",
+        "Tip_5": "Doppler Effect: Pay close attention to the signs in the formula based on the relative motion of the source and observer."
+    }
+}
+
