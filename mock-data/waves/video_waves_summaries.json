@@ -1,68 +1,50 @@
-[
-  {
-    "video_id": "waves",
-    "start_time": 0.51,
-    "end_time": 13.71,
-    "summary": "- The topic is about wave motion from the waves chapter.\n- The types of waves to be discussed are transverse waves and longitudinal waves."
-  },
-  {
-    "video_id": "waves",
-    "start_time": 13.71,
-    "end_time": 38.89,
-    "summary": "- In oscillations, we studied how a single particle moves in simple harmonic motion.\n- Now, we will discuss what happens when there is a group or system of particles."
-  },
-  {
-    "video_id": "waves",
-    "start_time": 38.89,
-    "end_time": 60.41,
-    "summary": "- When one end of a string is tied and the other end is moved up and down, a wave is generated in the string.\n- The individual particles of the string move, creating oscillations."
-  },
-  {
-    "video_id": "waves",
-    "start_time": 60.41,
-    "end_time": 110.07,
-    "summary": "- A wave consists of a set of particles oscillating at their positions.\n- Mechanical waves need a medium to propagate."
-  },
-  {
-    "video_id": "waves",
-    "start_time": 110.07,
-    "end_time": 134.27,
-    "summary": "- Waves like those in a string or sound waves need a medium to travel through (such as a string or air).\n- Sound waves propagate through air when we speak."
-  },
-  {
-    "video_id": "waves",
-    "start_time": 134.27,
-    "end_time": 157.25,
-    "summary": "- Mechanical waves require a medium to propagate.\n- Electromagnetic waves do not need a medium and can travel through a vacuum."
-  },
-  {
-    "video_id": "waves",
-    "start_time": 157.25,
-    "end_time": 216.7,
-    "summary": "- Electromagnetic waves (like light from the sun) do not need a medium to travel; they are called non-mechanical waves.\n- Waves in a spring or string need a medium to travel; these are examples of mechanical waves."
-  },
-  {
-    "video_id": "waves",
-    "start_time": 216.7,
-    "end_time": 237.96,
-    "summary": "- When multiple springs are connected and one end is pulled and then released, compressions and rarefactions travel through the springs.\n- This shows how pulses are generated and move in a medium."
-  },
-  {
-    "video_id": "waves",
-    "start_time": 237.96,
-    "end_time": 256.68,
-    "summary": "- Compressions and rarefactions travel through the spring, generating waves.\n- Mechanical waves are of two types."
-  },
-  {
-    "video_id": "waves",
-    "start_time": 256.68,
-    "end_time": 277.78,
-    "summary": "- In a string, a particle moves up and down while the wave travels horizontally.\n- The motion of each particle is perpendicular to the direction in which the wave propagates."
-  },
-  {
-    "video_id": "waves",
-    "start_time": 277.78,
-    "end_time": 324.88,
-    "summary": "- In a transverse wave, the motion of the particle of the medium is perpendicular to the direction of propagation of the wave.\n- In a longitudinal wave, the motion of the particle is in the direction of the wave, and compressions and rarefactions are formed."
-  }
-]
+{
+    "level1_summaries": [
+        {
+            "level": 1,
+            "range_start": "0.51",
+            "range_end": "96.21",
+            "summary": "## Introduction to Wave Motion and Oscillations\n\n- **Definition of Wave:** A wave is a set of particles or a system of particles oscillating together, rather than a single isolated particle in simple harmonic motion (SHM) [21:07], [78:39].\n\n- **Transition from Oscillations:** Previously, we focused on isolated particle SHM; wave motion explores the collective behavior of a group of particles [25:03].\n\n- **Oscillation vs. Propagation:** In a string wave, individual particles oscillate at their fixed positions and do not travel with the wave pulse itself [42:75], [62:77].\n\n- **Mechanism of Wave Generation:** Moving one end of a tied string up and down generates a wave where particles on the string oscillate together [42:75], [68:07].\n\n- **Key Exam Point:** A wave is essentially a collective disturbance propagating through a system of particles [78:39].",
+            "source_chunks": 4
+        },
+        {
+            "level": 1,
+            "range_start": "96.21",
+            "range_end": "248.96",
+            "summary": "## Mechanical vs. Non-mechanical Waves\n\n- **Mechanical Waves:** These require a material medium to propagate. Examples include waves on a string, sound waves (propagating through air), and waves in water [98:99], [111:13], [135:27].\n\n- **Non-mechanical Waves (Electromagnetic Waves):** These do not require a material medium and can travel through a vacuum. Examples include light waves from the sun, which consist of oscillating electric and magnetic fields [142:71], [151:55].\n\n- **Examples of Mechanical Mediums:** \n  - **Strings:** Wave speed depends on string properties [105:39].\n  - **Air:** Essential for sound propagation [122:71].\n  - **Springs:** Pulling and releasing a spring generates compressions and rarefactions that travel through the medium [182:25], [231:8].\n\n- **Disturbance and Propagation:** In mechanical waves, the disturbance (like a pulse in a string or spring) travels through the medium by transferring energy between particles [218:52], [246:14].",
+            "source_chunks": 4
+        },
+        {
+            "level": 1,
+            "range_start": "248.96",
+            "range_end": "332.56",
+            "summary": "## Classification of Mechanical Waves: Transverse and Longitudinal\n\n- **Transverse Waves:**\n  - **Particle Motion:** Individual particles of the medium move **perpendicular** to the direction of wave propagation [256:68], [272:06].\n  - **Example:** A wave in a string where the wave moves horizontally while particles oscillate up and down [256:68].\n\n- **Longitudinal Waves:**\n  - **Particle Motion:** Particles of the medium move **parallel** to (or in the same direction as) the wave's path [304:92], [329:74].\n  - **Characteristics:** Propagation involves the formation of **compressions** (high density) and **rarefactions** (low density) moving through the medium [296:92].\n  - **Example:** Sound waves and waves in a pushed/pulled spring system [296:92].\n\n- **Key Summary for Exams:** Mechanical waves are distinguished by the relative direction of particle oscillation versus wave travel (Perpendicular = Transverse; Parallel = Longitudinal) [324:88], [329:74].",
+            "source_chunks": 3
+        }
+    ],
+    "level2_summaries": [
+        {
+            "level": 2,
+            "range_start": "0.51",
+            "range_end": "96.21",
+            "summary": "## Introduction to Wave Motion and Oscillations\n\n- **Definition of Wave:** A wave is a set of particles or a system of particles oscillating together, rather than a single isolated particle in simple harmonic motion (SHM) [21:07], [78:39].\n\n- **Transition from Oscillations:** Previously, we focused on isolated particle SHM; wave motion explores the collective behavior of a group of particles [25:03].\n\n- **Oscillation vs. Propagation:** In a string wave, individual particles oscillate at their fixed positions and do not travel with the wave pulse itself [42:75], [62:77].\n\n- **Mechanism of Wave Generation:** Moving one end of a tied string up and down generates a wave where particles on the string oscillate together [42:75], [68:07].\n\n- **Key Exam Point:** A wave is essentially a collective disturbance propagating through a system of particles [78:39].",
+            "source_chunks": 4
+        },
+        {
+            "level": 2,
+            "range_start": "96.21",
+            "range_end": "248.96",
+            "summary": "## Mechanical vs. Non-mechanical Waves\n\n- **Mechanical Waves:** These require a material medium to propagate. Examples include waves on a string, sound waves (propagating through air), and waves in water [98:99], [111:13], [135:27].\n\n- **Non-mechanical Waves (Electromagnetic Waves):** These do not require a material medium and can travel through a vacuum. Examples include light waves from the sun, which consist of oscillating electric and magnetic fields [142:71], [151:55].\n\n- **Examples of Mechanical Mediums:** \n  - **Strings:** Wave speed depends on string properties [105:39].\n  - **Air:** Essential for sound propagation [122:71].\n  - **Springs:** Pulling and releasing a spring generates compressions and rarefactions that travel through the medium [182:25], [231:8].\n\n- **Disturbance and Propagation:** In mechanical waves, the disturbance (like a pulse in a string or spring) travels through the medium by transferring energy between particles [218:52], [246:14].",
+            "source_chunks": 4
+        },
+        {
+            "level": 2,
+            "range_start": "248.96",
+            "range_end": "332.56",
+            "summary": "## Classification of Mechanical Waves: Transverse and Longitudinal\n\n- **Transverse Waves:**\n  - **Particle Motion:** Individual particles of the medium move **perpendicular** to the direction of wave propagation [256:68], [272:06].\n  - **Example:** A wave in a string where the wave moves horizontally while particles oscillate up and down [256:68].\n\n- **Longitudinal Waves:**\n  - **Particle Motion:** Particles of the medium move **parallel** to (or in the same direction as) the wave's path [304:92], [329:74].\n  - **Characteristics:** Propagation involves the formation of **compressions** (high density) and **rarefactions** (low density) moving through the medium [296:92].\n  - **Example:** Sound waves and waves in a pushed/pulled spring system [296:92].\n\n- **Key Summary for Exams:** Mechanical waves are distinguished by the relative direction of particle oscillation versus wave travel (Perpendicular = Transverse; Parallel = Longitudinal) [324:88], [329:74].",
+            "source_chunks": 3
+        }
+    ],
+    "final_summary": "# Waves: Full Lecture Summary\n\n## Topic Overview\n- This lecture provides an introduction to wave motion, defining waves as collective oscillations of particles. It explores the necessity of a medium for mechanical waves and distinguishes them from non-mechanical (electromagnetic) waves. The lecture also classifies mechanical waves into transverse and longitudinal types based on particle motion.\n\n## Key Concepts Covered\n- **Wave Definition:** A wave is a system of particles oscillating together, moving energy through a medium without the particles themselves traveling with the wave [21:07], [62:77].\n- **Mechanical Waves:** Require a medium (like string, air, or water) to propagate [98:99], [135:27].\n- **Non-mechanical Waves:** Can travel through a vacuum (e.g., light waves from the sun) [142:71], [157:25].\n- **Transverse Waves:** Particles oscillate **perpendicular** to the direction of wave propagation (e.g., string waves) [272:06], [288:64].\n- **Longitudinal Waves:** Particles oscillate **parallel** to the direction of wave propagation, creating compressions and rarefactions (e.g., sound waves) [309:2], [329:74].\n\n## Important Definitions & Concepts\n- **Medium Requirement:** Mechanical waves need a physical substance to move; electromagnetic waves utilize oscillating electric and magnetic fields to move through space [98:99], [151:55].\n- **Transverse Motion:** Occurs when the disturbance is up-and-down (perpendicular) while the energy moves sideways [277:78].\n- **Longitudinal Motion:** Occurs when the disturbance is in the same direction as the wave path [313:6].\n- **Compressions & Rarefactions:** Regions of high and low pressure in longitudinal waves, respectively [231:8], [242:96].\n\n## Examples Mentioned\n- **String Waves:** Moving one end of a tied string up and down creates transverse pulses [42:75], [216:7].\n- **Spring Waves:** Pulling/releasing a spring system creates longitudinal pulses [182:25], [231:8].\n- **Sound:** A mechanical, longitudinal wave that propagates through air [122:71], [329:74].\n- **Light:** A non-mechanical, electromagnetic wave that reaches Earth from the sun through a vacuum [151:55], [157:25].\n\n## Most Important for Exams\n- Remember that **particles do not move with the wave**; they only oscillate about a mean position [62:77].\n- **Mechanical waves** = Need Medium (Sound, String); **Electromagnetic** = No Medium (Light) [142:71].\n- **Transverse** = Perpendicular Oscillation; **Longitudinal** = Parallel Oscillation [324:88].\n- **Velocity of Waves:** Depends on the properties of the medium (like tension and density in a string) [13:71].",
+    "total_original_chunks": 11
+}
