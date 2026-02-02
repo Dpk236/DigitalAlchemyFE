@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import heartPYQData from '../../mock-data/previous-mock.json';
 import wavesPYQData from '../../mock-data/waves/previous-year-questions.json';
 import projectilePYQData from '../../mock-data/projectile_motion/previous-year-questions.json';
+import MarkdownRenderer from '../markdown/MarkdownRenderer';
 
 interface PreviousYearQuestionsProps {
     videoId: string;
@@ -37,9 +38,9 @@ const PreviousYearQuestions: React.FC<PreviousYearQuestionsProps> = ({ videoId }
                     <span className="text-2xl">👨‍⚕️</span>
                     <h4 className="font-black text-blue-900 uppercase tracking-tight text-sm">Teacher's Note</h4>
                 </div>
-                <p className="text-sm text-blue-800 leading-relaxed font-medium italic">
-                    "{teacherNote}"
-                </p>
+                <div className="text-sm text-blue-800 leading-relaxed font-medium italic">
+                    <MarkdownRenderer content={teacherNote} />
+                </div>
             </div>
 
             {/* Questions List */}
@@ -58,15 +59,17 @@ const PreviousYearQuestions: React.FC<PreviousYearQuestionsProps> = ({ videoId }
                                 NEET {q.NEET_Year}
                             </span>
                         </div>
-                        <p className="text-gray-800 font-bold text-sm leading-relaxed mb-6 group-hover:text-blue-900 transition-colors">
-                            {q.Question}
-                        </p>
+                        <div className="text-gray-800 font-bold text-sm leading-relaxed mb-6 group-hover:text-blue-900 transition-colors">
+                            <MarkdownRenderer content={q.Question} />
+                        </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                             {Object.entries(q.Options || {}).map(([key, value]: [string, any]) => (
                                 <div key={key} className="flex items-center gap-3 bg-gray-50/50 p-3 rounded-xl border border-transparent hover:border-gray-100 transition-all">
                                     <span className="w-6 h-6 rounded-lg bg-white border border-gray-100 flex items-center justify-center text-[10px] font-black text-gray-400 uppercase">{key}</span>
-                                    <span className="text-xs text-gray-600 font-medium">{value as any}</span>
+                                    <div className="text-xs text-gray-600 font-medium">
+                                        <MarkdownRenderer content={value as any} />
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -91,10 +94,10 @@ const PreviousYearQuestions: React.FC<PreviousYearQuestionsProps> = ({ videoId }
                     {Object.entries(tips).map(([key, tip]: [string, any], idx) => (
                         <div key={key} className="flex gap-4 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:border-blue-100 transition-all">
                             <div className="w-8 h-8 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center font-black text-xs shrink-0">{idx + 1}</div>
-                            <p className="text-xs text-gray-600 leading-relaxed font-medium">
+                            <div className="text-xs text-gray-600 leading-relaxed font-medium">
                                 <span className="text-gray-900 font-black block mb-1 uppercase tracking-tighter text-[10px]">{key.replace('_', ' ')}</span>
-                                {tip as any}
-                            </p>
+                                <MarkdownRenderer content={tip as any} />
+                            </div>
                         </div>
                     ))}
                 </div>
