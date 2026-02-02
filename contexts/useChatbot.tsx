@@ -22,13 +22,7 @@ const useChatbot = () => {
 
   const fetchSummary = useCallback(async (videoId?: string) => {
     if (videoId === "waves") {
-      const summary = (wavesSummaries as any[]).map(s => {
-        const mins = Math.floor(s.start_time / 60);
-        const secs = Math.floor(s.start_time % 60);
-        const time = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-        return `[${time}] ${s.summary}`;
-      }).join("\n\n");
-      setSummaryHtml(summary);
+      setSummaryHtml((wavesSummaries as any).final_summary);
       return;
     }
     if (videoId === "projectile_motion") {
