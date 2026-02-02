@@ -9,9 +9,9 @@ interface SubjectFiltersProps {
 const SubjectFilters: React.FC<SubjectFiltersProps> = ({ activeSubject, setActiveSubject }) => {
     const subjects = [
         { id: 'PHYSICS', label: 'Physics', icon: '⚛️' },
+         { id: 'BIOLOGY', label: 'Biology', icon: '🧬' },
         { id: 'CHEMISTRY', label: 'Chemistry', icon: '⚗️' },
         { id: 'MATHEMATICS', label: 'Mathematics', icon: '∑' },
-        { id: 'BIOLOGY', label: 'Biology', icon: '🧬' },
     ];
 
     return (

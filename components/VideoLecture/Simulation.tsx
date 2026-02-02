@@ -28,8 +28,11 @@ const Simulation: React.FC<SimulationProps> = ({ videoId }) => {
     
     try {
       // Determine the folder name and file name based on videoId
-      const folderName = videoId === 'projectile_motion' ? 'projectile' : videoId;
-      const fileName = videoId === 'projectile_motion' ? 'projectile_motion.html' : `${videoId}.html`;
+      const folderName = videoId === 'projectile_motion' ? 'projectile' : 
+                         videoId === 'human_heart' ? 'human-heart' : videoId;
+      const fileName = videoId === 'projectile_motion' ? 'projectile_motion.html' : 
+                       videoId === 'human_heart' ? 'heart_interactive_real.html' : `${videoId}.html`;
+
       const url = `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/${fileName}`;
       
       console.log("Fetching simulation from:", url);

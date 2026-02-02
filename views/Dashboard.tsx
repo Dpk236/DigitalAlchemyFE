@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import VideoCard from '../components/Dashboard/VideoCard';
 import SubjectFilters from '../components/Dashboard/SubjectFilters';
-
+const CDN_BASE_URL = "https://d29zr2abydv3bb.cloudfront.net/";
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
   const [activeSubject, setActiveSubject] = useState('PHYSICS');
@@ -16,7 +16,7 @@ const Dashboard: React.FC = () => {
       topic: "WAVES",
       date: "Feb 01, 2026",
       time: "10:00 AM",
-      thumbnail: "https://images.unsplash.com/photo-1505672678657-cc7037095e60?auto=format&fit=crop&q=80&w=600",
+      thumbnail: `${CDN_BASE_URL}Media/Video/hackathon/waves/waves-thumbnail.png`,
     },
     {
       id: "projectile_motion",
@@ -25,7 +25,7 @@ const Dashboard: React.FC = () => {
       topic: "MECHANICS",
       date: "Feb 01, 2026",
       time: "11:30 AM",
-      thumbnail: "/projectile_motion_thumbnail.png",
+      thumbnail: `${CDN_BASE_URL}Media/Video/hackathon/projectile/projectile-motion-thumbnail.png`,
     },
     {
       title: "Chemical Kinetics & Reaction Mechanisms",
@@ -36,30 +36,25 @@ const Dashboard: React.FC = () => {
       thumbnail: "https://images.pexels.com/photos/15509860/pexels-photo-15509860.jpeg",
     },
     {
-      title: "Equilibrium Constants & Le Chatelier",
-      subject: "CHEMISTRY",
-      topic: "PHYSICAL",
-      date: "Jan 24, 2026",
-      time: "08:35 PM",
-      thumbnail: "https://images.pexels.com/photos/9785607/pexels-photo-9785607.jpeg",
-    },
-    {
-      title: "Coordination Compounds & Complexes",
-      subject: "CHEMISTRY",
-      topic: "INORGANIC",
-      date: "Jan 20, 2026",
-      time: "07:00 PM",
-      thumbnail: "https://images.pexels.com/photos/3825572/pexels-photo-3825572.jpeg",
-    },
-    {
       title: "Limits and Continuity - Foundations",
       subject: "MATHEMATICS",
       topic: "CALCULUS",
       date: "Jan 15, 2026",
       time: "10:00 AM",
       thumbnail: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=600",
+    },
+    {
+      id: "human_heart",
+      title: "Human Heart - Anatomy and Physiology",
+      subject: "BIOLOGY",
+      topic: "HUMAN PHYSIOLOGY",
+      date: "Feb 02, 2026",
+      time: "15:22 PM",
+      thumbnail: `${CDN_BASE_URL}Media/Video/hackathon/human-heart/human-heart-thumbnail.png`,
     }
   ];
+
+
 
   const groupedLectures = lectures.reduce((acc, lecture) => {
     const subject = lecture.subject;

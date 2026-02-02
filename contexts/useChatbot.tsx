@@ -9,6 +9,11 @@ import wavesSummaries from "../mock-data/waves/video_waves_summaries.json";
 import projectileFlashcards from "../mock-data/projectile_motion/video_projectile_motion_flashcards.json";
 import projectileQuiz from "../mock-data/projectile_motion/video_projectile_motion_quiz.json";
 import projectileSummaries from "../mock-data/projectile_motion/video_projectile_motion_summaries.json";
+import heartFlashcards from "../mock-data/human-heart/video_human_heart_flashcards.json";
+import heartQuiz from "../mock-data/human-heart/video_human_heart_quiz.json";
+import heartSummaries from "../mock-data/human-heart/video_human_heart_summaries.json";
+
+
 
 const BACKEND_URL = "https://askdoubt-backend.onrender.com";
 
@@ -29,6 +34,11 @@ const useChatbot = () => {
       setSummaryHtml((projectileSummaries as any).final_summary);
       return;
     }
+    if (videoId === "human_heart") {
+      setSummaryHtml((heartSummaries as any).final_summary);
+      return;
+    }
+
 
     const url = `${BACKEND_URL}/get_summmary?video_id=${videoId || 'waves'}`;
     setLoading(true);
@@ -66,6 +76,11 @@ const useChatbot = () => {
       setAiFlashCardsContent(projectileFlashcards as any);
       return;
     }
+    if (videoId === "human_heart") {
+      setAiFlashCardsContent(heartFlashcards as any);
+      return;
+    }
+
 
     const url = `${BACKEND_URL}/ai-flashcards?video_id=${videoId || 'waves'}`;
     setLoading(true);
@@ -106,6 +121,11 @@ const useChatbot = () => {
       setQuiz({ data: projectileQuiz });
       return;
     }
+    if (videoId === "human_heart") {
+      setQuiz({ data: heartQuiz });
+      return;
+    }
+
 
     const url = `${BACKEND_URL}/get-quiz?video_id=${videoId || 'waves'}`;
     setLoading(true);

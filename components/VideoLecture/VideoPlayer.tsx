@@ -36,8 +36,11 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const [playbackRate, setPlaybackRate] = useState(1);
   const [showSubtitles, setShowSubtitles] = useState(false);
 
-  const videoUrl = `${CDN_BASE_URL}Media/Video/hackathon/${videoId === 'projectile_motion' ? 'projectile' : videoId}/master.m3u8`;
-  const vttUrl = "./Bio480989616.vtt"; 
+  const getFolder = (id: string) => id === 'projectile_motion' ? 'projectile' : 
+                                   id === 'human_heart' ? 'human-heart' : id;
+  const folderName = getFolder(videoId);
+  const videoUrl = `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/master.m3u8`;
+  const vttUrl = `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/${folderName.replace('-', '_')}_subtitle.vtt`;
 
   React.useEffect(() => {
     updateSocketParams(videoId);
