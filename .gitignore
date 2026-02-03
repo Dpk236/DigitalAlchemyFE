@@ -7,15 +7,36 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Build artifacts
+dist/
+dist-ssr/
 *.local
+
+# Nested node_modules
+**/node_modules/
+
+# Redundant directories
+edumap-pro/
+
+# Roadmap canvas standalone boilerplate
+roadmap-canvas/package.json
+roadmap-canvas/package-lock.json
+roadmap-canvas/vite.config.ts
+roadmap-canvas/tsconfig.json
+roadmap-canvas/index.html
+roadmap-canvas/README.md
+roadmap-canvas/metadata.json
+
+# Root test files
+hls_player.html
+projectile_motion.html
+waves.html
+test_hf_api.py
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
