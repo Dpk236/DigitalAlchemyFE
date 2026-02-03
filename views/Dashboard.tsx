@@ -76,27 +76,10 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shrink-0">
-        <div className="max-w-[1600px] mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-500/20">S</div>
-            <h1 className="font-bold text-base leading-tight">Digital Alchemy</h1>
-          </div>
-          <div className="flex items-center gap-4">
-            <button className="p-2 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors">
-              <span className="material-symbols-outlined">notifications</span>
-            </button>
-            <div className="h-6 w-px bg-slate-200 mx-1"></div>
-            <button className="flex items-center gap-2 bg-slate-100 px-3 py-1.5 rounded-lg font-medium text-xs hover:bg-slate-200 transition-colors">
-              <span className="material-symbols-outlined text-sm">account_circle</span>
-              Student Profile
-            </button>
-          </div>
-        </div>
-
+      {/* Sub-Navigation (Subjects & Views) */}
+      <div className="sticky top-[57px] z-40 bg-white shrink-0">
         {/* Primary Nav (Subjects) */}
-        <nav className="bg-white border-t border-slate-100">
+        <nav className="bg-white border-b border-slate-100">
           <div className="max-w-[1600px] mx-auto px-6 flex items-center gap-8 overflow-x-auto no-scrollbar">
             {subjects.map((subject) => (
               <button
@@ -116,7 +99,7 @@ const Dashboard: React.FC = () => {
         </nav>
 
         {/* Secondary Nav (Lectures / Roadmap) */}
-        <nav className="bg-slate-50 border-t border-slate-200">
+        <nav className="bg-slate-50 border-b border-slate-200">
           <div className="max-w-[1600px] mx-auto px-6 py-3 flex items-center gap-3 overflow-x-auto no-scrollbar">
             {views.map((view) => (
               <button
@@ -133,7 +116,7 @@ const Dashboard: React.FC = () => {
             ))}
           </div>
         </nav>
-      </header>
+      </div>
 
       {/* Main Content */}
       <main className="flex-1 w-full overflow-y-auto">
