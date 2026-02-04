@@ -12,8 +12,8 @@ const Dashboard: React.FC = () => {
 
   const subjects = [
     { id: 'PHYSICS', label: 'Physics', icon: 'science' },
+     { id: 'BIOLOGY', label: 'Biology', icon: 'biotech' },
     { id: 'CHEMISTRY', label: 'Chemistry', icon: 'vaping_rooms' },
-    { id: 'BIOLOGY', label: 'Biology', icon: 'biotech' },
     { id: 'MATHEMATICS', label: 'Mathematics', icon: 'functions' },
   ];
 
@@ -44,22 +44,6 @@ const Dashboard: React.FC = () => {
       date: "Feb 01, 2026",
       time: "11:30 AM",
       thumbnail: `${CDN_BASE_URL}Media/Video/hackathon/projectile/projectile-motion-thumbnail.png`,
-    },
-    {
-      title: "Chemical Kinetics & Reaction Mechanisms",
-      subject: "CHEMISTRY",
-      topic: "ORGANIC",
-      date: "Jan 29, 2026",
-      time: "08:35 PM",
-      thumbnail: "https://images.pexels.com/photos/15509860/pexels-photo-15509860.jpeg",
-    },
-    {
-      title: "Limits and Continuity - Foundations",
-      subject: "MATHEMATICS",
-      topic: "CALCULUS",
-      date: "Jan 15, 2026",
-      time: "10:00 AM",
-      thumbnail: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=600",
     },
     {
       id: "human_heart",
