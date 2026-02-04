@@ -26,7 +26,32 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
+  
+  <!-- User identification start -->
+  <script>
+    window.usetifulTags = {      
+         userId : "USER_" + Math.random().toString(36).substr(2, 9),  // Dynamic ID placeholder
+         firstName : "Student",
+         lastName : "User"     
+    };
+  </script>
+  <!-- User identification end -->
+  
+  <!-- Usetiful Script start -->
+  <script>
+  (function (w, d, s) {
+      var a = d.getElementsByTagName('head')[0];
+      var r = d.createElement('script');
+      r.async = 1;
+      r.src = s;
+      r.setAttribute('id', 'usetifulScript');
+      r.dataset.token = "2ef232cba0b62f899e5f49d769a8e9ae";
+      r.dataset.apiHostname = "https://www.usetiful.com";
+      a.appendChild(r);
+    })(window, document, "https://www.usetiful.com/dist/usetiful.js");
+  </script>
+  <!-- Usetiful Script end -->
 </head>
   <body>
     <div id="root"></div>

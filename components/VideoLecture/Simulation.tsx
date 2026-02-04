@@ -7,6 +7,46 @@ interface SimulationProps {
 
 const CDN_BASE_URL = "https://d29zr2abydv3bb.cloudfront.net/";
 
+const SIMULATION_INSTRUCTIONS: Record<string, string[]> = {
+  PHYSICS: [
+    "Adjust experiment variables like velocity, angle, or gravity using the sliders.",
+    "Observe how real-time metrics change during the simulation.",
+    "Hit 'Launch' to start the experiment and 'Reset' to try again.",
+    "Drag your mouse to rotate the lab view and scroll to zoom in/out.",
+    "Try to complete all designated missions in the experiment panel."
+  ],
+  BIOLOGY: [
+    "Explore the interactive 3D model by rotating and zooming in.",
+    "Click on specific anatomical structures to reveal detailed names and functions.",
+    "Watch animations to understand physiological processes in real-time.",
+    "Use the controls to isolate different systems or zoom into microscopic details.",
+    "Interact with labels to deepen your understanding of biological mechanics."
+  ],
+  WAVES: [
+    "Experiment with both Transverse and Longitudinal wave modes.",
+    "Adjust frequency and amplitude to see how the wave pattern changes.",
+    "Observe individual particles - they oscillate but don't travel with the wave!",
+    "Identify compressions and rarefactions in the longitudinal simulation.",
+    "Toggle 'Show Vectors' to visualize particle velocity and acceleration."
+  ],
+  default: [
+    "Interact with the 3D model using your mouse or touch.",
+    "Use the control panel to adjust simulation parameters.",
+    "Real-time data will update as you experiment.",
+    "Toggle fullscreen for the best immersive experience."
+  ]
+};
+
+const getInstructions = (videoId: string): string[] => {
+  const biologyVideos = ['human_heart'];
+  const wavesVideos = ['waves'];
+
+  if (videoId === 'projectile_motion') return SIMULATION_INSTRUCTIONS.PHYSICS;
+  if (wavesVideos.includes(videoId)) return SIMULATION_INSTRUCTIONS.WAVES;
+  if (biologyVideos.includes(videoId)) return SIMULATION_INSTRUCTIONS.BIOLOGY;
+  return SIMULATION_INSTRUCTIONS.default;
+};
+
 const Simulation: React.FC<SimulationProps> = ({ videoId }) => {
   const [htmlContent, setHtmlContent] = useState<string>('');
   const [loading, setLoading] = useState(false);
@@ -66,26 +106,87 @@ const Simulation: React.FC<SimulationProps> = ({ videoId }) => {
   // Placeholder screen
   if (!hasStarted && !loading) {
     return (
-      <div className="flex flex-col h-full animate-fade-in">
-        <div className="flex-1 relative bg-gradient-to-br from-blue-900 via-purple-900 to-blue-800 rounded-2xl overflow-hidden shadow-2xl group cursor-pointer"
-          onClick={handlePlayClick}
-        >
-          {/* Background Image */}
-          <img 
-            src="/simulation_lab.jpeg" 
-            alt="Aakash Simulation Lab"
-            className="w-full h-full object-cover opacity-90"
-          />
+      <div className="flex flex-col h-full animate-fade-in group">
+        <div className="flex-1 relative bg-gradient-to-br from-blue-900 via-purple-900 to-blue-800 rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+          {/* Background Image with optimized overlay for image visibility & text contrast */}
+          <div className="absolute inset-0">
+            <img 
+              src="/simulation_lab.jpeg" 
+              alt="Aakash Simulation Lab"
+              className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent" />
+            <div className="absolute inset-0 bg-black/20" />
+          </div>
           
-          {/* Overlay - subtle hover effect */}
-          <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-xl">
-                <span className="text-blue-600 font-bold uppercase tracking-widest text-xs">Launch Simulation Lab</span>
+          {/* Content Container */}
+          <div className="relative h-full flex flex-col p-8 z-10">
+            {/* Header - Made smaller to save space */}
+            <div className="mb-4">
+              <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-full bg-blue-500/20 border border-blue-400/30 mb-2">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-500"></span>
+                </span>
+                <span className="text-[9px] uppercase tracking-widest font-bold text-blue-300">Virtual Lab Ready</span>
               </div>
+              <h2 className="text-xl font-black text-white leading-tight drop-shadow-lg">
+                Interactive <span className="text-white">Simulation Experience</span>
+              </h2>
+            </div>
+
+            {/* Instructions Section - Widened and no wrapping to fit content in one line */}
+            <div className="flex-1 min-h-0 w-full">
+              <h3 className="text-white/90 font-bold text-xs mb-3 flex items-center gap-2">
+                <svg className="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                How to Experiment
+              </h3>
+              <div className="grid gap-2">
+                {getInstructions(videoId).map((step, idx) => (
+                  <div key={idx} className="flex items-center gap-3 group/item">
+                    <div className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 text-[10px] font-bold text-blue-300 border border-white/5 group-hover/item:bg-blue-500/30 transition-colors">
+                      {idx + 1}
+                    </div>
+                    <p className="text-sm text-white font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] whitespace-nowrap">
+                      {step}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Launch Button - Priority Visibility */}
+            <div className="pt-6 mt-auto border-t border-white/5">
+              <button 
+                onClick={handlePlayClick}
+                className="group/btn relative inline-flex items-center gap-3 px-8 py-4 bg-white text-blue-900 rounded-2xl font-black text-sm uppercase tracking-wider hover:bg-blue-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] active:scale-95"
+              >
+                <span>Launch Simulation</span>
+                <svg className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
+        <style>{`
+          .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+          }
+        `}</style>
       </div>
     );
   }
@@ -148,5 +249,3 @@ const Simulation: React.FC<SimulationProps> = ({ videoId }) => {
 };
 
 export default Simulation;
-
-
