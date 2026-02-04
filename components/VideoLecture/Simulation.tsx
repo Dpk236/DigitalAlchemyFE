@@ -27,7 +27,8 @@ const SIMULATION_INSTRUCTIONS: Record<string, string[]> = {
     "Adjust frequency and amplitude to see how the wave pattern changes.",
     "Observe individual particles - they oscillate but don't travel with the wave!",
     "Identify compressions and rarefactions in the longitudinal simulation.",
-    "Toggle 'Show Vectors' to visualize particle velocity and acceleration."
+    "Toggle 'Show Vectors' to visualize particle velocity and acceleration.",
+    "Complete all designated missions in the experiment panel to master the concept."
   ],
   default: [
     "Interact with the 3D model using your mouse or touch.",
@@ -113,10 +114,10 @@ const Simulation: React.FC<SimulationProps> = ({ videoId }) => {
             <img 
               src="/simulation_lab.jpeg" 
               alt="Aakash Simulation Lab"
-              className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent" />
-            <div className="absolute inset-0 bg-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/40 to-transparent" />
+            <div className="absolute inset-0 bg-black/10" />
           </div>
           
           {/* Content Container */}
@@ -130,30 +131,32 @@ const Simulation: React.FC<SimulationProps> = ({ videoId }) => {
                 </span>
                 <span className="text-[9px] uppercase tracking-widest font-bold text-blue-300">Virtual Lab Ready</span>
               </div>
-              <h2 className="text-xl font-black text-white leading-tight drop-shadow-lg">
-                Interactive <span className="text-white">Simulation Experience</span>
+              <h2 className="text-xl font-black text-white leading-tight">
+                Interactive <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 uppercase tracking-tight">Simulation Experience</span>
               </h2>
             </div>
 
-            {/* Instructions Section - Widened and no wrapping to fit content in one line */}
-            <div className="flex-1 min-h-0 w-full">
-              <h3 className="text-white/90 font-bold text-xs mb-3 flex items-center gap-2">
-                <svg className="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                How to Experiment
-              </h3>
-              <div className="grid gap-2">
-                {getInstructions(videoId).map((step, idx) => (
-                  <div key={idx} className="flex items-center gap-3 group/item">
-                    <div className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 text-[10px] font-bold text-blue-300 border border-white/5 group-hover/item:bg-blue-500/30 transition-colors">
-                      {idx + 1}
+            {/* Instructions Section - Nested in a high-contrast dark box for maximum readability */}
+            <div className="flex-1 min-h-0 w-full flex flex-col justify-center">
+              <div className="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-2xl inline-block max-w-fit">
+                <h3 className="text-white font-black text-sm mb-4 flex items-center gap-2 uppercase tracking-wider">
+                  <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  How to Experiment
+                </h3>
+                <div className="grid gap-3">
+                  {getInstructions(videoId).map((step, idx) => (
+                    <div key={idx} className="flex items-center gap-4 group/item">
+                      <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0 text-xs font-black text-white shadow-lg shadow-blue-900/40">
+                        {idx + 1}
+                      </div>
+                      <p className="text-sm text-white font-bold whitespace-nowrap drop-shadow-sm">
+                        {step}
+                      </p>
                     </div>
-                    <p className="text-sm text-white font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] whitespace-nowrap">
-                      {step}
-                    </p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
 
