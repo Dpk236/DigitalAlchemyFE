@@ -27,8 +27,11 @@
 }
 </script>
   <link rel="stylesheet" href="/index.css">
-  
-  <!-- User identification start -->
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <!-- User identification start -->
   <script>
     window.usetifulTags = {      
          userId : "USER_" + Math.random().toString(36).substr(2, 9),  // Dynamic ID placeholder
@@ -52,9 +55,5 @@
     })(window, document, "https://www.usetiful.com/dist/usetiful.js");
   </script>
   <!-- Usetiful Script end -->
-</head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
