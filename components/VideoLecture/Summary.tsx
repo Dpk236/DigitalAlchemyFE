@@ -13,7 +13,21 @@ const Summary: React.FC<SummaryProps> = ({ videoId }) => {
     useEffect(() => {
         fetchSummary(videoId);
     }, [fetchSummary, videoId]);
+    const onSeek = (time: string) => {
+        console.log("Seek to:", time);
+        const video = document.querySelector('video');
+        if (!video) return;
 
+        const parts = time.split(":").map(Number);
+        let seconds = 0;
+        if (parts.length === 2) {
+            seconds = parts[0] * 60 + parts[1];
+        } else if (parts.length === 3) {
+            seconds = parts[0] * 3600 + parts[1] * 60 + parts[2];
+        }
+        video.currentTime = seconds;
+        video.play();
+    }
     return (
         <div className="space-y-10 animate-fade-in pb-10">
             <h2 className="text-2xl font-black text-gray-900 leading-none tracking-tight flex gap-2">Lecture <br /><span className="text-blue-600">Summary</span></h2>
@@ -29,7 +43,7 @@ const Summary: React.FC<SummaryProps> = ({ videoId }) => {
                         <MarkdownWithTimestamps
                             content={summaryHtml}
                             isDarkMode={false}
-                            onSeek={(timestamp) => console.log("Seek to:", timestamp)}
+                            onSeek={onSeek}
                         />
                     ) : (
                         <p className="text-gray-500 italic">No summary available.</p>

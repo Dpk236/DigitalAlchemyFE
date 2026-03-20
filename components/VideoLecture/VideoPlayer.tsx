@@ -5,6 +5,7 @@ import VideoJS from './VideoJS';
 import type Player from 'video.js/dist/types/player';
 import TranscriptList from './TranscriptList';
 import { updateSocketParams } from '../socket/socket';
+import VideosSubjects from '../../mock-data/videos-subject.json';
 
 interface VideoPlayerProps {
   videoId: string;
@@ -16,7 +17,8 @@ interface VideoPlayerProps {
   transcript: any[];
 }
 
-const CDN_BASE_URL = "https://d29zr2abydv3bb.cloudfront.net/";
+const CDN_BASE_URL = "https://d3vo8rtp78h2dc.cloudfront.net/";
+const CDN_BASE_URL_Stage = "https://d29zr2abydv3bb.cloudfront.net/";
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
   videoId,
@@ -36,11 +38,14 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const [playbackRate, setPlaybackRate] = useState(1);
   const [showSubtitles, setShowSubtitles] = useState(false);
 
-  const getFolder = (id: string) => id === 'projectile_motion' ? 'projectile' : 
-                                   id === 'human_heart' ? 'human-heart' : id;
+  const getFolder = (id: string) => id === 'projectile' ? 'projectile' :
+    id === 'human-heart' ? 'human-heart' : id;
   const folderName = getFolder(videoId);
-  const videoUrl = `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/master.m3u8`;
-  const vttUrl = `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/${folderName.replace('-', '_')}_subtitle.vtt`;
+  const videoData = VideosSubjects.find((v: any) => v.assetId == videoId);
+  const { path } = videoData || {};
+  const videoUrl = ['projectile', "waves", "human-heart"].includes(videoId) ? `${CDN_BASE_URL_Stage}${path}` : `${CDN_BASE_URL}${path}`;
+  console.log("videoUrl", videoUrl, videoId, videoData, VideosSubjects);
+  const vttUrl = ['projectile', "waves", "human-heart"].includes(videoId) ? `${CDN_BASE_URL_Stage}Media/Video/hackathon/${folderName}/${folderName.replace('-', '_')}_subtitle.vtt` : `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/${folderName.replace('-', '_')}_subtitle.vtt`;
 
   React.useEffect(() => {
     updateSocketParams(videoId);
@@ -78,8 +83,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     playerInstance.audioTracks().on('addtrack', updateAudioTracks);
     playerInstance.audioTracks().on('removetrack', updateAudioTracks);
     playerInstance.audioTracks().on('change', () => {
-       // Force re-render to update UI when track changes
-       updateAudioTracks();
+      // Force re-render to update UI when track changes
+      updateAudioTracks();
     });
 
   };
@@ -89,8 +94,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     const tracks = player.audioTracks();
     // @ts-ignore
     for (let i = 0; i < tracks.length; i++) {
-        // @ts-ignore
-        tracks[i].enabled = (i === index);
+      // @ts-ignore
+      tracks[i].enabled = (i === index);
     }
     // Update local state is automatic via event listener above, but we can close menu
     setIsLanguageMenuOpen(false);
@@ -107,7 +112,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     if (lang === 'mar' || label.toLowerCase().includes('marathi')) return 'Marathi (मराठी)';
     if (lang === 'tam' || label.toLowerCase().includes('tamil')) return 'Tamil (தமிழ்)';
     if (lang === 'tel' || label.toLowerCase().includes('telugu')) return 'Telugu (తెలుగు)';
-    
+
     // Fallback for HLS stream labels (audio_1, audio_2, audio_3, etc.)
     if (label === 'audio_1' || (label === '' && index === 0)) return 'English';
     if (label === 'audio_2' || (label === '' && index === 1)) return 'Hindi (हिन्दी)';
@@ -119,12 +124,12 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   };
 
   const getActiveTrackLabel = () => {
-     const activeIndex = audioTracks.findIndex(t => t.enabled);
-     if (activeIndex !== -1) {
-       return getTrackName(audioTracks[activeIndex], activeIndex);
-     }
-     if (audioTracks.length > 0) return getTrackName(audioTracks[0], 0);
-     return 'Default';
+    const activeIndex = audioTracks.findIndex(t => t.enabled);
+    if (activeIndex !== -1) {
+      return getTrackName(audioTracks[activeIndex], activeIndex);
+    }
+    if (audioTracks.length > 0) return getTrackName(audioTracks[0], 0);
+    return 'Default';
   };
 
   const togglePlay = () => {
@@ -196,7 +201,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   };
 
   return (
-    <div className="w-1/2.5 flex flex-col border-r border-gray-100 overflow-auto scrollbar-hide">
+    <div className="w-1/2.5 min-w-[500px] flex flex-col border-r border-gray-100 overflow-auto scrollbar-hide">
       <div className="p-8 max-w-2xl mx-auto w-full">
         <div className="aspect-video bg-slate-900 rounded-3xl overflow-hidden shadow-2xl relative group mb-8">
           <VideoJS

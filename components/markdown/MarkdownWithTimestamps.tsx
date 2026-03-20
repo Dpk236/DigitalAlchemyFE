@@ -13,17 +13,39 @@ interface MarkdownSummaryProps {
 }
 
 const MarkdownSummary: React.FC<MarkdownSummaryProps> = ({ content, onSeek, isDarkMode = false }) => {
+    // Matches: [00:55], [1:23:45] (colon-based) OR [478.44], [554.44] (decimal seconds)
+    const TIMESTAMP_REGEX = /(\[(?:\d{1,2}:)?\d{1,2}:\d{2}\]|\[\d+(?:\.\d+)?\])/g;
+
+    /** Convert decimal seconds → "M:SS" display label */
+    const formatDecimalSeconds = (secs: number): string => {
+        const totalSec = Math.floor(secs);
+        const m = Math.floor(totalSec / 60);
+        const s = totalSec % 60;
+        return `${m}:${s.toString().padStart(2, '0')}`;
+    };
+
     const renderWithTimestamps = (children: React.ReactNode): React.ReactNode => {
         const nodes = Array.isArray(children) ? children : [children];
 
         return nodes.flatMap((child, idx) => {
             if (typeof child !== "string") return child;
 
-            const parts = child.split(/(\[?\b(?:\d{1,2}:)?\d{1,2}:\d{2}\b\]?)/g);
+            const parts = child.split(TIMESTAMP_REGEX);
             return parts.map((part, i) => {
-                // Check if this part is a timestamp
-                const cleanTime = part.replace(/[\[\]]/g, "");
-                if (/^(?:\d{1,2}:)?\d{1,2}:\d{2}$/.test(cleanTime)) {
+                const cleanValue = part.replace(/[\[\]]/g, "");
+
+                // Colon-based timestamp: 00:55, 1:23:45
+                const isColonTimestamp = /^(?:\d{1,2}:)?\d{1,2}:\d{2}$/.test(cleanValue);
+
+                // Decimal-seconds timestamp: 478.44, 308, 554.44
+                const isDecimalTimestamp = /^\d+(?:\.\d+)?$/.test(cleanValue) && part.startsWith('[');
+
+                if (isColonTimestamp || isDecimalTimestamp) {
+                    // Display label: colon format shown as-is; decimal shown as M:SS
+                    const displayLabel = isDecimalTimestamp
+                        ? formatDecimalSeconds(parseFloat(cleanValue))
+                        : cleanValue;
+
                     return (
                         <span
                             key={`${idx}-${i}`}
@@ -33,10 +55,10 @@ const MarkdownSummary: React.FC<MarkdownSummaryProps> = ({ content, onSeek, isDa
                                 cursor: 'pointer',
                                 fontWeight: 'bold'
                             }}
-                            data-tooltip={`Click to jump to ${part}`}
-                            onClick={() => onSeek?.(cleanTime)}
+                            data-tooltip={`Click to jump to ${displayLabel}`}
+                            onClick={() => onSeek?.(cleanValue)}
                         >
-                            {cleanTime}
+                            {displayLabel}
                         </span>
                     );
                 }

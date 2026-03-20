@@ -1,127 +1,68 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import SubjectRoadmap from '../components/Roadmap/SubjectRoadmap';
 import VideoCard from '../components/Dashboard/VideoCard';
-
+import SubjectFilters from '../components/Dashboard/SubjectFilters';
+import VideosSubjects from '../mock-data/videos-subject.json';
 const CDN_BASE_URL = "https://d29zr2abydv3bb.cloudfront.net/";
-
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
   const [activeSubject, setActiveSubject] = useState('PHYSICS');
-  const [activeView, setActiveView] = useState<'Lectures' | 'Roadmap'>('Lectures');
-
-  const subjects = [
-    { id: 'PHYSICS', label: 'Physics', icon: 'science' },
-     { id: 'BIOLOGY', label: 'Biology', icon: 'biotech' },
-    { id: 'CHEMISTRY', label: 'Chemistry', icon: 'vaping_rooms' },
-    { id: 'MATHEMATICS', label: 'Mathematics', icon: 'functions' },
-  ];
-
-  const views: Array<'Lectures' | 'Roadmap'> = ['Lectures', 'Roadmap'];
-
-  const learningPaths: Record<string, string[]> = {
-    PHYSICS: ['CLASS 11', 'CLASS 12', 'JEE PREP', 'NEET PREP', 'CRASH COURSE'],
-    CHEMISTRY: ['CLASS 11', 'CLASS 12', 'JEE PREP', 'NEET PREP'],
-    BIOLOGY: ['CLASS 11', 'CLASS 12', 'NEET PREP'],
-    MATHEMATICS: ['CLASS 11', 'CLASS 12', 'JEE PREP', 'OLYMPIAD'],
+  const [videosSubjects] = useState(VideosSubjects);
+  const getThumbnail = (subject: string) => {
+    switch (subject.toUpperCase()) {
+      case 'PHYSICS': return `${CDN_BASE_URL}Media/Video/hackathon/waves/waves-thumbnail.png`;
+      case 'CHEMISTRY': return "https://images.pexels.com/photos/15509860/pexels-photo-15509860.jpeg";
+      case 'MATHEMATICS': return "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=600";
+      case 'BIOLOGY': return `${CDN_BASE_URL}Media/Video/hackathon/human-heart/human-heart-thumbnail.png`;
+      default: return "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=600";
+    }
   };
 
-  const lectures = [
-    {
-      id: "waves",
-      title: "Introduction to Waves & Oscillations",
-      subject: "PHYSICS",
-      topic: "WAVES",
-      date: "Feb 01, 2026",
-      time: "10:00 AM",
-      thumbnail: `${CDN_BASE_URL}Media/Video/hackathon/waves/waves-thumbnail.png`,
-    },
-    {
-      id: "projectile_motion",
-      title: "Projectile Motion - Advanced Concepts",
-      subject: "PHYSICS",
-      topic: "MECHANICS",
-      date: "Feb 01, 2026",
-      time: "11:30 AM",
-      thumbnail: `${CDN_BASE_URL}Media/Video/hackathon/projectile/projectile-motion-thumbnail.png`,
-    },
-    {
-      id: "human_heart",
-      title: "Human Heart - Anatomy and Physiology",
-      subject: "BIOLOGY",
-      topic: "HUMAN PHYSIOLOGY",
-      date: "Feb 02, 2026",
-      time: "15:22 PM",
-      thumbnail: `${CDN_BASE_URL}Media/Video/hackathon/human-heart/human-heart-thumbnail.png`,
-    }
-  ];
+  const lectures = videosSubjects.map((video) => ({
+    id: video.assetId.toString(),
+    title: video.title,
+    subject: video.subject.toUpperCase(),
+    topic: "GENERAL",
+    date: "Feb 05, 2026",
+    time: "10:00 AM",
+    thumbnail: getThumbnail(video.subject),
+    path: video.path
+  }));
 
-  const filteredLectures = lectures.filter(lecture => lecture.subject === activeSubject);
+
+
+  const groupedLectures = lectures.reduce((acc, lecture) => {
+    const subject = lecture.subject;
+    if (!acc[subject]) {
+      acc[subject] = [];
+    }
+    acc[subject].push(lecture);
+    return acc;
+  }, {} as Record<string, typeof lectures>);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Sub-Navigation (Subjects & Views) */}
-      <div className="sticky top-[57px] z-40 bg-white shrink-0">
-        {/* Primary Nav (Subjects) */}
-        <nav className="bg-white border-b border-slate-100">
-          <div className="max-w-[1600px] mx-auto px-6 flex items-center gap-8 overflow-x-auto no-scrollbar">
-            {subjects.map((subject) => (
-              <button
-                key={subject.id}
-                onClick={() => setActiveSubject(subject.id)}
-                className={`py-4 text-sm tracking-widest uppercase flex items-center gap-2 shrink-0 transition-all border-b-2 ${
-                  activeSubject === subject.id 
-                    ? 'border-blue-600 text-blue-600 font-bold' 
-                    : 'border-transparent text-slate-500 hover:text-blue-600'
-                }`}
-              >
-                <span className="material-symbols-outlined text-[18px]">{subject.icon}</span>
-                {subject.label}
-              </button>
-            ))}
-          </div>
-        </nav>
+    <div className="min-h-screen bg-gray-50/50 -m-8 p-12 animate-fade-in">
+      {/* Dashboard Navigation */}
 
-        {/* Secondary Nav (Lectures / Roadmap) */}
-        <nav className="bg-slate-50 border-b border-slate-200">
-          <div className="max-w-[1600px] mx-auto px-6 py-3 flex items-center gap-3 overflow-x-auto no-scrollbar">
-            {views.map((view) => (
-              <button
-                key={view}
-                onClick={() => setActiveView(view)}
-                className={`px-4 py-1.5 text-xs font-bold uppercase tracking-wider rounded-full transition-all shrink-0 ${
-                  activeView === view
-                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
-                    : 'bg-white border border-slate-200 text-slate-600 hover:border-blue-600 hover:text-blue-600'
-                }`}
-              >
-                {view}
-              </button>
-            ))}
-          </div>
-        </nav>
-      </div>
+      <SubjectFilters activeSubject={activeSubject} setActiveSubject={setActiveSubject} />
 
-      {/* Main Content */}
-      <main className="flex-1 w-full overflow-y-auto">
-        {activeView === 'Lectures' ? (
-          // Lectures View
-          <div className="min-h-screen bg-gray-50/50 p-12 animate-fade-in">
-            <div className="max-w-[1600px] mx-auto">
+      <div className="space-y-16">
+        {Object.entries(groupedLectures)
+          .filter(([subject]) => subject === activeSubject)
+          .map(([subject, subjectLectures]) => (
+            <div key={subject}>
               <div className="mb-8">
                 <div className="flex items-center gap-4 mb-2">
                   <div className="w-2.5 h-2.5 bg-blue-600 rounded-full shadow-lg shadow-blue-500/30"></div>
                   <h2 className="text-2xl font-black text-gray-900 tracking-tight flex items-center gap-3">
-                    {activeSubject}
-                    <span className="text-xs bg-gray-100 text-gray-400 px-3 py-1 rounded-full font-bold uppercase tracking-widest">
-                      {filteredLectures.length} Lectures
-                    </span>
+                    {subject}
+                    <span className="text-xs bg-gray-100 text-gray-400 px-3 py-1 rounded-full font-bold uppercase tracking-widest">{subjectLectures.length} Lectures</span>
                   </h2>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredLectures.map((lecture) => (
+                {subjectLectures.map((lecture) => (
                   <VideoCard
                     key={lecture.title}
                     {...lecture}
@@ -130,47 +71,9 @@ const Dashboard: React.FC = () => {
                 ))}
               </div>
             </div>
-          </div>
-        ) : (
-          // Roadmap View
-          <div className="roadmap-canvas-container">
-            <SubjectRoadmap subject={activeSubject} />
-          </div>
-        )}
-      </main>
+          ))}
+      </div>
 
-      <style>{`
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .no-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        
-        /* Isolate roadmap-canvas styling to preserve original fonts and styles */
-        .roadmap-canvas-container {
-          font-family: 'Inter', sans-serif;
-        }
-        .roadmap-canvas-container .font-handwriting {
-          font-family: 'Balsamiq Sans', cursive;
-        }
-        
-        .animate-fade-in {
-          animation: fadeIn 0.3s ease-in;
-        }
-        
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TabType } from '../../types';
 import Summary from './Summary';
 import Chat from './Chat';
@@ -8,13 +8,27 @@ import Quizzes from './Quizzes';
 import Simulation from './Simulation';
 import NotionNotes from './NotionNotes';
 import Tabs from './Tabs';
+import MindMapReactFlow, { MindMapNodeData } from './MindMapReactFlow';
+import MindMap from './MindMap';
+import useChatbot from '@/contexts/useChatbot';
 
 interface LectureInteractionPanelProps {
     videoId: string;
 }
 
 const LectureInteractionPanel: React.FC<LectureInteractionPanelProps> = ({ videoId }) => {
-    const [activeRightTab, setActiveRightTab] = useState<TabType>('Chat');
+    const [activeRightTab, setActiveRightTab] = useState<TabType>('Summary');
+    const {
+        fetchMindMap,
+    mindMapData,
+    } = useChatbot();
+
+    useEffect(() => {
+       
+        if (videoId) {
+            fetchMindMap(videoId);
+        }
+    }, [videoId]);
 
     return (
         <div className="flex-1 flex flex-col bg-[#fcfcfc] border-l border-gray-100 h-full overflow-hidden">
@@ -22,14 +36,14 @@ const LectureInteractionPanel: React.FC<LectureInteractionPanelProps> = ({ video
 
             <div className={`flex-1 overflow-x-hidden relative ${activeRightTab === 'Chat' ? 'p-0' : 'p-8 overflow-y-auto'}`}>
                 {activeRightTab === 'Summary' && (
-                    <Summary videoId={videoId}/>
+                    <Summary videoId={videoId} />
                 )}
 
-                {activeRightTab === 'Chat' && (
+                {/* {activeRightTab === 'Chat' && (
                     <Chat videoId={videoId} />
-                )}
+                )} */}
 
-                {activeRightTab === 'Simulation' && <Simulation videoId={videoId} />}
+                {/* {activeRightTab === 'Simulation' && <Simulation videoId={videoId} />} */}
 
                 {activeRightTab === 'Flashcards' && (
                     <Flashcards videoId={videoId} />
@@ -40,6 +54,8 @@ const LectureInteractionPanel: React.FC<LectureInteractionPanelProps> = ({ video
                 )}
 
                 {activeRightTab === 'Notes' && <NotionNotes />}
+
+                {activeRightTab === 'Mind-Map' && <MindMapReactFlow data={mindMapData} />}
             </div>
         </div>
     );
