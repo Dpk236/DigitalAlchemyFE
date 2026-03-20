@@ -1,0 +1,86 @@
+[
+    {
+        "title": "Chemical Bonding and Molecular Structure",
+        "subject": "Chemistry",
+        "assetId": 95264,
+        "smId": 63,
+        "path": "Media/AssetLibrary/Video/2605/School Plus_XI_C_Chemical Bonding and Molecular Structure_Ch_04_Lec_05.mp4"
+    },
+    {
+        "title": "Simple Harmonic Motion (Contd.)",
+        "subject": "Physics",
+        "assetId": 883138085,
+        "smId": 62,
+        "path": "Media/SOE/883138085/883138085.mp4"
+    },
+    {
+        "title": "Gravitational Potential Energy",
+        "subject": "Physics",
+        "assetId": 74596,
+        "smId": 62,
+        "path": "Media/SOE/861202607/861202607.mp4"
+    },
+    {
+        "title": "Breathing and Exchange of Gases",
+        "subject": "Biology",
+        "assetId": 97199,
+        "smId": 107,
+        "path": "Media/AssetLibrary/Video/2567/SCHOOL PLUS_XI_B_breathing & EXCHANGE OF GASES_CH_14_LEC_02.mp4"
+    },
+    {
+        "title": "Excretory Products and their Elimination",
+        "subject": "Biology",
+        "assetId": 80293,
+        "smId": 107,
+        "path": "Media/SOE/479294681/479294681.mp4"
+    },
+    {
+        "title": "Photosynthesis in Higher Plants",
+        "subject": "Biology",
+        "assetId": 94171,
+        "smId": 106,
+        "path": "Media/Video/94171/1/VIDEO_01_NSEB_BOTANY_PHOTOSYNTHESIS.mp4"
+    },
+    {
+        "title": "Permutations and Combinations",
+        "subject": "Mathematics",
+        "assetId": 97251,
+        "smId": 64,
+        "path": "Media/AssetLibrary/Video/3082/School Pluse_XI_M_Permutation And Combimations_Ch_06_Lec-06.mp4"
+    },
+    {
+        "title": "Introduction To Three Dimensional Geometry",
+        "subject": "Mathematics",
+        "assetId": 97370,
+        "smId": 64,
+        "path": "Media/AssetLibrary/Video/3118/School Pluse_XI_M_Introduction To Three Dimensional Geometry_Ch_11_Lec-01.mp4"
+    },
+    {
+        "title": "Circulatory Systems and Heart Chambers in Animals",
+        "subject": "Biology",
+        "assetId": "human-heart",
+        "smId": 64,
+        "path": "Media/AssetLibrary/Video/3083/School Pluse_XI_M_Limits And Derivatives_Ch_06_Lec-07.mp4"
+    },
+    {
+        "title": "Introduction to Waves and Their Types",
+        "subject": "Physics",
+        "assetId": "waves",
+        "smId": 64,
+        "path": "Media/AssetLibrary/Video/3083/School Pluse_XI_M_Limits And Derivatives_Ch_06_Lec-07.mp4"
+    },
+    {
+        "title": "Mathematical Analysis of Simple Harmonic Motion",
+        "subject": "Physics",
+        "assetId": "883138085",
+        "smId": 64,
+        "path": "Media/AssetLibrary/Video/3083/School Pluse_XI_M_Limits And Derivatives_Ch_06_Lec-07.mp4"
+    },
+    {
+        "title": "Introduction to Projectile Motion",
+        "subject": "Physics",
+        "assetId": "projectile",
+        "smId": 64,
+        "path": "Media/AssetLibrary/Video/3083/School Pluse_XI_M_Limits And Derivatives_Ch_06_Lec-07.mp4"
+    }
+]

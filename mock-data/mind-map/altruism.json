@@ -1,0 +1,174 @@
+ {
+            "title": "Altruism and Hamilton's Rule",
+            "description": "Study of selflessness and genetic basis in animals",
+            "children": [
+                {
+                    "title": "Altruism Definition",
+                    "description": "Selflessness reducing own fitness for others",
+                    "children": [
+                        {
+                            "title": "Evolutionary Sacrifice",
+                            "description": "Sacrifice is loss of reproductive fitness"
+                        },
+                        {
+                            "title": "Fitness Impact",
+                            "description": "Donor loses, recipient gains reproductive benefit"
+                        },
+                        {
+                            "title": "Notation",
+                            "description": "Donor: negative; Recipient: positive"
+                        }
+                    ]
+                },
+                {
+                    "title": "Example: Naked Mole Rat",
+                    "description": "Social animal with reproductive division",
+                    "children": [
+                        {
+                            "title": "Colony Structure",
+                            "description": "Queen, kings, and workers",
+                            "children": [
+                                {
+                                    "title": "Queen",
+                                    "description": "Single reproductive female"
+                                },
+                                {
+                                    "title": "Kings",
+                                    "description": "One to three reproductive males"
+                                },
+                                {
+                                    "title": "Workers",
+                                    "description": "Non-reproductive, perform other colony tasks",
+                                    "children": [
+                                        {
+                                            "title": "Foraging",
+                                            "description": "Searching for food"
+                                        },
+                                        {
+                                            "title": "Defense",
+                                            "description": "Protecting colony from predators"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Darwin's Theory Contradiction",
+                    "description": "Altruism challenges survival of the fittest",
+                    "children": [
+                        {
+                            "title": "Darwin's View",
+                            "description": "Competition and reproductive success"
+                        },
+                        {
+                            "title": "Altruism Puzzle",
+                            "description": "Explained by Hamilton, not Darwin"
+                        }
+                    ]
+                },
+                {
+                    "title": "Hamilton's Rule",
+                    "description": "Genetic basis for evolution of altruism",
+                    "children": [
+                        {
+                            "title": "Rule Formula",
+                            "description": "Altruism evolves if Rb > C",
+                            "children": [
+                                {
+                                    "title": "B: Benefit",
+                                    "description": "Reproductive benefit to recipient"
+                                },
+                                {
+                                    "title": "C: Cost",
+                                    "description": "Reproductive cost to donor"
+                                },
+                                {
+                                    "title": "R: Relatedness",
+                                    "description": "Coefficient of genetic relatedness"
+                                },
+                                {
+                                    "title": "Alternative Form",
+                                    "description": "Rb - C > 0"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Coefficient of Relatedness (R)",
+                            "description": "Measures genetic similarity",
+                            "children": [
+                                {
+                                    "title": "Parent-Offspring",
+                                    "description": "R = 0.5"
+                                },
+                                {
+                                    "title": "Siblings",
+                                    "description": "R = 0.5"
+                                },
+                                {
+                                    "title": "Aunt/Uncle-Niece/Nephew",
+                                    "description": "R = 0.25"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Example Calculation",
+                            "description": "Applying Hamilton's rule to rescue dilemma",
+                            "children": [
+                                {
+                                    "title": "Priya's Daughter",
+                                    "description": "R = 0.5, one individual"
+                                },
+                                {
+                                    "title": "Priya's Nieces",
+                                    "description": "R = 0.25, three individuals"
+                                },
+                                {
+                                    "title": "Calculation",
+                                    "description": "0.25 x 3 = 0.75 (benefit), 0.5 (cost)"
+                                },
+                                {
+                                    "title": "Result",
+                                    "description": "0.75 - 0.5 = 0.25 > 0, altruism favored"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Kin Selection",
+                    "description": "Altruism towards relatives",
+                    "children": [
+                        {
+                            "title": "Term Origin",
+                            "description": "Coined by John Maynard Smith"
+                        },
+                        {
+                            "title": "Relation to Hamilton's Rule",
+                            "description": "Explains genetic basis for kin altruism"
+                        }
+                    ]
+                },
+                {
+                    "title": "Reciprocal Altruism",
+                    "description": "Helping non-kin with expectation of return",
+                    "children": [
+                        {
+                            "title": "Definition",
+                            "description": "Non-kin help each other reciprocally"
+                        },
+                        {
+                            "title": "Vampire Bat Example",
+                            "description": "Blood sharing among non-kin bats",
+                            "children": [
+                                {
+                                    "title": "Key Observations",
+                                    "description": "Blood exchanged between non-kin, reciprocated"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }

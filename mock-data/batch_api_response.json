@@ -1,0 +1,1766 @@
+{
+    "job_id": "batches/l0chunfg73qdhnt2x6gb80oso3q45oi8boue",
+    "status": "JOB_STATE_SUCCEEDED",
+    "success_count": 10,
+    "failed_count": 1,
+    "results": {
+        "job_name": "batches/l0chunfg73qdhnt2x6gb80oso3q45oi8boue",
+        "success": 10,
+        "failed": 1,
+        "results": {
+            "95264": {
+                "status": "success",
+                "s3_key": "batch/output/95264_result.json",
+                "data": {
+                    "lecture_topic": "Valence Bond Theory, Orbital Overlap, and Hybridization",
+                    "subject": "Chemistry",
+                    "summary": "## Chemical Bonding: Valence Bond Theory (VBT)\n\n### Introduction to VBT\n- **Valence Bond Theory (VBT)** was developed by Hitler and London (1927) and improved by Pauling.\n- It provides detailed insight into **bond formation** and the **involvement of atomic orbitals**.\n- Explains how atomic orbitals overlap and the formation of **sigma (σ)** and **pi (π)** bonds.\n- Introduces the concept of **hybridization** to explain molecular geometry.\n\n### Formation of Hydrogen Molecule (H₂)\n- At **infinite separation**, hydrogen atoms have no interaction; potential energy (PE) is close to zero.\n- As atoms approach, new **attractive forces** (electron of one atom and nucleus of another) and **repulsive forces** (nuclei of both atoms, electrons of both atoms) arise.\n- A bond forms when the magnitude of attractive forces is **greater** than repulsive forces.\n- **Potential Energy Curve**: As atoms approach, PE decreases due to attraction, reaching a minimum at a specific internuclear distance called **R naught** (bond length).\n- If atoms come closer than R naught, repulsion dominates, and PE increases.\n- At R naught, attractive and repulsive forces are balanced, leading to maximum stability and minimum potential energy.\n- The energy required to separate bonded atoms to infinite distance is called **bond enthalpy**.\n- The H₂ molecule is more stable (lower energy) than individual H atoms.\n- Experimental bond length for H₂ is **74 picometer**.\n\n### Orbital Overlapping\n- VBT states that atoms form bonds by allowing their atomic orbitals to undergo **partial interpenetration**.\n- This partial interpenetration means a part of the electron cloud of two half-filled atomic orbitals becomes common.\n- This phenomenon is called **overlapping of atomic orbitals**.\n- Shared electrons in the common orbital region must have **opposite spins** (Pauli's exclusion principle).\n- Overlap can be positive, negative, or zero, depending on the **phase** of the electron wave function in the orbitals.\n    - **Positive Overlap**: Occurs when orbitals overlap **in-phase** (same phases combine), leading to attractive interaction.\n    - **Negative Overlap**: Occurs when orbitals overlap **out-of-phase** (opposite phases combine), leading to repulsive interaction.\n    - **Zero Overlap**: Occurs when lobes of atomic orbitals do not interact significantly (e.g., perpendicular orientation).\n\n### Types of Covalent Bonds\n- Covalent bonds are classified into sigma (σ) and pi (π) bonds based on the type of overlapping.\n    - **Sigma (σ) Bond**: \n        - Formed by **axial** or **head-on** overlapping of half-filled atomic orbitals along the internuclear axis.\n        - The electron cloud is **cylindrically symmetrical** about the internuclear axis.\n        - Examples: s-s, s-p, p-p (head-on) overlaps.\n        - Electrons involved are called **sigma electrons**.\n    - **Pi (π) Bond**: \n        - Formed by **parallel** or **sidewise** overlapping of atomic orbitals.\n        - The orbital axes remain parallel to each other and perpendicular to the internuclear axis.\n        - The electron cloud consists of **two saucer-type** regions, one above and one below the internuclear axis.\n        - A pi bond forms **only after a sigma bond** has already been established between the atoms.\n        - **Free rotation** of atoms around a pi bond is **not possible**.\n        - Pi bond formation generally **shortens the bond distance**.\n\n### Hybridization\n- VBT alone cannot fully explain the geometry and structure of polyatomic molecules, leading to the concept of hybridization.\n- **Definition**: It is the process of **intermixing atomic orbitals** of slightly different energies to redistribute their energies, resulting in a new set of **equivalent orbitals** (same energy, same shape, and other characteristics).\n- These new orbitals are called **hybrid orbitals**.\n- **Example (Methane, CH₄)**: Carbon's 2s and 2p orbitals mix to form four equivalent sp³ hybrid orbitals, which then overlap with hydrogen's 1s orbitals.\n- **Conditions for Hybridization**:\n    - Only orbitals in the **valence shell** of the atom are hybridized.\n    - Orbitals taking part must have **small energy differences** (similar energies).\n    - **Promotion of electrons is not an essential condition**; hybridization can occur in ground or excited states.\n    - **Half-filled, fully filled, or vacant** atomic orbitals can participate.\n- **Features of Hybridization**:\n    - The **number of hybrid orbitals formed equals the number of atomic orbitals** that hybridized.\n    - Hybrid orbitals are always **equivalent in energy and shape**.\n    - Hybrid orbitals are **more effective** in forming stable bonds than pure atomic orbitals.\n    - Hybrid orbitals form **only sigma (σ) bonds**; pi (π) bonds are formed by pure (unhybridized) atomic orbitals.\n    - Hybrid orbitals are directed in space to minimize electron pair repulsion, thus determining the **geometry of the molecule** (e.g., sp hybridization leads to linear geometry).\n",
+                    "mindmap": {
+                        "title": "Valence Bond Theory (VBT)",
+                        "description": "Explains chemical bond formation through orbital overlap",
+                        "children": [
+                            {
+                                "title": "Principles of VBT",
+                                "description": "Core ideas behind bond formation",
+                                "children": [
+                                    {
+                                        "title": "Atomic Orbital Overlap",
+                                        "description": "Partial interpenetration of atomic orbitals",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Forces in Bond Formation",
+                                        "description": "Balance of attractive and repulsive forces",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Potential Energy Curve",
+                                        "description": "Energy changes during bond formation, minimum at R naught",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Types of Orbital Overlap",
+                                "description": "Classification based on phase interaction",
+                                "children": [
+                                    {
+                                        "title": "Positive Overlap",
+                                        "description": "In-phase overlap, leads to attraction",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Negative Overlap",
+                                        "description": "Out-of-phase overlap, leads to repulsion",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Zero Overlap",
+                                        "description": "No significant interaction, e.g., perpendicular orbitals",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Types of Covalent Bonds",
+                                "description": "Classification based on overlap geometry",
+                                "children": [
+                                    {
+                                        "title": "Sigma (σ) Bond",
+                                        "description": "Axial or head-on overlap along internuclear axis",
+                                        "children": [
+                                            {
+                                                "title": "Cylindrical Symmetry",
+                                                "description": "Electron cloud is symmetrical about axis",
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Pi (π) Bond",
+                                        "description": "Parallel or sidewise overlap perpendicular to internuclear axis",
+                                        "children": [
+                                            {
+                                                "title": "Two Saucer-type Clouds",
+                                                "description": "Electron density above and below axis",
+                                                "children": []
+                                            },
+                                            {
+                                                "title": "Forms After Sigma Bond",
+                                                "description": "Requires a pre-existing sigma bond",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Hybridization",
+                                "description": "Mixing of atomic orbitals to form new equivalent orbitals",
+                                "children": [
+                                    {
+                                        "title": "Hybrid Orbitals",
+                                        "description": "New orbitals with equivalent energy and shape",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Conditions for Hybridization",
+                                        "description": "Valence shell, small energy difference, can be ground/excited state",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Features of Hybridization",
+                                        "description": "Number of hybrid orbitals, stability, bond type, geometry",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "quizzes": [
+                        {
+                            "question": "According to Valence Bond Theory, what is the primary condition for two atoms to form a stable chemical bond?",
+                            "options": {
+                                "A": "The atoms must be at an infinite separation.",
+                                "B": "The magnitude of repulsive forces must be greater than attractive forces.",
+                                "C": "The magnitude of attractive forces must be greater than repulsive forces.",
+                                "D": "The potential energy of the system must be at its maximum."
+                            },
+                            "correct_answer": "C",
+                            "hint": "Consider the energy changes and forces involved when atoms approach each other to form a stable bond.",
+                            "solution": "For a stable chemical bond to form, the overall energy of the system must decrease, which happens when attractive forces between the atoms dominate over repulsive forces. This leads to a minimum in potential energy. Option A describes isolated atoms. Option B would lead to repulsion and no bond formation. Option D describes an unstable state. Therefore, option C is correct.",
+                            "difficulty": "easy",
+                            "concept_tested": "Principles of Valence Bond Theory and Bond Formation"
+                        },
+                        {
+                            "question": "Which of the following statements is INCORRECT regarding orbital overlapping in Valence Bond Theory?",
+                            "options": {
+                                "A": "Positive overlap occurs when atomic orbitals overlap in-phase, leading to attractive interactions.",
+                                "B": "Negative overlap occurs when atomic orbitals overlap out-of-phase, leading to repulsive interactions.",
+                                "C": "Zero overlap occurs when atomic orbitals are oriented such that there is no significant interaction.",
+                                "D": "All types of orbital overlaps lead to the formation of stable chemical bonds."
+                            },
+                            "correct_answer": "D",
+                            "hint": "Think about which types of overlap contribute to bond formation and which do not.",
+                            "solution": "Only positive overlap, where orbitals combine in-phase, leads to attractive interactions and the formation of stable chemical bonds. Negative overlap leads to repulsion, and zero overlap means no interaction, neither of which results in a stable bond. Therefore, statement D is incorrect.",
+                            "difficulty": "medium",
+                            "concept_tested": "Types of Orbital Overlap"
+                        },
+                        {
+                            "question": "What is a key characteristic that distinguishes a sigma (σ) bond from a pi (π) bond?",
+                            "options": {
+                                "A": "Sigma bonds are formed by sidewise overlap, while pi bonds are formed by head-on overlap.",
+                                "B": "Pi bonds are cylindrically symmetrical about the internuclear axis, while sigma bonds are not.",
+                                "C": "Sigma bonds can be formed by hybrid orbitals, while pi bonds are formed by pure atomic orbitals.",
+                                "D": "Pi bonds can form independently, without a pre-existing sigma bond between the same two atoms."
+                            },
+                            "correct_answer": "C",
+                            "hint": "Recall the types of overlap and the role of hybrid orbitals in bond formation.",
+                            "solution": "Sigma bonds are formed by axial (head-on) overlap and can be formed by hybrid orbitals. Pi bonds are formed by parallel (sidewise) overlap of pure (unhybridized) atomic orbitals. Pi bonds are not cylindrically symmetrical and can only form after a sigma bond has been established between the atoms. Therefore, option C correctly distinguishes them.",
+                            "difficulty": "medium",
+                            "concept_tested": "Sigma and Pi Bonds, Hybridization"
+                        },
+                        {
+                            "question": "Which of the following is NOT an essential condition for hybridization?",
+                            "options": {
+                                "A": "The orbitals involved must be in the valence shell of the atom.",
+                                "B": "The orbitals must have exactly the same energy.",
+                                "C": "Promotion of electrons to a higher energy orbital is not always necessary.",
+                                "D": "Vacant, half-filled, or fully filled orbitals can participate."
+                            },
+                            "correct_answer": "B",
+                            "hint": "Consider the energy requirement for orbitals to intermix effectively.",
+                            "solution": "For hybridization, orbitals must have only a small difference in energy or almost equal energy, not necessarily exactly the same energy. Options A, C, and D are all correct conditions or features of hybridization as stated in the lecture. Therefore, option B is incorrect.",
+                            "difficulty": "medium",
+                            "concept_tested": "Conditions for Hybridization"
+                        }
+                    ],
+                    "flashcards": [
+                        {
+                            "front": "What is the main purpose of Valence Bond Theory (VBT)?",
+                            "back": "To explain bond formation and the involvement of atomic orbitals in chemical bonding.",
+                            "concept": "Valence Bond Theory",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is 'R naught' in the potential energy curve for bond formation?",
+                            "back": "The internuclear distance at which the potential energy is minimum, representing the bond length.",
+                            "concept": "Potential Energy Curve",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the experimental bond length of a hydrogen molecule (H₂)?",
+                            "back": "74 picometer.",
+                            "concept": "Bond Length",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "According to Pauli's principle, what must be true for shared electrons in an overlapping orbital region?",
+                            "back": "They must have opposite spin quantum numbers.",
+                            "concept": "Orbital Overlapping",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Define 'positive overlap' in the context of atomic orbitals.",
+                            "back": "Overlap where atomic orbitals combine in-phase (same phases), leading to attractive interaction and bond formation.",
+                            "concept": "Types of Orbital Overlap",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "How is a sigma (σ) bond formed?",
+                            "back": "By axial or head-on overlapping of half-filled atomic orbitals along the internuclear axis.",
+                            "concept": "Sigma Bond",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the characteristic electron cloud shape of a pi (π) bond?",
+                            "back": "Two saucer-type charged clouds, one above and one below the plane of the internuclear axis.",
+                            "concept": "Pi Bond",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Can a pi (π) bond form before a sigma (σ) bond between the same two atoms?",
+                            "back": "No, a pi bond formation takes place only after a sigma bond has been formed.",
+                            "concept": "Pi Bond Formation",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is hybridization?",
+                            "back": "The intermixing of atomic orbitals of slightly different energies to form a new set of equivalent orbitals (hybrid orbitals).",
+                            "concept": "Hybridization Definition",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What types of bonds can hybrid orbitals form?",
+                            "back": "Hybrid orbitals can only form sigma (σ) bonds; pi (π) bonds are formed by pure atomic orbitals.",
+                            "concept": "Hybrid Orbitals",
+                            "importance": "high"
+                        }
+                    ]
+                }
+            },
+            "97199": {
+                "status": "success",
+                "s3_key": "batch/output/97199_result.json",
+                "data": {
+                    "lecture_topic": "Gas Exchange, Transport, Regulation & Disorders",
+                    "subject": "Biology",
+                    "summary": "## Exchange of Gases\n- Gases are exchanged by **diffusion**, moving from higher to lower concentration.\n- **Factors affecting diffusion**:\n    - **Solubility of gases**: Higher solubility leads to higher diffusion.\n    - **Partial pressure/Pressure gradient**: Greater pressure difference leads to faster diffusion.\n    - **Thickness of membrane**: Thinner membrane accelerates diffusion.\n- **Exchange sites** in the human body:\n    - Between **alveoli and blood**.\n    - Between **blood and tissues**.\n- **Diffusion membrane** (between alveoli and blood) consists of three layers:\n    - Thin **squamous epithelium** of alveoli (one-celled thick).\n    - **Endothelium** of alveolar capillaries (one-celled thick).\n    - Thin **basement substance** (acellular) between the two.\n- **Partial pressure values (mm Hg)** drive gas exchange:\n    - **Alveolar Air**: pO2 = 104, pCO2 = 40\n    - **Deoxygenated Blood**: pO2 = 40, pCO2 = 45\n    - **Oxygenated Blood**: pO2 = 95, pCO2 = 40\n    - **Tissues**: pO2 = 40, pCO2 = 45\n\n## Transport of Gases\n### Oxygen Transport\n- Primarily as **oxyhemoglobin** (97%) by RBCs.\n- Hemoglobin binds reversibly with up to four oxygen molecules.\n- About 3% of oxygen is transported in dissolved form in plasma.\n- **Oxygen Dissociation Curve**: A sigmoid curve illustrating the relationship between pO2 and hemoglobin saturation.\n- **Factors affecting O2 binding/dissociation**:\n    - **High pO2, low pCO2, low H+ concentration (high pH), and low temperature** favor oxyhemoglobin formation (in alveoli).\n    - **Low pO2, high pCO2, high H+ concentration (low pH), and high temperature** favor oxyhemoglobin dissociation (in tissues).\n- Under normal physiological conditions, 100 ml of oxygenated blood delivers approximately **5 ml of oxygen** to the tissues.\n\n### Carbon Dioxide Transport\n- Mainly as **bicarbonate ions** (70%).\n    - CO2 reacts with water to form carbonic acid (H2CO3) catalyzed by **carbonic anhydrase**.\n    - Carbonic acid then dissociates into bicarbonate (HCO3-) and hydrogen ions (H+).\n- As **carbaminohemoglobin** (20-25%) by hemoglobin.\n- About 7% is transported in dissolved state through plasma.\n\n## Regulation of Respiration\n### Nervous Regulation\n- **Respiratory Rhythm Center**: Located in the **medulla** (hindbrain), responsible for the basic rhythm of respiration.\n- **Pneumotaxic Center**: Located in the **pons**, moderates the rhythm center, can reduce the duration of inspiration, thereby altering the respiratory rate.\n\n### Chemical Regulation\n- **Chemosensitive Area**: Located adjacent to the rhythm center, sensitive to **carbon dioxide** and **hydrogen ion** concentrations.\n- **Aortic bodies and Carotid bodies**: Receptors associated with the aortic arch and carotid artery, detect changes in CO2 and H+ levels, and send signals to the rhythm center.\n- The role of **oxygen** in regulating respiratory rhythm is considered quite insignificant compared to CO2 and H+.\n\n## Disorders of the Respiratory System\n- **Asthma**: Difficulty in breathing and wheezing due to **inflammation of bronchi and bronchioles**. Often caused by hypersensitivity or allergic responses, leading to swollen lining and excess mucus.\n- **Emphysema**: A chronic disorder where **alveolar walls are damaged**, significantly reducing the surface area for gas exchange. A major cause is **cigarette smoking**.\n- **Occupational Respiratory Disorders**: Caused by prolonged exposure to dust in certain industries (e.g., grinding, stone breaking).\n    - Leads to inflammation and **fibrosis** (proliferation of fibrous tissues) in the lungs, causing serious lung damage.\n    - Examples: **Asbestosis** (from asbestos mining) and **Byssinosis** (from cotton fibers in textile industries).",
+                    "mindmap": {
+                        "title": "Respiration: Gas Exchange, Transport & Regulation",
+                        "description": "Comprehensive overview of respiratory processes and disorders",
+                        "children": [
+                            {
+                                "title": "Gas Exchange",
+                                "description": "Movement of O2 and CO2 across membranes",
+                                "children": [
+                                    {
+                                        "title": "Mechanism of Diffusion",
+                                        "description": "Gases move from high to low concentration",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Factors Affecting Diffusion",
+                                        "description": "Solubility, pressure gradient, membrane thickness",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Exchange Sites",
+                                        "description": "Alveoli-blood and blood-tissues",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Diffusion Membrane",
+                                        "description": "Alveolar epithelium, capillary endothelium, basement substance",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Partial Pressure Gradients",
+                                        "description": "Differences in pO2 and pCO2 drive exchange",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Gas Transport",
+                                "description": "How O2 and CO2 are carried in blood",
+                                "children": [
+                                    {
+                                        "title": "Oxygen Transport",
+                                        "description": "Mainly as oxyhemoglobin (97%), some dissolved (3%)",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Carbon Dioxide Transport",
+                                        "description": "Bicarbonate (70%), carbaminohemoglobin (20-25%), dissolved (7%)",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Oxygen Dissociation Curve",
+                                        "description": "Sigmoid curve showing Hb saturation with O2",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Factors Affecting O2 Binding",
+                                        "description": "pO2, pCO2, H+ concentration, temperature",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Regulation of Respiration",
+                                "description": "Control mechanisms for breathing",
+                                "children": [
+                                    {
+                                        "title": "Nervous Regulation",
+                                        "description": "Centers in brain control respiratory rhythm",
+                                        "children": [
+                                            {
+                                                "title": "Respiratory Rhythm Center",
+                                                "description": "In medulla, sets basic rhythm",
+                                                "children": []
+                                            },
+                                            {
+                                                "title": "Pneumotaxic Center",
+                                                "description": "In pons, moderates rhythm, reduces inspiration duration",
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Chemical Regulation",
+                                        "description": "Chemoreceptors detect blood gas levels",
+                                        "children": [
+                                            {
+                                                "title": "Chemosensitive Area",
+                                                "description": "Sensitive to CO2 and H+ concentration",
+                                                "children": []
+                                            },
+                                            {
+                                                "title": "Aortic & Carotid Bodies",
+                                                "description": "Peripheral chemoreceptors for CO2 and H+",
+                                                "children": []
+                                            },
+                                            {
+                                                "title": "Oxygen's Role",
+                                                "description": "Insignificant direct role in rhythm regulation",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Respiratory Disorders",
+                                "description": "Common conditions affecting the respiratory system",
+                                "children": [
+                                    {
+                                        "title": "Asthma",
+                                        "description": "Inflammation of bronchi/bronchioles, causing wheezing",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Emphysema",
+                                        "description": "Damaged alveolar walls, reduced surface area, often due to smoking",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Occupational Disorders",
+                                        "description": "Lung damage from industrial dust exposure (e.g., asbestosis, byssinosis)",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "quizzes": [
+                        {
+                            "question": "The incidence of emphysema, a respiratory disorder, is high in cigarette smokers. In such cases, which of the following structures are primarily found damaged?",
+                            "options": {
+                                "A": "Cartilaginous rings",
+                                "B": "Alveolar walls",
+                                "C": "Trachea",
+                                "D": "Respiratory muscles"
+                            },
+                            "correct_answer": "B",
+                            "hint": "Recall the specific structural damage associated with emphysema as discussed in the lecture.",
+                            "solution": "Emphysema is a chronic disorder characterized by the damage to the alveolar walls. This damage reduces the surface area available for gas exchange, leading to difficulty in breathing. Cigarette smoking is a major cause of this condition. Options A, C, and D are not the primary structures damaged in emphysema.",
+                            "difficulty": "easy",
+                            "concept_tested": "Emphysema"
+                        },
+                        {
+                            "question": "Which of the following respiratory centers, upon stimulation, can reduce the inspiratory duration and thereby alter the respiratory rate?",
+                            "options": {
+                                "A": "Medullary inspiratory center",
+                                "B": "Pneumotaxic center",
+                                "C": "Apneustic center",
+                                "D": "Chemosensitive area"
+                            },
+                            "correct_answer": "B",
+                            "hint": "Consider the function of the centers located in the pons region of the brain.",
+                            "solution": "The pneumotaxic center, located in the pons region of the brain, moderates the function of the respiratory rhythm center. Neural signals from this center can reduce the duration of inspiration, which in turn increases the overall respiratory rate. The medullary inspiratory center is part of the rhythm center, the apneustic center was not mentioned, and the chemosensitive area detects chemical changes but doesn't directly reduce inspiratory duration.",
+                            "difficulty": "medium",
+                            "concept_tested": "Regulation of Respiration (Pneumotaxic Center)"
+                        },
+                        {
+                            "question": "Which of the following conditions in the tissues would favor the dissociation of oxyhemoglobin, leading to the release of oxygen?",
+                            "options": {
+                                "A": "High pO2, low pCO2, low H+, low temperature",
+                                "B": "Low pO2, high pCO2, high H+, high temperature",
+                                "C": "High pO2, high pCO2, low H+, high temperature",
+                                "D": "Low pO2, low pCO2, high H+, low temperature"
+                            },
+                            "correct_answer": "B",
+                            "hint": "Think about the metabolic activity in tissues and how it affects the local environment.",
+                            "solution": "In metabolically active tissues, oxygen is utilized, leading to low pO2. Respiration produces carbon dioxide, resulting in high pCO2, which in turn increases H+ concentration (low pH) and raises the temperature. All these conditions (low pO2, high pCO2, high H+, high temperature) collectively favor the dissociation of oxyhemoglobin, ensuring oxygen is released where it is needed most.",
+                            "difficulty": "medium",
+                            "concept_tested": "Factors Affecting Oxygen Dissociation"
+                        }
+                    ],
+                    "flashcards": [
+                        {
+                            "front": "What is the primary process by which gases are exchanged in the human body?",
+                            "back": "Diffusion",
+                            "concept": "Gas Exchange",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "List the three major layers of the diffusion membrane between alveoli and blood.",
+                            "back": "Thin squamous epithelium of alveoli, endothelium of alveolar capillaries, and basement substance.",
+                            "concept": "Diffusion Membrane",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "What percentage of oxygen is transported as oxyhemoglobin by RBCs?",
+                            "back": "About 97%",
+                            "concept": "Oxygen Transport",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Which enzyme catalyzes the reaction of CO2 with water to form carbonic acid during CO2 transport?",
+                            "back": "Carbonic anhydrase",
+                            "concept": "Carbon Dioxide Transport",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Where is the respiratory rhythm center, responsible for the basic rhythm of respiration, located?",
+                            "back": "In the medulla region of the hindbrain",
+                            "concept": "Nervous Regulation of Respiration",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is asthma characterized by?",
+                            "back": "Difficulty in breathing and wheezing due to inflammation of bronchi and bronchioles.",
+                            "concept": "Respiratory Disorders",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "What is the major cause of emphysema?",
+                            "back": "Cigarette smoking",
+                            "concept": "Respiratory Disorders",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is 'fibrosis' in the context of occupational respiratory disorders?",
+                            "back": "Proliferation of fibrous tissues in the inner linings of the respiratory system, leading to lung damage.",
+                            "concept": "Occupational Respiratory Disorders",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "What is the approximate amount of oxygen delivered to tissues by 100 ml of oxygenated blood under normal physiological conditions?",
+                            "back": "Around 5 ml",
+                            "concept": "Oxygen Transport",
+                            "importance": "medium"
+                        }
+                    ]
+                }
+            },
+            "80293": {
+                "status": "success",
+                "s3_key": "batch/output/80293_result.json",
+                "data": {
+                    "lecture_topic": "Regulation of Kidney Function: ADH and Homeostasis",
+                    "subject": "Biology",
+                    "summary": "## Regulation of Kidney Function\n\n### Kidney's Role in Homeostasis\n- Kidneys are not just excretory organs; they maintain **homeostasis** of plasma electrolytes and **acid-base balance**.\n- They regulate concentrations of ions like **sodium, potassium, bicarbonate, and hydrogen ions**.\n- Kidney function is regulated by **hormonal feedback mechanisms** involving the hypothalamus, JGA (Juxtaglomerular Apparatus), and heart.\n\n### Anti-Diuretic Hormone (ADH) / Vasopressin\n- **Chemical Nature**: ADH is a **peptide hormone**.\n- **Synthesis**: Synthesized by the **hypothalamus**.\n- **Release**: Released from the **posterior lobe of the pituitary gland**.\n\n### Osmoregulation by ADH\n- **Osmoreceptors**: Located in the **hypothalamus**, these nerve cells monitor blood osmolarity.\n- **Normal Blood Osmolarity**: The set point is **300 milliosmol per litre**.\n- **Response to High Osmolarity (e.g., dehydration)**:\n    - If osmolarity rises above 300 mOsmol/L, **ADH release increases**.\n    - Osmoreceptors also stimulate **thirst**, leading to water intake.\n    - ADH makes the **distal convoluted tubule (DCT)** and **collecting duct** permeable to water.\n    - This increases **water reabsorption** from glomerular filtrate into blood.\n    - Urine becomes **concentrated**, urine volume reduces, and blood osmolarity lowers back to normal.\n    - A decrease in osmolarity provides **negative feedback** to the hypothalamus, reducing ADH release.\n- **Response to Low Osmolarity (e.g., excess water intake)**:\n    - If osmolarity decreases below 300 mOsmol/L, **ADH secretion declines**.\n    - Tubular permeability to water decreases, reducing water reabsorption.\n    - More water passes out in urine, leading to **dilute urine** (diuresis).\n\n### Mechanism of ADH Action\n- ADH binds to receptors in target areas (DCT and collecting duct).\n- This leads to a temporary increase in the number of **aquaporin proteins**.\n- **Aquaporins** are protein-lined channels in cell membranes that facilitate water entry, increasing water absorption.\n\n### Diabetes Insipidus\n- A condition where ADH is either produced in **less amount**, or **ADH receptors are inactivated**, or **aquaporin channels are not formed**.\n- Results in **non-absorption of water** from the distal nephron.\n- Characterized by **severe dehydration** and solute imbalance due to **copious dilute urine** production.\n- **Distinguished from Diabetes Mellitus**: Diabetes insipidus urine is **without sugar** (insipid = tasteless), while diabetes mellitus involves excess glucose in urine.\n- Patients experience **excessive thirst** (polydipsia) which helps compensate for water loss.\n\n### Factors Affecting ADH Secretion\n- **Stimuli that Increase ADH**: Increased blood osmolarity (e.g., high salt intake), decreased arterial pressure, decreased blood volume.\n- **Stimuli that Decrease ADH**: **Alcohol** (inhibits ADH release, causing diuresis and dehydration), sufficient **water intake**, **caffeine** (present in tea/coffee, increases urination).\n\n### Renin-Angiotensin-Aldosterone System (RAS)\n- Introduced as another important aspect of kidney regulation, to be discussed further."
+                }
+            },
+            "94171": {
+                "status": "success",
+                "s3_key": "batch/output/94171_result.json",
+                "data": {
+                    "lecture_topic": "Photosynthesis: Light & Dark Reactions, C3 & C4 Cycles",
+                    "subject": "Biology",
+                    "summary": "## Photosynthesis\n- The process by which **producers** (plants) synthesize carbohydrates (food) using light energy.\n- The term 'Photosynthesis' breaks down into **'Photo'** (light) and **'Synthesis'** (to synthesize).\n- Overall process involves fixing atmospheric **carbon dioxide** into carbohydrates, requiring light, water, and pigments.\n- Bifurcated into two main reactions: **Light Reaction** and **Dark Reaction**.\n\n### Light Reaction\n- **Dependent on light**; occurs in the **grana** of chloroplasts.\n- Involves two **photosystems**: **PSII (P680)** and **PSI (P700)**, which absorb light.\n- **Electron flow** in Non-cyclic Photophosphorylation (Z-scheme):\n    - Light excites electrons from PSII (P680).\n    - Electrons accepted by **Pheophytin** (primary acceptor), then to **Plastoquinone**, **Cytochrome b6f complex**, **Plastocyanin**, and finally to PSI (P700).\n    - From PSI, electrons go to **Ferredoxin**, then to **FNR** (Ferredoxin-NADP reductase), which reduces **NADP+ to NADPH** in the stroma.\n- **Electron replenishment**:\n    - For PSII: By **water splitting** (photolysis) via the **Oxygen Evolving Complex (OEC)**, releasing protons, electrons, and **oxygen**.\n    - For PSI: By electrons from **Plastocyanin**.\n- **Products of Non-cyclic Photophosphorylation**: **ATP**, **NADPH**, and **Oxygen**.\n- **Cyclic Photophosphorylation**:\n    - Occurs in **stroma lamellae**, which lacks PSII and NADP reductase.\n    - Only **PSI** is involved.\n    - Electrons from PSI return to the **Cytochrome b6f complex** via Ferredoxin, then to Plastocyanin, and back to PSI.\n    - **Product**: Only **ATP**.\n\n### ATP Formation: Chemiosmotic Hypothesis\n- Proposed by **Peter Mitchell**.\n- Requires four components: a **membrane** (thylakoid membrane), a **proton pump** (Plastoquinone, Cytochrome b6f complex), a **proton gradient**, and **ATP synthase**.\n- **Proton gradient formation**:\n    - Protons are pumped into the **thylakoid lumen** by Plastoquinone and Cytochrome b6f complex.\n    - Water splitting in the lumen releases more protons.\n    - NADP+ reduction in the stroma consumes protons, further decreasing stromal H+ concentration.\n    - This creates a high proton concentration in the lumen and low in the stroma.\n- **ATP synthesis**: Protons flow from the lumen to the stroma through **ATP synthase (F0-F1 particle)**, causing conformational changes that lead to **ATP formation**.\n\n### Dark Reaction: Calvin Cycle (C3 Cycle)\n- **Light-independent** reaction; occurs in the **stroma**.\n- **Universal cycle** in nearly all plants.\n- **Primary CO2 acceptor**: **Ribulose 1,5-bisphosphate (RuBP)**, a 5-carbon ketose sugar.\n- **Enzyme**: **RuBisCO** (Ribulose 1,5-bisphosphate carboxylase oxygenase).\n- **Carboxylation**: RuBisCO fixes CO2 to RuBP, forming an unstable 6-carbon compound that immediately splits into two molecules of **3-Phosphoglycerate (3-PGA)**.\n- **First stable product**: **3-PGA** (a 3-carbon compound), hence the name **C3 cycle**.\n- **Reduction**: 3-PGA is converted to **Glyceraldehyde 3-phosphate** using **ATP** and **NADPH** (from light reaction).\n- **Regeneration**: RuBP is regenerated from Glyceraldehyde 3-phosphate using **ATP**.\n- **Energy requirement for 1 CO2 fixation**: **3 ATP** and **2 NADPH**.\n- **Energy requirement for 1 glucose (6 CO2) fixation**: **18 ATP** and **12 NADPH**.\n- Occurs in **mesophyll cells** in C3 plants.\n\n### Photorespiration (C2 Cycle)\n- A **wasteful process** in C3 plants.\n- Occurs when **RuBisCO** acts as an **oxygenase** (instead of carboxylase), especially under high O2 and low CO2 conditions.\n- Consumes **ATP** and **NADPH** without fixing sugar.\n- Products: One molecule of 3-PGA and one molecule of **2-phosphoglycolate** (a 2-carbon compound), hence **C2 cycle**.\n- Reduces photosynthetic yield in C3 plants.\n\n### C4 Cycle (Hatch-Slack Pathway)\n- An adaptation in **C4 plants** to minimize photorespiration, allowing them to thrive in higher temperatures.\n- Characterized by **Kranz anatomy**: presence of both **mesophyll cells** and **bundle sheath cells**.\n- **Mesophyll cells**:\n    - Lack RuBisCO.\n    - **PEP Carboxylase (PEPCase)** fixes atmospheric CO2 to **Phosphoenolpyruvate (PEP)** (3-carbon compound).\n    - Forms **Oxaloacetate (OAA)** (4-carbon compound) as the **first stable product**, hence **C4 cycle**.\n    - OAA is converted to **Malate** (4-carbon acid) for transport.\n- **Bundle Sheath cells**:\n    - Contain **RuBisCO**.\n    - Malate is transported here and undergoes **decarboxylation**, releasing CO2.\n    - This CO2 is then used by RuBisCO in the **Calvin cycle**.\n    - Pyruvate (3-carbon compound) is transported back to mesophyll cells to regenerate PEP (requires ATP).\n- **Advantage**: Maintains a **high CO2 concentration** around RuBisCO in bundle sheath cells, preventing its oxygenase activity.\n- **Energy requirement for 1 CO2 fixation**: **5 ATP** and **2 NADPH** (3 ATP + 2 NADPH for Calvin cycle + 2 ATP for PEP regeneration).\n- **Energy requirement for 1 glucose (6 CO2) fixation**: **30 ATP** and **12 NADPH**.\n- Net NADPH consumption is zero in C4 cycle itself, but 2 NADPH are used in the Calvin cycle part. The 2 additional ATP are for PEP regeneration. The total for 1 CO2 fixation is 5 ATP and 2 NADPH. The total for 6 CO2 fixation is 30 ATP and 12 NADPH. (The transcript states NADPH is utilized then recreated, implying net zero for the C4 part, but then gives total for 1 CO2 fixation as 5 ATP and 2 NADPH, which includes the Calvin cycle's NADPH. For glucose, it's 30 ATP and 12 NADPH, which is consistent with 6x (5 ATP + 2 NADPH)).",
+                    "mindmap": {
+                        "title": "Photosynthesis Overview",
+                        "description": "Process by which plants convert light energy into chemical energy (food).",
+                        "children": [
+                            {
+                                "title": "Light Reaction",
+                                "description": "Light-dependent phase producing ATP, NADPH, O2.",
+                                "children": [
+                                    {
+                                        "title": "Non-cyclic Photophosphorylation (Z-scheme)",
+                                        "description": "Involves PSII & PSI, produces ATP, NADPH, O2.",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Cyclic Photophosphorylation",
+                                        "description": "Only PSI, produces only ATP, occurs in stroma lamellae.",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Chemiosmotic Hypothesis",
+                                        "description": "Explains ATP synthesis via proton gradient across thylakoid membrane.",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Dark Reaction (Calvin Cycle)",
+                                "description": "Light-independent phase fixing CO2 into carbohydrates.",
+                                "children": [
+                                    {
+                                        "title": "C3 Cycle",
+                                        "description": "Universal cycle, RuBP + CO2 → 3-PGA (3C first product).",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Photorespiration (C2 Cycle)",
+                                        "description": "Wasteful process, RuBisCO acts as oxygenase, forms 2-phosphoglycolate (2C).",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "C4 Cycle (Hatch-Slack Pathway)",
+                                        "description": "Adaptation to reduce photorespiration, Kranz anatomy, OAA (4C first product).",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "quizzes": [
+                        {
+                            "question": "Which of the following is NOT a product of non-cyclic photophosphorylation?",
+                            "options": {
+                                "A": "ATP",
+                                "B": "NADPH",
+                                "C": "Oxygen",
+                                "D": "Carbohydrate"
+                            },
+                            "correct_answer": "D",
+                            "hint": "Non-cyclic photophosphorylation is part of the light reaction. Carbohydrates are formed in the dark reaction.",
+                            "solution": "Non-cyclic photophosphorylation, which is a part of the light reaction, produces ATP, NADPH, and oxygen. Carbohydrates are synthesized during the dark reaction (Calvin cycle) using the ATP and NADPH produced in the light reaction. Therefore, carbohydrate is not a direct product of non-cyclic photophosphorylation.",
+                            "difficulty": "easy",
+                            "concept_tested": "Products of Non-cyclic Photophosphorylation"
+                        },
+                        {
+                            "question": "In C4 plants, where does the initial fixation of atmospheric carbon dioxide occur, and what enzyme is primarily responsible for it?",
+                            "options": {
+                                "A": "Bundle sheath cells; RuBisCO",
+                                "B": "Mesophyll cells; RuBisCO",
+                                "C": "Bundle sheath cells; PEP Carboxylase",
+                                "D": "Mesophyll cells; PEP Carboxylase"
+                            },
+                            "correct_answer": "D",
+                            "hint": "Recall the specialized anatomy and enzyme distribution in C4 plants.",
+                            "solution": "C4 plants exhibit Kranz anatomy with mesophyll and bundle sheath cells. In mesophyll cells, the enzyme PEP Carboxylase (PEPCase) is responsible for the initial fixation of atmospheric CO2, forming a 4-carbon compound (Oxaloacetate). RuBisCO is present in bundle sheath cells for the Calvin cycle.",
+                            "difficulty": "medium",
+                            "concept_tested": "C4 Cycle and Kranz Anatomy"
+                        },
+                        {
+                            "question": "How many ATP and NADPH molecules are required to fix one molecule of CO2 in the Calvin cycle (C3 cycle)?",
+                            "options": {
+                                "A": "2 ATP, 2 NADPH",
+                                "B": "3 ATP, 2 NADPH",
+                                "C": "3 ATP, 3 NADPH",
+                                "D": "2 ATP, 3 NADPH"
+                            },
+                            "correct_answer": "B",
+                            "hint": "Consider the energy requirements for both reduction and regeneration steps in the C3 cycle.",
+                            "solution": "For the fixation of one molecule of CO2 in the Calvin cycle, 3 ATP molecules are consumed (2 for reduction of 3-PGA and 1 for regeneration of RuBP), and 2 NADPH molecules are consumed (for the reduction of 3-PGA).",
+                            "difficulty": "medium",
+                            "concept_tested": "Energy Requirements of Calvin Cycle"
+                        },
+                        {
+                            "question": "Which of the following conditions would favor photorespiration in C3 plants?",
+                            "options": {
+                                "A": "High CO2 concentration, low O2 concentration",
+                                "B": "Low CO2 concentration, high O2 concentration",
+                                "C": "Low temperature, high CO2 concentration",
+                                "D": "High light intensity, low O2 concentration"
+                            },
+                            "correct_answer": "B",
+                            "hint": "Photorespiration occurs when RuBisCO acts as an oxygenase. Think about the competitive substrates.",
+                            "solution": "Photorespiration is a wasteful process that occurs when RuBisCO binds with O2 instead of CO2. This oxygenase activity is favored under conditions of low CO2 concentration and high O2 concentration, as O2 competes with CO2 for the active site of RuBisCO.",
+                            "difficulty": "medium",
+                            "concept_tested": "Photorespiration Conditions"
+                        }
+                    ],
+                    "flashcards": [
+                        {
+                            "front": "What is the primary function of photosynthesis?",
+                            "back": "To synthesize carbohydrates (food) using light energy.",
+                            "concept": "Photosynthesis Definition",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Where does the light reaction of photosynthesis primarily occur?",
+                            "back": "In the grana of chloroplasts.",
+                            "concept": "Light Reaction Location",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Name the two photosystems involved in non-cyclic photophosphorylation.",
+                            "back": "Photosystem II (PSII or P680) and Photosystem I (PSI or P700).",
+                            "concept": "Photosystems",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What are the final products of non-cyclic photophosphorylation?",
+                            "back": "ATP, NADPH, and Oxygen (O2).",
+                            "concept": "Non-cyclic Photophosphorylation Products",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Which photosystem is involved in cyclic photophosphorylation, and what is its product?",
+                            "back": "Only Photosystem I (PSI); it produces only ATP.",
+                            "concept": "Cyclic Photophosphorylation",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "What is the primary CO2 acceptor in the Calvin cycle (C3 cycle)?",
+                            "back": "Ribulose 1,5-bisphosphate (RuBP).",
+                            "concept": "Calvin Cycle CO2 Acceptor",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the name of the enzyme that catalyzes the initial CO2 fixation in the Calvin cycle?",
+                            "back": "RuBisCO (Ribulose 1,5-bisphosphate carboxylase oxygenase).",
+                            "concept": "Calvin Cycle Enzyme",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Why is photorespiration considered a wasteful process?",
+                            "back": "It consumes ATP and NADPH without fixing CO2 or producing sugar, and it releases CO2.",
+                            "concept": "Photorespiration",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "What is the characteristic anatomical feature of C4 plants?",
+                            "back": "Kranz anatomy, involving mesophyll and bundle sheath cells.",
+                            "concept": "C4 Plant Anatomy",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the first stable product of CO2 fixation in C4 plants, and what enzyme forms it?",
+                            "back": "Oxaloacetate (OAA), formed by PEP Carboxylase (PEPCase) in mesophyll cells.",
+                            "concept": "C4 Cycle First Product & Enzyme",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "How many ATP and NADPH are required to synthesize one molecule of glucose (6 CO2) in C3 plants?",
+                            "back": "18 ATP and 12 NADPH.",
+                            "concept": "C3 Cycle Energy Requirement",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "How many ATP and NADPH are required to synthesize one molecule of glucose (6 CO2) in C4 plants?",
+                            "back": "30 ATP and 12 NADPH.",
+                            "concept": "C4 Cycle Energy Requirement",
+                            "importance": "high"
+                        }
+                    ]
+                }
+            },
+            "97251": {
+                "status": "success",
+                "s3_key": "batch/output/97251_result.json",
+                "data": {
+                    "lecture_topic": "Combinations with Restrictions in Mathematics",
+                    "subject": "Mathematics",
+                    "summary": "## Combinations with Restrictions\n\n### Definition of Restricted Combinations\n- A **restricted combination** is a type of combination where specific rules or limitations are applied to how items are selected from a group.\n- Examples of restrictions include:\n    - **Excluding** certain items.\n    - **Requiring the inclusion** of specific items.\n    - **Limiting** how many times an item can be selected.\n\n### Problem Solving Examples\n\n#### 1. Card Selection (Exactly 1 Ace)\n- **Problem**: Select 5 cards from a deck of 52, with exactly 1 ace.\n- **Breakdown**: A deck has 4 aces and 48 non-ace cards.\n- **Solution Approach**: Select 1 ace from 4 (4C1) AND 4 non-ace cards from 48 (48C4). Total ways = 4C1 * 48C4.\n\n#### 2. Cricket Team Selection (Exactly 4 Bowlers)\n- **Problem**: Select 11 players from 17, where 5 are bowlers and 12 are batsmen, and exactly 4 bowlers must be included.\n- **Solution Approach**: Select 4 bowlers from 5 (5C4) AND 7 batsmen from 12 (12C7). Total ways = 5C4 * 12C7.\n\n#### 3. Committee Formation (Specific Gender Mix)\n- **Problem**: Form a 3-person committee from 2 men and 3 women, consisting of 1 man and 2 women.\n- **Solution Approach**: Select 1 man from 2 (2C1) AND 2 women from 3 (3C2). Total ways = 2C1 * 3C2.\n\n#### 4. Card Selection (Same Suit)\n- **Problem**: Select 4 cards from a deck of 52, such that all 4 cards are of the same suit.\n- **Breakdown**: 52 cards are divided into 4 suits (Spade, Club, Heart, Diamond), each with 13 cards.\n- **Solution Approach**: Select 4 cards from Spades (13C4) OR 4 from Clubs (13C4) OR 4 from Hearts (13C4) OR 4 from Diamonds (13C4). Total ways = 4 * 13C4.\n\n#### 5. Card Selection (Different Suits)\n- **Problem**: Select 4 cards from a deck of 52, such that each card belongs to a different suit.\n- **Solution Approach**: Select 1 card from Spades (13C1) AND 1 from Clubs (13C1) AND 1 from Hearts (13C1) AND 1 from Diamonds (13C1). Total ways = 13C1 * 13C1 * 13C1 * 13C1 = (13)^4.\n\n#### 6. Card Selection (Face Cards)\n- **Problem**: Select 4 cards from a deck of 52, such that all 4 are face cards.\n- **Breakdown**: A deck has 12 face cards (3 per suit: Jack, Queen, King).\n- **Solution Approach**: Select 4 face cards from 12 (12C4).\n\n#### 7. Card Selection (Red and Black Cards)\n- **Problem**: Select 4 cards from a deck of 52, such that 2 are red and 2 are black.\n- **Breakdown**: A deck has 26 red cards and 26 black cards.\n- **Solution Approach**: Select 2 red cards from 26 (26C2) AND 2 black cards from 26 (26C2). Total ways = 26C2 * 26C2.\n\n#### 8. Exam Question Selection (At Least from Each Part)\n- **Problem**: Answer 10 questions, choosing at least 4 from Part A (6 questions) and Part B (7 questions).\n- **Solution Approach**: Consider cases:\n    - **Case 1**: 4 from Part A (6C4) AND 6 from Part B (7C6).\n    - **Case 2**: 5 from Part A (6C5) AND 5 from Part B (7C5).\n    - **Case 3**: 6 from Part A (6C6) AND 4 from Part B (7C4).\n- **Total ways** = Sum of ways from Case 1, Case 2, and Case 3.\n\n### General Combination Formula\n- The number of ways to choose 'r' items from 'n' distinct items is given by **nCr = n! / (r! * (n-r)!)**."
+                }
+            },
+            "97370": {
+                "status": "success",
+                "s3_key": "batch/output/97370_result.json",
+                "data": {
+                    "lecture_topic": "Introduction to 3D Geometry: Octants and Coordinates",
+                    "subject": "Mathematics",
+                    "summary": "## Introduction to 3D Geometry\n\n### From 2D to 3D Space\n-   **2D space** uses **x-axis** and **y-axis** on a flat plane, dividing it into **four quadrants**.\n-   Points in 2D are located using **(x, y)** coordinates.\n-   **3D space** introduces a third axis, the **z-axis**, along with x and y.\n-   All three axes are **perpendicular** to each other and meet at the **origin (0, 0, 0)**.\n-   Mathematician **Euler** formalized many ideas in 3D geometry.\n\n### 3D Coordinate System\n-   **X-axis**: Represents depth (moving into or out of the screen).\n-   **Y-axis**: Represents horizontal movement (right or left direction).\n-   **Z-axis**: Represents vertical movement (upwards or downwards direction).\n-   **Origin**: The central point (0, 0, 0) where all three axes intersect.\n\n### Coordinate Planes\n-   Three main planes are formed by taking two axes at a time:\n    -   **XY-plane**: Formed by the x and y axes.\n    -   **YZ-plane**: Formed by the y and z axes.\n    -   **ZX-plane**: Formed by the z and x axes.\n-   These three planes are mutually **perpendicular**.\n\n### Octants\n-   The three coordinate axes divide 3D space into **eight octants**.\n-   Each octant is defined by the unique combination of **signs** of the x, y, and z coordinates.\n-   **First Octant**: (+, +, +)\n-   **Fifth Octant**: (+, +, -) (below the first octant)\n-   **Second Octant**: (-, +, +)\n-   **Sixth Octant**: (-, +, -) (below the second octant)\n-   **Third Octant**: (-, -, +)\n-   **Seventh Octant**: (-, -, -) (below the third octant)\n-   **Fourth Octant**: (+, -, +)\n-   **Eighth Octant**: (+, -, -) (below the fourth octant)\n\n### Locating Points in 3D Space\n-   A point **(x, y, z)** represents:\n    -   **x**: The perpendicular distance from the **YZ-plane**.\n    -   **y**: The perpendicular distance from the **XZ-plane**.\n    -   **z**: The perpendicular distance from the **XY-plane**.\n-   **Points on axes**:\n    -   On x-axis: (x, 0, 0)\n    -   On y-axis: (0, y, 0)\n    -   On z-axis: (0, 0, z)\n-   **Points on coordinate planes**:\n    -   On XY-plane: (x, y, 0)\n    -   On YZ-plane: (0, y, z)\n    -   On ZX-plane: (x, 0, z)\n-   **Planes parallel to coordinate planes**:\n    -   A plane with equation **x = constant** (e.g., x=1) is parallel to the **YZ-plane**.\n    -   A plane with equation **y = constant** (e.g., y=3) is parallel to the **XZ-plane**.\n    -   A plane with equation **z = constant** (e.g., z=4) is parallel to the **XY-plane**.",
+                    "mindmap": {
+                        "title": "Introduction to 3D Geometry",
+                        "description": "Understanding coordinate systems, planes, and octants in 3D space",
+                        "children": [
+                            {
+                                "title": "2D vs 3D Space",
+                                "description": "Transition from flat plane to real-world 3-dimensional space",
+                                "children": [
+                                    {
+                                        "title": "2D System",
+                                        "description": "X, Y axes, 4 Quadrants, (x,y) coordinates",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "3D System",
+                                        "description": "X, Y, Z axes, Origin, (x,y,z) coordinates",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "3D Coordinate System",
+                                "description": "Components and properties of the 3D coordinate framework",
+                                "children": [
+                                    {
+                                        "title": "Axes (X, Y, Z)",
+                                        "description": "X: depth, Y: horizontal, Z: vertical movement",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Origin (0,0,0)",
+                                        "description": "Point where all three axes intersect",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Perpendicularity",
+                                        "description": "All three axes are mutually perpendicular",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Coordinate Planes",
+                                "description": "Planes formed by pairs of axes in 3D space",
+                                "children": [
+                                    {
+                                        "title": "XY-plane",
+                                        "description": "Plane formed by X and Y axes",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "YZ-plane",
+                                        "description": "Plane formed by Y and Z axes",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "ZX-plane",
+                                        "description": "Plane formed by Z and X axes",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Octants",
+                                "description": "Eight divisions of 3D space by coordinate planes",
+                                "children": [
+                                    {
+                                        "title": "Definition",
+                                        "description": "Space divided into 8 regions by axes",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Sign Conventions",
+                                        "description": "Unique (+/-) combinations for x, y, z in each octant",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Point Location & Properties",
+                                "description": "How to locate points and their characteristics in 3D",
+                                "children": [
+                                    {
+                                        "title": "Distance from Planes",
+                                        "description": "x from YZ, y from XZ, z from XY plane",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Points on Axes",
+                                        "description": "(x,0,0), (0,y,0), (0,0,z) forms",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Points on Planes",
+                                        "description": "(x,y,0), (0,y,z), (x,0,z) forms",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Parallel Planes",
+                                        "description": "x=k || YZ, y=k || XZ, z=k || XY",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "quizzes": [
+                        {
+                            "question": "In which octant does the point (4, -2, 3) lie?",
+                            "options": {
+                                "A": "First Octant",
+                                "B": "Second Octant",
+                                "C": "Fourth Octant",
+                                "D": "Eighth Octant"
+                            },
+                            "correct_answer": "C",
+                            "hint": "Recall the sign conventions for x, y, and z coordinates in each octant.",
+                            "solution": "The point (4, -2, 3) has a positive x-coordinate (+), a negative y-coordinate (-), and a positive z-coordinate (+). This combination (+, -, +) corresponds to the Fourth Octant.",
+                            "difficulty": "medium",
+                            "concept_tested": "Octants and Sign Conventions"
+                        },
+                        {
+                            "question": "If a point lies on the YZ-plane, which of its coordinates must be zero?",
+                            "options": {
+                                "A": "x-coordinate",
+                                "B": "y-coordinate",
+                                "C": "z-coordinate",
+                                "D": "Both y and z coordinates"
+                            },
+                            "correct_answer": "A",
+                            "hint": "A point on a coordinate plane means it has no displacement along the axis *not* part of that plane.",
+                            "solution": "The YZ-plane is formed by the Y and Z axes. Any point lying on this plane will have its x-coordinate equal to zero, as it has no displacement along the x-axis.",
+                            "difficulty": "easy",
+                            "concept_tested": "Points on Coordinate Planes"
+                        },
+                        {
+                            "question": "The plane defined by the equation y = 5 is parallel to which coordinate plane?",
+                            "options": {
+                                "A": "XY-plane",
+                                "B": "YZ-plane",
+                                "C": "ZX-plane",
+                                "D": "It's not parallel to any coordinate plane."
+                            },
+                            "correct_answer": "C",
+                            "hint": "A plane where one coordinate is fixed is parallel to the plane formed by the other two axes.",
+                            "solution": "The equation y = 5 means the y-coordinate is fixed at 5, while x and z can take any values. This describes a plane parallel to the ZX-plane (where y=0).",
+                            "difficulty": "medium",
+                            "concept_tested": "Planes Parallel to Coordinate Planes"
+                        },
+                        {
+                            "question": "What are the coordinates of a point 'P' on the z-axis, 7 units away from the origin in the positive direction?",
+                            "options": {
+                                "A": "(7, 0, 0)",
+                                "B": "(0, 7, 0)",
+                                "C": "(0, 0, 7)",
+                                "D": "(7, 7, 7)"
+                            },
+                            "correct_answer": "C",
+                            "hint": "On the z-axis, only the z-coordinate has a non-zero value.",
+                            "solution": "A point on the z-axis has its x and y coordinates as zero. Since it is 7 units away in the positive direction, its coordinates will be (0, 0, 7).",
+                            "difficulty": "easy",
+                            "concept_tested": "Points on Axes"
+                        },
+                        {
+                            "question": "A point has coordinates (-1, 5, -2). In which octant does it lie?",
+                            "options": {
+                                "A": "Second Octant",
+                                "B": "Third Octant",
+                                "C": "Sixth Octant",
+                                "D": "Seventh Octant"
+                            },
+                            "correct_answer": "C",
+                            "hint": "Determine the signs of x, y, and z and match them to the octant definitions.",
+                            "solution": "The point (-1, 5, -2) has x negative (-), y positive (+), and z negative (-). This sign combination (-, +, -) corresponds to the Sixth Octant.",
+                            "difficulty": "medium",
+                            "concept_tested": "Octant Identification"
+                        }
+                    ],
+                    "flashcards": [
+                        {
+                            "front": "How many axes are there in a 3D coordinate system?",
+                            "back": "Three (x, y, z)",
+                            "concept": "3D Coordinate System",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the point where all three axes intersect in 3D space?",
+                            "back": "Origin (0, 0, 0)",
+                            "concept": "3D Coordinate System",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "How many octants does 3D space have?",
+                            "back": "Eight",
+                            "concept": "Octants",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What are the signs of the coordinates (x, y, z) in the First Octant?",
+                            "back": "(+, +, +)",
+                            "concept": "Octant Signs",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What does the x-coordinate of a point (x, y, z) represent?",
+                            "back": "The perpendicular distance from the YZ-plane",
+                            "concept": "Point Location",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "What are the coordinates of any point lying on the x-axis?",
+                            "back": "(x, 0, 0)",
+                            "concept": "Points on Axes",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Which coordinate is zero for a point lying on the XY-plane?",
+                            "back": "Z-coordinate",
+                            "concept": "Points on Coordinate Planes",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "A plane defined by z = constant is parallel to which coordinate plane?",
+                            "back": "XY-plane",
+                            "concept": "Planes Parallel to Coordinate Planes",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "Who was one of the first mathematicians to formalize many ideas in 3D geometry?",
+                            "back": "Euler",
+                            "concept": "History of 3D Geometry",
+                            "importance": "low"
+                        },
+                        {
+                            "front": "Describe the movement associated with the y-axis in 3D space.",
+                            "back": "Movement in the right-hand or left-hand direction (horizontal movement)",
+                            "concept": "3D Axes",
+                            "importance": "medium"
+                        }
+                    ]
+                }
+            },
+            "waves": {
+                "status": "success",
+                "s3_key": "batch/output/waves_result.json",
+                "data": {
+                    "lecture_topic": "Introduction to Waves and Their Types",
+                    "subject": "Physics",
+                    "summary": "## Introduction to Waves\n- Waves involve a **set of particles** or a **system of particles** oscillating together, unlike isolated particle oscillations.\n- In wave motion, individual particles **oscillate at their positions** but do not move along with the wave itself.\n- An example is a wave generated in a string when one end is moved up and down.\n\n## Types of Waves\n\n### Mechanical Waves\n- These waves **need a medium** to propagate.\n- They are disturbances that travel through a material medium.\n- Examples include **waves in a string**, **sound waves** (propagating in air), and **waves in water**.\n- Disturbance in a spring generating **compressions and rarefactions** is also a mechanical wave.\n\n### Non-Mechanical Waves\n- These waves **do not require a medium** for propagation.\n- They can travel through a vacuum.\n- An example is **electromagnetic waves** (like light from the sun), where electric and magnetic fields oscillate.\n\n### Types of Mechanical Waves\n\n#### Transverse Waves\n- In **transverse waves**, the motion of the particles of the medium is **perpendicular** to the direction of propagation of the wave.\n- Example: A wave travelling in a string, where particles move up and down while the wave moves horizontally.\n\n#### Longitudinal Waves\n- In **longitudinal waves**, the motion of the particles of the medium is **in the direction** (parallel) of propagation of the wave.\n- Example: A wave in a spring, where compressions and rarefactions travel, and particles move to and fro along the direction of the wave.",
+                    "mindmap": {
+                        "title": "Waves: Introduction & Types",
+                        "description": "Understanding wave motion, mechanical vs. non-mechanical, and transverse vs. longitudinal waves.",
+                        "children": [
+                            {
+                                "title": "Wave Motion Basics",
+                                "description": "How waves differ from simple oscillations of single particles.",
+                                "children": [
+                                    {
+                                        "title": "Particles Oscillate",
+                                        "description": "Individual particles of medium oscillate at fixed positions.",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Wave Propagates",
+                                        "description": "The disturbance (wave) travels through the medium.",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Classification by Medium Need",
+                                "description": "Categorizing waves based on their requirement for a medium.",
+                                "children": [
+                                    {
+                                        "title": "Mechanical Waves",
+                                        "description": "Waves that require a material medium for propagation.",
+                                        "children": [
+                                            {
+                                                "title": "Examples of Mechanical Waves",
+                                                "description": "Waves in string, sound waves, waves in water, spring waves.",
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Non-Mechanical Waves",
+                                        "description": "Waves that do not require a medium; can travel through vacuum.",
+                                        "children": [
+                                            {
+                                                "title": "Example of Non-Mechanical Waves",
+                                                "description": "Electromagnetic waves (e.g., light).",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Classification by Particle Motion",
+                                "description": "Categorizing mechanical waves based on particle oscillation direction.",
+                                "children": [
+                                    {
+                                        "title": "Transverse Waves",
+                                        "description": "Particle motion is perpendicular to wave propagation direction.",
+                                        "children": [
+                                            {
+                                                "title": "Example of Transverse Wave",
+                                                "description": "Wave in a string.",
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Longitudinal Waves",
+                                        "description": "Particle motion is parallel to wave propagation direction.",
+                                        "children": [
+                                            {
+                                                "title": "Example of Longitudinal Wave",
+                                                "description": "Wave in a spring (compressions/rarefactions).",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "quizzes": [
+                        {
+                            "question": "Which of the following statements correctly describes the motion of particles in a medium when a wave propagates through it?",
+                            "options": {
+                                "A": "Particles move along with the wave in the direction of propagation.",
+                                "B": "Particles oscillate about their mean positions without moving with the wave.",
+                                "C": "Particles are permanently displaced from their original positions.",
+                                "D": "Particles move randomly in all directions, transferring energy."
+                            },
+                            "correct_answer": "B",
+                            "hint": "Recall the example of a string where particles move up and down, but the wave travels horizontally.",
+                            "solution": "According to the lecture, in wave motion, individual particles of the medium oscillate at their positions but do not move with the wave. The wave itself is the propagation of a disturbance. Therefore, option B is correct. Options A and C describe bulk movement or permanent displacement, which is incorrect for wave propagation. Option D is too general and doesn't capture the oscillatory nature.",
+                            "difficulty": "easy",
+                            "concept_tested": "Wave Motion Basics"
+                        },
+                        {
+                            "question": "Which of the following is an example of a non-mechanical wave?",
+                            "options": {
+                                "A": "Sound wave propagating through air.",
+                                "B": "Wave generated in a stretched string.",
+                                "C": "Light wave travelling from the sun to the earth.",
+                                "D": "Waves formed on the surface of water."
+                            },
+                            "correct_answer": "C",
+                            "hint": "Consider which type of wave does not require a medium to travel.",
+                            "solution": "The lecture defines non-mechanical waves as those that do not require a medium for propagation and can travel through a vacuum. Electromagnetic waves, such as light, are given as an example. Sound waves, waves in a string, and water waves are all explicitly mentioned as examples of mechanical waves that require a medium. Thus, option C is the correct answer.",
+                            "difficulty": "medium",
+                            "concept_tested": "Non-Mechanical Waves"
+                        },
+                        {
+                            "question": "In a transverse wave, how is the motion of the medium's particles related to the direction of wave propagation?",
+                            "options": {
+                                "A": "The particle motion is parallel to the wave propagation.",
+                                "B": "The particle motion is perpendicular to the wave propagation.",
+                                "C": "The particle motion is at a 45-degree angle to the wave propagation.",
+                                "D": "The particles do not move; only energy is transferred."
+                            },
+                            "correct_answer": "B",
+                            "hint": "Think about the example of a wave in a string and how the individual points on the string move.",
+                            "solution": "The lecture clearly states that in a transverse wave, the motion of the particles of the medium is perpendicular to the direction of propagation of the wave. For example, in a string wave, particles move up and down while the wave travels horizontally. Option A describes longitudinal waves, and options C and D are incorrect based on the definition.",
+                            "difficulty": "easy",
+                            "concept_tested": "Transverse Waves"
+                        },
+                        {
+                            "question": "A wave in a spring, characterized by compressions and rarefactions, is an example of which type of wave?",
+                            "options": {
+                                "A": "Transverse wave",
+                                "B": "Electromagnetic wave",
+                                "C": "Longitudinal wave",
+                                "D": "Surface wave"
+                            },
+                            "correct_answer": "C",
+                            "hint": "Consider the direction of particle movement relative to the wave's travel in a spring with compressions and rarefactions.",
+                            "solution": "The lecture describes a wave in a spring with compressions and rarefactions as an example where particles move 'to and fro' in the direction of the wave. This characteristic defines a longitudinal wave, where particle motion is in the same direction as wave propagation. Transverse waves have perpendicular particle motion, and electromagnetic waves are non-mechanical. Therefore, option C is correct.",
+                            "difficulty": "medium",
+                            "concept_tested": "Longitudinal Waves"
+                        }
+                    ],
+                    "flashcards": [
+                        {
+                            "front": "What is the fundamental difference between oscillations and wave motion as discussed?",
+                            "back": "Oscillations involve an isolated particle, while wave motion involves a set or system of particles oscillating together.",
+                            "concept": "Wave Motion Basics",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "How do individual particles of a medium behave when a wave propagates through it?",
+                            "back": "They oscillate at their positions and do not move along with the wave.",
+                            "concept": "Wave Motion Basics",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Define a mechanical wave.",
+                            "back": "A wave that needs a material medium to propagate.",
+                            "concept": "Mechanical Waves",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Give two examples of mechanical waves.",
+                            "back": "Waves in a string, sound waves, waves in water, or waves in a spring.",
+                            "concept": "Mechanical Waves",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is a non-mechanical wave?",
+                            "back": "A wave that does not require a medium to propagate and can travel through a vacuum.",
+                            "concept": "Non-Mechanical Waves",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Provide an example of a non-mechanical wave.",
+                            "back": "Electromagnetic waves (e.g., light from the sun).",
+                            "concept": "Non-Mechanical Waves",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Describe the particle motion relative to wave propagation in a transverse wave.",
+                            "back": "The motion of the particles of the medium is perpendicular to the direction of propagation of the wave.",
+                            "concept": "Transverse Waves",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What type of wave is generated in a string when one end is moved up and down?",
+                            "back": "A transverse wave.",
+                            "concept": "Transverse Waves",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "Describe the particle motion relative to wave propagation in a longitudinal wave.",
+                            "back": "The motion of the particles of the medium is in the direction (parallel) of propagation of the wave.",
+                            "concept": "Longitudinal Waves",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What type of wave is characterized by compressions and rarefactions, such as in a spring?",
+                            "back": "A longitudinal wave.",
+                            "concept": "Longitudinal Waves",
+                            "importance": "medium"
+                        }
+                    ]
+                }
+            },
+            "human-heart": {
+                "status": "success",
+                "s3_key": "batch/output/human-heart_result.json",
+                "data": {
+                    "lecture_topic": "Circulatory Systems and Heart Chambers in Animals",
+                    "subject": "Biology",
+                    "summary": "## Circulatory Pathways\n\n### Open Circulatory System\n- Blood flows through **open spaces** or **sinuses** of the body.\n- Heart pumps blood through large vessels into open spaces/body cavities (sinuses).\n- Found in: **Arthropods**, **Molluscs** (except cephalopods), **Hemicordates**, and **Tunicates**.\n\n### Closed Circulatory System\n- Blood always flows in **closed paths** within defined vessels (arteries, veins, capillaries).\n- Does not flow in open body spaces.\n- Found in: **Annelids** and **Chordates**.\n- Considered more advantageous because blood flow can be **precisely regulated**.\n\n## Heart Chambers and Circulation in Different Animals\n\n### Fishes\n- Have a **two-chambered heart**: one atrium and one ventricle.\n- The heart pumps **deoxygenated blood**.\n- Blood flow: Heart → Gills (oxygenated) → All body parts → Deoxygenated blood returns to Heart.\n- Exhibit **single circulation**.\n\n### Amphibians and Reptiles\n- Have a **three-chambered heart**: two atria and one ventricle.\n- **Left atrium** receives **oxygenated blood** from lungs, gills, or skin.\n- **Right atrium** receives **deoxygenated blood** from body parts.\n- In reptiles, there is an **incomplete septum** developing between the two ventricles.\n- Due to the single ventricle (and incomplete septum in reptiles), there is **mixing of oxygenated and deoxygenated blood**.\n- Exhibit **incomplete double circulation**.",
+                    "mindmap": {
+                        "title": "Circulatory Systems & Heart Chambers",
+                        "description": "Overview of circulatory pathways and heart structures in animals",
+                        "children": [
+                            {
+                                "title": "Circulatory Pathways",
+                                "description": "Two main types of blood circulation systems",
+                                "children": [
+                                    {
+                                        "title": "Open Circulatory System",
+                                        "description": "Blood flows in open spaces called sinuses",
+                                        "children": [
+                                            {
+                                                "title": "Characteristics",
+                                                "description": "Blood pumped into open cavities, not confined to vessels",
+                                                "children": []
+                                            },
+                                            {
+                                                "title": "Examples",
+                                                "description": "Arthropods, Molluscs (except cephalopods), Hemicordates, Tunicates",
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Closed Circulatory System",
+                                        "description": "Blood always flows within defined vessels",
+                                        "children": [
+                                            {
+                                                "title": "Characteristics",
+                                                "description": "Blood confined to arteries, veins, and capillaries",
+                                                "children": []
+                                            },
+                                            {
+                                                "title": "Examples & Advantage",
+                                                "description": "Annelids, Chordates; precise blood flow regulation",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Heart Chambers in Animals",
+                                "description": "Number of heart chambers in different animal groups",
+                                "children": [
+                                    {
+                                        "title": "Fishes",
+                                        "description": "Two-chambered heart and single circulation",
+                                        "children": [
+                                            {
+                                                "title": "Heart Structure",
+                                                "description": "One atrium, one ventricle",
+                                                "children": []
+                                            },
+                                            {
+                                                "title": "Circulation Type",
+                                                "description": "Single circulation; heart pumps deoxygenated blood",
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Amphibians & Reptiles",
+                                        "description": "Three-chambered heart and incomplete double circulation",
+                                        "children": [
+                                            {
+                                                "title": "Heart Structure",
+                                                "description": "Two atria, one ventricle; incomplete septum in reptiles",
+                                                "children": []
+                                            },
+                                            {
+                                                "title": "Circulation Type",
+                                                "description": "Incomplete double circulation; mixing of blood",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "quizzes": [
+                        {
+                            "question": "Which of the following animals typically possesses an open circulatory system?",
+                            "options": {
+                                "A": "Annelids",
+                                "B": "Chordates",
+                                "C": "Arthropods",
+                                "D": "Cephalopods"
+                            },
+                            "correct_answer": "C",
+                            "hint": "Recall the examples provided for open circulatory systems, specifically noting exceptions.",
+                            "solution": "The transcript states that open circulatory systems are present in arthropods, molluscs (except cephalopods), hemicordates, and tunicates. Annelids and chordates have closed circulatory systems. Cephalopods, though molluscs, are an exception and have a closed system. Therefore, arthropods have an open circulatory system.",
+                            "difficulty": "easy",
+                            "concept_tested": "Types of Circulatory Systems and Examples"
+                        },
+                        {
+                            "question": "In fishes, what type of blood does the heart primarily pump?",
+                            "options": {
+                                "A": "Oxygenated blood to the gills",
+                                "B": "Deoxygenated blood to the gills",
+                                "C": "Mixed blood to the body parts",
+                                "D": "Oxygenated blood to the body parts"
+                            },
+                            "correct_answer": "B",
+                            "hint": "Consider the path of blood flow in fishes starting from the heart.",
+                            "solution": "The transcript explicitly states that in fishes, 'the heart pumps deoxygenated blood' which then moves to the gills for oxygenation. Options A, C, and D describe incorrect blood types or destinations for the initial pump from the heart in fishes.",
+                            "difficulty": "medium",
+                            "concept_tested": "Circulation in Fishes"
+                        },
+                        {
+                            "question": "Amphibians and most reptiles exhibit 'incomplete double circulation'. What is the primary reason for this classification?",
+                            "options": {
+                                "A": "The heart has only one atrium.",
+                                "B": "Blood flows through open sinuses.",
+                                "C": "There is mixing of oxygenated and deoxygenated blood in the ventricle.",
+                                "D": "The heart pumps only deoxygenated blood."
+                            },
+                            "correct_answer": "C",
+                            "hint": "Focus on the consequence of having a single ventricle in a three-chambered heart.",
+                            "solution": "The transcript explains that amphibians and reptiles have a three-chambered heart with two atria and one ventricle. It further states, 'So there is a mixing of oxygenated and deoxygenated blood in amphibians and reptiles. And this kind of circulation is called as incomplete double circulation.' Options A and D are incorrect descriptions of their heart or blood pumping. Option B describes an open circulatory system, which is not characteristic of amphibians and reptiles.",
+                            "difficulty": "medium",
+                            "concept_tested": "Circulation in Amphibians and Reptiles"
+                        },
+                        {
+                            "question": "Which of the following statements is an advantage of a closed circulatory system over an open circulatory system?",
+                            "options": {
+                                "A": "It allows blood to flow through open spaces for better nutrient exchange.",
+                                "B": "The flow of blood can be precisely regulated.",
+                                "C": "It is present in a wider variety of animal phyla.",
+                                "D": "It requires less energy to pump blood."
+                            },
+                            "correct_answer": "B",
+                            "hint": "Recall the specific benefit mentioned for closed circulatory systems.",
+                            "solution": "The transcript states, 'And this closed circulatory system is considered to be more advantageous. Why? Because the flow of blood can be precisely regulated in this kind of system.' Options A, C, and D are not mentioned as advantages in the transcript.",
+                            "difficulty": "easy",
+                            "concept_tested": "Advantages of Closed Circulatory System"
+                        }
+                    ],
+                    "flashcards": [
+                        {
+                            "front": "What is an open circulatory system?",
+                            "back": "A system where blood flows through open spaces or sinuses of the body, not confined to vessels.",
+                            "concept": "Open Circulatory System",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Name two animal groups that have an open circulatory system.",
+                            "back": "Arthropods and Molluscs (except cephalopods).",
+                            "concept": "Open Circulatory System Examples",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "What is a closed circulatory system?",
+                            "back": "A system where blood always flows in closed paths within defined vessels (arteries, veins, capillaries).",
+                            "concept": "Closed Circulatory System",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the main advantage of a closed circulatory system?",
+                            "back": "The flow of blood can be precisely regulated.",
+                            "concept": "Closed Circulatory System Advantage",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "How many chambers does a fish heart have?",
+                            "back": "Two chambers: one atrium and one ventricle.",
+                            "concept": "Fish Heart Chambers",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What type of circulation is found in fishes?",
+                            "back": "Single circulation.",
+                            "concept": "Fish Circulation",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "How many chambers do amphibian and most reptile hearts have?",
+                            "back": "Three chambers: two atria and one ventricle.",
+                            "concept": "Amphibian/Reptile Heart Chambers",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Why is the circulation in amphibians and reptiles called 'incomplete double circulation'?",
+                            "back": "Because there is mixing of oxygenated and deoxygenated blood in the single ventricle.",
+                            "concept": "Incomplete Double Circulation",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the significance of the incomplete septum in reptile hearts?",
+                            "back": "It is a developing wall between ventricles, but it is still incomplete, leading to blood mixing.",
+                            "concept": "Reptile Heart Structure",
+                            "importance": "medium"
+                        }
+                    ]
+                }
+            },
+            "883138085": {
+                "status": "success",
+                "s3_key": "batch/output/883138085_result.json",
+                "data": {
+                    "lecture_topic": "Mathematical Analysis of Simple Harmonic Motion",
+                    "subject": "Physics",
+                    "summary": "## Simple Harmonic Motion (SHM) Conditions\n- The fundamental condition for SHM is that **acceleration (a)** is directly proportional to **displacement (x)** from the mean position and directed opposite to it.\n- Mathematically, this is expressed as **a = -kx**.\n- The **negative sign** is crucial, indicating that when displacement (x) is positive, acceleration (a) is negative (restoring force), and vice versa.\n\n### Angular Frequency and Time Period\n- In the condition **a = -kx**, the constant **k** is equal to **omega squared (ω²)**, where **ω** is the **angular frequency**.\n- So, **a = -ω²x**.\n- Angular frequency (ω) is not angular velocity but a characteristic of the oscillation.\n- The **time period (T)** of SHM can be calculated using the formula **T = 2π/ω**.\n\n### Force in SHM\n- The **net force (F_net)** in SHM is given by **F_net = ma**.\n- Substituting **a = -ω²x**, we get **F_net = -mω²x**.\n- Often, this is written as **F_net = -kx**, where the constant **k** here represents **mω²**.\n- It's important to distinguish between the 'k' in **a = -kx** (which is ω²) and the 'k' in **F = -kx** (which is mω²).\n\n### Differential Equation of SHM\n- Acceleration (a) can be written as the second derivative of displacement with respect to time: **a = d²x/dt²**.\n- Substituting this into **a = -ω²x**, we get **d²x/dt² = -ω²x**.\n- Rearranging, the differential equation for SHM is **d²x/dt² + ω²x = 0**.\n- This equation can also be written for displacement along the y-axis as **d²y/dt² + ω²y = 0**.\n\n### Solution to SHM Differential Equation\n- The differential equation for SHM is a **second-order differential equation**.\n- Its solution, representing displacement (x) as a function of time (t), is proposed based on mathematical experience.\n- The only functions that satisfy this condition (where the second derivative is proportional to the original function with a negative sign) are **trigonometric functions**.\n- **Algebraic functions** (e.g., x³) do not work because their derivatives reduce the power.\n- **Exponential functions** (e.g., e^(ωt)) do not work because their double derivatives do not introduce a negative sign.\n- Therefore, the general solution for displacement in SHM is of the form **x(t) = A sin(ωt + φ)** or **x(t) = A cos(ωt + φ)**, where A is amplitude and φ is phase constant.\n- This means that an **x versus t graph for SHM is sinusoidal**.",
+                    "mindmap": {
+                        "title": "Simple Harmonic Motion (SHM)",
+                        "description": "Mathematical conditions and solutions for SHM",
+                        "children": [
+                            {
+                                "title": "Condition for SHM",
+                                "description": "Acceleration proportional and opposite to displacement",
+                                "children": [
+                                    {
+                                        "title": "Acceleration Equation",
+                                        "description": "a = -kx, where k = ω²",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Importance of Negative Sign",
+                                        "description": "Ensures restoring nature of force/acceleration",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "SHM Parameters",
+                                "description": "Quantities derived from SHM condition",
+                                "children": [
+                                    {
+                                        "title": "Angular Frequency (ω)",
+                                        "description": "Related to k in a = -kx (ω² = k)",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Time Period (T)",
+                                        "description": "T = 2π/ω, time for one complete oscillation",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Force Equation",
+                                        "description": "F_net = -mω²x (or F_net = -kx where k = mω²)",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Differential Equation of SHM",
+                                "description": "Mathematical form characterizing SHM",
+                                "children": [
+                                    {
+                                        "title": "Derivation",
+                                        "description": "From a = d²x/dt² and a = -ω²x",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Equation Form",
+                                        "description": "d²x/dt² + ω²x = 0 (second order differential equation)",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Solution for SHM Displacement",
+                                "description": "Function describing position as a function of time",
+                                "children": [
+                                    {
+                                        "title": "Proposed Solution Type",
+                                        "description": "Trigonometric functions (sine or cosine)",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "General Solution",
+                                        "description": "x(t) = A sin(ωt + φ) or A cos(ωt + φ)",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Why other functions fail",
+                                        "description": "Algebraic/Exponential functions don't satisfy derivative condition",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "quizzes": [
+                        {
+                            "question": "Which of the following equations correctly represents a simple harmonic motion?",
+                            "options": {
+                                "A": "a = 4x",
+                                "B": "a = -4x",
+                                "C": "a = 4x²",
+                                "D": "a = -4x²"
+                            },
+                            "correct_answer": "B",
+                            "hint": "Recall the fundamental condition for SHM involving acceleration and displacement.",
+                            "solution": "For a motion to be simple harmonic, the acceleration (a) must be directly proportional to the displacement (x) from the mean position and directed opposite to it. This is represented by the equation a = -kx, where k is a positive constant. Option B, a = -4x, fits this condition. Options A, C, and D do not satisfy the required proportionality and/or the negative sign.",
+                            "difficulty": "easy",
+                            "concept_tested": "Condition for Simple Harmonic Motion"
+                        },
+                        {
+                            "question": "If the acceleration of a particle undergoing SHM is given by a = -9x, what is its time period of oscillation?",
+                            "options": {
+                                "A": "π seconds",
+                                "B": "2π seconds",
+                                "C": "π/3 seconds",
+                                "D": "2π/3 seconds"
+                            },
+                            "correct_answer": "D",
+                            "hint": "Compare the given equation with the standard form a = -ω²x and then use the formula for time period.",
+                            "solution": "The standard equation for acceleration in SHM is a = -ω²x. Comparing this with the given equation a = -9x, we find that ω² = 9. Therefore, the angular frequency ω = √9 = 3 rad/s. The time period (T) of oscillation is given by T = 2π/ω. Substituting ω = 3, we get T = 2π/3 seconds. Thus, option D is correct.",
+                            "difficulty": "medium",
+                            "concept_tested": "Angular Frequency and Time Period in SHM"
+                        },
+                        {
+                            "question": "The differential equation characterizing simple harmonic motion along the x-axis is:",
+                            "options": {
+                                "A": "d²x/dt² - ω²x = 0",
+                                "B": "d²x/dt² + ω²x = 0",
+                                "C": "dx/dt + ωx = 0",
+                                "D": "dx/dt - ωx = 0"
+                            },
+                            "correct_answer": "B",
+                            "hint": "Remember that acceleration is the second derivative of displacement and it's proportional to negative displacement.",
+                            "solution": "Acceleration (a) is the second derivative of displacement (x) with respect to time (t), i.e., a = d²x/dt². For SHM, the condition is a = -ω²x. Substituting the expression for 'a', we get d²x/dt² = -ω²x. Rearranging this equation gives d²x/dt² + ω²x = 0. This is the second-order differential equation for SHM. Therefore, option B is correct.",
+                            "difficulty": "medium",
+                            "concept_tested": "Differential Equation of SHM"
+                        },
+                        {
+                            "question": "Which type of mathematical function is the general solution for displacement (x) as a function of time (t) in Simple Harmonic Motion?",
+                            "options": {
+                                "A": "Algebraic function (e.g., polynomial)",
+                                "B": "Exponential function",
+                                "C": "Logarithmic function",
+                                "D": "Trigonometric function (e.g., sine or cosine)"
+                            },
+                            "correct_answer": "D",
+                            "hint": "Consider which functions, when differentiated twice, return a form proportional to the original function with a negative sign.",
+                            "solution": "The differential equation for SHM is d²x/dt² = -ω²x. This means the second derivative of the function x(t) must be proportional to the negative of the original function. Algebraic functions (like x^n) have derivatives that reduce the power, so they don't fit. Exponential functions (like e^(ωt)) do not introduce a negative sign upon double differentiation. Logarithmic functions also do not satisfy this property. Only trigonometric functions like sine and cosine have the property that their second derivative is proportional to the negative of the original function (e.g., d²(sin(ωt))/dt² = -ω²sin(ωt)). Thus, the general solution is a trigonometric function.",
+                            "difficulty": "medium",
+                            "concept_tested": "Solution to SHM Differential Equation"
+                        }
+                    ],
+                    "flashcards": [
+                        {
+                            "front": "What is the fundamental condition for Simple Harmonic Motion (SHM) in terms of acceleration and displacement?",
+                            "back": "Acceleration (a) is proportional to displacement (x) and directed opposite to it: a = -kx.",
+                            "concept": "Condition for SHM",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "In the SHM condition a = -kx, what does 'k' represent?",
+                            "back": "k represents the square of the angular frequency (ω²).",
+                            "concept": "SHM Parameters",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the formula to calculate the time period (T) of SHM if the angular frequency (ω) is known?",
+                            "back": "T = 2π/ω",
+                            "concept": "SHM Parameters",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the differential equation that characterizes Simple Harmonic Motion?",
+                            "back": "d²x/dt² + ω²x = 0",
+                            "concept": "Differential Equation of SHM",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Why is the negative sign in a = -kx crucial for SHM?",
+                            "back": "It indicates that the acceleration (and thus the restoring force) is always directed towards the equilibrium position, opposite to the displacement.",
+                            "concept": "Condition for SHM",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "What is the general form of the solution for displacement x(t) in SHM?",
+                            "back": "x(t) = A sin(ωt + φ) or x(t) = A cos(ωt + φ)",
+                            "concept": "Solution to SHM Differential Equation",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the constant 'k' in the force equation F_net = -kx for SHM?",
+                            "back": "k = mω² (mass times angular frequency squared)",
+                            "concept": "Force in SHM",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "Why can't an algebraic function (like a polynomial) be a solution for SHM displacement?",
+                            "back": "Because its derivatives continuously reduce the power, it cannot return a form proportional to the original function with a negative sign after two differentiations.",
+                            "concept": "Solution to SHM Differential Equation",
+                            "importance": "low"
+                        },
+                        {
+                            "front": "What type of graph is obtained when plotting displacement (x) versus time (t) for a particle undergoing SHM?",
+                            "back": "A sinusoidal graph (either sine or cosine wave).",
+                            "concept": "Characteristics of SHM",
+                            "importance": "medium"
+                        }
+                    ]
+                }
+            },
+            "projectile": {
+                "status": "success",
+                "s3_key": "batch/output/projectile_result.json",
+                "data": {
+                    "lecture_topic": "Introduction to Projectile Motion",
+                    "subject": "Physics",
+                    "summary": "## Projectile Motion: Definition and Characteristics\n\n### What is a Projectile?\n- A **body thrown at some angle with the horizontal** near the Earth's surface.\n- It moves in a **parabolic path** under the action of gravity.\n- The object itself is called a **projectile**, and its motion is **projectile motion**.\n\n### Conditions for Projectile Motion Analysis\n- Motion occurs **near the Earth's surface**.\n- This ensures **acceleration due to gravity (g) is constant**.\n- Typically considered for **short ranges** (e.g., 1-2 kilometers).\n\n### Nature of Projectile Motion\n- It is a **two-dimensional motion**.\n- Involves movement along both the **horizontal (x-axis)** and **vertical (y-axis)** directions.\n- The only force acting is **gravity**, causing acceleration in the vertical direction.\n\n### Analysis of Projectile Motion\n- **Initial Velocity (V0)**: Thrown at an angle **theta** with the horizontal.\n  - **Horizontal component (Vx)**: **V0 cos theta**.\n  - **Vertical component (Vy)**: **V0 sin theta**.\n- **Acceleration (a)**:\n  - **Horizontal acceleration (ax)**: **0** (no force in horizontal direction).\n  - **Vertical acceleration (ay)**: **-g** (downward, due to gravity).\n\n### Consequences of Acceleration\n- **Horizontal velocity (Vx)** remains **constant** throughout the motion.\n- **Vertical velocity (Vy)** changes due to constant downward acceleration **-g**.\n\n### Key Parameters of Projectile Motion\n- **Maximum Height (h)**: The highest point reached where the **vertical component of velocity (Vy) becomes zero**.\n- **Range (R)**: The **horizontal distance** covered from the point of projection to the point where the particle lands.\n- **Time of Flight (T)**: The **total duration** for which the particle remains in the air.",
+                    "mindmap": {
+                        "title": "Projectile Motion Fundamentals",
+                        "description": "Understanding the basics of projectile motion and its analysis.",
+                        "children": [
+                            {
+                                "title": "Definition & Path",
+                                "description": "What projectile motion is and its characteristic trajectory.",
+                                "children": [
+                                    {
+                                        "title": "Projectile",
+                                        "description": "Body thrown at an angle to horizontal.",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Projectile Motion",
+                                        "description": "Motion of projectile in a parabolic path.",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Path Shape",
+                                        "description": "Always a parabolic path.",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Conditions & Nature",
+                                "description": "Assumptions and characteristics of this type of motion.",
+                                "children": [
+                                    {
+                                        "title": "Near Earth Surface",
+                                        "description": "Ensures 'g' is constant.",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Short Range",
+                                        "description": "Typically 1-2 km, for constant 'g' assumption.",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Two-Dimensional",
+                                        "description": "Motion in both horizontal (x) and vertical (y) planes.",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Under Gravity",
+                                        "description": "Only acceleration due to gravity acts.",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Analysis of Motion",
+                                "description": "How to break down and study projectile motion.",
+                                "children": [
+                                    {
+                                        "title": "Initial Velocity Components",
+                                        "description": "Resolve V0 into Vx (V0 cosθ) and Vy (V0 sinθ).",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Acceleration Components",
+                                        "description": "ax = 0, ay = -g (downward).",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Horizontal Motion",
+                                        "description": "Constant velocity (Vx = V0 cosθ).",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Vertical Motion",
+                                        "description": "Changing velocity due to 'g'.",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Key Parameters",
+                                "description": "Important measurable quantities of projectile motion.",
+                                "children": [
+                                    {
+                                        "title": "Maximum Height (h)",
+                                        "description": "Highest point where vertical velocity is zero.",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Range (R)",
+                                        "description": "Total horizontal distance covered.",
+                                        "children": []
+                                    },
+                                    {
+                                        "title": "Time of Flight (T)",
+                                        "description": "Total time the projectile is in the air.",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "quizzes": [
+                        {
+                            "question": "Which of the following statements is true regarding the acceleration of a projectile during its flight (neglecting air resistance)?",
+                            "options": {
+                                "A": "Acceleration is zero at the maximum height.",
+                                "B": "Acceleration is constant and directed downwards.",
+                                "C": "Acceleration changes direction throughout the flight.",
+                                "D": "Acceleration is only present in the horizontal direction."
+                            },
+                            "correct_answer": "B",
+                            "hint": "Consider the only force acting on the projectile after projection.",
+                            "solution": "After a body is thrown, the only acceleration acting on it is due to gravity, which is constant in magnitude (g) and always directed downwards. Therefore, the acceleration of a projectile is constant and directed downwards throughout its flight. Option A is incorrect because acceleration due to gravity still acts at maximum height. Option C is incorrect as the direction of 'g' is always downwards. Option D is incorrect as there is no acceleration in the horizontal direction.",
+                            "difficulty": "easy",
+                            "concept_tested": "Acceleration in Projectile Motion"
+                        },
+                        {
+                            "question": "A body is thrown at an angle 'theta' with the horizontal. If its initial velocity is V0, what are the initial horizontal and vertical components of its velocity?",
+                            "options": {
+                                "A": "Horizontal: V0 sin theta, Vertical: V0 cos theta",
+                                "B": "Horizontal: V0 cos theta, Vertical: V0 sin theta",
+                                "C": "Horizontal: V0, Vertical: 0",
+                                "D": "Horizontal: 0, Vertical: V0"
+                            },
+                            "correct_answer": "B",
+                            "hint": "Recall how a vector is resolved into components when an angle is given with respect to the horizontal axis.",
+                            "solution": "When an initial velocity vector V0 makes an angle theta with the horizontal (x-axis), its component along the x-axis is V0 cos theta, and its component along the y-axis (vertical) is V0 sin theta. Thus, the initial horizontal velocity is V0 cos theta and the initial vertical velocity is V0 sin theta.",
+                            "difficulty": "easy",
+                            "concept_tested": "Resolution of Initial Velocity"
+                        },
+                        {
+                            "question": "At the maximum height of a projectile's trajectory, which of the following statements is true?",
+                            "options": {
+                                "A": "Both horizontal and vertical components of velocity are zero.",
+                                "B": "The vertical component of velocity is zero, but the horizontal component is non-zero.",
+                                "C": "The horizontal component of velocity is zero, but the vertical component is non-zero.",
+                                "D": "Both horizontal and vertical components of velocity are at their maximum."
+                            },
+                            "correct_answer": "B",
+                            "hint": "Consider how acceleration affects the horizontal and vertical velocities separately.",
+                            "solution": "At the maximum height, the projectile momentarily stops moving upwards before starting to descend. This means its vertical component of velocity becomes zero. However, since there is no acceleration in the horizontal direction, the horizontal component of velocity remains constant throughout the flight and is therefore non-zero at the maximum height.",
+                            "difficulty": "medium",
+                            "concept_tested": "Velocity at Maximum Height"
+                        }
+                    ],
+                    "flashcards": [
+                        {
+                            "front": "What is a 'projectile'?",
+                            "back": "A body thrown at some angle with the horizontal near the Earth's surface.",
+                            "concept": "Definition of Projectile",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the characteristic path of a projectile?",
+                            "back": "A parabolic path.",
+                            "concept": "Projectile Trajectory",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "Why is projectile motion typically considered 'near the Earth'?",
+                            "back": "To ensure that the acceleration due to gravity (g) can be considered constant.",
+                            "concept": "Conditions for Projectile Motion",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "What type of motion is projectile motion?",
+                            "back": "Two-dimensional motion (involving both horizontal and vertical movement).",
+                            "concept": "Nature of Projectile Motion",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the acceleration of a projectile in the horizontal (x) direction?",
+                            "back": "Zero (ax = 0).",
+                            "concept": "Acceleration Components",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the acceleration of a projectile in the vertical (y) direction?",
+                            "back": "-g (downward, due to gravity).",
+                            "concept": "Acceleration Components",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What happens to the horizontal component of a projectile's velocity during its flight?",
+                            "back": "It remains constant.",
+                            "concept": "Horizontal Velocity",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is the vertical velocity of a projectile at its maximum height?",
+                            "back": "Zero (Vy = 0).",
+                            "concept": "Maximum Height",
+                            "importance": "high"
+                        },
+                        {
+                            "front": "What is 'Range' in projectile motion?",
+                            "back": "The horizontal distance covered from the point of projection to the point where the particle lands.",
+                            "concept": "Key Parameters",
+                            "importance": "medium"
+                        },
+                        {
+                            "front": "What is 'Time of Flight' in projectile motion?",
+                            "back": "The total duration for which the particle remains in the air.",
+                            "concept": "Key Parameters",
+                            "importance": "medium"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

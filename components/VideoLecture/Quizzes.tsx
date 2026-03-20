@@ -13,7 +13,7 @@ const Quizzes: React.FC<QuizzesProps> = ({ videoId }) => {
   const [activeMode, setActiveMode] = useState<'Practice' | 'PYQ' | 'PracticeMock'>('Practice');
 
   // Safe destructuring with defaults
-  const questions = quiz?.data?.questions || [];
+  const questions = quiz?.data || [];
   const quiz_title = quiz?.data?.quiz_title || "Quiz";
   const isDarkMode = false;
 

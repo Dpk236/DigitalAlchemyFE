@@ -34,6 +34,7 @@ const VideoJS: React.FC<VideoJSProps> = ({
                 fluid: true,
                 preload: "auto",
                 playbackRates: [0.5, 1, 1.25, 1.5, 2],
+                crossOrigin: "anonymous",
                 html5: {
                     vhs: {
                         overrideNative: true
@@ -80,7 +81,7 @@ const VideoJS: React.FC<VideoJSProps> = ({
         if (player && videoUrl) {
             // Reset any existing errors before loading new source
             player.error(null);
-            
+
             player.src({
                 src: videoUrl,
                 type: videoUrl.endsWith('.m3u8') ? 'application/x-mpegURL' : 'video/mp4',

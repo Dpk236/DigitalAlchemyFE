@@ -7,7 +7,7 @@ export enum AppView {
   REVISION = 'REVISION'
 }
 
-export type TabType = 'Chat' | 'Flashcards' | 'Challenge Zone' | 'Simulation' | 'Summary' | 'Notes';
+export type TabType = 'Chat' | 'Flashcards' | 'Challenge Zone' | 'Simulation' | 'Summary' | 'Notes' | 'Mind-Map';
 
 export interface Flashcard {
   id: string;

@@ -1,58 +1,33 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import VideoCard from '../components/Dashboard/VideoCard';
 import SubjectFilters from '../components/Dashboard/SubjectFilters';
+import VideosSubjects from '../mock-data/videos-subject.json';
 const CDN_BASE_URL = "https://d29zr2abydv3bb.cloudfront.net/";
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
   const [activeSubject, setActiveSubject] = useState('PHYSICS');
-
-  const lectures = [
-    {
-      id: "waves",
-      title: "Introduction to Waves & Oscillations",
-      subject: "PHYSICS",
-      topic: "WAVES",
-      date: "Feb 01, 2026",
-      time: "10:00 AM",
-      thumbnail: `${CDN_BASE_URL}Media/Video/hackathon/waves/waves-thumbnail.png`,
-    },
-    {
-      id: "projectile_motion",
-      title: "Projectile Motion - Advanced Concepts",
-      subject: "PHYSICS",
-      topic: "MECHANICS",
-      date: "Feb 01, 2026",
-      time: "11:30 AM",
-      thumbnail: `${CDN_BASE_URL}Media/Video/hackathon/projectile/projectile-motion-thumbnail.png`,
-    },
-    {
-      title: "Chemical Kinetics & Reaction Mechanisms",
-      subject: "CHEMISTRY",
-      topic: "ORGANIC",
-      date: "Jan 29, 2026",
-      time: "08:35 PM",
-      thumbnail: "https://images.pexels.com/photos/15509860/pexels-photo-15509860.jpeg",
-    },
-    {
-      title: "Limits and Continuity - Foundations",
-      subject: "MATHEMATICS",
-      topic: "CALCULUS",
-      date: "Jan 15, 2026",
-      time: "10:00 AM",
-      thumbnail: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=600",
-    },
-    {
-      id: "human_heart",
-      title: "Human Heart - Anatomy and Physiology",
-      subject: "BIOLOGY",
-      topic: "HUMAN PHYSIOLOGY",
-      date: "Feb 02, 2026",
-      time: "15:22 PM",
-      thumbnail: `${CDN_BASE_URL}Media/Video/hackathon/human-heart/human-heart-thumbnail.png`,
+  const [videosSubjects] = useState(VideosSubjects);
+  const getThumbnail = (subject: string) => {
+    switch (subject.toUpperCase()) {
+      case 'PHYSICS': return `${CDN_BASE_URL}Media/Video/hackathon/waves/waves-thumbnail.png`;
+      case 'CHEMISTRY': return "https://images.pexels.com/photos/15509860/pexels-photo-15509860.jpeg";
+      case 'MATHEMATICS': return "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=600";
+      case 'BIOLOGY': return `${CDN_BASE_URL}Media/Video/hackathon/human-heart/human-heart-thumbnail.png`;
+      default: return "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=600";
     }
-  ];
+  };
+
+  const lectures = videosSubjects.map((video) => ({
+    id: video.assetId.toString(),
+    title: video.title,
+    subject: video.subject.toUpperCase(),
+    topic: "GENERAL",
+    date: "Feb 05, 2026",
+    time: "10:00 AM",
+    thumbnail: getThumbnail(video.subject),
+    path: video.path
+  }));
 
 
 

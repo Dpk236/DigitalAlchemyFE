@@ -1,53 +1,74 @@
 
-import React, { useState } from 'react';
-
-interface NoteBlock {
-  id: string;
-  type: 'h1' | 'text';
-  content: string;
-}
+import React from 'react';
+import jsPDF from 'jspdf';
+import useChatbot from '../../contexts/useChatbot';
 
 const NotionNotes: React.FC = () => {
-  const [blocks, setBlocks] = useState<NoteBlock[]>([
-    { id: '1', type: 'h1', content: 'My Custom Study Notes' },
-    { id: '2', type: 'text', content: 'Click here to start typing your thoughts on this lecture...' },
-  ]);
+  const { notes, addNote, updateNote, deleteNote } = useChatbot();
 
-  const addBlock = (type: 'h1' | 'text') => {
-    setBlocks([...blocks, { id: Date.now().toString(), type, content: '' }]);
+  const exportToPDF = () => {
+    const doc = new jsPDF();
+    let yPos = 20;
+    const margin = 20;
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const maxWidth = pageWidth - margin * 2;
+
+    doc.setFontSize(22);
+    doc.setFont("helvetica", "bold");
+    doc.text("Study Notes", margin, yPos);
+    yPos += 15;
+
+    notes.forEach((note) => {
+      if (!note.content.trim()) return;
+
+      if (note.type === 'h1') {
+        doc.setFontSize(16);
+        doc.setFont("helvetica", "bold");
+        doc.setTextColor(31, 41, 55); // gray-900
+        yPos += 5;
+      } else {
+        doc.setFontSize(12);
+        doc.setFont("helvetica", "normal");
+        doc.setTextColor(55, 65, 81); // gray-700
+      }
+
+      const lines = doc.splitTextToSize(note.content, maxWidth);
+
+      // Check if we need a new page
+      if (yPos + (lines.length * 7) > 280) {
+        doc.addPage();
+        yPos = 20;
+      }
+
+      doc.text(lines, margin, yPos);
+      yPos += (lines.length * 7) + 5;
+    });
+
+    doc.save('study-notes.pdf');
   };
 
-  const updateBlock = (id: string, content: string) => {
-    setBlocks(blocks.map(b => b.id === id ? { ...b, content } : b));
-  };
-
-  const removeBlock = (id: string) => {
-    if (blocks.length > 1) {
-      setBlocks(blocks.filter(b => b.id !== id));
-    }
-  };
 
   return (
     <div className="space-y-4 animate-fade-in pb-20">
       <div className="flex gap-2 mb-8">
         <button
-          onClick={() => addBlock('h1')}
+          onClick={() => addNote('', 'h1')}
           className="text-xs font-bold border border-gray-300 bg-white text-gray-900 px-3 py-1.5 rounded-lg hover:bg-gray-50 hover:border-gray-400 shadow-sm transition-all flex items-center gap-1"
         >
           <span className="text-gray-400">#</span> Heading
         </button>
         <button
-          onClick={() => addBlock('text')}
+          onClick={() => addNote('', 'text')}
           className="text-xs font-bold border border-gray-300 bg-white text-gray-900 px-3 py-1.5 rounded-lg hover:bg-gray-50 hover:border-gray-400 shadow-sm transition-all flex items-center gap-1"
         >
           <span className="text-gray-400">Aa</span> Text
         </button>
       </div>
       <div className="space-y-1">
-        {blocks.map((block) => (
+        {notes.map((block) => (
           <div key={block.id} className="group relative flex items-start gap-3">
             <button
-              onClick={() => removeBlock(block.id)}
+              onClick={() => deleteNote(block.id)}
               className="opacity-0 group-hover:opacity-100 absolute -left-8 top-1.5 text-gray-400 hover:text-red-500 p-1 transition-opacity"
               title="Remove block"
             >
@@ -58,7 +79,7 @@ const NotionNotes: React.FC = () => {
                 className="w-full text-2xl font-black text-gray-900 bg-transparent focus:outline-none placeholder-gray-300 tracking-tight"
                 value={block.content}
                 placeholder="Heading..."
-                onChange={(e) => updateBlock(block.id, e.target.value)}
+                onChange={(e) => updateNote(block.id, e.target.value)}
               />
             ) : (
               <textarea
@@ -66,7 +87,7 @@ const NotionNotes: React.FC = () => {
                 value={block.content}
                 placeholder="Start typing or use '/' for commands..."
                 rows={block.content.split('\n').length}
-                onChange={(e) => updateBlock(block.id, e.target.value)}
+                onChange={(e) => updateNote(block.id, e.target.value)}
               />
             )}
           </div>
@@ -77,7 +98,10 @@ const NotionNotes: React.FC = () => {
           <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
           <span className="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Cloud Sync Active</span>
         </div>
-        <button className="text-[11px] font-bold text-blue-600 hover:text-blue-700 transition-colors flex items-center gap-1.5 bg-blue-50 px-3 py-1.5 rounded-full">
+        <button
+          onClick={exportToPDF}
+          className="text-[11px] font-bold text-blue-600 hover:text-blue-700 transition-colors flex items-center gap-1.5 bg-blue-50 px-3 py-1.5 rounded-full"
+        >
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
           Export to PDF
         </button>

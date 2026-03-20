@@ -19,8 +19,9 @@ interface ChatProps {
 }
 
 const Chat: React.FC<ChatProps> = ({ videoId }) => {
-    const { chatMessages, fetchAllChats, loading: historyLoading } = useChatbot();
+    const { chatMessages, fetchAllChats, loading: historyLoading, addNote } = useChatbot();
     const [messages, setMessages] = useState<ChatMessage[]>([]);
+    const [savedMessageIndices, setSavedMessageIndices] = useState<Set<number>>(new Set());
     const [query, setQuery] = useState('');
     const [isThinking, setIsThinking] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
@@ -45,10 +46,10 @@ const Chat: React.FC<ChatProps> = ({ videoId }) => {
             const transformedMessages: ChatMessage[] = chatMessages.map((item: any) => {
                 let content = item?.content || "";
                 let hasImage = false;
-                
+
                 // Regex to catch [Image Upload], [Image Uploaded], [Image Attachment], etc.
                 const imageRegex = /\[Image (?:Upload|Uploaded|Attachment)\]|📷/i;
-                
+
                 if (imageRegex.test(content)) {
                     content = content.replace(imageRegex, "").trim();
                     hasImage = true;
@@ -151,14 +152,14 @@ const Chat: React.FC<ChatProps> = ({ videoId }) => {
 
             try {
                 const response = await uploadQuestionImage(selectedFile, userId, lectureId, sessionId, finalMessage);
-                
+
                 // Remove typing indicator and placeholder if needed (though backend might return history)
                 setMessages(prev => prev.filter(m => m.role !== "typing"));
-                
+
                 // Update with the final extracted text result if we want to show what OCR found
                 // For now just stream the assistant response
                 streamAssistantResponse(response.ai_response, response.type || "context_retrieval");
-                
+
                 // Clear selected file
                 setSelectedFile(null);
                 setPreviewUrl(null);
@@ -264,7 +265,27 @@ const Chat: React.FC<ChatProps> = ({ videoId }) => {
                             <div className={`max-w-[90%] px-5 py-3.5 rounded-3xl text-sm ${m.role === 'user' ? 'bg-blue-600 text-white rounded-tr-none shadow-xl shadow-blue-500/20' : 'bg-white border border-gray-100 text-gray-800 rounded-tl-none shadow-sm'
                                 }`}>
                                 {m.role === 'assistant' ? (
-                                    <div>
+                                    <div className="relative group/msg">
+                                        <button
+                                            onClick={() => {
+                                                addNote(m.text);
+                                                setSavedMessageIndices(prev => new Set(prev).add(i));
+                                            }}
+                                            className={`mt-2 absolute -right-2 -top-4 px-2 py-1 rounded-full shadow-md transition-all flex items-center gap-1.5 text-[10px] font-bold z-10 ${savedMessageIndices.has(i) ? 'bg-green-500 text-white' : 'bg-gray-600 text-white hover:bg-gray-700'}`}
+                                            title={savedMessageIndices.has(i) ? "Saved!" : "Save to Notes"}
+                                        >
+                                            {savedMessageIndices.has(i) ? (
+                                                <>
+                                                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                                                    <span>Saved!</span>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                                    <span>Save Notes</span>
+                                                </>
+                                            )}
+                                        </button>
                                         <MarkdownWithTimestamps content={m.text} onSeek={onSeek} isDarkMode={false} />
                                         {m.cross_questions && m.cross_questions.length > 0 && (
                                             <div className="mt-2 flex flex-wrap gap-2">
@@ -301,7 +322,7 @@ const Chat: React.FC<ChatProps> = ({ videoId }) => {
                 {previewUrl && (
                     <div className="mb-4 relative inline-block">
                         <img src={previewUrl} alt="Upload Preview" className="h-20 w-20 object-cover rounded-xl border-2 border-blue-500 shadow-lg" />
-                        <button 
+                        <button
                             onClick={removeFile}
                             className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 shadow-md hover:bg-red-600 transition-colors"
                         >
