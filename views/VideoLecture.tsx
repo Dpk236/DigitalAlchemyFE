@@ -33,32 +33,31 @@ const VideoLecture: React.FC = () => {
     const fetchTranscript = async () => {
       setLoading(true);
       try {
-        const folderName = videoId === 'projectile_motion' ? 'projectile' : 
-                         videoId === 'human_heart' ? 'human-heart' : videoId;
+        const folderName = videoId === 'projectile' ? 'projectile' :
+          videoId === 'human-heart' ? 'human-heart' : videoId;
         const separator = videoId === 'human_heart' ? '-' : '_';
-        const filename = videoId === 'human_heart' ? 'human-heart' : 
-                        videoId === 'projectile_motion' ? 'projectile' : folderName;
-        const url = `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/${filename}${separator}transcript.json`;
+        const filename = `transcript_en_${videoId}.json`
+        const url = `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/${filename}`;
 
 
 
 
-        
+
         console.log("Fetching transcript from:", url);
         const response = await fetch(url);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        
+
         const data = await response.json();
-        
+
         // Map the data if it has a segments array, otherwise use as is if it's already a list
         const segments = data.segments || data;
-        
+
         const formattedTranscript = segments.map((segment: any) => ({
           time: formatTime(segment.start),
           startTime: segment.start,
           text: segment.text,
         }));
-        
+
         setTranscript(formattedTranscript);
       } catch (error) {
         console.error("Failed to fetch transcript:", error);

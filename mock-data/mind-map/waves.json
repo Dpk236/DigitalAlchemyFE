@@ -1,0 +1,84 @@
+{
+    "title": "Wave Motion Fundamentals",
+    "description": "Introduction to types and properties of waves",
+    "children": [
+        {
+            "title": "Oscillations Review",
+            "description": "Simple harmonic motion of isolated particles",
+            "children": [
+                {
+                    "title": "System of Particles",
+                    "description": "Multiple particles oscillating together",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "title": "Wave Definition",
+            "description": "Oscillating particles creating wave motion",
+            "children": [
+                {
+                    "title": "Example: String Wave",
+                    "description": "Particles oscillate; wave propagates along string",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "title": "Types of Waves",
+            "description": "Classification based on medium requirement",
+            "children": [
+                {
+                    "title": "Mechanical Waves",
+                    "description": "Require medium for propagation",
+                    "children": [
+                        {
+                            "title": "Examples",
+                            "description": "String, spring, sound, water waves",
+                            "children": []
+                        },
+                        {
+                            "title": "Transverse Waves",
+                            "description": "Particle motion perpendicular to wave direction",
+                            "children": [
+                                {
+                                    "title": "String Example",
+                                    "description": "Particles move up-down, wave moves horizontally",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Longitudinal Waves",
+                            "description": "Particle motion parallel to wave direction",
+                            "children": [
+                                {
+                                    "title": "Spring Example",
+                                    "description": "Compressions and rarefactions travel through spring",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Non-Mechanical Waves",
+                    "description": "Do not need medium to propagate",
+                    "children": [
+                        {
+                            "title": "Electromagnetic Waves",
+                            "description": "Electric and magnetic field oscillations",
+                            "children": [
+                                {
+                                    "title": "Light Example",
+                                    "description": "Travels through vacuum (e.g., Sun to Earth)",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
