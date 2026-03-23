@@ -55,7 +55,7 @@ const LectureInteractionPanel: React.FC<LectureInteractionPanelProps> = ({ video
 
                 {activeRightTab === 'Notes' && <NotionNotes />}
 
-                {activeRightTab === 'Mind-Map' && <MindMapReactFlow data={mindMapData} />}
+                {activeRightTab === 'Mind-Map' && <MindMapReactFlow data={mindMapData} videoId={videoId} />}
             </div>
         </div>
     );

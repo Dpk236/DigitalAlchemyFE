@@ -271,6 +271,7 @@ export default function MindMap({ data }: MindMapProps) {
     }
 
     return (
+        <>
         <div
             id='mind-map-export-container'
             className='w-full h-full flex flex-col bg-white'
@@ -356,5 +357,6 @@ export default function MindMap({ data }: MindMapProps) {
                 </div>
             </div>
         </div>
+        </>
     );
 }
