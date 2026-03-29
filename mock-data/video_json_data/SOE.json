@@ -1,0 +1,140 @@
+[
+    {
+        "subject": "physics",
+        "class": 12,
+        "syllabus_master_videos": [
+            {
+                "smid": "65",
+                "nodeid": "13637",
+                "topic": "Alternating Current",
+                "asset_id": "98768",
+                "asset_title": "Resonance, power in AC circuits, power factor, watt less current. AC generator, Transformer",
+                "video_link": "Media/AssetLibrary/Video/3299/School Plus_XII_P_Alternating Current-Ch-07-Lec-02.mp4"
+            },
+            {
+                "smid": "65",
+                "nodeid": "13395",
+                "topic": "Wave Optics",
+                "asset_id": "98286",
+                "asset_title": "Wave optics: Wave front and Huygen\u2019s principle, reflection and refraction of plane wave",
+                "video_link": "Media/AssetLibrary/Video/3302/School Plus_XII_P_Wave Optics-Ch-10-Lec-01.mp4"
+            },
+            {
+                "smid": "65",
+                "nodeid": "13830",
+                "topic": "Moving Charges and Magnetism",
+                "asset_id": "97687",
+                "asset_title": "Force between two parallel current-carrying conductors-definition of ampere",
+                "video_link": "Media/AssetLibrary/Video/3291/School Plus_XII_P_Moving Charges and Magnetism-Ch-04-Lec-03.mp4"
+            },
+            {
+                "smid": "65",
+                "nodeid": "13317",
+                "topic": "Atoms",
+                "asset_id": "77205",
+                "asset_title": "Bohr Atomic Model",
+                "video_link": "Media/SOE/886685782/886685782.mp4"
+            },
+            {
+                "smid": "65",
+                "nodeid": "13128",
+                "topic": "Communication Systems",
+                "asset_id": "77310",
+                "asset_title": "Signals and Propagation of Electromagnetic waves",
+                "video_link": "Media/SOE/890229346/890229346.mp4"
+            }
+        ]
+    },
+    {
+        "subject": "chemistry",
+        "class": 12,
+        "syllabus_master_videos": [
+            {
+                "smid": "66",
+                "nodeid": "16425",
+                "topic": "The Solid State",
+                "asset_id": "75045",
+                "asset_title": "Structure of ionic solids",
+                "video_link": "Media/SOE/848398750/848398750.mp4"
+            },
+            {
+                "smid": "66",
+                "nodeid": "16166",
+                "topic": "Chemical Kinetics and Nuclear Chemistry",
+                "asset_id": "97730",
+                "asset_title": "Law of mass action, Rate law or rate equation of a reaction, units of rate of a reaction",
+                "video_link": "Media/AssetLibrary/Video/3236/School Plus_XII_C_Chemical Kinetics-Ch-03-Lec-02.mp4"
+            },
+            {
+                "smid": "66",
+                "nodeid": "16274",
+                "topic": "Electrochemistry",
+                "asset_id": "97727",
+                "asset_title": "Electrochemical series and its application; Nernst's equation, Applications of Nernst's Equation",
+                "video_link": "Media/AssetLibrary/Video/3234/School Plus_XII_C_Electrochemistry-Ch-02-Lec-05.mp4"
+            },
+            {
+                "smid": "66",
+                "nodeid": "15754",
+                "topic": "Coordination Compounds",
+                "asset_id": "98263",
+                "asset_title": "Isomerism in coordination compound, application of coordination compound",
+                "video_link": "Media/AssetLibrary/Video/3247/School Plus_XII_C_Coordination Compounds-Ch-05-Lec-05.mp4"
+            },
+            {
+                "smid": "66",
+                "nodeid": "15309",
+                "topic": "Biomolecules",
+                "asset_id": "98812",
+                "asset_title": "Enzymes, Vitamins, Nucleic acids",
+                "video_link": "Media/AssetLibrary/Video/3280/School Plus_XII_C_Biomolecules-Ch-10-Lec-04.mp4"
+            }
+        ]
+    },
+    {
+        "subject": "mathematics",
+        "class": 12,
+        "syllabus_master_videos": [
+            {
+                "smid": "67",
+                "nodeid": "19218",
+                "topic": "Matrices",
+                "asset_id": "98754",
+                "asset_title": "Operations on matrices: addition and multiplication and multiplication with a scalar",
+                "video_link": "Media/AssetLibrary/Video/3322/School Plus_XII_M_Matrice-Ch-03-Lec-02.mp4"
+            },
+            {
+                "smid": "67",
+                "nodeid": "18864",
+                "topic": "Vector Algebra",
+                "asset_id": "101324",
+                "asset_title": "Types of vectors, Free Vectors and Triangle Law",
+                "video_link": "Media/AssetLibrary/Video/3376/School Plus_XII_M_Vector Algebra-Ch-10-Lec-02.mp4"
+            },
+            {
+                "smid": "67",
+                "nodeid": "18769",
+                "topic": "Three Dimensional Geometry",
+                "asset_id": "98764",
+                "asset_title": "Angle between two lines.",
+                "video_link": "Media/AssetLibrary/Video/3385/School Plus_XII_M_3D Geometry-Ch-11-Lec-05.mp4"
+            },
+            {
+                "smid": "67",
+                "nodeid": "18673",
+                "topic": "Probability",
+                "asset_id": "101334",
+                "asset_title": "Total Probability and Baye's Theorem",
+                "video_link": "Media/AssetLibrary/Video/3395/School Plus_XII_M_Probability-Ch-13-Lec-04.mp4"
+            },
+            {
+                "smid": "67",
+                "nodeid": "19304",
+                "topic": "Inverse Trigonometric Functions",
+                "asset_id": "101268",
+                "asset_title": "Properties of inverse trignometric functions",
+                "video_link": "Media/AssetLibrary/Video/3319/School Plus_XII_M_Inverse Trignometric Function-Ch-02-Lec-03.mp4"
+            }
+        ]
+    }
+]

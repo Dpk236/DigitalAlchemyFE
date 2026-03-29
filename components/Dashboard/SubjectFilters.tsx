@@ -1,22 +1,34 @@
 
+
 import React from 'react';
+
+interface Subject {
+    id: string;
+    label: string;
+    icon?: string;
+}
 
 interface SubjectFiltersProps {
     activeSubject: string;
     setActiveSubject: (subject: string) => void;
+    subjects: Subject[];
 }
 
-const SubjectFilters: React.FC<SubjectFiltersProps> = ({ activeSubject, setActiveSubject }) => {
-    const subjects = [
-        { id: 'PHYSICS', label: 'Physics', icon: '⚛️' },
-         { id: 'BIOLOGY', label: 'Biology', icon: '🧬' },
-        { id: 'CHEMISTRY', label: 'Chemistry', icon: '⚗️' },
-        { id: 'MATHEMATICS', label: 'Mathematics', icon: '∑' },
-    ];
+const SubjectFilters: React.FC<SubjectFiltersProps> = ({ activeSubject, setActiveSubject, subjects }) => {
+
+    const defaultIcons: Record<string, string> = {
+        'PHYSICS': '⚛️',
+        'BIOLOGY': '🧬',
+        'CHEMISTRY': '⚗️',
+        'MATHEMATICS': '∑',
+        'BOTANY': '🌿',
+        'ZOOLOGY': '🦁',
+    };
+
 
     return (
         <div className="flex items-center justify-between mb-12">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 flex-wrap">
                 {subjects.map((sub) => (
                     <button
                         key={sub.id}
@@ -26,7 +38,9 @@ const SubjectFilters: React.FC<SubjectFiltersProps> = ({ activeSubject, setActiv
                             : 'bg-white text-gray-400 border border-gray-100 hover:border-gray-200 hover:text-gray-600 shadow-sm'
                             }`}
                     >
-                        <span className={activeSubject === sub.id ? 'text-white' : 'text-gray-400'}>{sub.icon}</span>
+                        <span className={activeSubject === sub.id ? 'text-white' : 'text-gray-400'}>
+                            {sub.icon || defaultIcons[sub.id.toUpperCase()] || '📚'}
+                        </span>
                         {sub.label}
                     </button>
                 ))}
@@ -45,3 +59,4 @@ const SubjectFilters: React.FC<SubjectFiltersProps> = ({ activeSubject, setActiv
 };
 
 export default SubjectFilters;
+

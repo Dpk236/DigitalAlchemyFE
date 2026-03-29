@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useMemo, useRef } from "react";
 import { Flashcard, QuizQuestion } from "../types";
 
 export interface Note {
@@ -18,6 +18,8 @@ import heartFlashcards from "../mock-data/human-heart/video_human_heart_flashcar
 import heartQuiz from "../mock-data/human-heart/video_human_heart_quiz.json";
 import heartSummaries from "../mock-data/human-heart/video_human_heart_summaries.json";
 import BatchResponse from "../mock-data/batch_api_response.json";
+import { useLocation } from "react-router-dom";
+import { STREAM_DATA } from "@/services/streamConstants";
 
 // const BACKEND_URL = "https://askdoubt-backend.onrender.com";
 const BACKEND_URL = "http://localhost:5000";
@@ -50,8 +52,13 @@ const stripMarkdownAndHtml = (text: string) => {
 
   return cleanText.trim();
 };
+const baseUrl = "https://d3vo8rtp78h2dc.cloudfront.net";
 
 const useChatbot = () => {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const videoId = queryParams.get('video_id');
+  const activeStream = queryParams.get('stream');
   const [summaryHtml, setSummaryHtml] = useState<string | null>(null);
   const [visualViewContent, setVisualViewContent] = useState<any>(null);
   const [aiFlashCardsContent, setAiFlashCardsContent] = useState<Flashcard[]>(
@@ -62,7 +69,9 @@ const useChatbot = () => {
   const [quiz, setQuiz] = useState<any>({});
   const [loading, setLoading] = useState<boolean>(false);
   const [notes, setNotes] = useState<Note[]>([]);
-
+  const currentStreamData = useMemo(() => (STREAM_DATA[activeStream] || []).map((ele: any) => [...ele.syllabus_master_videos]).flatMap((ele: any) => ele), [activeStream]);
+  const path = currentStreamData.find((ele: any) => ele.asset_id === videoId)?.video_link;
+  console.log("currentStreamDatacurrentStreamData", currentStreamData);
   // Load notes from localStorage on mount
   useEffect(() => {
     const savedNotes = localStorage.getItem("study_notes");
@@ -85,6 +94,75 @@ const useChatbot = () => {
       ]);
     }
   }, []);
+  function getAllData(videoPath: string) {
+    if (!videoPath) return "";
+    // 1. Split the path into parts
+    const parts = videoPath.split('/');
+
+    // 2. Remove the last part (the filename)
+    const fileNameWithExt = parts.pop() || "";
+
+    // 3. Remove the extension (.mp4) and prepare the transcript filename
+    const fileName = fileNameWithExt.replace('.mp4', '');
+    const transcriptFileName = `${fileName}_summary.json`;
+
+    // 4. Rebuild the path with "transcripts" inserted
+    const transcriptPath = [
+      ...parts,
+      'transcripts',
+      encodeURIComponent(transcriptFileName)
+    ].join('/');
+
+    return `${baseUrl}/${transcriptPath}`;
+  }
+
+
+
+
+  const lastFetchedUrl = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (!path || !videoId) return;
+    const url = getAllData(path);
+    
+    // Prevent redundant or infinite calls
+    if (lastFetchedUrl.current === url) return;
+    
+    console.log("Fetching all lecture data from:", url);
+    lastFetchedUrl.current = url;
+    setLoading(true);
+
+    fetch(url)
+      .then(res => {
+        if (!res.ok) throw new Error("Lecture data not found");
+        return res.json();
+      })
+      .then(data => {
+        if (data) {
+          setSummaryHtml(data.summary || null);
+          setMindMapData(data.mindmap || null);
+          setQuiz({
+            data: data.quizzes || [],
+            title: data.lecture_topic || "Quiz"
+          });
+          setAiFlashCardsContent(data.flashcards || []);
+          console.log("Successfully loaded lecture data for:", videoId);
+        }
+      })
+      .catch(err => {
+        console.error("Failed to fetch lecture data:", err);
+        // Fallback or clear states on failure
+        setSummaryHtml(null);
+        setMindMapData(null);
+        setQuiz({});
+        setAiFlashCardsContent([]);
+        lastFetchedUrl.current = null; // Allow retry on error
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [path, videoId]);
+
 
   // Persist notes to localStorage whenever they change
   useEffect(() => {
@@ -92,6 +170,7 @@ const useChatbot = () => {
       localStorage.setItem("study_notes", JSON.stringify(notes));
     }
   }, [notes]);
+
 
   const addNote = useCallback(
     (content: string, type: "h1" | "text" = "text", clean: boolean = true) => {
@@ -126,51 +205,22 @@ const useChatbot = () => {
     );
   }, []);
 
-  const fetchSummary = useCallback(async (videoId?: string) => {
-    // Try to get summary from BatchResponse local data first
+  const fetchSummary = useCallback(async (vid?: string) => {
+    // Already handled by useEffect for current video
+    if ((vid || videoId) === videoId && summaryHtml) return;
+    
     try {
-      const batchResults = BatchResponse?.results?.results?.[videoId];
-      const { data } = batchResults || {};
-      const { summary, flashcards } = data || {};
-      console.log(
-        "Batch summary lookup for",
-        data,
-        batchResults,
-        "found:",
-        BatchResponse?.results?.results
-      );
-      setSummaryHtml(summary);
-      return;
+      const targetVid = vid || videoId;
+      if (!targetVid) return;
+      const batchResults = BatchResponse?.results?.results?.[targetVid];
+      if (batchResults?.data?.summary) {
+        setSummaryHtml(batchResults.data.summary);
+      }
     } catch (err) {
       console.warn("Batch lookup failed", err);
     }
+  }, [videoId, summaryHtml]);
 
-    // // existing mock fallbacks
-    // if (videoId === "waves") {
-    //   setSummaryHtml((wavesSummaries as any).final_summary);
-    //   return;
-    // }
-    // if (videoId === "projectile_motion") {
-    //   setSummaryHtml((projectileSummaries as any).final_summary);
-    //   return;
-    // }
-    // if (videoId === "human_heart") {
-    //   setSummaryHtml((heartSummaries as any).final_summary);
-    //   return;
-    // }
-
-    // const url = `${BACKEND_URL}/get_summmary?video_id=${videoId || "waves"}`;
-    // setLoading(true);
-    // try {
-    //   const response = await fetch(url);
-    //   const data = await response.json();
-    //   setSummaryHtml(data.final_summary);
-    // } catch (error) {
-    //   console.error("Error fetching summary:", error);
-    // } finally {
-    //   setLoading(false);
-    // }
-  }, []);
 
   const fetchVisualView = useCallback(async () => {
     const url = `${BACKEND_URL}/visual-view`;
@@ -186,42 +236,51 @@ const useChatbot = () => {
     }
   }, []);
 
-  const fetchAIFlashCards = useCallback(async (videoId?: string) => {
-    // Try BatchResponse first
+  const fetchAIFlashCards = useCallback(async (vid?: string) => {
+    if ((vid || videoId) === videoId && aiFlashCardsContent.length > 0) return;
+
     try {
-      const batchResults = BatchResponse?.results?.results?.[videoId];
-      const { data } = batchResults || {};
-      const { flashcards } = data || {};
-      setAiFlashCardsContent(flashcards || []);
+      const targetVid = vid || videoId;
+      if (!targetVid) return;
+      const batchResults = BatchResponse?.results?.results?.[targetVid];
+      if (batchResults?.data?.flashcards) {
+        setAiFlashCardsContent(batchResults.data.flashcards);
+      }
     } catch (err) {
       console.warn("Batch flashcards lookup failed", err);
     } finally {
       setLoading(false);
     }
-  }, []);
-  const fetchMindMap = useCallback(async (videoId?: string) => {
-    // Try BatchResponse first
+  }, [videoId, aiFlashCardsContent]);
+
+
+  const fetchMindMap = useCallback(async (vid?: string) => {
+    if ((vid || videoId) === videoId && mindMapData) return;
+
     try {
-      const batchResults = BatchResponse?.results?.results?.[videoId];
-      const { data } = batchResults || {};
-      const { mindmap } = data || {};
-      setMindMapData(mindmap || []);
+      const targetVid = vid || videoId;
+      if (!targetVid) return;
+      const batchResults = BatchResponse?.results?.results?.[targetVid];
+      if (batchResults?.data?.mindmap) {
+        setMindMapData(batchResults.data.mindmap);
+      }
     } catch (err) {
-      console.warn("Batch flashcards lookup failed", err);
+      console.warn("Batch mindmap lookup failed", err);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [videoId, mindMapData]);
+
 
   const fetchAllChats = useCallback(
     async (
-      videoId?: string,
+      vid?: string,
       userId: string = "user123",
       sessionId: string = "session789"
     ) => {
-      const url = `${BACKEND_URL}/get-all-chat?video_id=${
-        videoId || "waves"
-      }&user_id=${userId}&session_id=${sessionId}`;
+      const targetVid = vid || videoId;
+      const url = `${BACKEND_URL}/get-all-chat?video_id=${targetVid || "waves"
+        }&user_id=${userId}&session_id=${sessionId}`;
       setLoading(true);
       try {
         const response = await fetch(url);
@@ -234,22 +293,27 @@ const useChatbot = () => {
         setLoading(false);
       }
     },
-    []
+    [videoId]
   );
 
-  const fetchQuiz = useCallback(async (videoId?: string) => {
-    // Try BatchResponse first
+  const fetchQuiz = useCallback(async (vid?: string) => {
+    if ((vid || videoId) === videoId && quiz.data?.length > 0) return;
+
     try {
-      const batchResults = BatchResponse?.results?.results?.[videoId];
-      const { data } = batchResults || {};
-      const { quizzes } = data || {};
-      setQuiz({ data: quizzes });
+      const targetVid = vid || videoId;
+      if (!targetVid) return;
+      const batchResults = BatchResponse?.results?.results?.[targetVid];
+      if (batchResults?.data?.quizzes) {
+        setQuiz({ data: batchResults.data.quizzes });
+      }
     } catch (err) {
       console.warn("Batch quiz lookup failed", err);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [videoId, quiz]);
+
+
 
   return {
     summaryHtml,
