@@ -1,5 +1,5 @@
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Language } from '../../types';
 import VideoJS from './VideoJS';
 import type Player from 'video.js/dist/types/player';
@@ -7,8 +7,12 @@ import TranscriptList from './TranscriptList';
 import { updateSocketParams } from '../socket/socket';
 import VideosSubjects from '../../mock-data/videos-subject.json';
 
+
+import { STREAMS, STREAM_DATA } from '../../services/streamConstants';
+
 interface VideoPlayerProps {
   videoId: string;
+  stream: string | null;
   videoLanguage: Language;
   setVideoLanguage: (lang: Language) => void;
   leftTab: 'Chapters' | 'Transcripts';
@@ -18,10 +22,10 @@ interface VideoPlayerProps {
 }
 
 const CDN_BASE_URL = "https://d3vo8rtp78h2dc.cloudfront.net/";
-const CDN_BASE_URL_Stage = "https://d29zr2abydv3bb.cloudfront.net/";
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
   videoId,
+  stream,
   videoLanguage,
   setVideoLanguage,
   leftTab,
@@ -38,18 +42,105 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const [playbackRate, setPlaybackRate] = useState(1);
   const [showSubtitles, setShowSubtitles] = useState(false);
 
-  const getFolder = (id: string) => id === 'projectile' ? 'projectile' :
-    id === 'human-heart' ? 'human-heart' : id;
+  const getFolder = (id: string) => id === 'projectile_motion' ? 'projectile' :
+    id === 'human_heart' ? 'human-heart' : id;
+
   const folderName = getFolder(videoId);
-  const videoData = VideosSubjects.find((v: any) => v.assetId == videoId);
-  const { path } = videoData || {};
-  const videoUrl = ['projectile', "waves", "human-heart"].includes(videoId) ? `${CDN_BASE_URL_Stage}${path}` : `${CDN_BASE_URL}${path}`;
-  console.log("videoUrl", videoUrl, videoId, videoData, VideosSubjects);
-  const vttUrl = ['projectile', "waves", "human-heart"].includes(videoId) ? `${CDN_BASE_URL_Stage}Media/Video/hackathon/${folderName}/${folderName.replace('-', '_')}_subtitle.vtt` : `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/${folderName.replace('-', '_')}_subtitle.vtt`;
+
+  // Find video in original mock data
+  let videoData = VideosSubjects.find((v: any) => v.assetId == videoId);
+  let path = videoData?.path;
+  console.log("pathpathpathpath", path);
+  // If not found, look in the selected stream data
+  if (!path && stream && STREAM_DATA[stream]) {
+    for (const subjectData of STREAM_DATA[stream]) {
+      const video = subjectData.syllabus_master_videos.find(
+        (v: any) => v.asset_id == videoId
+      );
+      if (video) {
+        path = video.video_link;
+        break;
+      }
+    }
+  }
+  const baseUrl = "https://d3vo8rtp78h2dc.cloudfront.net";
+
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  };
+
+  const [dynamicTranscript, setDynamicTranscript] = useState<any[]>([]);
+  const [transcriptCache, setTranscriptCache] = useState<Record<string, any[]>>({});
+
+  /**
+   * Logic 1: Using String Manipulation (Splitting & Joining)
+   * This handles both cases dynamically.
+   */
+  function getTranscriptUrl(videoPath: string) {
+    if (!videoPath) return "";
+    // 1. Split the path into parts
+    const parts = videoPath.split('/');
+
+    // 2. Remove the last part (the filename)
+    const fileNameWithExt = parts.pop() || "";
+
+    // 3. Remove the extension (.mp4) and prepare the transcript filename
+    const fileName = fileNameWithExt.replace('.mp4', '');
+    const transcriptFileName = `${fileName}_transcript.json`;
+
+    // 4. Rebuild the path with "transcripts" inserted
+    const transcriptPath = [
+      ...parts,
+      'transcripts',
+      encodeURIComponent(transcriptFileName)
+    ].join('/');
+
+    return `${baseUrl}/${transcriptPath}`;
+  }
+  useEffect(() => {
+    if (!path) return;
+
+    // Check cache first
+    if (transcriptCache[videoId]) {
+      setDynamicTranscript(transcriptCache[videoId]);
+      return;
+    }
+
+    const transcriptUrl = getTranscriptUrl(path);
+    console.log(path, "Fetching dynamic transcript from:", transcriptUrl);
+
+    fetch(transcriptUrl)
+      .then(res => {
+        if (!res.ok) throw new Error("Transcript not found");
+        return res.json();
+      })
+      .then(data => {
+        const segments = data.segments || [];
+        const formatted = segments.map((seg: any) => ({
+          time: formatTime(seg.start),
+          startTime: seg.start,
+          text: seg.text,
+        }));
+        setDynamicTranscript(formatted);
+        setTranscriptCache(prev => ({ ...prev, [videoId]: formatted }));
+      })
+      .catch(err => {
+        console.error("Failed to load transcript from URL:", err);
+        setDynamicTranscript([]);
+      });
+  }, [path, videoId]);
+
+  const videoUrl = `${CDN_BASE_URL}${path}`;
+  console.log("videoUrl", videoUrl, videoId, videoData, path);
+  const vttUrl = `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/${folderName.replace('-', '_')}_subtitle.vtt`;
 
   React.useEffect(() => {
     updateSocketParams(videoId);
   }, [videoId]);
+
 
   const handlePlayerReady = (playerInstance: any) => {
     setPlayer(playerInstance);
@@ -375,11 +466,13 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               ))}
             </div>
           ) : ( */}
+
           <TranscriptList
-            transcript={transcript}
+            transcript={dynamicTranscript.length > 0 ? dynamicTranscript : transcript}
             currentTime={currentTime}
             onSeek={handleSeek}
           />
+
           {/* )} */}
         </div>
       </div>

@@ -34,7 +34,7 @@ const VideoJS: React.FC<VideoJSProps> = ({
                 fluid: true,
                 preload: "auto",
                 playbackRates: [0.5, 1, 1.25, 1.5, 2],
-                // crossOrigin: "anonymous",
+                crossOrigin: "anonymous",
                 html5: {
                     vhs: {
                         overrideNative: true

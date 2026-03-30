@@ -1,4 +1,6 @@
 import React, { useMemo, useEffect, useState, useCallback } from 'react';
+import MindMapVisualView from './MindMapVisualView';
+
 import ReactFlow, {
     Background,
     Controls,
@@ -15,7 +17,7 @@ import ReactFlow, {
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import dagre from 'dagre';
-import { Info, ChevronDown } from 'lucide-react';
+import { Info, ChevronDown, X } from 'lucide-react';
 
 // Re-use data interface
 export interface MindMapNodeData {
@@ -26,6 +28,7 @@ export interface MindMapNodeData {
 
 interface MindMapProps {
     data: MindMapNodeData | null;
+    videoId: string;
 }
 
 // Custom Node Component
@@ -239,6 +242,22 @@ const MindMapInternal = ({ data }: MindMapProps) => {
 };
 
 export default function MindMapReactFlow(props: MindMapProps) {
+    const [activeTab, setActiveTab] = useState<'Normal Map' | 'Visual Representation'>('Normal Map');
+    const [isVisualModalOpen, setIsVisualModalOpen] = useState(false);
+
+    // Automatically open modal when Visual Representation tab is clicked
+    useEffect(() => {
+        if (activeTab === 'Visual Representation') {
+            setIsVisualModalOpen(true);
+        }
+    }, [activeTab]);
+
+    const closeVisualModal = () => {
+        setIsVisualModalOpen(false);
+        // Switch back to Normal Map since the modal is the primary view for Visual
+        setActiveTab('Normal Map');
+    };
+
     if (!props.data) {
         return (
             <div className='w-full h-full flex items-center justify-center min-h-[400px]'>
@@ -256,8 +275,61 @@ export default function MindMapReactFlow(props: MindMapProps) {
     }
 
     return (
-        <ReactFlowProvider>
-            <MindMapInternal {...props} />
-        </ReactFlowProvider>
+        <div className="flex flex-col h-full w-full">
+            {/* Mind Map Specific Tabs */}
+            <div className="flex items-center gap-4 p-4 border-b border-gray-100 bg-white/50 backdrop-blur-sm sticky top-0 z-20">
+                <button
+                    onClick={() => setActiveTab('Normal Map')}
+                    className={`px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all ${
+                        activeTab === 'Normal Map'
+                            ? 'bg-blue-600 text-white shadow-md shadow-blue-200'
+                            : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
+                    }`}
+                >
+                    Normal Map
+                </button>
+                <button
+                    onClick={() => setActiveTab('Visual Representation')}
+                    className={`px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all ${
+                        activeTab === 'Visual Representation'
+                            ? 'bg-blue-600 text-white shadow-md shadow-blue-200'
+                            : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
+                    }`}
+                >
+                    Visual Representation
+                </button>
+            </div>
+
+            <div className="flex-1 min-h-0 relative">
+                {activeTab === 'Normal Map' ? (
+                    <ReactFlowProvider>
+                        <MindMapInternal {...props} />
+                    </ReactFlowProvider>
+                ) : (
+                    <MindMapVisualView videoId={props.videoId} />
+                )}
+            </div>
+
+            {/* Full Screen Visual Representation Modal */}
+            {isVisualModalOpen && (
+                <div className="fixed inset-0 z-[100] bg-white flex flex-col animate-in fade-in zoom-in duration-300">
+                    <div className="flex items-center justify-between p-6 border-b border-gray-100 bg-white shadow-sm">
+                        <div className="flex flex-col">
+                            <h2 className="text-xl font-black text-blue-900 tracking-tight">Visual Representation</h2>
+                            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">Full Screen Experience</p>
+                        </div>
+                        <button 
+                            onClick={closeVisualModal}
+                            className="p-3 bg-gray-50 hover:bg-gray-100 text-gray-400 hover:text-gray-900 rounded-2xl transition-all group"
+                        >
+                            <X size={24} className="group-hover:rotate-90 transition-transform duration-300" />
+                        </button>
+                    </div>
+                    <div className="flex-1 overflow-hidden">
+                        <MindMapVisualView videoId={props.videoId} />
+                    </div>
+                </div>
+            )}
+        </div>
     );
 }

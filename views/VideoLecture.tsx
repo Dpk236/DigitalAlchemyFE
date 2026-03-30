@@ -15,7 +15,9 @@ const formatTime = (seconds: number) => {
 const VideoLecture: React.FC = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
+
   const videoId = queryParams.get('video_id') || 'waves';
+  const stream = queryParams.get('stream');
 
   const [transcript, setTranscript] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -33,8 +35,8 @@ const VideoLecture: React.FC = () => {
     const fetchTranscript = async () => {
       setLoading(true);
       try {
-        const folderName = videoId === 'projectile' ? 'projectile' :
-          videoId === 'human-heart' ? 'human-heart' : videoId;
+        const folderName = videoId === 'projectile_motion' ? 'projectile' :
+          videoId === 'human_heart' ? 'human-heart' : videoId;
         const separator = videoId === 'human_heart' ? '-' : '_';
         const filename = `transcript_en_${videoId}.json`
         const url = `${CDN_BASE_URL}Media/Video/hackathon/${folderName}/${filename}`;
@@ -85,6 +87,7 @@ const VideoLecture: React.FC = () => {
       ) : (
         <VideoPlayer
           videoId={videoId}
+          stream={stream}
           videoLanguage={videoLanguage}
           setVideoLanguage={setVideoLanguage}
           leftTab={leftTab}
@@ -93,6 +96,7 @@ const VideoLecture: React.FC = () => {
           transcript={transcript}
         />
       )}
+
 
       {/* Right Pane: Interaction Panel */}
       <LectureInteractionPanel videoId={videoId} />

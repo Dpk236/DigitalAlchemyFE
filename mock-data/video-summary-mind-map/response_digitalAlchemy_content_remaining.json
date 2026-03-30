@@ -1,0 +1,540 @@
+{
+  "status": "completed",
+  "total": 2,
+  "successful": 2,
+  "failed": 0,
+  "results": [
+    {
+      "status": "success",
+      "video_id": "3187",
+      "transcript_key": "Media/AssetLibrary/Video/3187/transcripts/School Plus_XII_B_Rep in flowering Plants-Ch-01-Lec-01_summary.json",
+      "output_key": "Media/AssetLibrary/Video/3187/transcripts/School Plus_XII_B_Rep in flowering Plants-Ch-01-Lec-01_summary_summary.json",
+      "result": {
+        "lecture_topic": "Structure of Flower and Pre-fertilization Events in Angiosperms",
+        "subject": "Biology",
+        "summary": "## Introduction to Angiospermic Reproduction\n- Angiospermic plants use **flowers** for sexual reproduction.\n- Flowers lead to **seed production**, which germinate into new plants.\n\n## Importance of Flower\n- **Site of sexual reproduction** where gametes fertilize.\n- Holds **aesthetic, ornamental, social, religious, and cultural significance**.\n- An important **object of morphological and embryological studies**.\n\n## Structure of Flower: Floral Whorls\n- A typical flower has four whorls:\n  - **Calyx**: Outermost, made of **sepals**. Green, protects bud. **Accessory** part.\n  - **Corolla**: Next, made of **petals**. Colored, attracts pollinators. **Accessory** part.\n  - **Androecium**: **Male reproductive part**, made of **stamens**. Develops pollen. **Essential** part.\n  - **Gynoecium**: **Female reproductive part**, made of **carpels** or **pistils**. Contains egg. **Essential** part.\n- **Essential Whorls**: Androecium and Gynoecium (involved in gamete production).\n- **Accessory Whorls**: Calyx and Corolla (supportive functions).\n\n## Pre-fertilization Events\n- Events occurring **before fertilization** of male and female gametes.\n- Key events include:\n  - **Microsporogenesis**: Development of microspores.\n  - **Development of pollen grain**.\n  - **Megasporogenesis**: Development of megaspores.\n  - **Development of embryo sac**.\n  - **Pollination**: Pollen transfer from anther to stigma.\n  - **Pollen-pistil interaction**: Chemical dialogue for pollen tube development.\n\n## Structure of Stamen\n- The **stamen** is the male reproductive unit, composed of a **filament** (stalk) and an **anther** (bilobed terminal part).\n\n## Structure of Anther (Transverse Section)\n- **Bilobed** (two lobes), each with two **thecae**, making it **dithecous**.\n- Contains four **microsporangia** (pollen sacs) at corners, thus **tetrasporangiate**.\n- Microsporangia contain **sporogenous tissue** (diploid, **2N**) for microspore development.\n- **Line of dehiscence**: Where the anther bursts to release pollen.\n\n## Microsporangium Walls\n- Four layers:\n  1.  **Epidermis**: Outermost, protective.\n  2.  **Endothecium**.\n  3.  **Middle layers**.\n  - Outer three layers provide **protection** and aid **dehiscence**.\n  4.  **Tapetum**: Innermost, provides **nutrition** to developing microspores.\n    - Cells have **dense cytoplasm** and are often **multi-nucleate** (due to karyokinesis without cytokinesis).\n\n## Microsporogenesis Process\n- **Sporogenous tissue cells (2N)** differentiate into **Microspore Mother Cells (MMC)** or **Pollen Mother Cells (PMC) (2N)**.\n- PMC undergoes **meiosis** to produce four **haploid (N)** cells in a **microspore tetrad**.\n- Microspores mature into **pollen grains**.\n- Mature anther dehisces, releasing pollen grains.\n\n## Structure of Pollen Grain\n- Represents the **male gametophyte** (not the gamete).\n- Diameter: 25-30 micrometers.\n- Two walls:\n  - **Exine**: Hard, outer, discontinuous, made of **sporopollenin**.\n  - **Intine**: Thin, inner, continuous, made of **cellulose and pectins**.\n- Contains a **vegetative cell** (larger, food reserves, forms pollen tube) and a **generative cell** (smaller, forms two male gametes).\n- **Germ pore**: Region on exine without sporopollenin, for pollen tube emergence.\n\n## Sporopollenin\n- **Most resistant organic material known**; no enzyme degrades it.\n- Allows pollen grains to be **well fossilized**.\n- Provides **protection** during transfer.\n- **Absent at germ pore**.\n\n## Development of Pollen Grains\n- Microspore divides mitotically (asymmetrically) into a **vegetative cell** and a **generative cell**.\n- **Pollen shedding stages**:\n  - Over 60% of angiosperms shed at **two-celled stage** (vegetative + generative).\n  - Remaining shed at **three-celled stage** (vegetative + two male gametes).\n\n## Role and Significance of Pollen Grains\n- **Nutritional value**: Rich in nutrients, used as **food supplements** (tablets, syrups) for stamina.\n- **Allergies and hypersensitivities**: Cause bronchial afflictions (e.g., asthma, bronchitis).\n  - **Parthenium** (carrot grass) is a common cause of pollen allergy in India.\n\n## Pollen Viability\n- Period pollen remains capable of germination; varies by species, temperature, humidity.\n  - Short: e.g., rice, wheat (~30 minutes).\n  - Long: e.g., Solanaceae, Rosaceae, Leguminosae (several months).\n\n## Pollen Storage\n- Stored long-term via **cryopreservation** in **liquid nitrogen (-196°C)** for breeding programs and pollen banks.",
+        "mindmap": {
+          "title": "Flower Structure & Pre-fertilization Events",
+          "description": "Overview of angiosperm reproduction before fertilization",
+          "children": [
+            {
+              "title": "Importance of Flower",
+              "description": "Significance in reproduction, aesthetics, and study",
+              "children": [
+                {
+                  "title": "Sexual Reproduction Site",
+                  "description": "Where male and female gametes fertilize",
+                  "children": []
+                },
+                {
+                  "title": "Aesthetic & Cultural Value",
+                  "description": "Ornamental, social, religious uses",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "title": "Structure of Flower",
+              "description": "Four main floral whorls",
+              "children": [
+                {
+                  "title": "Accessory Whorls",
+                  "description": "Supportive parts, not directly involved in gamete formation",
+                  "children": [
+                    {
+                      "title": "Calyx (Sepals)",
+                      "description": "Outermost, green, protects bud",
+                      "children": []
+                    },
+                    {
+                      "title": "Corolla (Petals)",
+                      "description": "Colored, attracts pollinators",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "title": "Essential Whorls",
+                  "description": "Directly involved in gamete production",
+                  "children": [
+                    {
+                      "title": "Androecium (Stamens)",
+                      "description": "Male reproductive part, produces pollen",
+                      "children": []
+                    },
+                    {
+                      "title": "Gynoecium (Carpels/Pistils)",
+                      "description": "Female reproductive part, contains ovules",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Pre-fertilization Events",
+              "description": "Processes before gamete fusion",
+              "children": [
+                {
+                  "title": "Microsporogenesis",
+                  "description": "Formation of microspores",
+                  "children": []
+                },
+                {
+                  "title": "Pollen Grain Development",
+                  "description": "Maturation of microspores",
+                  "children": []
+                },
+                {
+                  "title": "Pollination",
+                  "description": "Transfer of pollen to stigma",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "title": "Structure of Stamen",
+              "description": "Male reproductive unit",
+              "children": [
+                {
+                  "title": "Components",
+                  "description": "Filament (stalk) and Anther (terminal part)",
+                  "children": []
+                },
+                {
+                  "title": "Anther Structure (TS)",
+                  "description": "Internal organization of the anther",
+                  "children": [
+                    {
+                      "title": "Bilobed & Dithecous",
+                      "description": "Two lobes, each with two thecae",
+                      "children": []
+                    },
+                    {
+                      "title": "Tetrasporangiate",
+                      "description": "Four microsporangia (pollen sacs)",
+                      "children": []
+                    },
+                    {
+                      "title": "Microsporangium Walls",
+                      "description": "Layers surrounding pollen sacs",
+                      "children": [
+                        {
+                          "title": "Protective Layers",
+                          "description": "Epidermis, Endothecium, Middle layers",
+                          "children": []
+                        },
+                        {
+                          "title": "Tapetum",
+                          "description": "Innermost, provides nutrition, multi-nucleate",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Microsporogenesis Process",
+              "description": "Formation of microspores from PMC",
+              "children": [
+                {
+                  "title": "PMC to Microspore Tetrad",
+                  "description": "Pollen Mother Cell (2N) undergoes meiosis to form 4 haploid microspores (N)",
+                  "children": []
+                },
+                {
+                  "title": "Microspore Maturation",
+                  "description": "Microspores develop into pollen grains",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "title": "Structure of Pollen Grain",
+              "description": "Male gametophyte with protective layers and cells",
+              "children": [
+                {
+                  "title": "Male Gametophyte",
+                  "description": "Pollen grain represents the male gametophyte",
+                  "children": []
+                },
+                {
+                  "title": "Pollen Walls",
+                  "description": "Exine (outer, sporopollenin) and Intine (inner, cellulose/pectin)",
+                  "children": []
+                },
+                {
+                  "title": "Pollen Cells",
+                  "description": "Vegetative cell (pollen tube) and Generative cell (male gametes)",
+                  "children": []
+                },
+                {
+                  "title": "Germ Pore",
+                  "description": "Opening in exine for pollen tube emergence",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "title": "Pollen Grain Significance",
+              "description": "Roles and characteristics of pollen grains",
+              "children": [
+                {
+                  "title": "Nutritional Value",
+                  "description": "Rich in nutrients, used as food supplements",
+                  "children": []
+                },
+                {
+                  "title": "Allergies",
+                  "description": "Can cause bronchial afflictions (e.g., Parthenium)",
+                  "children": []
+                },
+                {
+                  "title": "Viability & Storage",
+                  "description": "Period for germination and cryopreservation",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        "quizzes": [
+          {
+            "question": "Which of the following floral whorls are considered 'essential' for sexual reproduction in an angiospermic flower?",
+            "options": {
+              "A": "Calyx and Corolla",
+              "B": "Androecium and Gynoecium",
+              "C": "Calyx and Androecium",
+              "D": "Corolla and Gynoecium"
+            },
+            "correct_answer": "B",
+            "hint": "Essential whorls are directly involved in producing gametes.",
+            "solution": "The androecium (male reproductive part) produces pollen grains which contain male gametes, and the gynoecium (female reproductive part) contains ovules which house the female gamete. Therefore, these two whorls are directly involved in sexual reproduction and are considered essential. Calyx and Corolla are accessory parts.",
+            "difficulty": "easy",
+            "concept_tested": "Essential Floral Whorls"
+          },
+          {
+            "question": "What is the ploidy of the cells in a microspore tetrad, and what process leads to their formation from the Microspore Mother Cell (PMC)?",
+            "options": {
+              "A": "Diploid (2N), Mitosis",
+              "B": "Haploid (N), Meiosis",
+              "C": "Diploid (2N), Meiosis",
+              "D": "Haploid (N), Mitosis"
+            },
+            "correct_answer": "B",
+            "hint": "Recall the type of cell division that reduces chromosome number.",
+            "solution": "Microspore Mother Cells (PMC) are diploid (2N). They undergo meiosis, which is a reductional division, to produce four haploid (N) microspores. These microspores are initially arranged in a microspore tetrad.",
+            "difficulty": "medium",
+            "concept_tested": "Microsporogenesis and Ploidy"
+          },
+          {
+            "question": "Which of the following statements is TRUE regarding sporopollenin?",
+            "options": {
+              "A": "It forms the inner wall (intine) of the pollen grain.",
+              "B": "It is easily degraded by enzymes, aiding pollen germination.",
+              "C": "It is the most resistant organic material known and helps in fossilization of pollen.",
+              "D": "It is uniformly present over the entire surface of the pollen grain, including the germ pore."
+            },
+            "correct_answer": "C",
+            "hint": "Consider its role in pollen protection and preservation.",
+            "solution": "Sporopollenin forms the hard outer wall (exine) of the pollen grain, not the intine. It is highly resistant to degradation by enzymes, acids, and high temperatures, making it the most resistant organic material known. This property is why pollen grains are well-preserved as fossils. It is absent at the germ pore to allow the pollen tube to emerge.",
+            "difficulty": "medium",
+            "concept_tested": "Sporopollenin properties and function"
+          },
+          {
+            "question": "The tapetum, an innermost wall layer of the microsporangium, is characterized by its dense cytoplasm and multi-nucleate condition. What is the primary function of the tapetum?",
+            "options": {
+              "A": "To provide mechanical protection to the developing pollen grains.",
+              "B": "To facilitate the dehiscence of the anther for pollen release.",
+              "C": "To provide nutrition to the developing sporogenous tissue and microspores.",
+              "D": "To attract pollinating agents through its vibrant coloration."
+            },
+            "correct_answer": "C",
+            "hint": "Think about why its cells have dense cytoplasm and are multi-nucleate.",
+            "solution": "The tapetum's dense cytoplasm and multi-nucleate nature are adaptations for its primary role: providing nourishment. It supplies essential nutrients to the sporogenous tissue and the developing microspores, enabling them to mature into pollen grains. Protection and dehiscence are functions of the outer wall layers, and attraction is the function of petals.",
+            "difficulty": "easy",
+            "concept_tested": "Function of Tapetum"
+          },
+          {
+            "question": "In most angiosperms (over 60%), pollen grains are shed at which developmental stage?",
+            "options": {
+              "A": "Microspore tetrad stage",
+              "B": "Single microspore stage",
+              "C": "Two-celled stage (vegetative cell + generative cell)",
+              "D": "Three-celled stage (vegetative cell + two male gametes)"
+            },
+            "correct_answer": "C",
+            "hint": "Recall the common shedding stage mentioned in the lecture.",
+            "solution": "The transcript states that over 60% of angiosperms shed pollen at the two-celled stage, which consists of a vegetative cell and a generative cell. The remaining species shed at the three-celled stage.",
+            "difficulty": "medium",
+            "concept_tested": "Pollen Shedding Stages"
+          }
+        ],
+        "flashcards": [
+          {
+            "front": "What is the primary function of the flower in angiosperms?",
+            "back": "It is the site of sexual reproduction, leading to seed formation.",
+            "concept": "Importance of Flower",
+            "importance": "high"
+          },
+          {
+            "front": "Which floral whorl consists of sepals and what is its main role?",
+            "back": "Calyx; its main role is to protect the other floral parts, especially during the bud stage.",
+            "concept": "Calyx",
+            "importance": "medium"
+          },
+          {
+            "front": "What are the individual units of the corolla and what is their function?",
+            "back": "Petals; their function is to attract pollinating agents.",
+            "concept": "Corolla",
+            "importance": "medium"
+          },
+          {
+            "front": "Name the male reproductive part of the flower and its individual unit.",
+            "back": "Androecium; its individual unit is the stamen.",
+            "concept": "Androecium",
+            "importance": "high"
+          },
+          {
+            "front": "What are the essential floral whorls?",
+            "back": "Androecium and Gynoecium, as they are directly involved in gamete production.",
+            "concept": "Essential Floral Whorls",
+            "importance": "high"
+          },
+          {
+            "front": "Describe the structure of a typical anther in terms of lobes and microsporangia.",
+            "back": "A typical anther is bilobed and tetrasporangiate (each lobe has two microsporangia).",
+            "concept": "Anther Structure",
+            "importance": "high"
+          },
+          {
+            "front": "What is the function of the tapetum in the microsporangium?",
+            "back": "It provides nutrition to the developing sporogenous tissue and microspores.",
+            "concept": "Tapetum Function",
+            "importance": "high"
+          },
+          {
+            "front": "Why are tapetal cells often multi-nucleate?",
+            "back": "They undergo karyokinesis (nuclear division) but not subsequent cytokinesis (cytoplasmic division).",
+            "concept": "Tapetum Characteristics",
+            "importance": "medium"
+          },
+          {
+            "front": "What is microsporogenesis?",
+            "back": "The process of formation of microspores from Microspore Mother Cells (PMC) inside the microsporangium.",
+            "concept": "Microsporogenesis",
+            "importance": "high"
+          },
+          {
+            "front": "What is the ploidy of a microspore and how is it formed from a PMC?",
+            "back": "Haploid (N); formed by meiosis from a diploid (2N) PMC.",
+            "concept": "Ploidy in Microsporogenesis",
+            "importance": "high"
+          },
+          {
+            "front": "What does a pollen grain represent?",
+            "back": "The male gametophyte (not the male gamete itself).",
+            "concept": "Pollen Grain Identity",
+            "importance": "high"
+          },
+          {
+            "front": "What is sporopollenin and what is its significance?",
+            "back": "It is the most resistant organic material known, forming the exine of pollen grains, protecting them, and aiding in fossilization.",
+            "concept": "Sporopollenin",
+            "importance": "high"
+          },
+          {
+            "front": "Why is sporopollenin absent at the germ pore?",
+            "back": "To allow the emergence and growth of the pollen tube.",
+            "concept": "Germ Pore Function",
+            "importance": "medium"
+          },
+          {
+            "front": "Name the two cells present in a mature pollen grain.",
+            "back": "Vegetative cell and Generative cell.",
+            "concept": "Pollen Grain Cells",
+            "importance": "high"
+          },
+          {
+            "front": "What is pollen viability?",
+            "back": "The period for which pollen grains retain their ability to germinate.",
+            "concept": "Pollen Viability",
+            "importance": "medium"
+          },
+          {
+            "front": "How are pollen grains stored for long durations for plant breeding?",
+            "back": "Through cryopreservation in liquid nitrogen (-196°C).",
+            "concept": "Pollen Storage",
+            "importance": "high"
+          }
+        ]
+      }
+    },
+    {
+      "status": "success",
+      "video_id": "3385",
+      "transcript_key": "Media/AssetLibrary/Video/3385/transcripts/School Plus_XII_M_3D Geometry-Ch-11-Lec-05_transcript.json",
+      "output_key": "Media/AssetLibrary/Video/3385/transcripts/School Plus_XII_M_3D Geometry-Ch-11-Lec-05_summary.json",
+      "result": {
+        "lecture_topic": "Angle Between Two Lines in 3D Space",
+        "subject": "Mathematics",
+        "summary": "## Angle Between Two Lines in 3D Space\n\n### Introduction to Angles\n- The angle between two lines L1 and L2 in 3D space can be **theta** (acute) or **phi** (obtuse).\n- In this chapter, the focus is on finding the **acute angle (theta)**.\n\n### Angle using Direction Ratios (DRs)\n- Consider two lines L1 and L2 passing through the origin with direction ratios:\n    - L1: **(A1, B1, C1)**\n    - L2: **(A2, B2, C2)**\n- Represent lines as vectors **OP** and **OQ** where P is on L1 and Q is on L2.\n- **OP vector** = A1 î + B1 ĵ + C1 k̂\n- **OQ vector** = A2 î + B2 ĵ + C2 k̂\n- The formula for **cos(theta)** is derived from the dot product of these vectors:\n    - **cos(theta) = |(A1A2 + B1B2 + C1C2) / (√(A1² + B1² + C1²) * √(A2² + B2² + C2²))|**\n    - The modulus ensures that theta is an acute angle (cos(theta) is positive).\n- The formula for **sin(theta)** can be derived from sin²(theta) = 1 - cos²(theta):\n    - **sin(theta) = √( (A1B2 - A2B1)² + (B1C2 - B2C1)² + (C1A2 - C2A1)² ) / (√(A1² + B1² + C1²) * √(A2² + B2² + C2²))**\n\n### Angle using Direction Cosines (DCs)\n- If the direction cosines of lines L1 and L2 are:\n    - L1: **(L1, M1, N1)**\n    - L2: **(L2, M2, N2)**\n- The formula for **cos(theta)** simplifies to:\n    - **cos(theta) = |L1L2 + M1M2 + N1N2|**\n- The formula for **sin(theta)** simplifies to:\n    - **sin(theta) = √( (L1M2 - L2M1)² + (M1N2 - M2N1)² + (N1L2 - N2L1)² )**\n\n### Special Cases\n- **Perpendicular Lines (theta = 90°):**\n    - If lines are perpendicular, **cos(90°) = 0**.\n    - Using DRs: **A1A2 + B1B2 + C1C2 = 0**\n    - Using DCs: **L1L2 + M1M2 + N1N2 = 0**\n- **Parallel Lines (theta = 0°):**\n    - If lines are parallel, **sin(0°) = 0**.\n    - Using DRs: **(A1B2 - A2B1)² + (B1C2 - B2C1)² + (C1A2 - C2A1)² = 0**.\n    - This implies **A1/A2 = B1/B2 = C1/C2** (ratios of corresponding direction ratios are equal).\n    - Using DCs: **L1/L2 = M1/M2 = N1/N2** (or L1=L2, M1=M2, N1=N2 since DCs are normalized).",
+        "mindmap": {
+          "title": "Angle Between Two Lines in 3D",
+          "description": "Calculating angles between lines in three-dimensional space",
+          "children": [
+            {
+              "title": "Types of Angles",
+              "description": "Acute vs. Obtuse angle between lines",
+              "children": [
+                {
+                  "title": "Acute Angle (theta)",
+                  "description": "The smaller angle, cos(theta) is positive",
+                  "children": []
+                },
+                {
+                  "title": "Obtuse Angle (phi)",
+                  "description": "The larger angle, phi = 180° - theta",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "title": "Using Direction Ratios (DRs)",
+              "description": "Formulas for angle using A1, B1, C1 and A2, B2, C2",
+              "children": [
+                {
+                  "title": "Cos Theta Formula (DRs)",
+                  "description": "Dot product of direction vectors divided by magnitudes",
+                  "children": []
+                },
+                {
+                  "title": "Sin Theta Formula (DRs)",
+                  "description": "Derived from 1 - cos²(theta) using DRs",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "title": "Using Direction Cosines (DCs)",
+              "description": "Formulas for angle using L1, M1, N1 and L2, M2, N2",
+              "children": [
+                {
+                  "title": "Cos Theta Formula (DCs)",
+                  "description": "Sum of products of corresponding direction cosines",
+                  "children": []
+                },
+                {
+                  "title": "Sin Theta Formula (DCs)",
+                  "description": "Derived from 1 - cos²(theta) using DCs",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "title": "Special Cases of Lines",
+              "description": "Conditions for perpendicular and parallel lines",
+              "children": [
+                {
+                  "title": "Perpendicular Lines",
+                  "description": "Angle is 90°, dot product of DRs/DCs is zero",
+                  "children": []
+                },
+                {
+                  "title": "Parallel Lines",
+                  "description": "Angle is 0°, DRs/DCs are proportional",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        "quizzes": [
+          {
+            "question": "Two lines L1 and L2 have direction ratios (1, 2, 3) and (2, -1, 0) respectively. What is the cosine of the acute angle between them?",
+            "options": { "A": "0", "B": "1/√14", "C": "1/√5", "D": "2/√14" },
+            "correct_answer": "A",
+            "hint": "Use the formula for cos(theta) involving direction ratios and remember to take the modulus for the acute angle.",
+            "solution": "Given DRs for L1: (A1, B1, C1) = (1, 2, 3)\nGiven DRs for L2: (A2, B2, C2) = (2, -1, 0)\ncos(theta) = |(A1A2 + B1B2 + C1C2) / (√(A1² + B1² + C1²) * √(A2² + B2² + C2²))|\nNumerator = (1*2 + 2*(-1) + 3*0) = (2 - 2 + 0) = 0\nSince the numerator is 0, cos(theta) = 0. Therefore, the angle is 90 degrees, and its cosine is 0.\nOption A is correct.",
+            "difficulty": "medium",
+            "concept_tested": "Cosine of angle between lines using direction ratios"
+          },
+          {
+            "question": "If two lines in 3D space are perpendicular, which of the following conditions must be true for their direction ratios (A1, B1, C1) and (A2, B2, C2)?",
+            "options": {
+              "A": "A1/A2 = B1/B2 = C1/C2",
+              "B": "A1A2 + B1B2 + C1C2 = 0",
+              "C": "A1B2 - A2B1 = 0",
+              "D": "A1+A2 = B1+B2 = C1+C2"
+            },
+            "correct_answer": "B",
+            "hint": "Recall the condition for perpendicular lines when the angle is 90 degrees.",
+            "solution": "For perpendicular lines, the angle theta is 90 degrees. We know that cos(theta) = 0 for perpendicular lines. Using the formula for cos(theta) with direction ratios, cos(theta) = |(A1A2 + B1B2 + C1C2) / (√(A1² + B1² + C1²) * √(A2² + B2² + C2²))|. For cos(theta) to be 0, the numerator must be 0. Thus, A1A2 + B1B2 + C1C2 = 0. Option A is for parallel lines. Option C is part of the condition for parallel lines. Option D is not a standard condition.",
+            "difficulty": "easy",
+            "concept_tested": "Condition for perpendicular lines"
+          },
+          {
+            "question": "For two parallel lines in 3D space with direction ratios (A1, B1, C1) and (A2, B2, C2), which of the following is true?",
+            "options": {
+              "A": "A1A2 + B1B2 + C1C2 = 0",
+              "B": "A1B2 - A2B1 = 1",
+              "C": "A1/A2 = B1/B2 = C1/C2",
+              "D": "A1+B1+C1 = A2+B2+C2"
+            },
+            "correct_answer": "C",
+            "hint": "Consider the value of sin(theta) for parallel lines and its expanded form.",
+            "solution": "For parallel lines, the angle theta is 0 degrees. We know that sin(theta) = 0 for parallel lines. The formula for sin(theta) is sin(theta) = √( (A1B2 - A2B1)² + (B1C2 - B2C1)² + (C1A2 - C2A1)² ) / (√(A1² + B1² + C1²) * √(A2² + B2² + C2²)). For sin(theta) to be 0, the numerator must be 0, which means (A1B2 - A2B1)² = 0, (B1C2 - B2C1)² = 0, and (C1A2 - C2A1)² = 0. This implies A1B2 = A2B1, B1C2 = B2C1, and C1A2 = C2A1, which simplifies to A1/A2 = B1/B2 = C1/C2. Option A is for perpendicular lines. Options B and D are incorrect conditions.",
+            "difficulty": "medium",
+            "concept_tested": "Condition for parallel lines"
+          }
+        ],
+        "flashcards": [
+          {
+            "front": "What is the primary angle of interest when discussing the angle between two lines in 3D space?",
+            "back": "The acute angle (theta).",
+            "concept": "Definition of Angle",
+            "importance": "high"
+          },
+          {
+            "front": "State the formula for cos(theta) between two lines with direction ratios (A1, B1, C1) and (A2, B2, C2).",
+            "back": "cos(theta) = |(A1A2 + B1B2 + C1C2) / (√(A1² + B1² + C1²) * √(A2² + B2² + C2²))|",
+            "concept": "Angle using Direction Ratios",
+            "importance": "high"
+          },
+          {
+            "front": "What is the condition for two lines with direction ratios (A1, B1, C1) and (A2, B2, C2) to be perpendicular?",
+            "back": "A1A2 + B1B2 + C1C2 = 0",
+            "concept": "Perpendicular Lines",
+            "importance": "high"
+          },
+          {
+            "front": "What is the condition for two lines with direction ratios (A1, B1, C1) and (A2, B2, C2) to be parallel?",
+            "back": "A1/A2 = B1/B2 = C1/C2",
+            "concept": "Parallel Lines",
+            "importance": "high"
+          },
+          {
+            "front": "State the formula for cos(theta) between two lines with direction cosines (L1, M1, N1) and (L2, M2, N2).",
+            "back": "cos(theta) = |L1L2 + M1M2 + N1N2|",
+            "concept": "Angle using Direction Cosines",
+            "importance": "medium"
+          },
+          {
+            "front": "How is sin(theta) related to cos(theta) in the context of angles between lines?",
+            "back": "sin(theta) = √(1 - cos²(theta))",
+            "concept": "Trigonometric Identity",
+            "importance": "low"
+          },
+          {
+            "front": "If two lines have direction cosines (L1, M1, N1) and (L2, M2, N2), what is the condition for them to be perpendicular?",
+            "back": "L1L2 + M1M2 + N1N2 = 0",
+            "concept": "Perpendicular Lines (DCs)",
+            "importance": "medium"
+          }
+        ]
+      }
+    }
+  ]
+}

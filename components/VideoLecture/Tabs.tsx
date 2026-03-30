@@ -14,7 +14,7 @@ const Tabs: React.FC<TabsProps> = ({ activeTab, setActiveTab }) => {
           "Summary",
           "Flashcards",
           "Challenge Zone",
-          //"Simulation",
+          "Simulation",
           "Mind-Map",
           "Notes",
         ] as TabType[]
