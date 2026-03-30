@@ -93,6 +93,32 @@ const useChatbot = () => {
         },
       ]);
     }
+
+    // // existing mock fallbacks
+    // if (videoId === "waves") {
+    //   setSummaryHtml((wavesSummaries as any).final_summary);
+    //   return;
+    // }
+    // if (videoId === "projectile_motion") {
+    //   setSummaryHtml((projectileSummaries as any).final_summary);
+    //   return;
+    // }
+    // if (videoId === "human_heart") {
+    //   setSummaryHtml((heartSummaries as any).final_summary);
+    //   return;
+    // }
+
+    // const url = `${BACKEND_URL}/get_summmary?video_id=${videoId || "waves"}`;
+    // setLoading(true);
+    // try {
+    //   const response = await fetch(url);
+    //   const data = await response.json();
+    //   setSummaryHtml(data.final_summary);
+    // } catch (error) {
+    //   console.error("Error fetching summary:", error);
+    // } finally {
+    //   setLoading(false);
+    // }
   }, []);
   function getAllData(videoPath: string) {
     if (!videoPath) return "";

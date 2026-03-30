@@ -9,6 +9,7 @@ import PracticeZone from './views/PracticeZone';
 import RevisionHub from './views/RevisionHub';
 
 import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-dom';
+import Header from '@/components/Common/Header';
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -19,7 +20,7 @@ const App: React.FC = () => {
   return (
     <div className="flex h-screen bg-white overflow-hidden">
       <main className="flex-1 overflow-auto relative">
-        {!isDashboard && (
+        {/* {!isDashboard && (
           <header className="sticky top-0 z-20 bg-white border-b px-6 py-3 flex justify-between items-center">
             <div className="flex items-center gap-4">
               <button onClick={() => navigate('/dashboard')} className="p-2 hover:bg-gray-100 rounded-lg">
@@ -46,7 +47,8 @@ const App: React.FC = () => {
               </div>
             </div>
           </header>
-        )}
+        )} */}
+        <Header />
 
         <div className={isVideo ? "h-[calc(100vh-57px)]" : isDashboard ? "p-0" : "p-8"}>
           <Routes>
