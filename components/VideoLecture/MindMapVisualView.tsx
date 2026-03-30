@@ -11,7 +11,8 @@ const MindMapVisualView: React.FC<MindMapVisualViewProps> = ({ videoId }) => {
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
 
-    const imageUrl = `/components/MindMapVisualImages/${videoId}.png`;
+    const imageUrl = `/MindMapVisualImages/${videoId}.png`;
+    console.log("imageUrlimageUrl=", imageUrl);
     const containerRef = React.useRef<HTMLDivElement>(null);
 
     const handleZoomIn = () => setScale(prev => Math.min(prev + 0.25, 3));
