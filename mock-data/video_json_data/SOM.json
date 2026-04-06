@@ -1,185 +1,185 @@
 [
     {
         "subject": "physics",
-        "class": 12,
+        "class": null,
         "syllabus_master_videos": [
             {
                 "smid": "109",
-                "nodeid": "69919",
-                "topic": "Semiconductor Electronics :Materials, Devices and Simple Circuits",
-                "asset_id": "98779",
-                "asset_title": "Energy bands in conductors, semiconductors and insulators (qualitative ideas only)",
-                "video_link": "Media/AssetLibrary/Video/3307/School Plus_XII_P_Semiconductor Electronics-Ch-14-Lec-01.mp4"
+                "nodeid": null,
+                "topic": "Combination of cell",
+                "asset_id": "81753",
+                "asset_title": "Combination of cell",
+                "video_link": "Media/SOE/499444532/499444532.mp4"
             },
             {
                 "smid": "109",
-                "nodeid": "70450",
-                "topic": "Biot- Savart's law",
-                "asset_id": "97674",
-                "asset_title": "Biot - Savart law and its application to current carrying circular loop",
-                "video_link": "Media/AssetLibrary/Video/3290/School Plus_XII_P_Moving Charges and Magnetism-Ch-04-Lec-02.mp4"
+                "nodeid": null,
+                "topic": "Kirchhoff's Loop Law",
+                "asset_id": "81735",
+                "asset_title": "Kirchhoff's Loop Law",
+                "video_link": "Media/SOE/499444507/499444507.mp4"
             },
             {
                 "smid": "109",
-                "nodeid": "70119",
-                "topic": "Optical instruments",
-                "asset_id": "98347",
-                "asset_title": "Optical instruments: Microscopes and astronomical telescopes (reflecting and refracting)",
-                "video_link": "Media/AssetLibrary/Video/3301/School Plus_XII_P_Ray Optics & Optical Instruments-Ch-09-Lec-04.mp4"
+                "nodeid": null,
+                "topic": "Introduction to EMF & internal resistance",
+                "asset_id": "81728",
+                "asset_title": "Introduction to EMF & internal resistance",
+                "video_link": "Media/SOE/499443616/499443616.mp4"
             },
             {
                 "smid": "109",
-                "nodeid": "70527",
-                "topic": "Electric Current",
-                "asset_id": "97670",
-                "asset_title": "Electric current, flow of electric charges in a metallic conductor, drift velocity",
-                "video_link": "Media/AssetLibrary/Video/3289/School Plus_XII_P_Current Electricity-Ch-03-Lec-01.mp4"
+                "nodeid": null,
+                "topic": "Current Density and Ohm's law",
+                "asset_id": "81720",
+                "asset_title": "Current Density and Ohm's law",
+                "video_link": "Media/SOE/499443135/499443135.mp4"
             },
             {
                 "smid": "109",
-                "nodeid": "70617",
-                "topic": "Electric Flu",
-                "asset_id": "97666",
-                "asset_title": "Flux of Electric Field",
-                "video_link": "Media/AssetLibrary/Video/3282/School Plus_XII_P_Electric Charges and Fields-Ch-01-Lec-03.mp4"
+                "nodeid": null,
+                "topic": "Introduction to electric field lines",
+                "asset_id": "81609",
+                "asset_title": "Introduction to electric field lines",
+                "video_link": "Media/SOE/500791779/500791779.mp4"
             }
         ]
     },
     {
         "subject": "chemistry",
-        "class": 12,
+        "class": null,
         "syllabus_master_videos": [
             {
                 "smid": "110",
-                "nodeid": "67852",
-                "topic": "Amines -> Introduction",
-                "asset_id": "98788",
-                "asset_title": "Amines : Structure, Classification and Nomenclature of Amines",
-                "video_link": "Media/AssetLibrary/Video/3273/School Plus_XII_C_Amines-Ch-09-Lec-01.mp4"
+                "nodeid": null,
+                "topic": "Classification of alcohols",
+                "asset_id": "81360",
+                "asset_title": "Classification of alcohols",
+                "video_link": "Media/SOE/603961842/603961842.mp4"
             },
             {
                 "smid": "110",
-                "nodeid": "67987",
-                "topic": "Alcohols and Phenols : Classification",
-                "asset_id": "98782",
-                "asset_title": "Preparation of alcohols",
-                "video_link": "Media/AssetLibrary/Video/3259/School Plus_XII_C_Alcohols Phenols & Ethers-Ch-07-Lec-02.mp4"
+                "nodeid": null,
+                "topic": "Reaction with metals",
+                "asset_id": "81335",
+                "asset_title": "Reaction with metals",
+                "video_link": "Media/SOE/603961439/603961439.mp4"
             },
             {
                 "smid": "110",
-                "nodeid": "67876",
-                "topic": "Nomenclature and Structure of Carboxyl Group",
-                "asset_id": "98404",
-                "asset_title": "Carboxylic acids : Nomenclature and structure of carboxyl group, Preparation of carboxylic acids",
-                "video_link": "Media/AssetLibrary/Video/3270/School Plus_XII_C_Aldehydes, Ketones & Carboxylic AcidsLecture-Ch-08-Lec-07.mp4"
+                "nodeid": null,
+                "topic": "Physical properties of Haloalkanes and Haloarenes",
+                "asset_id": "81314",
+                "asset_title": "Physical properties of Haloalkanes and Haloarenes",
+                "video_link": "Media/SOE/603959541/603959541.mp4"
             },
             {
                 "smid": "110",
-                "nodeid": "68076",
-                "topic": "Nomenclature of Coordination Compounds",
-                "asset_id": "98373",
-                "asset_title": "Valence Bond theory (Postulates, application and limitation)",
-                "video_link": "Media/AssetLibrary/Video/3245/School Plus_XII_C_Coordination Compounds-Ch-05-Lec-03.mp4"
+                "nodeid": null,
+                "topic": "Introduction to Werner theory",
+                "asset_id": "81248",
+                "asset_title": "Introduction to Werner theory",
+                "video_link": "Media/SOE/603955967/603955967.mp4"
             },
             {
                 "smid": "110",
-                "nodeid": "68522",
-                "topic": "Collision Theory of Reaction Rates",
-                "asset_id": "97716",
-                "asset_title": "Collision theory, Catalyst",
-                "video_link": "Media/AssetLibrary/Video/3238/School Plus_XII_C_Chemical Kinetics-Ch-03-Lec-05.mp4"
+                "nodeid": null,
+                "topic": "Optical isomerism",
+                "asset_id": "81257",
+                "asset_title": "Optical isomerism",
+                "video_link": "Media/SOE/603956468/603956468.mp4"
             }
         ]
     },
     {
         "subject": "botany",
-        "class": 12,
+        "class": null,
         "syllabus_master_videos": [
             {
                 "smid": "111",
-                "nodeid": "66720",
-                "topic": "DNA Fingerprinting",
-                "asset_id": "98864",
-                "asset_title": "DNA Fingerprinting",
-                "video_link": "Media/AssetLibrary/Video/3201/School Plus_XII_B_Molecular Basis of Inheritance-Ch-05-Lec-06.mp4"
+                "nodeid": null,
+                "topic": "Chromosomal Theory of Inheritance",
+                "asset_id": "80689",
+                "asset_title": "Chromosomal Theory of Inheritance",
+                "video_link": "Media/SOE/481003843/481003843.mp4"
             },
             {
                 "smid": "111",
-                "nodeid": "66735",
-                "topic": "Regulation of Gene Expression",
-                "asset_id": "98861",
-                "asset_title": "Regulation Of Gene Expression, Human Genome Project, Goals Of Hgp, Methodologies",
-                "video_link": "Media/AssetLibrary/Video/3200/School Plus_XII_B_Molecular Basis of Inheritance-Ch-05-Lec-05.mp4"
+                "nodeid": null,
+                "topic": "Patterns of Biodiversity",
+                "asset_id": "80921",
+                "asset_title": "Patterns of Biodiversity",
+                "video_link": "Media/SOE/449206533/449206533.mp4"
             },
             {
                 "smid": "111",
-                "nodeid": "66764",
-                "topic": "RNA World",
-                "asset_id": "98857",
-                "asset_title": "RNA world, Replication, Transcription, Transcription Unit, Transcription Unit and the Gene",
-                "video_link": "Media/AssetLibrary/Video/3199/School Plus_XII_B_Molecular Basis of Inheritance-Ch-05-Lec-03.mp4"
+                "nodeid": null,
+                "topic": "Structure of Ecosystem",
+                "asset_id": "80889",
+                "asset_title": "Structure of Ecosystem",
+                "video_link": "Media/SOE/481011808/481011808.mp4"
             },
             {
                 "smid": "111",
-                "nodeid": "66775",
-                "topic": "The DNA",
-                "asset_id": "98852",
-                "asset_title": "Structure of DNA and RNA, DNA packaging (Nucleosomal Model)",
-                "video_link": "Media/AssetLibrary/Video/3197/School Plus_XII_B_Molecular Basis of Inheritance-Ch-05-Lec-01.mp4"
+                "nodeid": null,
+                "topic": "Organism and population- Abiotic factors",
+                "asset_id": "80857",
+                "asset_title": "Organism and population- Abiotic factors",
+                "video_link": "Media/SOE/481010514/481010514.mp4"
             },
             {
                 "smid": "111",
-                "nodeid": "66913",
-                "topic": "Flower- A Fascinating Organ of Angiosperms",
-                "asset_id": "97628",
-                "asset_title": "Flower structure, Pre-Fertilization Events, Structure of Polen grain and microsporogenesis",
-                "video_link": "Media/AssetLibrary/Video/3187/School Plus_XII_B_Rep in flowering Plants-Ch-01-Lec-01.mp4"
+                "nodeid": null,
+                "topic": "Sewage treatment",
+                "asset_id": "80833",
+                "asset_title": "Sewage treatment",
+                "video_link": "Media/SOE/481010076/481010076.mp4"
             }
         ]
     },
     {
         "subject": "zoology",
-        "class": 12,
+        "class": null,
         "syllabus_master_videos": [
             {
                 "smid": "112",
-                "nodeid": "65428",
-                "topic": "Biotechnological Applications in Medicine",
-                "asset_id": "99464",
-                "asset_title": "Biotechnological applications in medicine; human insulin , gene therapy, molecular diagnostics",
-                "video_link": "Media/AssetLibrary/Video/3214/School Plus_XII_B_Biotechnology & its Applications-Ch-10-Lec-02.mp4"
+                "nodeid": null,
+                "topic": "Bioethics and Biopiracy",
+                "asset_id": "82383",
+                "asset_title": "Bioethics and Biopiracy",
+                "video_link": "Media/SOE/449205401/449205401.mp4"
             },
             {
                 "smid": "112",
-                "nodeid": "65662",
-                "topic": "Origin of Life",
-                "asset_id": "98845",
-                "asset_title": "Origin of life, Evolution of life forms \u2013 A Theory, what are the evidences for evolution?",
-                "video_link": "Media/AssetLibrary/Video/3207/School Plus_XII_B_Evolution-Ch-06-Lec-01.mp4"
-            },
-            {
-                "smid": "112",
-                "nodeid": "65528",
-                "topic": "Cancer",
-                "asset_id": "86656",
-                "asset_title": "Cancer",
-                "video_link": "Media/SOE/479312722/479312722.mp4"
-            },
-            {
-                "smid": "112",
-                "nodeid": "65445",
-                "topic": "Processes of Recombinant DNA Technologies",
-                "asset_id": "82356",
-                "asset_title": "Bioreactors",
-                "video_link": "Media/SOE/479315016/479315016.mp4"
-            },
-            {
-                "smid": "112",
-                "nodeid": "65576",
-                "topic": "Common Diseases in Humans",
+                "nodeid": null,
+                "topic": "Fungal infections",
                 "asset_id": "82310",
                 "asset_title": "Fungal infections",
                 "video_link": "Media/SOE/479312608/479312608.mp4"
+            },
+            {
+                "smid": "112",
+                "nodeid": null,
+                "topic": "Transgenic Microbes",
+                "asset_id": "82382",
+                "asset_title": "Transgenic Microbes",
+                "video_link": "Media/SOE/449205396/449205396.mp4"
+            },
+            {
+                "smid": "112",
+                "nodeid": null,
+                "topic": "Lamarckism",
+                "asset_id": "82239",
+                "asset_title": "Lamarckism",
+                "video_link": "Media/SOE/479311416/479311416.mp4"
+            },
+            {
+                "smid": "112",
+                "nodeid": null,
+                "topic": "Function of testosterone, sertoli cells and accessory ducts",
+                "asset_id": "82174",
+                "asset_title": "Function of testosterone, sertoli cells and accessory ducts",
+                "video_link": "Media/SOE/479307543/479307543.mp4"
             }
         ]
     }
