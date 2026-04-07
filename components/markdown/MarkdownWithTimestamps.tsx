@@ -3,6 +3,9 @@ import React from "react";
 import ReactMarkdown, { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import "./index.css";
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 // import AskAIOverlay from "./AskAIOverlay"; // Currently unused in original file
 // import { useTextSelection } from "./Contexts/useTextSelection"; // Ensure this path exists or adjust
 
@@ -122,7 +125,9 @@ const MarkdownSummary: React.FC<MarkdownSummaryProps> = ({ content, onSeek, isDa
                 gap: 12,
             }}
         >
-            <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
+            <ReactMarkdown
+                remarkPlugins={[remarkMath, remarkGfm]}
+                rehypePlugins={[rehypeKatex]} components={components}>
                 {preprocessContent(content)}
             </ReactMarkdown>
         </div>
